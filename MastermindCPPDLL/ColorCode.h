@@ -10,6 +10,7 @@
 #include <array>
 
 namespace mastermind {
+	// FIXME:  Template makes no real sense here...
 	template<std::size_t slot_count = 4>
 	class MASTERMINDCPPDLL_API ColorCode {
 	private:

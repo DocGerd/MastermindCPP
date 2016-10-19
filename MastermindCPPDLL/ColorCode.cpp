@@ -14,7 +14,8 @@ namespace mastermind {
 	}
 
 	template<std::size_t slot_count>
-	ColorCode<slot_count>::~ColorCode() {
+	ColorCode<slot_count>::~ColorCode()
+	{
 	}
 
 	template<std::size_t slot_count>

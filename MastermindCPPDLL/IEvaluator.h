@@ -12,7 +12,5 @@ namespace mastermind {
 	public:
 		 virtual BlackAndWhite evaluate(const ColorCode<> &cc) abstract;
 		 virtual ColorCode<>* getSolution() abstract;
-
-
 	};
 }
