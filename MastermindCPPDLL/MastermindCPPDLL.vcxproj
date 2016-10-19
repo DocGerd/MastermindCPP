@@ -213,6 +213,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="API.h" />
     <ClInclude Include="BlackAndWhite.h" />
     <ClInclude Include="ColorCode.h" />
     <ClInclude Include="ComputerEvaluator.h" />
