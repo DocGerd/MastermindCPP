@@ -8,7 +8,7 @@
 namespace mastermind {
 	class IGuesser abstract {
 	public:
-		virtual ColorCode<> nextGuess() abstract;
+		virtual ColorCode nextGuess() abstract;
 		virtual void processEvaluation(BlackAndWhite &bw) abstract;
 	};
 }
