@@ -4,7 +4,7 @@
 #include "../MastermindCPPDLL/Mastermind.h"
 #include "../MastermindCPPDLL/ColorCode.h"
 #include "../MastermindCPPDLL/ComputerEvaluator.h"
-#include <cwchar>
+
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace mastermind;
 
@@ -33,18 +33,25 @@ namespace UnitTest1
 
 		TEST_METHOD(TestEvaluate)
 		{
-			std::array<int, 4> sol = { 1,2,3,4 };
+			std::array<int, 4> sol = { 1, 2, 3, 4 };
 			ColorCode solution(sol);
 			ComputerEvaluator ce(solution);
 
 			ColorCode first(std::array<int, 4>{ 2, 5, 2, 1 });
-			BlackAndWhite expected(1, 1);
+			BlackAndWhite expected(0, 2);
 			BlackAndWhite actual = ce.evaluate(first);
 			Assert::AreEqual(expected, actual, L"", LINE_INFO());
+		}
+
+		TEST_METHOD(TestEvaluate2)
+		{
+			std::array<int, 4> sol = { 1, 2, 3, 4 };
+			ColorCode solution(sol);
+			ComputerEvaluator ce(solution);
 
 			ColorCode second(std::array<int, 4>{1, 1, 6, 2});
-			BlackAndWhite expected2(1, 2);
-			BlackAndWhite actual2 = ce.evaluate(second);		
+			BlackAndWhite expected2(1, 1);
+			BlackAndWhite actual2 = ce.evaluate(second);
 			Assert::AreEqual(expected2, actual2, L"", LINE_INFO());
 		}
 

@@ -25,6 +25,7 @@ namespace mastermind {
 		str.append(std::to_wstring(this->white));
 		return str;
 	}
+
 	std::wstring BlackAndWhite::toStringWithoutDescription() {
 		std::wstring str(L"");
 		str.append(std::to_wstring(this->black));
@@ -44,8 +45,7 @@ namespace mastermind {
 
 	const bool BlackAndWhite::operator==(const BlackAndWhite& rhs) const {
 		bool result = false;
-		if (this->white == rhs.white
-			&& this->black == rhs.black) {
+		if (this->white == rhs.white && this->black == rhs.black) {
 			result = true;
 		}
 		return result;

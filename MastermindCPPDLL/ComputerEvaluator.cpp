@@ -17,6 +17,10 @@ namespace mastermind {
 
 		bool* checkedSol = new bool[SLOT_COUNT];
 		bool* checkedCc = new bool[SLOT_COUNT];
+		for (std::size_t i = 0; i < SLOT_COUNT; ++i) {
+			checkedSol[i] = false;
+			checkedCc[i] = false;
+		}
 
 		// check blacks
 		for (std::size_t i = 0; i < SLOT_COUNT; ++i) {
