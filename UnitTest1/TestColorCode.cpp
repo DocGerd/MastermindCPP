@@ -13,13 +13,13 @@ namespace UnitTest1
 		TEST_METHOD(TestCstr)
 		{
 			std::array<int, 4> cols = { 1, 2, 3, 4 };
-			mastermind::ColorCode<4> cc(cols);
+			mastermind::ColorCode cc(cols);
 		}
 
 		TEST_METHOD(TestGet)
 		{
 			std::array<int, 4> cols = { 1, 2, 3, 4 };
-			mastermind::ColorCode<4> cc(cols);
+			mastermind::ColorCode cc(cols);
 
 			Assert::AreEqual(4, cc.get(3), L"", LINE_INFO());
 		}
@@ -27,7 +27,7 @@ namespace UnitTest1
 		TEST_METHOD(TestToString)
 		{
 			std::array<int, 4> cols = { 1, 2, 3, 4 };
-			mastermind::ColorCode<4> cc(cols);
+			mastermind::ColorCode cc(cols);
 
 			std::wstring expected(L"1 2 3 4 ");
 

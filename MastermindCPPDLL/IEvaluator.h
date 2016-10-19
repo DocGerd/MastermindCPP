@@ -13,7 +13,7 @@
 namespace mastermind {
 	class MASTERMINDCPPDLL_API IEvaluator abstract {
 	public:
-		 virtual BlackAndWhite evaluate(const ColorCode<> &cc) abstract;
-		 virtual ColorCode<>* getSolution() abstract;
+		 virtual BlackAndWhite evaluate(const ColorCode &cc) abstract;
+		 virtual ColorCode* getSolution() abstract;
 	};
 }
