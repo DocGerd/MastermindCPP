@@ -18,8 +18,5 @@ namespace mastermind {
 			}
 			return result;
 		}
-
-	public:
-		virtual std::wstring toString() abstract;
 	};
 }

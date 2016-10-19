@@ -20,10 +20,9 @@ namespace mastermind {
 		return this->colors[index];
 	}
 
-	//template<std::size_t slot_count>
-	//int ColorCode<slot_count>::operator[](std::size_t i) {
-	//	return this->colors[i];
-	//}
+	int ColorCode::operator[](std::size_t i) {
+		return this->colors[i];
+	}
 
 	const int ColorCode::operator[](std::size_t i) const {
 		return this->colors[i];

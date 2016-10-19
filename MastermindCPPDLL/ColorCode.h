@@ -8,7 +8,6 @@
 #include <array>
 
 namespace mastermind {
-	// FIXME:  Template makes no real sense here...
 	class MASTERMINDCPPDLL_API ColorCode : public Mastermind {
 	private:
 #pragma warning(disable: 4251)
@@ -19,7 +18,7 @@ namespace mastermind {
 		ColorCode(std::array<int, SLOT_COUNT> &col);
 		~ColorCode();
 		int get(std::size_t index);
-		//int operator[](std::size_t i);
+		int operator[](std::size_t i);
 		const int operator[](std::size_t i) const;
 
 		virtual std::wstring toString();
