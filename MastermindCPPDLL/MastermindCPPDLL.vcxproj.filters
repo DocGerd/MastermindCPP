@@ -27,9 +27,6 @@
     <ClInclude Include="ColorCode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DEFAULTS.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="IEvaluator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -43,6 +40,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="API.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mastermind.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
