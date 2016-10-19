@@ -11,9 +11,9 @@ namespace mastermind {
 	ComputerEvaluator::~ComputerEvaluator() {
 	}
 
-	BlackAndWhite ComputerEvaluator::evaluate(const ColorCode &cc) {
-		unsigned int black = 0;
-		unsigned int white = 0;
+	BlackAndWhite* ComputerEvaluator::evaluate(const ColorCode &cc) {
+		std::size_t black = 0;
+		std::size_t white = 0;
 
 		bool* checkedSol = new bool[SLOT_COUNT];
 		bool* checkedCc = new bool[SLOT_COUNT];
@@ -42,7 +42,7 @@ namespace mastermind {
 
 		++moveCount;
 
-		return BlackAndWhite(black, white);
+		return new BlackAndWhite(black, white);
 	}
 
 	ColorCode* ComputerEvaluator::getSolution() {

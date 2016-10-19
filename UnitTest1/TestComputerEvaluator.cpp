@@ -23,29 +23,24 @@ namespace UnitTest1
 
 		TEST_METHOD(TestEvaluate)
 		{
-			// 1 == green
-			// 2 == red
-			// 3 == blue
-			// 4 == green
-			// 5 == yellow
-			// 6 == orange
 			std::array<int, 4> sol = { 1,2,3,4 };
 			ColorCode solution(sol);
 			ComputerEvaluator ce(solution);
 
 			ColorCode first(std::array<int, 4>{ 2, 5, 2, 1 });
-			BlackAndWhite expected(1, 1);
-			BlackAndWhite actual = ce.evaluate(first);
-			bool result = expected == actual;
+			BlackAndWhite* expected = new BlackAndWhite(1, 1);
+			BlackAndWhite* actual = ce.evaluate(first);
 			wchar_t message[200];
-			_swprintf(message, L"expected: %s, actual: %s", expected.toString(), actual.toString());
-			Assert::IsTrue(result, message, LINE_INFO());
+			_swprintf(message, L"expected: %s, actual: %s", expected->toString(), actual->toString());
+			Assert::IsTrue(*expected == *actual, message, LINE_INFO());
 
-			//ColorCode second(std::array<int, 4>{1, 1, 6, 2});
-			//BlackAndWhite expected2(1, 2);
-			//BlackAndWhite actual2 = ce.evaluate(second);
-			//Assert::AreEqual(expected2, actual2, L"", LINE_INFO());
-
+			ColorCode second(std::array<int, 4>{1, 1, 6, 2});
+			delete expected;
+			expected = new BlackAndWhite(1, 2);
+			delete actual;
+			actual = ce.evaluate(second);			
+			_swprintf(message, L"expected: %s, actual: %s", expected->toString(), actual->toString());
+			Assert::IsTrue(*expected == *actual, message, LINE_INFO());
 		}
 
 		TEST_METHOD(TestGetSolution)
@@ -57,6 +52,7 @@ namespace UnitTest1
 			Assert::IsNull(ce.getSolution(), L"", LINE_INFO());
 
 			// TODO
+			Assert::Fail(L"Missing test!");
 		}
 	};
 }

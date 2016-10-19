@@ -16,7 +16,7 @@ namespace mastermind {
 		ComputerEvaluator(ColorCode soutionCode);
 		~ComputerEvaluator();
 
-		virtual BlackAndWhite evaluate(const ColorCode &cc) override;
+		virtual BlackAndWhite* evaluate(const ColorCode &cc) override;
 		virtual ColorCode* getSolution() override;
 	};
 }
