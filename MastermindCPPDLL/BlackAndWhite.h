@@ -14,6 +14,7 @@ namespace mastermind {
 		BlackAndWhite(std::size_t blacks, std::size_t whites);
 
 		virtual std::wstring toString();
+		virtual std::wstring toString() const;
 		std::wstring toStringWithoutDescription();
 		bool operator==(const BlackAndWhite& rhs);
 		const bool operator==(const BlackAndWhite& rhs) const;

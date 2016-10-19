@@ -36,4 +36,14 @@ namespace mastermind {
 		}
 		return result;
 	}
+
+	const bool ColorCode::operator==(const ColorCode &rhs) const {
+		bool result = true;
+		for (std::size_t i = 0; i < SLOT_COUNT && result; ++i) {
+			if (this->colors[i] != rhs.colors[i]) {
+				result = false;
+			}
+		}
+		return result;
+	}
 }

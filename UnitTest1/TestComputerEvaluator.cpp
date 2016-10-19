@@ -4,9 +4,19 @@
 #include "../MastermindCPPDLL/Mastermind.h"
 #include "../MastermindCPPDLL/ColorCode.h"
 #include "../MastermindCPPDLL/ComputerEvaluator.h"
-
+#include <cwchar>
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace mastermind;
+
+namespace Microsoft {
+	namespace VisualStudio {
+		namespace CppUnitTestFramework {
+			template<> static std::wstring ToString<BlackAndWhite>(const BlackAndWhite& q) {
+				return q.toString();
+			}
+		}
+	}
+}
 
 namespace UnitTest1
 {
@@ -28,19 +38,14 @@ namespace UnitTest1
 			ComputerEvaluator ce(solution);
 
 			ColorCode first(std::array<int, 4>{ 2, 5, 2, 1 });
-			BlackAndWhite* expected = new BlackAndWhite(1, 1);
-			BlackAndWhite* actual = ce.evaluate(first);
-			wchar_t message[200];
-			_swprintf(message, L"expected: %s, actual: %s", expected->toString(), actual->toString());
-			Assert::IsTrue(*expected == *actual, message, LINE_INFO());
+			BlackAndWhite expected(1, 1);
+			BlackAndWhite actual = ce.evaluate(first);
+			Assert::AreEqual(expected, actual, L"", LINE_INFO());
 
 			ColorCode second(std::array<int, 4>{1, 1, 6, 2});
-			delete expected;
-			expected = new BlackAndWhite(1, 2);
-			delete actual;
-			actual = ce.evaluate(second);			
-			_swprintf(message, L"expected: %s, actual: %s", expected->toString(), actual->toString());
-			Assert::IsTrue(*expected == *actual, message, LINE_INFO());
+			BlackAndWhite expected2(1, 2);
+			BlackAndWhite actual2 = ce.evaluate(second);		
+			Assert::AreEqual(expected2, actual2, L"", LINE_INFO());
 		}
 
 		TEST_METHOD(TestGetSolution)
@@ -51,8 +56,13 @@ namespace UnitTest1
 
 			Assert::IsNull(ce.getSolution(), L"", LINE_INFO());
 
-			// TODO
-			Assert::Fail(L"Missing test!");
+			ColorCode cc(std::array<int, 4>{ 2, 5, 2, 1 });
+			for (auto i = 0; i < Mastermind::MAX_MOVES; ++i) {
+				ce.evaluate(cc);
+			}
+			Assert::IsNotNull(ce.getSolution(), L"", LINE_INFO());
+			bool result = solution == *ce.getSolution();
+			Assert::IsTrue(result, L"", LINE_INFO());
 		}
 	};
 }

@@ -20,6 +20,7 @@ namespace mastermind {
 		int get(std::size_t index);
 		int operator[](std::size_t i);
 		const int operator[](std::size_t i) const;
+		const bool operator==(const ColorCode &rhs) const;
 
 		virtual std::wstring toString();
 	};

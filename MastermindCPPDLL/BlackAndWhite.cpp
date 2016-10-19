@@ -17,7 +17,14 @@ namespace mastermind {
 		str.append(std::to_wstring(this->white));
 		return str;
 	}
-
+	std::wstring BlackAndWhite::toString() const {
+		std::wstring str(L"");
+		str.append(L"black: ");
+		str.append(std::to_wstring(this->black));
+		str.append(L" white: ");
+		str.append(std::to_wstring(this->white));
+		return str;
+	}
 	std::wstring BlackAndWhite::toStringWithoutDescription() {
 		std::wstring str(L"");
 		str.append(std::to_wstring(this->black));

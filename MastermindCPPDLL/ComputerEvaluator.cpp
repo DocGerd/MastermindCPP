@@ -11,7 +11,7 @@ namespace mastermind {
 	ComputerEvaluator::~ComputerEvaluator() {
 	}
 
-	BlackAndWhite* ComputerEvaluator::evaluate(const ColorCode &cc) {
+	BlackAndWhite ComputerEvaluator::evaluate(const ColorCode &cc) {
 		std::size_t black = 0;
 		std::size_t white = 0;
 
@@ -42,7 +42,7 @@ namespace mastermind {
 
 		++moveCount;
 
-		return new BlackAndWhite(black, white);
+		return BlackAndWhite(black, white);
 	}
 
 	ColorCode* ComputerEvaluator::getSolution() {
