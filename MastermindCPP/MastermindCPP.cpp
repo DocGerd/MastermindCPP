@@ -3,7 +3,9 @@
 
 #include "stdafx.h"
 
+#include "../MastermindCPPDLL/Shell.h"
+
 int main()
 {
-	return 0;
+	return mastermind::shell::Shell::main();
 }

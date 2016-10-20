@@ -1,0 +1,123 @@
+\hypertarget{classmastermind_1_1_black_and_white}{}\section{mastermind\+:\+:Black\+And\+White Class Reference}
+\label{classmastermind_1_1_black_and_white}\index{mastermind\+::\+Black\+And\+White@{mastermind\+::\+Black\+And\+White}}
+
+
+{\ttfamily \#include $<$Black\+And\+White.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmastermind_1_1_black_and_white_aedecdf7875c538b7fa66a01a413404cd}{}\label{classmastermind_1_1_black_and_white_aedecdf7875c538b7fa66a01a413404cd} 
+{\bfseries Black\+And\+White} (std\+::size\+\_\+t blacks, std\+::size\+\_\+t whites)
+\item 
+\hypertarget{classmastermind_1_1_black_and_white_ae74a18bd019f47f33c8b3c8dd2a01ea8}{}\label{classmastermind_1_1_black_and_white_ae74a18bd019f47f33c8b3c8dd2a01ea8} 
+virtual std\+::wstring \hyperlink{classmastermind_1_1_black_and_white_ae74a18bd019f47f33c8b3c8dd2a01ea8}{to\+String} ()
+\begin{DoxyCompactList}\small\item\em Get string representation. In format \char`\"{}black\+: \%i white\+: \%i\char`\"{}. \end{DoxyCompactList}\item 
+\hypertarget{classmastermind_1_1_black_and_white_acfd7c48583ff474a29f8be8c2fd641d0}{}\label{classmastermind_1_1_black_and_white_acfd7c48583ff474a29f8be8c2fd641d0} 
+virtual std\+::wstring \hyperlink{classmastermind_1_1_black_and_white_acfd7c48583ff474a29f8be8c2fd641d0}{to\+String} () const
+\begin{DoxyCompactList}\small\item\em Get string representation. In format \char`\"{}black\+: \%i white\+: \%i\char`\"{}. \end{DoxyCompactList}\item 
+\hypertarget{classmastermind_1_1_black_and_white_a0236bf88cd56096a905edffdbcad609a}{}\label{classmastermind_1_1_black_and_white_a0236bf88cd56096a905edffdbcad609a} 
+std\+::wstring \hyperlink{classmastermind_1_1_black_and_white_a0236bf88cd56096a905edffdbcad609a}{to\+String\+Without\+Description} ()
+\begin{DoxyCompactList}\small\item\em Get string representation. In format \char`\"{}\%i \%i\char`\"{}. \end{DoxyCompactList}\item 
+bool \hyperlink{classmastermind_1_1_black_and_white_a218f949e75ce9e080c262f87a2263916}{operator==} (const \hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White} \&rhs)
+\begin{DoxyCompactList}\small\item\em Test equality. \end{DoxyCompactList}\item 
+const bool \hyperlink{classmastermind_1_1_black_and_white_a55c1255c7d53d52a053489c6d62a9762}{operator==} (const \hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Test equality. \end{DoxyCompactList}\item 
+bool \hyperlink{classmastermind_1_1_black_and_white_a706941b33714b6764811e14780183ed9}{operator!=} (const \hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White} \&rhs)
+\begin{DoxyCompactList}\small\item\em Test inequality. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \hyperlink{classmastermind_1_1_black_and_white_a70cbebcdb3ad3f8708727ef51aef724f}{get\+White} ()
+\begin{DoxyCompactList}\small\item\em Get amount of white sticks. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \hyperlink{classmastermind_1_1_black_and_white_a470f5b3e118ca8da4d5bfb484505d0c8}{get\+Black} ()
+\begin{DoxyCompactList}\small\item\em Get amount of black sticks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White}. Representation for evaluation sticks. Black sticks show color and position right. White sticks show color right but wrong position. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classmastermind_1_1_black_and_white_a470f5b3e118ca8da4d5bfb484505d0c8}{}\label{classmastermind_1_1_black_and_white_a470f5b3e118ca8da4d5bfb484505d0c8} 
+\index{mastermind\+::\+Black\+And\+White@{mastermind\+::\+Black\+And\+White}!get\+Black@{get\+Black}}
+\index{get\+Black@{get\+Black}!mastermind\+::\+Black\+And\+White@{mastermind\+::\+Black\+And\+White}}
+\subsubsection{\texorpdfstring{get\+Black()}{getBlack()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mastermind\+::\+Black\+And\+White\+::get\+Black (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get amount of black sticks. 
+
+\begin{DoxyReturn}{Returns}
+amount of black sticks. 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1_black_and_white_a70cbebcdb3ad3f8708727ef51aef724f}{}\label{classmastermind_1_1_black_and_white_a70cbebcdb3ad3f8708727ef51aef724f} 
+\index{mastermind\+::\+Black\+And\+White@{mastermind\+::\+Black\+And\+White}!get\+White@{get\+White}}
+\index{get\+White@{get\+White}!mastermind\+::\+Black\+And\+White@{mastermind\+::\+Black\+And\+White}}
+\subsubsection{\texorpdfstring{get\+White()}{getWhite()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mastermind\+::\+Black\+And\+White\+::get\+White (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get amount of white sticks. 
+
+\begin{DoxyReturn}{Returns}
+amount of white sticks. 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1_black_and_white_a706941b33714b6764811e14780183ed9}{}\label{classmastermind_1_1_black_and_white_a706941b33714b6764811e14780183ed9} 
+\index{mastermind\+::\+Black\+And\+White@{mastermind\+::\+Black\+And\+White}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!mastermind\+::\+Black\+And\+White@{mastermind\+::\+Black\+And\+White}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool mastermind\+::\+Black\+And\+White\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Test inequality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the right hand side \hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if {\ttfamily !(a == b)} 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1_black_and_white_a218f949e75ce9e080c262f87a2263916}{}\label{classmastermind_1_1_black_and_white_a218f949e75ce9e080c262f87a2263916} 
+\index{mastermind\+::\+Black\+And\+White@{mastermind\+::\+Black\+And\+White}!operator==@{operator==}}
+\index{operator==@{operator==}!mastermind\+::\+Black\+And\+White@{mastermind\+::\+Black\+And\+White}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool mastermind\+::\+Black\+And\+White\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Test equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the right hand side \hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if amount of white left and right is equal and amount of black left and right is equal. 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1_black_and_white_a55c1255c7d53d52a053489c6d62a9762}{}\label{classmastermind_1_1_black_and_white_a55c1255c7d53d52a053489c6d62a9762} 
+\index{mastermind\+::\+Black\+And\+White@{mastermind\+::\+Black\+And\+White}!operator==@{operator==}}
+\index{operator==@{operator==}!mastermind\+::\+Black\+And\+White@{mastermind\+::\+Black\+And\+White}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const bool mastermind\+::\+Black\+And\+White\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Test equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the right hand side \hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if amount of white left and right is equal and amount of black left and right is equal. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Mastermind\+C\+P\+P\+D\+L\+L/Black\+And\+White.\+h\item 
+Mastermind\+C\+P\+P\+D\+L\+L/Black\+And\+White.\+cpp\end{DoxyCompactItemize}

@@ -5,5 +5,9 @@
 
 namespace mastermind {
 	namespace shell {
+		class MASTERMINDCPPDLL_API Shell : public Mastermind {
+		public:
+			static int main();
+		};
 	}
 }

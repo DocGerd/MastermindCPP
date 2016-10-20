@@ -2,7 +2,9 @@
 
 #include "ColorCode.h"
 #include <random>
-
+#include <string>
+#include <sstream>
+#include <list>
 namespace mastermind {
 	namespace shell {
 		namespace utilities {
@@ -23,19 +25,47 @@ namespace mastermind {
 				return ColorCode(cols);
 			}
 
-			int* parseString(std::wstring s) {
-				// TODO
+			static void split(const std::wstring &s, char delim, std::list<int> &elems) {
+				std::istringstream ss;
+				std::string str(s.begin(), s.end());
+				ss.str(str);
+				std::string item;
+				while (std::getline(ss, item, delim)) {
+					elems.push_back(stoi(item));
+				}
+			}
+
+			/*!
+			 * Split a string at given delimiters.
+			 * @param s the string to be split
+			 * @param delim the delimiter
+			 * @param the
+			*/
+			static std::list<int> split(const std::wstring &s, char delim) {
+				std::list<int> elems;
+				split(s, delim, elems);
+				return elems;
+			}
+
+			/*!
+			 * Parse a string for numbers. Used for input of ColorCodes.
+			 * @param s the string to be parsed
+			 * @return the tokens
+			 */
+			std::list<int> parseString(const std::wstring &s) {
+				std::list<int> tokens = split(s, ' ');
+				return tokens;
 			}
 
 			/// Create alphabet string for the representation of the board.
 			std::wstring createAlphabet() {
-				char c = 'a';
+				wchar_t c = 'a';
 				std::wstring result = L"";
-				result.append(std::to_wstring(c));
+				result.append(1, c);
 				for (std::size_t i = 0; i < Mastermind::SLOT_COUNT - 1; ++i) {
 					++c;
 					result.append(L" ");
-					result.append(std::to_wstring(c));
+					result.append(1, c);
 				}
 				return result;
 			}

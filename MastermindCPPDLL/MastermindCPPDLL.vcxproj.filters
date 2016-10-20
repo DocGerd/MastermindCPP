@@ -128,5 +128,8 @@
     <ClCompile Include="MainGame.cpp">
       <Filter>Source Files\Logic</Filter>
     </ClCompile>
+    <ClCompile Include="Shell.cpp">
+      <Filter>Source Files\Shell</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
