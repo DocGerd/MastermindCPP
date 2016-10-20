@@ -217,6 +217,7 @@
     <ClInclude Include="BlackAndWhite.h" />
     <ClInclude Include="ColorCode.h" />
     <ClInclude Include="ComputerEvaluator.h" />
+    <ClInclude Include="ComputerGuesser.h" />
     <ClInclude Include="IEvaluator.h" />
     <ClInclude Include="IGuesser.h" />
     <ClInclude Include="Mastermind.h" />
@@ -227,6 +228,7 @@
     <ClCompile Include="BlackAndWhite.cpp" />
     <ClCompile Include="ColorCode.cpp" />
     <ClCompile Include="ComputerEvaluator.cpp" />
+    <ClCompile Include="ComputerGuesser.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

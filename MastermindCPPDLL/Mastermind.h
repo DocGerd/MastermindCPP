@@ -20,9 +20,13 @@ namespace mastermind {
 		 * @return number of possible solutions
 		*/
 		static inline unsigned long CODE_COUNT() {
-			unsigned long result = COLOR_COUNT;
-			for (auto i = 1; i < SLOT_COUNT; ++i) {
-				result *= COLOR_COUNT;
+			return POWER(COLOR_COUNT, SLOT_COUNT);
+		}
+
+		static inline unsigned long POWER(int lhs, int rhs) {
+			unsigned long result = lhs;
+			for (auto i = 1; i < rhs; ++i) {
+				result *= lhs;
 			}
 			return result;
 		}
