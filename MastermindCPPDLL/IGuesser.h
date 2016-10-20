@@ -1,16 +1,19 @@
 #pragma once
-#ifdef MASTERMINDCPPDLL_EXPORTS
-#define MASTERMINDCPPDLL_API __declspec(dllexport)
-#else
-#define MASTERMINDCPPDLL_API __declspec(dllimport)
-#endif
+
+#include "API.h"
+
 #include "ColorCode.h"
 #include "BlackAndWhite.h"
 
 namespace mastermind {
+	/// Interface for a Guesser.
 	class IGuesser abstract {
 	public:
-		virtual ColorCode<> nextGuess() abstract;
+		/// Get the next guess.
+		/*!
+		 * @return ColorCode of the guess.
+		*/
+		virtual ColorCode nextGuess() abstract;
 		virtual void processEvaluation(BlackAndWhite &bw) abstract;
 	};
 }

@@ -1,24 +1,31 @@
 #pragma once
 
-#ifdef MASTERMINDCPPDLL_EXPORTS
-#define MASTERMINDCPPDLL_API __declspec(dllexport)
-#else
-#define MASTERMINDCPPDLL_API __declspec(dllimport)
-#endif
+#include "API.h"
 
+#include "Mastermind.h"
 #include "IEvaluator.h"
 
 namespace mastermind {
-	class MASTERMINDCPPDLL_API ComputerEvaluator : public virtual IEvaluator {
+	/// Elevator which automatically evaluates the ColorCode given to a solution.
+	class MASTERMINDCPPDLL_API ComputerEvaluator : public virtual IEvaluator, public Mastermind {
 	private:
+		/// Amount of already performed moves.
 		unsigned int moveCount;
-		const ColorCode<> solution;
+		/// The solution.
+		const ColorCode solution;
 
 	public:
-		ComputerEvaluator(ColorCode<> soutionCode);
+		/// Create a ComputerEvaluator.
+		/*!
+		 * @param solutionCode the solution
+		*/
+		ComputerEvaluator(ColorCode soutionCode);
+		/// Destruct this.
 		~ComputerEvaluator();
 
-		virtual BlackAndWhite evaluate(const ColorCode<> &cc) override;
-		virtual ColorCode<>* getSolution() override;
+		//! @copydoc IEvaluator::evaluate()
+		BlackAndWhite evaluate(const ColorCode &cc) override;
+		//! @copydoc IEvaluator::getSolution()
+		ColorCode* getSolution() override;
 	};
 }

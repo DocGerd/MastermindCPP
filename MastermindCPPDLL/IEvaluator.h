@@ -1,18 +1,26 @@
 #pragma once
-#ifdef MASTERMINDCPPDLL_EXPORTS
-#define MASTERMINDCPPDLL_API __declspec(dllexport)
-#else
-#define MASTERMINDCPPDLL_API __declspec(dllimport)
-#endif
+
+#include "API.h"
+
 #include "ColorCode.h"
 #include "BlackAndWhite.h"
 
+#include "API.h"
+
 namespace mastermind {
-	class IEvaluator abstract {
+	/// Interface for an Evaluator of a ColorCode.
+	class MASTERMINDCPPDLL_API IEvaluator abstract {
 	public:
-		 virtual BlackAndWhite evaluate(const ColorCode<> &cc) abstract;
-		 virtual ColorCode<>* getSolution() abstract;
-
-
+		/// Evaluate the given ColorCode to the respective BlackAndWhite.
+		/*!
+		 * @param cc the ColorCode to be evaluated
+		 * @return the resulting BlackAndWhite
+		*/
+		virtual BlackAndWhite evaluate(const ColorCode &cc) abstract;
+		/// Get the solution.
+		/*!
+		 * @return the solution ColorCode or NULL if not available yet.
+		*/
+		virtual ColorCode* getSolution() abstract;
 	};
 }
