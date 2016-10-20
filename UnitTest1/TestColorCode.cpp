@@ -5,11 +5,11 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace UnitTest1
-{		
+{
 	TEST_CLASS(TestColorCode)
 	{
 	public:
-		
+
 		TEST_METHOD(TestCstr)
 		{
 			std::array<int, 4> cols = { 1, 2, 3, 4 };

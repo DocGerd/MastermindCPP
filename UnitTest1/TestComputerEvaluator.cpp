@@ -26,7 +26,7 @@ namespace UnitTest1
 
 		TEST_METHOD(TestCstr)
 		{
-			std::array<int, 4> sol = {1,2,3,4};
+			std::array<int, 4> sol = { 1,2,3,4 };
 			ColorCode solution(sol);
 			ComputerEvaluator ce(solution);
 		}

@@ -6,7 +6,6 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace mastermind;
 
-
 namespace UnitTest1
 {
 	TEST_CLASS(TestBlackAndWhite)

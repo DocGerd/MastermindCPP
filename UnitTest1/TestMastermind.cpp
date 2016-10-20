@@ -15,7 +15,7 @@ namespace UnitTest1
 		{
 			const std::size_t cc = mastermind::Mastermind::COLOR_COUNT;
 			const std::size_t sc = mastermind::Mastermind::SLOT_COUNT;
-			const unsigned long expected = (unsigned long) pow(cc, sc);
+			const unsigned long expected = (unsigned long)pow(cc, sc);
 
 			Assert::AreEqual(expected, mastermind::Mastermind::CODE_COUNT(), L"", LINE_INFO());
 		}

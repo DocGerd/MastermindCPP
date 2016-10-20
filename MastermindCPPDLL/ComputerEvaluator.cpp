@@ -2,7 +2,6 @@
 #include "ComputerEvaluator.h"
 
 namespace mastermind {
-
 	ComputerEvaluator::ComputerEvaluator(ColorCode solutionCode) :
 		solution(solutionCode), moveCount(0)
 	{
@@ -30,7 +29,7 @@ namespace mastermind {
 				++black;
 			}
 		}
-		
+
 		// check whites
 		for (std::size_t i = 0; i < SLOT_COUNT; ++i) {
 			for (std::size_t j = 0; j < SLOT_COUNT && !checkedSol[i]; ++j) {

@@ -1,11 +1,9 @@
 #include "stdafx.h"
 #include "BlackAndWhite.h"
 
-
 namespace mastermind {
-
 	BlackAndWhite::BlackAndWhite(std::size_t blacks, std::size_t whites) :
-	black(blacks), white(whites)
+		black(blacks), white(whites)
 	{
 	}
 
