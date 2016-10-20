@@ -63,6 +63,21 @@
     <ClInclude Include="Mastermind.h">
       <Filter>Header Files\Logic</Filter>
     </ClInclude>
+    <ClInclude Include="Shell.h">
+      <Filter>Header Files\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="GameHistory.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="HumanEvaluator.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="HumanGuesser.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -84,6 +99,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ComputerGuesser.cpp">
+      <Filter>Source Files\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="GameHistory.cpp">
       <Filter>Source Files\Logic</Filter>
     </ClCompile>
   </ItemGroup>

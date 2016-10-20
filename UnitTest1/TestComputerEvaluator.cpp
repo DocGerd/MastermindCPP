@@ -6,7 +6,7 @@
 #include "../MastermindCPPDLL/ComputerEvaluator.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-using namespace mastermind;
+using namespace mastermind::logic;
 
 namespace Microsoft {
 	namespace VisualStudio {
@@ -64,7 +64,7 @@ namespace UnitTest1
 			Assert::IsNull(ce.getSolution(), L"", LINE_INFO());
 
 			ColorCode cc(std::array<int, 4>{ 2, 5, 2, 1 });
-			for (auto i = 0; i < Mastermind::MAX_MOVES; ++i) {
+			for (auto i = 0; i < mastermind::Mastermind::MAX_MOVES; ++i) {
 				ce.evaluate(cc);
 			}
 			Assert::IsNotNull(ce.getSolution(), L"", LINE_INFO());

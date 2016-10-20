@@ -4,7 +4,7 @@
 #include "../MastermindCPPDLL/BlackAndWhite.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-using namespace mastermind;
+using namespace mastermind::logic;
 
 namespace UnitTest1
 {

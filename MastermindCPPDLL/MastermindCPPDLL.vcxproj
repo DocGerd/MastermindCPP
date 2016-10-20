@@ -218,9 +218,14 @@
     <ClInclude Include="ColorCode.h" />
     <ClInclude Include="ComputerEvaluator.h" />
     <ClInclude Include="ComputerGuesser.h" />
+    <ClInclude Include="GameHistory.h" />
+    <ClInclude Include="HumanEvaluator.h" />
+    <ClInclude Include="HumanGuesser.h" />
     <ClInclude Include="IEvaluator.h" />
     <ClInclude Include="IGuesser.h" />
+    <ClInclude Include="MainGame.h" />
     <ClInclude Include="Mastermind.h" />
+    <ClInclude Include="Shell.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -249,6 +254,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_PG|x64'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="GameHistory.cpp" />
     <ClCompile Include="IEvaluator.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
