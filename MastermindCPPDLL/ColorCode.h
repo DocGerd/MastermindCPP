@@ -36,6 +36,8 @@ namespace mastermind {
 
 			/// String representation of ColorCode.
 			virtual std::wstring toString();
+			/// String representation of ColorCode.
+			virtual std::wstring toString() const;
 		};
 	}
 }

@@ -17,7 +17,7 @@ namespace mastermind {
 			 * @param cc the ColorCode to be evaluated
 			 * @return the resulting BlackAndWhite
 			*/
-			virtual BlackAndWhite evaluate(const ColorCode &cc) abstract;
+			virtual BlackAndWhite* evaluate(const ColorCode &cc) abstract;
 			/// Get the solution.
 			/*!
 			 * @return the solution ColorCode or NULL if not available yet.

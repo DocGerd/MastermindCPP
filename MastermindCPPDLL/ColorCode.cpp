@@ -41,7 +41,14 @@ namespace mastermind {
 			}
 			return result;
 		}
-
+		std::wstring ColorCode::toString() const {
+			std::wstring result(L"");
+			for (std::size_t i = 0; i < SLOT_COUNT; ++i) {
+				result.append(std::to_wstring(this->colors[i]));
+				result.append(L" ");
+			}
+			return result;
+		}
 		const bool ColorCode::operator==(const ColorCode &rhs) const {
 			bool result = true;
 			for (std::size_t i = 0; i < SLOT_COUNT && result; ++i) {

@@ -29,7 +29,7 @@ namespace mastermind {
 				// remove ColorCodes which cannot be possible anymore.
 				ComputerEvaluator evaluator(possibleCodes.front());
 				for (std::list<ColorCode>::iterator iter = possibleCodes.begin(); iter != possibleCodes.end(); ++iter) {
-					BlackAndWhite curr = evaluator.evaluate(*iter);
+					BlackAndWhite curr = *evaluator.evaluate(*iter);
 					if (curr != bw) {
 						possibleCodes.erase(iter);
 					}
