@@ -35,11 +35,7 @@ namespace mastermind {
 			return this->colors[index];
 		}
 
-		int ColorCode::operator[](std::size_t i) {
-			return this->colors[i];
-		}
-
-		const int ColorCode::operator[](std::size_t i) const {
+		int ColorCode::operator[](std::size_t i) const {
 			return this->colors[i];
 		}
 
@@ -59,7 +55,8 @@ namespace mastermind {
 			}
 			return result;
 		}
-		const bool ColorCode::operator==(const ColorCode &rhs) const {
+
+		bool ColorCode::operator==(const ColorCode& rhs) const {
 			bool result = true;
 			for (std::size_t i = 0; i < SLOT_COUNT && result; ++i) {
 				if (this->colors[i] != rhs.colors[i]) {

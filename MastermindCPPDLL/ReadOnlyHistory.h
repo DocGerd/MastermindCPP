@@ -22,7 +22,7 @@ namespace mastermind {
 			 * Get string of this history.
 			 * @return the string
 			 */
-			std::wstring toString();
+			std::wstring toString() const;
 		};
 	}
 }

@@ -20,7 +20,7 @@ namespace mastermind {
 		}
 
 		ColorCode* HumanGuesser::nextGuess() {
-			ColorCode* cc = NULL;
+			ColorCode* cc = nullptr;
 			bool wait = true;
 			while (wait) {
 				std::wcout << L"next guess> ";
@@ -31,7 +31,7 @@ namespace mastermind {
 					wait = true;
 				}
 				else if (input == L"cancel") {
-					cc = NULL;
+					cc = nullptr;
 					std::wcout << L"Game aborted." << std::endl;
 					wait = false;
 				}

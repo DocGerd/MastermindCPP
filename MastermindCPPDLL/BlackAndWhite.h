@@ -26,46 +26,36 @@ namespace mastermind {
 			BlackAndWhite(std::list<int> &sticks);
 
 			/// Get string representation. In format "black: %i white: %i".
-			virtual std::wstring toString();
-
-			/// Get string representation. In format "black: %i white: %i".
 			virtual std::wstring toString() const;
 
 			/// Get string representation. In format "%i %i".
-			std::wstring toStringWithoutDescription();
+			std::wstring toStringWithoutDescription() const;
 
 			/// Test equality.
 			/*!
 			* @param rhs the right hand side BlackAndWhite
 			* @return \c true if amount of white left and right is equal and amount of black left and right is equal.
 			*/
-			bool operator==(const BlackAndWhite& rhs);
-
-			/// Test equality.
-			/*!
-			* @param rhs the right hand side BlackAndWhite
-			* @return \c true if amount of white left and right is equal and amount of black left and right is equal.
-			*/
-			const bool operator==(const BlackAndWhite& rhs) const;
+			bool operator==(const BlackAndWhite& rhs) const;
 
 			/// Test inequality.
 			/*!
 			 * @param rhs the right hand side BlackAndWhite
 			 * @return \c true if <tt>!(a == b)</tt>
 			 */
-			bool operator!=(const BlackAndWhite& rhs);
+			bool operator!=(const BlackAndWhite& rhs) const;
 
 			/// Get amount of white sticks.
 			/*!
 			* @return amount of white sticks.
 			*/
-			std::size_t getWhite();
+			std::size_t getWhite() const;
 
 			/// Get amount of black sticks.
 			/*!
 			 * @return amount of black sticks.
 			*/
-			std::size_t getBlack();
+			std::size_t getBlack() const;
 		};
 	}
 }

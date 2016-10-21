@@ -12,6 +12,10 @@ namespace mastermind {
 		/// Interface for an Evaluator of a ColorCode.
 		class MASTERMINDCPPDLL_API IEvaluator abstract {
 		public:
+			virtual ~IEvaluator()
+			{
+			}
+
 			/// Evaluate the given ColorCode to the respective BlackAndWhite.
 			/*!
 			 * @param cc the ColorCode to be evaluated

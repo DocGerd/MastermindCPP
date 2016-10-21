@@ -4,7 +4,7 @@
 namespace mastermind {
 	namespace logic {
 		MainGame::MainGame(IGuesser *g, IEvaluator *e, GameHistory *h) :
-			guesser(g), evaluator(e), history(h), moveCount(0) {
+			moveCount(0), evaluator(e), guesser(g), history(h) {
 		}
 
 		bool MainGame::next() {
@@ -13,13 +13,13 @@ namespace mastermind {
 			BlackAndWhite* bw;
 
 			cc = guesser->nextGuess();
-			if (cc == NULL) {
+			if (cc == nullptr) {
 				finished = true;
 			}
 			else {
 				history->add(*cc);
 				bw = evaluator->evaluate(*cc);
-				if (bw == NULL) {
+				if (bw == nullptr) {
 					finished = true;
 				}
 				else {

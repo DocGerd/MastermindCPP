@@ -12,21 +12,24 @@ namespace mastermind {
 			delete blackAndWhites;
 		}
 
-		void GameHistory::add(const ColorCode &cc) {
+		void GameHistory::add(const ColorCode &cc) const
+		{
 			if (colorCodes->size() != blackAndWhites->size()) {
 				throw std::logic_error("history corrupt");
 			}
 			colorCodes->push_back(cc);
 		}
 
-		void GameHistory::add(const BlackAndWhite &bw) {
+		void GameHistory::add(const BlackAndWhite &bw) const
+		{
 			if (colorCodes->size() - 1 != blackAndWhites->size()) {
 				throw std::logic_error("history corrupt");
 			}
 			blackAndWhites->push_back(bw);
 		}
 
-		std::wstring GameHistory::toString() {
+		std::wstring GameHistory::toString() const
+		{
 			// TODO: header
 			std::wstring result = L"";
 

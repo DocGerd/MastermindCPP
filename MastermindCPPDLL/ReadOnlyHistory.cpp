@@ -8,7 +8,8 @@ namespace mastermind {
 			history(h) {
 		}
 
-		std::wstring ReadOnlyHistory::toString() {
+		std::wstring ReadOnlyHistory::toString() const
+		{
 			return history->toString();
 		}
 	}

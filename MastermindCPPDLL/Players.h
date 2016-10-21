@@ -24,10 +24,12 @@ namespace mastermind {
 			Players(IGuesser *g, IEvaluator *e) :
 				guesser(g), evaluator(e) { }
 
-			IGuesser* getGuesser() {
+			IGuesser* getGuesser() const
+			{
 				return this->guesser;
 			}
-			IEvaluator* getEvaluator() {
+			IEvaluator* getEvaluator() const
+			{
 				return this->evaluator;
 			}
 		};
@@ -41,9 +43,9 @@ namespace mastermind {
 		* objects
 		* @return the players
 		*/
-		Players* getPlayers(RequestedState state, GameHistory *history) {
-			IEvaluator *e = NULL;
-			IGuesser *g = NULL;
+		inline Players* getPlayers(RequestedState state, GameHistory *history) {
+			IEvaluator *e = nullptr;
+			IGuesser *g = nullptr;
 			switch (state) {
 			case HUMAN_GUESSER:
 				g = new HumanGuesser(new ReadOnlyHistory(history));

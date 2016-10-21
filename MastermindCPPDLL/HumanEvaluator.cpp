@@ -21,7 +21,7 @@ namespace mastermind {
 		}
 
 		BlackAndWhite* HumanEvaluator::evaluate(const ColorCode& cc) {
-			BlackAndWhite* bw = NULL;
+			BlackAndWhite* bw = nullptr;
 			std::wcout << L"machine guess: " << cc.toString() << std::endl;
 
 			bool wait = true;
@@ -34,7 +34,7 @@ namespace mastermind {
 					wait = true;
 				}
 				else if (input == L"cancel") {
-					bw = NULL;
+					bw = nullptr;
 					std::wcout << L"Game aborted." << std::endl;
 					wait = false;
 				}
@@ -60,7 +60,7 @@ namespace mastermind {
 		}
 
 		ColorCode* HumanEvaluator::getSolution() {
-			return NULL;
+			return nullptr;
 		}
 	}
 }

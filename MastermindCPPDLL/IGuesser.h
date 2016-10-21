@@ -8,8 +8,12 @@
 namespace mastermind {
 	namespace logic {
 		/// Interface for a Guesser.
-		class IGuesser abstract {
+		class MASTERMINDCPPDLL_API IGuesser abstract {
 		public:
+			virtual ~IGuesser()
+			{
+			}
+
 			/// Get the next guess.
 			/*!
 			 * @return The next guess of the player. <tt>null</tt> aborts the game.

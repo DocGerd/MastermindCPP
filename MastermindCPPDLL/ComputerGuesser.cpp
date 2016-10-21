@@ -12,7 +12,7 @@ namespace mastermind {
 		}
 
 		ColorCode* ComputerGuesser::nextGuess() {
-			ColorCode *result = NULL;
+			ColorCode *result = nullptr;
 			if (!cheated) {
 				result = &possibleCodes.front();
 				++moveCount;

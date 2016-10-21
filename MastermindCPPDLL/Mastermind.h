@@ -8,6 +8,10 @@ namespace mastermind {
 	/// Class for important global game values.
 	class MASTERMINDCPPDLL_API Mastermind {
 	public:
+		virtual ~Mastermind()
+		{
+		}
+
 		/// Maximum moves allowed until game finished.
 		static constexpr std::size_t MAX_MOVES = 7;
 		/// Amount of slots for colors.

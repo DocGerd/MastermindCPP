@@ -25,19 +25,19 @@ namespace mastermind {
 			 * Add a ColorCode to the history.
 			 * @param cc the ColorCode.
 			*/
-			void add(const ColorCode &cc);
+			void add(const ColorCode &cc) const;
 
 			/*!
 			 * Add a BlackAndWhite to the history.
 			 * @param bw the BlackAndWhite
 			*/
-			void add(const BlackAndWhite &bw);
+			void add(const BlackAndWhite &bw) const;
 
 			/*!
 			 * Get the string representation of the game history.
 			 * @return the string
 			*/
-			std::wstring toString();
+			std::wstring toString() const;
 		};
 	}
 }

@@ -42,7 +42,7 @@ namespace mastermind {
 						cancel = mg->next();
 					}
 					ColorCode *solution = e->getSolution();
-					if (solution != NULL) {
+					if (solution != nullptr) {
 						std::wcout << L"no more moves - solution: " << solution->toString() << std::endl;
 					}
 				}

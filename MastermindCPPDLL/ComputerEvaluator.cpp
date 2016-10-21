@@ -50,7 +50,7 @@ namespace mastermind {
 		}
 
 		ColorCode* ComputerEvaluator::getSolution() {
-			ColorCode* result = NULL;
+			ColorCode* result = nullptr;
 			if (moveCount >= MAX_MOVES) {
 				result = new ColorCode(solution);
 			}
