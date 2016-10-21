@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "BlackAndWhite.h"
 
+#include <cassert>
 namespace mastermind {
 	namespace logic {
 		const BlackAndWhite BlackAndWhite::WIN_STICKS = BlackAndWhite(SLOT_COUNT, 0);
@@ -8,6 +9,18 @@ namespace mastermind {
 		BlackAndWhite::BlackAndWhite(std::size_t blacks, std::size_t whites) :
 			black(blacks), white(whites)
 		{
+		}
+
+		BlackAndWhite::BlackAndWhite(std::list<int> &list) {
+			if (list.size() != 2) {
+				throw std::invalid_argument("only two tuple allowed!");
+			}
+			const size_t size = list.size();
+			std::list<int>::iterator iter = list.begin();
+			black = *iter;
+			++iter;
+			white = *iter;
+			assert(iter == list.end());
 		}
 
 		std::wstring BlackAndWhite::toString() {

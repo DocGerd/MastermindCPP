@@ -4,6 +4,7 @@
 #include "Mastermind.h"
 
 #include <string>
+#include <list>
 
 namespace mastermind {
 	namespace logic {
@@ -13,15 +14,16 @@ namespace mastermind {
 		class MASTERMINDCPPDLL_API BlackAndWhite : public Mastermind {
 		private:
 			/// amount white sticks.
-			const std::size_t white;
+			std::size_t white;
 			/// amount black sticks.
-			const std::size_t black;
+			std::size_t black;
 		public:
 			/// Stick combination for a win. All black, zero white.
 			static const BlackAndWhite WIN_STICKS;
 
 		public:
 			BlackAndWhite(std::size_t blacks, std::size_t whites);
+			BlackAndWhite(std::list<int> &sticks);
 
 			/// Get string representation. In format "black: %i white: %i".
 			virtual std::wstring toString();

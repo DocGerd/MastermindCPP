@@ -6,6 +6,7 @@
 
 #include <string>
 #include <array>
+#include <list>
 
 namespace mastermind {
 	namespace logic {
@@ -20,6 +21,7 @@ namespace mastermind {
 		public:
 			ColorCode(std::array<int, SLOT_COUNT> &col);
 			ColorCode(int col[]);
+			ColorCode(std::list<int> &list);
 			~ColorCode();
 
 			/// Get color at index.

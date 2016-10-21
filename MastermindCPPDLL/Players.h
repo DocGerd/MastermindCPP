@@ -41,13 +41,13 @@ namespace mastermind {
 		* objects
 		* @return the players
 		*/
-		static Players* getPlayers(RequestedState state, GameHistory *history) {
+		Players* getPlayers(RequestedState state, GameHistory *history) {
 			IEvaluator *e = NULL;
 			IGuesser *g = NULL;
 			switch (state) {
 			case HUMAN_GUESSER:
 				g = new HumanGuesser(new ReadOnlyHistory(history));
-				e = new ComputerEvaluator(utilities::createRandomCode());
+				e = new ComputerEvaluator(utilities::Utilities::createRandomCode());
 				break;
 			case COMPUTER_GUESSER:
 				g = new ComputerGuesser();
@@ -56,6 +56,7 @@ namespace mastermind {
 			default:
 				throw std::logic_error("cannot happen");
 			}
+			return new Players(g, e);
 		}
 	}
 }

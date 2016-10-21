@@ -6,7 +6,7 @@
 
 namespace mastermind {
 	namespace shell {
-		static enum RequestedState {
+		enum RequestedState {
 			HUMAN_GUESSER,
 			COMPUTER_GUESSER
 		};

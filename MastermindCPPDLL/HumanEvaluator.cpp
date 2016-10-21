@@ -1,10 +1,21 @@
 #include "stdafx.h"
+
 #include "HumanEvaluator.h"
+#include "Utilities.h"
 
 #include <iostream>
 
 namespace mastermind {
 	namespace logic {
+		const std::wstring HumanEvaluator::HELP_TEXT = std::wstring(L"Available actions:")
+			+ L"\nhelp: Print this help message."
+			+ L"\ncancel: Cancel the current game."
+			+ L"\nprint: Print the history of the game."
+			+ L"\nb w: Evaluate last guess with black & white sticks."
+			+ L"\n\tb and w from 0 to " + std::to_wstring(Mastermind::SLOT_COUNT)
+			+ L" and b + w < " + std::to_wstring(Mastermind::SLOT_COUNT)
+			+ L"\n\twrong numbers will be dealt as cheating!";
+
 		HumanEvaluator::HumanEvaluator(ReadOnlyHistory* h) :
 			history(h) {
 		}
@@ -19,7 +30,7 @@ namespace mastermind {
 				std::wstring input;
 				std::wcin >> input;
 				if (input == L"help") {
-					std::wcout << L"TODO HELP TEXT" << std::endl;
+					std::wcout << HELP_TEXT << std::endl;
 					wait = true;
 				}
 				else if (input == L"cancel") {
@@ -32,7 +43,16 @@ namespace mastermind {
 					wait = true;
 				}
 				else {
-					// TODO
+					// FIXME: parsing bug.
+					std::list<int> sticks = mastermind::shell::utilities::Utilities::parseString(input);
+					if (sticks.size() == 2) {
+						bw = new BlackAndWhite(sticks);
+						wait = false;
+					}
+					else {
+						std::wcout << L"Error! Incorrect input" << std::endl;
+						wait = true;
+					}
 				}
 			}
 

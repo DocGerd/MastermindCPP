@@ -4,7 +4,7 @@
 namespace mastermind {
 	namespace logic {
 		GameHistory::GameHistory() :
-			colorCodes(), blackAndWhites() {
+			colorCodes(new std::list<ColorCode>()), blackAndWhites(new std::list<BlackAndWhite>()) {
 		}
 
 		GameHistory::~GameHistory() {

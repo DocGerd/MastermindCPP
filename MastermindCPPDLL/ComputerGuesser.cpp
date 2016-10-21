@@ -50,7 +50,9 @@ namespace mastermind {
 		void ComputerGuesser::createCodes() {
 			possibleCodes = std::list<ColorCode>();
 			int colors[SLOT_COUNT];
-			// XXX: check if 0 initalized
+			for (size_t i = 0; i < SLOT_COUNT; ++i) {
+				colors[i] = 0;
+			}
 			possibleCodes.push_back(ColorCode(colors));
 			const std::size_t code_count = CODE_COUNT();
 			for (std::size_t i = 1; i < code_count; ++i) {

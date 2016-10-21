@@ -13,7 +13,7 @@ namespace UnitTest1
 		TEST_METHOD(TestCreateAlphabet)
 		{
 			std::wstring expected = L"a b c d";
-			std::wstring actual = mastermind::shell::utilities::createAlphabet();
+			std::wstring actual = mastermind::shell::utilities::Utilities::createAlphabet();
 
 			Assert::AreEqual(actual, expected, L"", LINE_INFO());
 		}
@@ -21,7 +21,7 @@ namespace UnitTest1
 		TEST_METHOD(TestParseString)
 		{
 			std::wstring str = L"12 29 1 0";
-			std::list<int> list = mastermind::shell::utilities::parseString(str);
+			std::list<int> list = mastermind::shell::utilities::Utilities::parseString(str);
 			Assert::AreEqual((size_t)4, list.size(), L"", LINE_INFO());
 			size_t size = list.size();
 			int* tokens = new int[size];

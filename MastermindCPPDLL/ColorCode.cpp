@@ -3,12 +3,22 @@
 #include "ColorCode.h"
 
 #include <stdexcept>
+#include <iterator>
 
 namespace mastermind {
 	namespace logic {
 		ColorCode::ColorCode(std::array<int, SLOT_COUNT> &col) :
 			colors(col)
 		{
+		}
+
+		ColorCode::ColorCode(std::list<int> &list) {
+			const size_t size = list.size();
+			std::list<int>::iterator iter = list.begin();
+			for (size_t i = 0; i < size && iter != list.end(); ++i) {
+				colors[i] = *iter;
+				++iter;
+			}
 		}
 
 		ColorCode::ColorCode(int col[]) {
