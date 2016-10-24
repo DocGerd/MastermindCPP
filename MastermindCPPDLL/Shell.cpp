@@ -26,7 +26,7 @@ namespace mastermind {
 			while (!quit) {
 				std::wcout << L"mastermind> ";
 				std::wstring input;
-				std::wcin >> input;
+				std::getline(std::wcin, input);
 
 				if (input == L"help") {
 					std::wcout << HELP_TEXT << std::endl;

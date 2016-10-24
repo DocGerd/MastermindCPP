@@ -17,10 +17,11 @@ namespace mastermind {
 			}
 			const size_t size = list.size();
 			std::list<int>::iterator iter = list.begin();
+			assert(iter != list.end());
 			black = *iter;
 			++iter;
+			assert(iter != list.end());
 			white = *iter;
-			assert(iter == list.end());
 		}
 
 		std::wstring BlackAndWhite::toString() const {

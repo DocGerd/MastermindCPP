@@ -25,7 +25,7 @@ namespace mastermind {
 			while (wait) {
 				std::wcout << L"next guess> ";
 				std::wstring input;
-				std::wcin >> input;
+				std::getline(std::wcin, input);
 				if (input == L"help") {
 					std::wcout << HELP_TEXT << std::endl;
 					wait = true;

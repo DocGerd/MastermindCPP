@@ -28,7 +28,18 @@ namespace mastermind {
 				ss.str(str);
 				std::string item;
 				while (std::getline(ss, item, delim)) {
-					elems.push_back(stoi(item));
+					int token;
+					bool success = true;
+					try
+					{
+						token = stoi(item);
+					} catch (std::invalid_argument &ex)
+					{
+						success = false;
+					}
+					if (success) {
+						elems.push_back(stoi(item));
+					}
 				}
 			}
 
