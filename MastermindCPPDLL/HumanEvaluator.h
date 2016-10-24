@@ -11,6 +11,9 @@ namespace mastermind {
 		private:
 			ReadOnlyHistory* const history;
 #pragma warning(disable: 4251)
+			/**
+			* \brief The help text for console output.
+			*/
 			static const std::wstring HELP_TEXT;
 #pragma warning(default: 4251)
 

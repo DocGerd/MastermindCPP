@@ -8,7 +8,9 @@
 
 namespace mastermind {
 	namespace logic {
-		/// A computer guesser.
+		/**
+		 * \brief A computer guesser.
+		 */
 		class MASTERMINDCPPDLL_API ComputerGuesser : public virtual IGuesser, public Mastermind {
 		private:
 #pragma warning(disable: 4251)
@@ -22,9 +24,9 @@ namespace mastermind {
 
 		public:
 			ComputerGuesser();
-			//! @copydoc IGuesser::nextGuess()
+			/// \copydoc IGuesser::nextGuess()
 			ColorCode* nextGuess() override;
-			//! @copydoc IGuesser::processEvaluation()
+			/// \copydoc IGuesser::processEvaluation()
 			void processEvaluation(const BlackAndWhite &bw) override;
 
 		private:
