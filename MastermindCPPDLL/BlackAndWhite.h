@@ -47,13 +47,13 @@ namespace mastermind
 
 			/**
 			 * \brief Get string representation.
-			 * \return string in format "black: %i white: %i"
+			 * \return string in format <tt>"black: %i white: %i"</tt>
 			 */
 			virtual std::wstring toString() const;
 
 			/**
 			 * \brief Get string representation.
-			 * \return string in format "%i %i"
+			 * \return string in format <tt>"%i %i"</tt>
 			 */
 			std::wstring toStringWithoutDescription() const;
 
