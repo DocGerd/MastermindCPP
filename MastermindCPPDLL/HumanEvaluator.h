@@ -5,9 +5,12 @@
 #include "Mastermind.h"
 #include "ReadOnlyHistory.h"
 
-namespace mastermind {
-	namespace logic {
-		class MASTERMINDCPPDLL_API HumanEvaluator : public virtual IEvaluator, public Mastermind {
+namespace mastermind
+{
+	namespace logic
+	{
+		class MASTERMINDCPPDLL_API HumanEvaluator : public virtual IEvaluator, public Mastermind
+		{
 		private:
 			ReadOnlyHistory* const history;
 #pragma warning(disable: 4251)
