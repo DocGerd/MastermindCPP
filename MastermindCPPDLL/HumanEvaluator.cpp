@@ -52,7 +52,6 @@ namespace mastermind
 				}
 				else
 				{
-					// FIXME: parsing bug.
 					std::list<int> sticks = mastermind::shell::utilities::Utilities::parseString(input);
 					if (sticks.size() == 2)
 					{
