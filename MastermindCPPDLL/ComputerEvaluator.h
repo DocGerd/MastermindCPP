@@ -36,11 +36,11 @@ namespace mastermind
 			~ComputerEvaluator();
 
 			/**
-			 * \copydoc IEvaluator::evaluate
+			 * \copydoc IEvaluator::evaluate()
 			 */
 			BlackAndWhite* evaluate(const ColorCode& cc) override;
 			/**
-			 * \copydoc IEvaluator::getSolution
+			 * \copydoc IEvaluator::getSolution()
 			 */
 			ColorCode* getSolution() override;
 		};

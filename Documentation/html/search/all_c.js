@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['tostring',['toString',['../classmastermind_1_1logic_1_1_black_and_white.html#a0eda910b89f90c753b861dff1449347c',1,'mastermind::logic::BlackAndWhite::toString()'],['../classmastermind_1_1logic_1_1_black_and_white.html#aaa1108efb71702c9cdf6ac9a9ad4a0c9',1,'mastermind::logic::BlackAndWhite::toString() const'],['../classmastermind_1_1logic_1_1_color_code.html#acba1d8df3a2a5b4907009c7d21cbd723',1,'mastermind::logic::ColorCode::toString()'],['../classmastermind_1_1logic_1_1_color_code.html#a5d3903d505ecbd831d7e3776a0076c51',1,'mastermind::logic::ColorCode::toString() const'],['../classmastermind_1_1logic_1_1_game_history.html#a4b2d573dd63908a204a8bbd73d426d46',1,'mastermind::logic::GameHistory::toString()'],['../classmastermind_1_1logic_1_1_read_only_history.html#afb28dfc9cc7b169a7878bd7567979a36',1,'mastermind::logic::ReadOnlyHistory::toString()']]],
-  ['tostringwithoutdescription',['toStringWithoutDescription',['../classmastermind_1_1logic_1_1_black_and_white.html#a928b0328a8d9c0b5f22a4efe93ecafd8',1,'mastermind::logic::BlackAndWhite']]]
+  ['readonlyhistory',['ReadOnlyHistory',['../classmastermind_1_1logic_1_1_read_only_history.html',1,'mastermind::logic']]],
+  ['readonlyhistory',['ReadOnlyHistory',['../classmastermind_1_1logic_1_1_read_only_history.html#a47c2ea23a91610532e19d1097d98492e',1,'mastermind::logic::ReadOnlyHistory']]],
+  ['readonlyhistory_2ecpp',['ReadOnlyHistory.cpp',['../_read_only_history_8cpp.html',1,'']]],
+  ['readonlyhistory_2eh',['ReadOnlyHistory.h',['../_read_only_history_8h.html',1,'']]],
+  ['requestedstate',['RequestedState',['../namespacemastermind_1_1shell.html#ad060dfaf42b2c0f7827708f0d0046ede',1,'mastermind::shell']]],
+  ['requestedstate_2eh',['RequestedState.h',['../_requested_state_8h.html',1,'']]]
 ];

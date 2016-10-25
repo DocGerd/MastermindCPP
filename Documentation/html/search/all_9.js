@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['players',['Players',['../classmastermind_1_1shell_1_1_players.html',1,'mastermind::shell']]],
-  ['processevaluation',['processEvaluation',['../classmastermind_1_1logic_1_1_computer_guesser.html#a728f55a5700d3574fc6b9207c9e8db7d',1,'mastermind::logic::ComputerGuesser::processEvaluation()'],['../classmastermind_1_1logic_1_1abstract.html#ad44cfe3ef7f44a27de1522a6510ebd07',1,'mastermind::logic::abstract::processEvaluation()']]]
+  ['next',['next',['../classmastermind_1_1logic_1_1_main_game.html#a2b48f18cf8dbd95431d4627b57ea5d01',1,'mastermind::logic::MainGame']]],
+  ['nextguess',['nextGuess',['../classmastermind_1_1logic_1_1_computer_guesser.html#a5553cb2d63534927fbf9031c5d40c828',1,'mastermind::logic::ComputerGuesser::nextGuess()'],['../classmastermind_1_1logic_1_1_human_guesser.html#a5a165250f667fd40099c43cd3caf487c',1,'mastermind::logic::HumanGuesser::nextGuess()'],['../classmastermind_1_1logic_1_1abstract.html#ae4e30322061ea0ebc302274c79c5ca47',1,'mastermind::logic::abstract::nextGuess()']]]
 ];

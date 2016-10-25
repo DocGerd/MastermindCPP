@@ -15,30 +15,44 @@ Inheritance diagram for mastermind\+:\+:Mastermind\+:\begin{figure}[H]
 \includegraphics[height=10.000000cm]{classmastermind_1_1_mastermind}
 \end{center}
 \end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classmastermind_1_1_mastermind_ac7d104e1c2febabb8d819de2ba447487}{$\sim$\+Mastermind} ()
+\begin{DoxyCompactList}\small\item\em Destruct this. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static unsigned long \hyperlink{classmastermind_1_1_mastermind_af22130e134506ecb5e756b931e759a03}{C\+O\+D\+E\+\_\+\+C\+O\+U\+NT} ()
 \begin{DoxyCompactList}\small\item\em Amount of possible solutions. \end{DoxyCompactList}\item 
-\hypertarget{classmastermind_1_1_mastermind_a24e1947e0ead0b7610b14dbeea618fbd}{}\label{classmastermind_1_1_mastermind_a24e1947e0ead0b7610b14dbeea618fbd} 
-static unsigned long {\bfseries P\+O\+W\+ER} (int lhs, int rhs)
-\end{DoxyCompactItemize}
+static unsigned long \hyperlink{classmastermind_1_1_mastermind_a24e1947e0ead0b7610b14dbeea618fbd}{P\+O\+W\+ER} (int lhs, int rhs)
+\begin{DoxyCompactList}\small\item\em Calculate power of two int values. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classmastermind_1_1_mastermind_a8bbb0daf2ebb27f688f1a30cd4488be1}{}\label{classmastermind_1_1_mastermind_a8bbb0daf2ebb27f688f1a30cd4488be1} 
 static constexpr std\+::size\+\_\+t \hyperlink{classmastermind_1_1_mastermind_a8bbb0daf2ebb27f688f1a30cd4488be1}{M\+A\+X\+\_\+\+M\+O\+V\+ES} = 7
 \begin{DoxyCompactList}\small\item\em Maximum moves allowed until game finished. \end{DoxyCompactList}\item 
-\hypertarget{classmastermind_1_1_mastermind_ad4cfc8127641ff8dfe89d65ae232331c}{}\label{classmastermind_1_1_mastermind_ad4cfc8127641ff8dfe89d65ae232331c} 
 static constexpr std\+::size\+\_\+t \hyperlink{classmastermind_1_1_mastermind_ad4cfc8127641ff8dfe89d65ae232331c}{S\+L\+O\+T\+\_\+\+C\+O\+U\+NT} = 4
 \begin{DoxyCompactList}\small\item\em Amount of slots for colors. \end{DoxyCompactList}\item 
-\hypertarget{classmastermind_1_1_mastermind_a934035f0e608928076c4ce68b50d30f0}{}\label{classmastermind_1_1_mastermind_a934035f0e608928076c4ce68b50d30f0} 
 static constexpr std\+::size\+\_\+t \hyperlink{classmastermind_1_1_mastermind_a934035f0e608928076c4ce68b50d30f0}{C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT} = 6
 \begin{DoxyCompactList}\small\item\em Amount of available colors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Class for important global game values. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmastermind_1_1_mastermind_ac7d104e1c2febabb8d819de2ba447487}{}\label{classmastermind_1_1_mastermind_ac7d104e1c2febabb8d819de2ba447487} 
+\index{mastermind\+::\+Mastermind@{mastermind\+::\+Mastermind}!````~Mastermind@{$\sim$\+Mastermind}}
+\index{````~Mastermind@{$\sim$\+Mastermind}!mastermind\+::\+Mastermind@{mastermind\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{$\sim$\+Mastermind()}{~Mastermind()}}
+{\footnotesize\ttfamily virtual mastermind\+::\+Mastermind\+::$\sim$\+Mastermind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destruct this. 
+
+
 
 \subsection{Member Function Documentation}
 \hypertarget{classmastermind_1_1_mastermind_af22130e134506ecb5e756b931e759a03}{}\label{classmastermind_1_1_mastermind_af22130e134506ecb5e756b931e759a03} 
@@ -52,10 +66,56 @@ Class for important global game values.
 Amount of possible solutions. 
 
 \begin{DoxyReturn}{Returns}
-number of possible solutions 
+number of possible solutions. 
 \end{DoxyReturn}
+\hypertarget{classmastermind_1_1_mastermind_a24e1947e0ead0b7610b14dbeea618fbd}{}\label{classmastermind_1_1_mastermind_a24e1947e0ead0b7610b14dbeea618fbd} 
+\index{mastermind\+::\+Mastermind@{mastermind\+::\+Mastermind}!P\+O\+W\+ER@{P\+O\+W\+ER}}
+\index{P\+O\+W\+ER@{P\+O\+W\+ER}!mastermind\+::\+Mastermind@{mastermind\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{P\+O\+W\+E\+R()}{POWER()}}
+{\footnotesize\ttfamily static unsigned long mastermind\+::\+Mastermind\+::\+P\+O\+W\+ER (\begin{DoxyParamCaption}\item[{int}]{lhs,  }\item[{int}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculate power of two int values. 
+
+\begin{DoxyReturn}{Returns}
+lhs$^\wedge$rhs 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmastermind_1_1_mastermind_a934035f0e608928076c4ce68b50d30f0}{}\label{classmastermind_1_1_mastermind_a934035f0e608928076c4ce68b50d30f0} 
+\index{mastermind\+::\+Mastermind@{mastermind\+::\+Mastermind}!C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT@{C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT}}
+\index{C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT@{C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT}!mastermind\+::\+Mastermind@{mastermind\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT}{COLOR\_COUNT}}
+{\footnotesize\ttfamily constexpr std\+::size\+\_\+t mastermind\+::\+Mastermind\+::\+C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT = 6\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Amount of available colors. 
+
+\hypertarget{classmastermind_1_1_mastermind_a8bbb0daf2ebb27f688f1a30cd4488be1}{}\label{classmastermind_1_1_mastermind_a8bbb0daf2ebb27f688f1a30cd4488be1} 
+\index{mastermind\+::\+Mastermind@{mastermind\+::\+Mastermind}!M\+A\+X\+\_\+\+M\+O\+V\+ES@{M\+A\+X\+\_\+\+M\+O\+V\+ES}}
+\index{M\+A\+X\+\_\+\+M\+O\+V\+ES@{M\+A\+X\+\_\+\+M\+O\+V\+ES}!mastermind\+::\+Mastermind@{mastermind\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+M\+O\+V\+ES}{MAX\_MOVES}}
+{\footnotesize\ttfamily constexpr std\+::size\+\_\+t mastermind\+::\+Mastermind\+::\+M\+A\+X\+\_\+\+M\+O\+V\+ES = 7\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Maximum moves allowed until game finished. 
+
+\hypertarget{classmastermind_1_1_mastermind_ad4cfc8127641ff8dfe89d65ae232331c}{}\label{classmastermind_1_1_mastermind_ad4cfc8127641ff8dfe89d65ae232331c} 
+\index{mastermind\+::\+Mastermind@{mastermind\+::\+Mastermind}!S\+L\+O\+T\+\_\+\+C\+O\+U\+NT@{S\+L\+O\+T\+\_\+\+C\+O\+U\+NT}}
+\index{S\+L\+O\+T\+\_\+\+C\+O\+U\+NT@{S\+L\+O\+T\+\_\+\+C\+O\+U\+NT}!mastermind\+::\+Mastermind@{mastermind\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{S\+L\+O\+T\+\_\+\+C\+O\+U\+NT}{SLOT\_COUNT}}
+{\footnotesize\ttfamily constexpr std\+::size\+\_\+t mastermind\+::\+Mastermind\+::\+S\+L\+O\+T\+\_\+\+C\+O\+U\+NT = 4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Amount of slots for colors. 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Mastermind\+C\+P\+P\+D\+L\+L/Mastermind.\+h\end{DoxyCompactItemize}
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_mastermind_8h}{Mastermind.\+h}\end{DoxyCompactItemize}

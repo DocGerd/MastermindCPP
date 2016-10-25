@@ -1,5 +1,14 @@
 \hypertarget{classmastermind_1_1logic_1_1_human_evaluator}{}\section{mastermind\+:\+:logic\+:\+:Human\+Evaluator Class Reference}
 \label{classmastermind_1_1logic_1_1_human_evaluator}\index{mastermind\+::logic\+::\+Human\+Evaluator@{mastermind\+::logic\+::\+Human\+Evaluator}}
+
+
+A human Evaluator for console.  
+
+
+
+
+{\ttfamily \#include $<$Human\+Evaluator.\+h$>$}
+
 Inheritance diagram for mastermind\+:\+:logic\+:\+:Human\+Evaluator\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,19 +18,60 @@ Inheritance diagram for mastermind\+:\+:logic\+:\+:Human\+Evaluator\+:\begin{fig
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classmastermind_1_1logic_1_1_human_evaluator_ab1e96e3389a2932631a302e3cbaef8ff}{}\label{classmastermind_1_1logic_1_1_human_evaluator_ab1e96e3389a2932631a302e3cbaef8ff} 
-{\bfseries Human\+Evaluator} (\hyperlink{classmastermind_1_1logic_1_1_read_only_history}{Read\+Only\+History} $\ast$h)
+\hyperlink{classmastermind_1_1logic_1_1_human_evaluator_ab1e96e3389a2932631a302e3cbaef8ff}{Human\+Evaluator} (\hyperlink{classmastermind_1_1logic_1_1_read_only_history}{Read\+Only\+History} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classmastermind_1_1logic_1_1_human_evaluator}{Human\+Evaluator}. \end{DoxyCompactList}\item 
+\hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_human_evaluator_ac427121219b8e69ed30b0e123ce622a4}{evaluate} (const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} \&cc) override
 \item 
-\hypertarget{classmastermind_1_1logic_1_1_human_evaluator_ac427121219b8e69ed30b0e123ce622a4}{}\label{classmastermind_1_1logic_1_1_human_evaluator_ac427121219b8e69ed30b0e123ce622a4} 
-\hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} $\ast$ {\bfseries evaluate} (const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} \&cc) override
-\item 
-\hypertarget{classmastermind_1_1logic_1_1_human_evaluator_ab369895151e4702e8b57d74c8f6869db}{}\label{classmastermind_1_1logic_1_1_human_evaluator_ab369895151e4702e8b57d74c8f6869db} 
-\hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ {\bfseries get\+Solution} () override
+\hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_human_evaluator_ab369895151e4702e8b57d74c8f6869db}{get\+Solution} () override
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+A human Evaluator for console. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_human_evaluator_ab1e96e3389a2932631a302e3cbaef8ff}{}\label{classmastermind_1_1logic_1_1_human_evaluator_ab1e96e3389a2932631a302e3cbaef8ff} 
+\index{mastermind\+::logic\+::\+Human\+Evaluator@{mastermind\+::logic\+::\+Human\+Evaluator}!Human\+Evaluator@{Human\+Evaluator}}
+\index{Human\+Evaluator@{Human\+Evaluator}!mastermind\+::logic\+::\+Human\+Evaluator@{mastermind\+::logic\+::\+Human\+Evaluator}}
+\subsubsection{\texorpdfstring{Human\+Evaluator()}{HumanEvaluator()}}
+{\footnotesize\ttfamily mastermind\+::logic\+::\+Human\+Evaluator\+::\+Human\+Evaluator (\begin{DoxyParamCaption}\item[{\hyperlink{classmastermind_1_1logic_1_1_read_only_history}{Read\+Only\+History} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Create a \hyperlink{classmastermind_1_1logic_1_1_human_evaluator}{Human\+Evaluator}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the history to read from \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_human_evaluator_ac427121219b8e69ed30b0e123ce622a4}{}\label{classmastermind_1_1logic_1_1_human_evaluator_ac427121219b8e69ed30b0e123ce622a4} 
+\index{mastermind\+::logic\+::\+Human\+Evaluator@{mastermind\+::logic\+::\+Human\+Evaluator}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!mastermind\+::logic\+::\+Human\+Evaluator@{mastermind\+::logic\+::\+Human\+Evaluator}}
+\subsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} $\ast$ mastermind\+::logic\+::\+Human\+Evaluator\+::evaluate (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} \&}]{cc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+
+
+\hypertarget{classmastermind_1_1logic_1_1_human_evaluator_ab369895151e4702e8b57d74c8f6869db}{}\label{classmastermind_1_1logic_1_1_human_evaluator_ab369895151e4702e8b57d74c8f6869db} 
+\index{mastermind\+::logic\+::\+Human\+Evaluator@{mastermind\+::logic\+::\+Human\+Evaluator}!get\+Solution@{get\+Solution}}
+\index{get\+Solution@{get\+Solution}!mastermind\+::logic\+::\+Human\+Evaluator@{mastermind\+::logic\+::\+Human\+Evaluator}}
+\subsubsection{\texorpdfstring{get\+Solution()}{getSolution()}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ mastermind\+::logic\+::\+Human\+Evaluator\+::get\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Mastermind\+C\+P\+P\+D\+L\+L/Human\+Evaluator.\+h\item 
-Mastermind\+C\+P\+P\+D\+L\+L/Human\+Evaluator.\+cpp\end{DoxyCompactItemize}
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_human_evaluator_8h}{Human\+Evaluator.\+h}\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_human_evaluator_8cpp}{Human\+Evaluator.\+cpp}\end{DoxyCompactItemize}

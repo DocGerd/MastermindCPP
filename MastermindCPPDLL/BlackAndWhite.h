@@ -34,7 +34,7 @@ namespace mastermind
 			static const BlackAndWhite WIN_STICKS;
 
 			/**
-			 * \brief Create BlackAndwhite.
+			 * \brief Create BlackAndWhite.
 			 * \param blacks amount of black sticks
 			 * \param whites amount of white sticks
 			 */

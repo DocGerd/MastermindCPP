@@ -39,11 +39,11 @@ namespace mastermind
 			 */
 			ComputerGuesser();
 			/**
-			 * \copydoc IGuesser::nextGuess
+			 * \copydoc IGuesser::nextGuess()
 			 */
 			ColorCode* nextGuess() override;
 			/**
-			 * \copydoc IGuesser::processEvaluation
+			 * \copydoc IGuesser::processEvaluation()
 			 */
 			void processEvaluation(const BlackAndWhite& bw) override;
 			/**

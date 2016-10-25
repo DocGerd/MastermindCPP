@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['processevaluation',['processEvaluation',['../classmastermind_1_1logic_1_1_computer_guesser.html#a728f55a5700d3574fc6b9207c9e8db7d',1,'mastermind::logic::ComputerGuesser::processEvaluation()'],['../classmastermind_1_1logic_1_1abstract.html#ad44cfe3ef7f44a27de1522a6510ebd07',1,'mastermind::logic::abstract::processEvaluation()']]]
+  ['main',['main',['../classmastermind_1_1shell_1_1_shell.html#aa47488e9975693b33445e871951ec9cd',1,'mastermind::shell::Shell::main()'],['../_mastermind_c_p_p_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;MastermindCPP.cpp']]],
+  ['maingame',['MainGame',['../classmastermind_1_1logic_1_1_main_game.html#af1a4d71009b1d4322edec911ea39b55c',1,'mastermind::logic::MainGame']]]
 ];

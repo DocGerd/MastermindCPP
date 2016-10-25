@@ -21,5 +21,6 @@ var hierarchy =
       [ "mastermind::shell::Shell", "classmastermind_1_1shell_1_1_shell.html", null ]
     ] ],
     [ "mastermind::shell::Players", "classmastermind_1_1shell_1_1_players.html", null ],
-    [ "mastermind::logic::ReadOnlyHistory", "classmastermind_1_1logic_1_1_read_only_history.html", null ]
+    [ "mastermind::logic::ReadOnlyHistory", "classmastermind_1_1logic_1_1_read_only_history.html", null ],
+    [ "mastermind::shell::utilities::Utilities", "classmastermind_1_1shell_1_1utilities_1_1_utilities.html", null ]
 ];

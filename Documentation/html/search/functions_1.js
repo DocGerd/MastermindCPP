@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['code_5fcount',['CODE_COUNT',['../classmastermind_1_1_mastermind.html#af22130e134506ecb5e756b931e759a03',1,'mastermind::Mastermind']]],
-  ['computerevaluator',['ComputerEvaluator',['../classmastermind_1_1logic_1_1_computer_evaluator.html#ac0f1bd2144214ce313df69491b74e328',1,'mastermind::logic::ComputerEvaluator']]]
+  ['blackandwhite',['BlackAndWhite',['../classmastermind_1_1logic_1_1_black_and_white.html#a4dbd770b9f1ba3bef45ebba9fc01dcf4',1,'mastermind::logic::BlackAndWhite::BlackAndWhite(std::size_t blacks, std::size_t whites)'],['../classmastermind_1_1logic_1_1_black_and_white.html#af6fc312cb65dcb1cc53f6e75cf45861d',1,'mastermind::logic::BlackAndWhite::BlackAndWhite(std::list&lt; int &gt; &amp;sticks)']]]
 ];

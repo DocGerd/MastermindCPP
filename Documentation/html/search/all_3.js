@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['evaluate',['evaluate',['../classmastermind_1_1logic_1_1_computer_evaluator.html#a579f808c46ab11077c4a3ce51838714b',1,'mastermind::logic::ComputerEvaluator::evaluate()'],['../classmastermind_1_1logic_1_1abstract.html#a42fd7e506150c1f6a486f9619a7cc337',1,'mastermind::logic::abstract::evaluate()']]]
+  ['dllmain',['DllMain',['../dllmain_8cpp.html#a26e64fb39b69bcd9d1274d279f1561b9',1,'dllmain.cpp']]],
+  ['dllmain_2ecpp',['dllmain.cpp',['../dllmain_8cpp.html',1,'']]]
 ];
