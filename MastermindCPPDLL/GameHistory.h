@@ -6,37 +6,52 @@
 
 #include <list>
 
-namespace mastermind {
-	namespace logic {
-		class MASTERMINDCPPDLL_API GameHistory : public Mastermind {
+namespace mastermind
+{
+	namespace logic
+	{
+		/**
+		 * \brief Game History.
+		 * Saves performed moves, i.e. ColorCodes and BlackAndWhites, so the board can be printed.
+		 */
+		class MASTERMINDCPPDLL_API GameHistory : public Mastermind
+		{
 		private:
-			/// History of the ColorCodes.
+			/**
+			 * \brief History of ColorCodes.
+			 */
 			std::list<ColorCode>* const colorCodes;
-			/// History of the BlackAndWhites.
+			/**
+			 * \brief History of BlackAndWhites.
+			 */
 			std::list<BlackAndWhite>* const blackAndWhites;
 
 		public:
-			/// Create a GameHistory.
+			/**
+			 * \brief Create empty history.
+			 */
 			GameHistory();
-			/// Destruct a GameHistory.
+			/**
+			 * \brief Destruct this.
+			 */
 			~GameHistory();
 
-			/*!
-			 * Add a ColorCode to the history.
-			 * @param cc the ColorCode.
-			*/
-			void add(const ColorCode &cc) const;
+			/**
+			 * \brief Add a ColorCode to the history.
+			 * \param cc the ColorCode
+			 */
+			void add(const ColorCode& cc) const;
 
-			/*!
-			 * Add a BlackAndWhite to the history.
-			 * @param bw the BlackAndWhite
-			*/
-			void add(const BlackAndWhite &bw) const;
+			/**
+			 * \brief Add a BlackAndWhite to the history.
+			 * \param bw the BlackAndWhite
+			 */
+			void add(const BlackAndWhite& bw) const;
 
-			/*!
-			 * Get the string representation of the game history.
-			 * @return the string
-			*/
+			/**
+			 * \brief Get the string representation of the game history.
+			 * \return the string
+			 */
 			std::wstring toString() const;
 		};
 	}

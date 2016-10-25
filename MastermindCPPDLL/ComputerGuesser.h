@@ -6,28 +6,46 @@
 
 #include <list>
 
-namespace mastermind {
-	namespace logic {
+namespace mastermind
+{
+	namespace logic
+	{
 		/**
 		 * \brief A computer guesser.
+		 * Uses a heuristic to find a solution. All possibilities are calculated and after each evaluation
+		 * impossible solutions will be removed.
 		 */
-		class MASTERMINDCPPDLL_API ComputerGuesser : public virtual IGuesser, public Mastermind {
+		class MASTERMINDCPPDLL_API ComputerGuesser : public virtual IGuesser, public Mastermind
+		{
 		private:
 #pragma warning(disable: 4251)
-			/// List of possible codes available to guess.
+			/**
+			 * \brief List of possible codes available to guess.
+			 */
 			std::list<ColorCode*>* possibleCodes;
 #pragma warning(default: 4251)
-			/// Amount of moves performed.
+			/**
+			 * \brief Amount of moves performed.
+			 */
 			std::size_t moveCount;
-			/// Flag indicating player has cheated.
+			/**
+			 * \brief Flag indicating player has cheated.
+			 */
 			bool cheated;
 
 		public:
+			/**
+			 * \brief Create a ComputerGuesser.
+			 */
 			ComputerGuesser();
-			/// \copydoc IGuesser::nextGuess()
+			/**
+			 * \copydoc IGuesser::nextGuess
+			 */
 			ColorCode* nextGuess() override;
-			/// \copydoc IGuesser::processEvaluation()
-			void processEvaluation(const BlackAndWhite &bw) override;
+			/**
+			 * \copydoc IGuesser::processEvaluation
+			 */
+			void processEvaluation(const BlackAndWhite& bw) override;
 			/**
 			 * \brief Check if cheating was detected.
 			 * \return <tt>true</tt> if evaluator cheated
@@ -35,6 +53,9 @@ namespace mastermind {
 			bool cheatingDetected() const;
 
 		private:
+			/**
+			 * \brief Create all possible ColorCodes.
+			 */
 			void createCodes();
 		};
 	}

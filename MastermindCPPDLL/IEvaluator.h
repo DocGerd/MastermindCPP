@@ -5,12 +5,15 @@
 #include "ColorCode.h"
 #include "BlackAndWhite.h"
 
-namespace mastermind {
-	namespace logic {
+namespace mastermind
+{
+	namespace logic
+	{
 		/**
 		 * \brief Interface for an Evaluator of a ColorCode.
 		 */
-		class MASTERMINDCPPDLL_API IEvaluator abstract {
+		class MASTERMINDCPPDLL_API IEvaluator abstract
+		{
 		public:
 			virtual ~IEvaluator()
 			{
@@ -21,7 +24,7 @@ namespace mastermind {
 			 * \param cc the ColorCode to be evaluated
 			 * \return the resulting BlackAndWhite
 			*/
-			virtual BlackAndWhite* evaluate(const ColorCode &cc) abstract;
+			virtual BlackAndWhite* evaluate(const ColorCode& cc) abstract;
 
 			/**
 			 * \brief Get the solution.

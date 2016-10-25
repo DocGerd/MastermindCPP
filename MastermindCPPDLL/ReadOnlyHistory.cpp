@@ -2,10 +2,13 @@
 
 #include "ReadOnlyHistory.h"
 
-namespace mastermind {
-	namespace logic {
+namespace mastermind
+{
+	namespace logic
+	{
 		ReadOnlyHistory::ReadOnlyHistory(GameHistory* h) :
-			history(h) {
+			history(h)
+		{
 		}
 
 		std::wstring ReadOnlyHistory::toString() const

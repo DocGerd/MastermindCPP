@@ -1,19 +1,36 @@
 #pragma once
 
-#include "API.h"
-
 #include <stdexcept>
 
-namespace mastermind {
-	namespace shell {
-		enum RequestedState {
+namespace mastermind
+{
+	namespace shell
+	{
+		/**
+		 * \brief Available states for games.
+		 */
+		enum RequestedState
+		{
+			/**
+			 * \brief Human guesser, computer evaluator.
+			 */
 			HUMAN_GUESSER,
+			/**
+			 * \brief Computer guesser, human evaluator.
+			 */
 			COMPUTER_GUESSER
 		};
 
-		static RequestedState switchState(const RequestedState &state) {
+		/**
+		 * \brief Switch the state.
+		 * \param state current state
+		 * \return the other state
+		 */
+		static RequestedState switchState(const RequestedState& state)
+		{
 			RequestedState result;
-			switch (state) {
+			switch (state)
+			{
 			case HUMAN_GUESSER:
 				result = RequestedState::COMPUTER_GUESSER;
 				break;

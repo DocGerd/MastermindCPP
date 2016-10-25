@@ -2,8 +2,11 @@
 #include "BlackAndWhite.h"
 
 #include <cassert>
-namespace mastermind {
-	namespace logic {
+
+namespace mastermind
+{
+	namespace logic
+	{
 		const BlackAndWhite BlackAndWhite::WIN_STICKS = BlackAndWhite(SLOT_COUNT, 0);
 
 		BlackAndWhite::BlackAndWhite(std::size_t blacks, std::size_t whites) :
@@ -11,8 +14,10 @@ namespace mastermind {
 		{
 		}
 
-		BlackAndWhite::BlackAndWhite(std::list<int> &list) {
-			if (list.size() != 2) {
+		BlackAndWhite::BlackAndWhite(std::list<int>& list)
+		{
+			if (list.size() != 2)
+			{
 				throw std::invalid_argument("only two tuple allowed!");
 			}
 			const size_t size = list.size();
@@ -24,7 +29,8 @@ namespace mastermind {
 			white = *iter;
 		}
 
-		std::wstring BlackAndWhite::toString() const {
+		std::wstring BlackAndWhite::toString() const
+		{
 			std::wstring str(L"");
 			str.append(L"black: ");
 			str.append(std::to_wstring(this->black));
@@ -42,9 +48,11 @@ namespace mastermind {
 			return str;
 		}
 
-		bool BlackAndWhite::operator==(const BlackAndWhite& rhs) const {
+		bool BlackAndWhite::operator==(const BlackAndWhite& rhs) const
+		{
 			bool result = false;
-			if (this->white == rhs.white && this->black == rhs.black) {
+			if (this->white == rhs.white && this->black == rhs.black)
+			{
 				result = true;
 			}
 			return result;

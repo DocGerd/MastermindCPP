@@ -6,15 +6,19 @@
 #include <string>
 #include <list>
 
-namespace mastermind {
-	namespace shell {
-		namespace utilities {
+namespace mastermind
+{
+	namespace shell
+	{
+		namespace utilities
+		{
 			using namespace mastermind::logic;
 
 			/**
 			 * \brief Utilities class.
 			 */
-			class MASTERMINDCPPDLL_API Utilities {
+			class MASTERMINDCPPDLL_API Utilities
+			{
 			public:
 				/**
 				* \brief Create a random ColorCode.
@@ -27,7 +31,7 @@ namespace mastermind {
 				* \param s the string to be parsed
 				* \return the tokens
 				*/
-				static std::list<int> parseString(const std::wstring &s);
+				static std::list<int> parseString(const std::wstring& s);
 
 				/**
 				 * \brief Create alphabet string for the representation of the board.
@@ -36,14 +40,14 @@ namespace mastermind {
 				static std::wstring createAlphabet();
 
 			protected:
-				static void split(const std::wstring &s, char delim, std::list<int> &elems);
+				static void split(const std::wstring& s, char delim, std::list<int>& elems);
 				/**
 				* \brief Split a string at given delimiters.
 				* \param s the string to be split
 				* \param delim the delimiter
 				* \return the tokens
 				*/
-				static std::list<int> split(const std::wstring &s, char delim);
+				static std::list<int> split(const std::wstring& s, char delim);
 			};
 		}
 	}

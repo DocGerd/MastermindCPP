@@ -11,23 +11,51 @@
 #include "ComputerEvaluator.h"
 #include "Utilities.h"
 
-namespace mastermind {
-	namespace shell {
+namespace mastermind
+{
+	namespace shell
+	{
 		using namespace mastermind::logic;
 
-		class MASTERMINDCPPDLL_API Players {
+		/**
+		 * \brief Players of the game.
+		 */
+		class MASTERMINDCPPDLL_API Players
+		{
 		private:
+			/**
+			 * \brief Player who is guessing.
+			 */
 			IGuesser* const guesser;
+			/**
+			 * \brief Player who is evaluating.
+			 */
 			IEvaluator* const evaluator;
 
 		public:
-			Players(IGuesser *g, IEvaluator *e) :
-				guesser(g), evaluator(e) { }
+			/**
+			 * \brief Create Players.
+			 * \param g the guesser
+			 * \param e the evaluator
+			 */
+			Players(IGuesser* g, IEvaluator* e) :
+				guesser(g), evaluator(e)
+			{
+			}
 
+			/**
+			 * \brief Get the guesser.
+			 * \return the guesser
+			 */
 			IGuesser* getGuesser() const
 			{
 				return this->guesser;
 			}
+
+			/**
+			 * \brief Get the evaluator.
+			 * \return the evaluator
+			 */
 			IEvaluator* getEvaluator() const
 			{
 				return this->evaluator;
@@ -35,18 +63,19 @@ namespace mastermind {
 		};
 
 		/**
-		* Get the player objects.
+		* \brief Get the player objects.
 		* Just here are the objects created so the objects are created just
 		* in time. (in case someone "switches" pretty often...)
-		* @param state the requested state, must not be <tt>null</tt>
-		* @param history the history which should be referenced in the Human*
-		* objects
-		* @return the players
+		* \param state the requested state, must not be <tt>null</tt>
+		* \param history the history which should be referenced in the Human* objects
+		* \return the players
 		*/
-		inline Players* getPlayers(RequestedState state, GameHistory *history) {
-			IEvaluator *e = nullptr;
-			IGuesser *g = nullptr;
-			switch (state) {
+		inline Players* getPlayers(RequestedState state, GameHistory* history)
+		{
+			IEvaluator* e = nullptr;
+			IGuesser* g = nullptr;
+			switch (state)
+			{
 			case HUMAN_GUESSER:
 				g = new HumanGuesser(new ReadOnlyHistory(history));
 				e = new ComputerEvaluator(utilities::Utilities::createRandomCode());

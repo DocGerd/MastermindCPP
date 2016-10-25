@@ -1,30 +1,37 @@
 #include "stdafx.h"
 #include "ComputerEvaluator.h"
 
-namespace mastermind {
-	namespace logic {
+namespace mastermind
+{
+	namespace logic
+	{
 		ComputerEvaluator::ComputerEvaluator(ColorCode solutionCode) :
 			solution(solutionCode), moveCount(0)
 		{
 		}
 
-		ComputerEvaluator::~ComputerEvaluator() {
+		ComputerEvaluator::~ComputerEvaluator()
+		{
 		}
 
-		BlackAndWhite* ComputerEvaluator::evaluate(const ColorCode &cc) {
+		BlackAndWhite* ComputerEvaluator::evaluate(const ColorCode& cc)
+		{
 			std::size_t black = 0;
 			std::size_t white = 0;
 
 			bool* checkedSol = new bool[SLOT_COUNT];
 			bool* checkedCc = new bool[SLOT_COUNT];
-			for (std::size_t i = 0; i < SLOT_COUNT; ++i) {
+			for (std::size_t i = 0; i < SLOT_COUNT; ++i)
+			{
 				checkedSol[i] = false;
 				checkedCc[i] = false;
 			}
 
 			// check blacks
-			for (std::size_t i = 0; i < SLOT_COUNT; ++i) {
-				if (cc[i] == solution[i]) {
+			for (std::size_t i = 0; i < SLOT_COUNT; ++i)
+			{
+				if (cc[i] == solution[i])
+				{
 					checkedSol[i] = true;
 					checkedCc[i] = true;
 					++black;
@@ -32,10 +39,14 @@ namespace mastermind {
 			}
 
 			// check whites
-			for (std::size_t i = 0; i < SLOT_COUNT; ++i) {
-				for (std::size_t j = 0; j < SLOT_COUNT && !checkedSol[i]; ++j) {
-					if (!checkedCc[j]) {
-						if (solution[i] == cc[j]) {
+			for (std::size_t i = 0; i < SLOT_COUNT; ++i)
+			{
+				for (std::size_t j = 0; j < SLOT_COUNT && !checkedSol[i]; ++j)
+				{
+					if (!checkedCc[j])
+					{
+						if (solution[i] == cc[j])
+						{
 							checkedCc[j] = true;
 							checkedSol[i] = true;
 							++white;
@@ -49,9 +60,11 @@ namespace mastermind {
 			return new BlackAndWhite(black, white);
 		}
 
-		ColorCode* ComputerEvaluator::getSolution() {
+		ColorCode* ComputerEvaluator::getSolution()
+		{
 			ColorCode* result = nullptr;
-			if (moveCount >= MAX_MOVES) {
+			if (moveCount >= MAX_MOVES)
+			{
 				result = new ColorCode(solution);
 			}
 			return result;

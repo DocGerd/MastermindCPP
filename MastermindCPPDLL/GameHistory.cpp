@@ -1,28 +1,34 @@
 #include "stdafx.h"
 #include "GameHistory.h"
 
-namespace mastermind {
-	namespace logic {
+namespace mastermind
+{
+	namespace logic
+	{
 		GameHistory::GameHistory() :
-			colorCodes(new std::list<ColorCode>()), blackAndWhites(new std::list<BlackAndWhite>()) {
+			colorCodes(new std::list<ColorCode>()), blackAndWhites(new std::list<BlackAndWhite>())
+		{
 		}
 
-		GameHistory::~GameHistory() {
+		GameHistory::~GameHistory()
+		{
 			delete colorCodes;
 			delete blackAndWhites;
 		}
 
-		void GameHistory::add(const ColorCode &cc) const
+		void GameHistory::add(const ColorCode& cc) const
 		{
-			if (colorCodes->size() != blackAndWhites->size()) {
+			if (colorCodes->size() != blackAndWhites->size())
+			{
 				throw std::logic_error("history corrupt");
 			}
 			colorCodes->push_back(cc);
 		}
 
-		void GameHistory::add(const BlackAndWhite &bw) const
+		void GameHistory::add(const BlackAndWhite& bw) const
 		{
-			if (colorCodes->size() - 1 != blackAndWhites->size()) {
+			if (colorCodes->size() - 1 != blackAndWhites->size())
+			{
 				throw std::logic_error("history corrupt");
 			}
 			blackAndWhites->push_back(bw);
@@ -35,10 +41,12 @@ namespace mastermind {
 
 			std::list<ColorCode>::iterator iterCC = colorCodes->begin();
 			std::list<BlackAndWhite>::iterator iterBW = blackAndWhites->begin();
-			while (iterCC != colorCodes->end()) {
+			while (iterCC != colorCodes->end())
+			{
 				result.append(L"\n");
 				result.append((*iterCC).toString());
-				if (iterBW != blackAndWhites->end()) {
+				if (iterBW != blackAndWhites->end())
+				{
 					result.append(L" ");
 					result.append((*iterBW).toStringWithoutDescription());
 				}

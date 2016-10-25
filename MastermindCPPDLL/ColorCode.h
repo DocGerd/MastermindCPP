@@ -8,34 +8,74 @@
 #include <array>
 #include <list>
 
-namespace mastermind {
-	namespace logic {
-		/// Represents one line of the game board.
-		class MASTERMINDCPPDLL_API ColorCode : public Mastermind {
+namespace mastermind
+{
+	namespace logic
+	{
+		/**
+		 * \brief Represents one line of the game board.
+		 */
+		class MASTERMINDCPPDLL_API ColorCode : public Mastermind
+		{
 		private:
 #pragma warning(disable: 4251)
-			/// Colors in the line.
+			/**
+			 * \brief Colors in the line.
+			 */
 			std::array<int, SLOT_COUNT> colors;
 #pragma warning(default: 4251)
 
 		public:
-			ColorCode(std::array<int, SLOT_COUNT> &col);
+			/**
+			 * \brief Create a ColorCode.
+			 * \param col columns as std::array
+			 */
+			ColorCode(std::array<int, SLOT_COUNT>& col);
+			/**
+			* \brief Create a ColorCode.
+			* \param col columns as int[]
+			*/
 			ColorCode(int col[]);
-			ColorCode(std::list<int> &list);
+			/**
+			* \brief Create a ColorCode.
+			* \param list columns as std::list
+			*/
+			ColorCode(std::list<int>& list);
+			/**
+			 * \brief Destruct this.
+			 */
 			~ColorCode();
 
-			/// Get color at index.
+			/**
+			 * \brief Get color at index.
+			 * \param index the index
+			 * \return color at index
+			 */
 			int get(std::size_t index);
 
-			/// Get color at index.
+			/**
+			 * \brief Get color at index.
+			 * \param i the index
+			 * \return color at index
+			 */
 			int operator[](std::size_t i) const;
 
-			/// Test equality to other ColorCode. true if colors and their positions are the same.
+			/**
+			 * \brief Test equality to other ColorCode.
+			 * \para rhs the other ColorCode
+			 * \return \c true if colors and their positions are the same.
+			 */
 			bool operator==(const ColorCode& rhs) const;
 
-			/// String representation of ColorCode.
+			/**
+			 * \brief String representation of ColorCode.
+			 * \return the string
+			 */
 			virtual std::wstring toString();
-			/// String representation of ColorCode.
+			/**
+			 * \brief String representation of ColorCode.
+			 * \return the string
+			 */
 			virtual std::wstring toString() const;
 		};
 	}

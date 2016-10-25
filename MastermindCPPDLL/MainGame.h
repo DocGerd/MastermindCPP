@@ -15,7 +15,8 @@ namespace mastermind
 		 * Game logic is in here. No in and output. Works only with the interfaces of
 		 * IEvaluator and IGuesser.
 		 */
-		class MASTERMINDCPPDLL_API MainGame : public Mastermind {
+		class MASTERMINDCPPDLL_API MainGame : public Mastermind
+		{
 		private:
 			/**
 			 * \brief Amount of already performed moves.
@@ -41,7 +42,7 @@ namespace mastermind
 			* \param e the evaluator, must not be <tt>null</tt>
 			* \param h the history to write to, must not be <tt>null</tt>
 			*/
-			MainGame(IGuesser *g, IEvaluator *e, GameHistory *h);
+			MainGame(IGuesser* g, IEvaluator* e, GameHistory* h);
 			/**
 			* \brief The game itself. Performs the next turn, i.e.one turn each of
 			* Guesser and Evaluator.
