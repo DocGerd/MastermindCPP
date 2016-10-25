@@ -13,14 +13,20 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Interfaces">
+    <Filter Include="Header Files\Logic">
+      <UniqueIdentifier>{0886a24d-2698-455f-9738-7086cf47f061}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Logic\Interfaces">
       <UniqueIdentifier>{e3433cfc-73cf-4d66-bf7c-31b410195d00}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Game">
+    <Filter Include="Header Files\Shell">
+      <UniqueIdentifier>{52e230b8-4cd4-40d6-941b-0dc862be5e10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Logic">
       <UniqueIdentifier>{e790b453-bfd7-4018-8dd7-c835cfb663d3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Game">
-      <UniqueIdentifier>{358a881b-4de4-49ef-8c34-5bae7ca5dbb3}</UniqueIdentifier>
+    <Filter Include="Source Files\Shell">
+      <UniqueIdentifier>{ea1b92f7-428c-492b-a42e-3056693a0653}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -37,22 +43,52 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IEvaluator.h">
-      <Filter>Header Files\Interfaces</Filter>
+      <Filter>Header Files\Logic\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="IGuesser.h">
-      <Filter>Header Files\Interfaces</Filter>
+      <Filter>Header Files\Logic\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="BlackAndWhite.h">
-      <Filter>Header Files\Game</Filter>
+      <Filter>Header Files\Logic</Filter>
     </ClInclude>
     <ClInclude Include="ColorCode.h">
-      <Filter>Header Files\Game</Filter>
+      <Filter>Header Files\Logic</Filter>
     </ClInclude>
     <ClInclude Include="ComputerEvaluator.h">
-      <Filter>Header Files\Game</Filter>
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputerGuesser.h">
+      <Filter>Header Files\Logic</Filter>
     </ClInclude>
     <ClInclude Include="Mastermind.h">
-      <Filter>Header Files\Game</Filter>
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Shell.h">
+      <Filter>Header Files\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="GameHistory.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="HumanEvaluator.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="HumanGuesser.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadOnlyHistory.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Players.h">
+      <Filter>Header Files\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestedState.h">
+      <Filter>Header Files\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>Header Files\Shell</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -63,16 +99,40 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BlackAndWhite.cpp">
-      <Filter>Source Files\Game</Filter>
+      <Filter>Source Files\Logic</Filter>
     </ClCompile>
     <ClCompile Include="ColorCode.cpp">
-      <Filter>Source Files\Game</Filter>
+      <Filter>Source Files\Logic</Filter>
     </ClCompile>
     <ClCompile Include="ComputerEvaluator.cpp">
-      <Filter>Source Files\Game</Filter>
+      <Filter>Source Files\Logic</Filter>
     </ClCompile>
     <ClCompile Include="IEvaluator.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ComputerGuesser.cpp">
+      <Filter>Source Files\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="GameHistory.cpp">
+      <Filter>Source Files\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadOnlyHistory.cpp">
+      <Filter>Source Files\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="HumanEvaluator.cpp">
+      <Filter>Source Files\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="HumanGuesser.cpp">
+      <Filter>Source Files\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>Source Files\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="Shell.cpp">
+      <Filter>Source Files\Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>Source Files\Shell</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

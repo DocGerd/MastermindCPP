@@ -1,0 +1,68 @@
+\hypertarget{classmastermind_1_1logic_1_1_main_game}{}\section{mastermind\+:\+:logic\+:\+:Main\+Game Class Reference}
+\label{classmastermind_1_1logic_1_1_main_game}\index{mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}}
+
+
+The Game. Game logic is in here. No in and output. Works only with the interfaces of I\+Evaluator and I\+Guesser.  
+
+
+
+
+{\ttfamily \#include $<$Main\+Game.\+h$>$}
+
+Inheritance diagram for mastermind\+:\+:logic\+:\+:Main\+Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmastermind_1_1logic_1_1_main_game}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmastermind_1_1logic_1_1_main_game_af1a4d71009b1d4322edec911ea39b55c}{Main\+Game} (I\+Guesser $\ast$g, I\+Evaluator $\ast$e, \hyperlink{classmastermind_1_1logic_1_1_game_history}{Game\+History} $\ast$h)
+\item 
+bool \hyperlink{classmastermind_1_1logic_1_1_main_game_a2b48f18cf8dbd95431d4627b57ea5d01}{next} ()
+\begin{DoxyCompactList}\small\item\em The game itself. Performs the next turn, i.\+e.\+one turn each of Guesser and Evaluator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The Game. Game logic is in here. No in and output. Works only with the interfaces of I\+Evaluator and I\+Guesser. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_main_game_af1a4d71009b1d4322edec911ea39b55c}{}\label{classmastermind_1_1logic_1_1_main_game_af1a4d71009b1d4322edec911ea39b55c} 
+\index{mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}!Main\+Game@{Main\+Game}}
+\index{Main\+Game@{Main\+Game}!mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}}
+\subsubsection{\texorpdfstring{Main\+Game()}{MainGame()}}
+{\footnotesize\ttfamily mastermind\+::logic\+::\+Main\+Game\+::\+Main\+Game (\begin{DoxyParamCaption}\item[{I\+Guesser $\ast$}]{g,  }\item[{I\+Evaluator $\ast$}]{e,  }\item[{\hyperlink{classmastermind_1_1logic_1_1_game_history}{Game\+History} $\ast$}]{h }\end{DoxyParamCaption})}
+
+Creates a \hyperlink{classmastermind_1_1logic_1_1_main_game}{Main\+Game} object. 
+\begin{DoxyParams}{Parameters}
+{\em g} & the guesser, must not be {\ttfamily null} \\
+\hline
+{\em e} & the evaluator, must not be {\ttfamily null} \\
+\hline
+{\em h} & the history to write to, must not be {\ttfamily null} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_main_game_a2b48f18cf8dbd95431d4627b57ea5d01}{}\label{classmastermind_1_1logic_1_1_main_game_a2b48f18cf8dbd95431d4627b57ea5d01} 
+\index{mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}!next@{next}}
+\index{next@{next}!mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily bool mastermind\+::logic\+::\+Main\+Game\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The game itself. Performs the next turn, i.\+e.\+one turn each of Guesser and Evaluator. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if game finished, i.\+e.\+won or cancel 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_main_game_8h}{Main\+Game.\+h}\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_main_game_8cpp}{Main\+Game.\+cpp}\end{DoxyCompactItemize}

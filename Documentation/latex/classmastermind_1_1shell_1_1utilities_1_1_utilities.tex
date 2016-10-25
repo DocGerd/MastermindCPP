@@ -1,0 +1,109 @@
+\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities}{}\section{mastermind\+:\+:shell\+:\+:utilities\+:\+:Utilities Class Reference}
+\label{classmastermind_1_1shell_1_1utilities_1_1_utilities}\index{mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}}
+
+
+\hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities}{Utilities} class.  
+
+
+
+
+{\ttfamily \#include $<$Utilities.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_ae384c27ca0a2b6866d9769b60ebb011f}{create\+Random\+Code} ()
+\begin{DoxyCompactList}\small\item\em Create a random Color\+Code. \end{DoxyCompactList}\item 
+static std\+::list$<$ int $>$ \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_a42b5ee02b8c69c290ab27e9f76a8dbb9}{parse\+String} (const std\+::wstring \&s)
+\begin{DoxyCompactList}\small\item\em Parse a string for numbers. Used for input of Color\+Codes. \end{DoxyCompactList}\item 
+static std\+::wstring \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_a86393a0717a6c0522878b951bffa3cbc}{create\+Alphabet} ()
+\begin{DoxyCompactList}\small\item\em Create alphabet string for the representation of the board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_a546b49b8a9c3a5e53400d48d6b6f5126}{split} (const std\+::wstring \&s, char delim, std\+::list$<$ int $>$ \&elems)
+\item 
+static std\+::list$<$ int $>$ \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_a6fe21ac1d92d80b2380d27a4ebd657cb}{split} (const std\+::wstring \&s, char delim)
+\begin{DoxyCompactList}\small\item\em Split a string at given delimiters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities}{Utilities} class. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_a86393a0717a6c0522878b951bffa3cbc}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_a86393a0717a6c0522878b951bffa3cbc} 
+\index{mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}!create\+Alphabet@{create\+Alphabet}}
+\index{create\+Alphabet@{create\+Alphabet}!mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}}
+\subsubsection{\texorpdfstring{create\+Alphabet()}{createAlphabet()}}
+{\footnotesize\ttfamily std\+::wstring mastermind\+::shell\+::utilities\+::\+Utilities\+::create\+Alphabet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create alphabet string for the representation of the board. 
+
+\begin{DoxyReturn}{Returns}
+string in the form L\char`\"{}a b c d e\char`\"{} etc. 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_ae384c27ca0a2b6866d9769b60ebb011f}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_ae384c27ca0a2b6866d9769b60ebb011f} 
+\index{mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}!create\+Random\+Code@{create\+Random\+Code}}
+\index{create\+Random\+Code@{create\+Random\+Code}!mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}}
+\subsubsection{\texorpdfstring{create\+Random\+Code()}{createRandomCode()}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} mastermind\+::shell\+::utilities\+::\+Utilities\+::create\+Random\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a random Color\+Code. 
+
+\begin{DoxyReturn}{Returns}
+the Color\+Code 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_a42b5ee02b8c69c290ab27e9f76a8dbb9}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_a42b5ee02b8c69c290ab27e9f76a8dbb9} 
+\index{mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}!parse\+String@{parse\+String}}
+\index{parse\+String@{parse\+String}!mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}}
+\subsubsection{\texorpdfstring{parse\+String()}{parseString()}}
+{\footnotesize\ttfamily std\+::list$<$ int $>$ mastermind\+::shell\+::utilities\+::\+Utilities\+::parse\+String (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parse a string for numbers. Used for input of Color\+Codes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the string to be parsed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the tokens 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_a546b49b8a9c3a5e53400d48d6b6f5126}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_a546b49b8a9c3a5e53400d48d6b6f5126} 
+\index{mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}!split@{split}}
+\index{split@{split}!mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}}
+\subsubsection{\texorpdfstring{split()}{split()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mastermind\+::shell\+::utilities\+::\+Utilities\+::split (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s,  }\item[{char}]{delim,  }\item[{std\+::list$<$ int $>$ \&}]{elems }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_a6fe21ac1d92d80b2380d27a4ebd657cb}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_a6fe21ac1d92d80b2380d27a4ebd657cb} 
+\index{mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}!split@{split}}
+\index{split@{split}!mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}}
+\subsubsection{\texorpdfstring{split()}{split()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::list$<$ int $>$ mastermind\+::shell\+::utilities\+::\+Utilities\+::split (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s,  }\item[{char}]{delim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Split a string at given delimiters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the string to be split \\
+\hline
+{\em delim} & the delimiter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the tokens 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_utilities_8h}{Utilities.\+h}\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_utilities_8cpp}{Utilities.\+cpp}\end{DoxyCompactItemize}

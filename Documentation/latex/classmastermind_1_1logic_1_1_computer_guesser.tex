@@ -1,0 +1,87 @@
+\hypertarget{classmastermind_1_1logic_1_1_computer_guesser}{}\section{mastermind\+:\+:logic\+:\+:Computer\+Guesser Class Reference}
+\label{classmastermind_1_1logic_1_1_computer_guesser}\index{mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}}
+
+
+A computer guesser. Uses a heuristic to find a solution. All possibilities are calculated and after each evaluation impossible solutions will be removed.  
+
+
+
+
+{\ttfamily \#include $<$Computer\+Guesser.\+h$>$}
+
+Inheritance diagram for mastermind\+:\+:logic\+:\+:Computer\+Guesser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmastermind_1_1logic_1_1_computer_guesser}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmastermind_1_1logic_1_1_computer_guesser_a56134030aac585a8cdbe1e42d544b653}{Computer\+Guesser} ()
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classmastermind_1_1logic_1_1_computer_guesser}{Computer\+Guesser}. \end{DoxyCompactList}\item 
+\hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_computer_guesser_a5553cb2d63534927fbf9031c5d40c828}{next\+Guess} () override
+\item 
+void \hyperlink{classmastermind_1_1logic_1_1_computer_guesser_a728f55a5700d3574fc6b9207c9e8db7d}{process\+Evaluation} (const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&bw) override
+\item 
+bool \hyperlink{classmastermind_1_1logic_1_1_computer_guesser_ae93df46297030bcbd924f5ddc4af4889}{cheating\+Detected} () const
+\begin{DoxyCompactList}\small\item\em Check if cheating was detected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A computer guesser. Uses a heuristic to find a solution. All possibilities are calculated and after each evaluation impossible solutions will be removed. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_computer_guesser_a56134030aac585a8cdbe1e42d544b653}{}\label{classmastermind_1_1logic_1_1_computer_guesser_a56134030aac585a8cdbe1e42d544b653} 
+\index{mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}!Computer\+Guesser@{Computer\+Guesser}}
+\index{Computer\+Guesser@{Computer\+Guesser}!mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}}
+\subsubsection{\texorpdfstring{Computer\+Guesser()}{ComputerGuesser()}}
+{\footnotesize\ttfamily mastermind\+::logic\+::\+Computer\+Guesser\+::\+Computer\+Guesser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a \hyperlink{classmastermind_1_1logic_1_1_computer_guesser}{Computer\+Guesser}. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_computer_guesser_ae93df46297030bcbd924f5ddc4af4889}{}\label{classmastermind_1_1logic_1_1_computer_guesser_ae93df46297030bcbd924f5ddc4af4889} 
+\index{mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}!cheating\+Detected@{cheating\+Detected}}
+\index{cheating\+Detected@{cheating\+Detected}!mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}}
+\subsubsection{\texorpdfstring{cheating\+Detected()}{cheatingDetected()}}
+{\footnotesize\ttfamily bool mastermind\+::logic\+::\+Computer\+Guesser\+::cheating\+Detected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if cheating was detected. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if evaluator cheated 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1logic_1_1_computer_guesser_a5553cb2d63534927fbf9031c5d40c828}{}\label{classmastermind_1_1logic_1_1_computer_guesser_a5553cb2d63534927fbf9031c5d40c828} 
+\index{mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}!next\+Guess@{next\+Guess}}
+\index{next\+Guess@{next\+Guess}!mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}}
+\subsubsection{\texorpdfstring{next\+Guess()}{nextGuess()}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ mastermind\+::logic\+::\+Computer\+Guesser\+::next\+Guess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+
+
+\hypertarget{classmastermind_1_1logic_1_1_computer_guesser_a728f55a5700d3574fc6b9207c9e8db7d}{}\label{classmastermind_1_1logic_1_1_computer_guesser_a728f55a5700d3574fc6b9207c9e8db7d} 
+\index{mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}!process\+Evaluation@{process\+Evaluation}}
+\index{process\+Evaluation@{process\+Evaluation}!mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}}
+\subsubsection{\texorpdfstring{process\+Evaluation()}{processEvaluation()}}
+{\footnotesize\ttfamily void mastermind\+::logic\+::\+Computer\+Guesser\+::process\+Evaluation (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&}]{bw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_computer_guesser_8h}{Computer\+Guesser.\+h}\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_computer_guesser_8cpp}{Computer\+Guesser.\+cpp}\end{DoxyCompactItemize}

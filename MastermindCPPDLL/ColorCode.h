@@ -6,33 +6,77 @@
 
 #include <string>
 #include <array>
+#include <list>
 
-namespace mastermind {
-	/// Represents one line of the game board.
-	class MASTERMINDCPPDLL_API ColorCode : public Mastermind {
-	private:
+namespace mastermind
+{
+	namespace logic
+	{
+		/**
+		 * \brief Represents one line of the game board.
+		 */
+		class MASTERMINDCPPDLL_API ColorCode : public Mastermind
+		{
+		private:
 #pragma warning(disable: 4251)
-		/// Colors in the line.
-		std::array<int, SLOT_COUNT> colors;
+			/**
+			 * \brief Colors in the line.
+			 */
+			std::array<int, SLOT_COUNT> colors;
 #pragma warning(default: 4251)
 
-	public:
-		ColorCode(std::array<int, SLOT_COUNT> &col);
-		~ColorCode();
+		public:
+			/**
+			 * \brief Create a ColorCode.
+			 * \param col columns as std::array
+			 */
+			ColorCode(std::array<int, SLOT_COUNT>& col);
+			/**
+			* \brief Create a ColorCode.
+			* \param col columns as int[]
+			*/
+			ColorCode(int col[]);
+			/**
+			* \brief Create a ColorCode.
+			* \param list columns as std::list
+			*/
+			ColorCode(std::list<int>& list);
+			/**
+			 * \brief Destruct this.
+			 */
+			~ColorCode();
 
-		/// Get color at index.
-		int get(std::size_t index);
+			/**
+			 * \brief Get color at index.
+			 * \param index the index
+			 * \return color at index
+			 */
+			int get(std::size_t index);
 
-		/// Get color at index.
-		int operator[](std::size_t i);
+			/**
+			 * \brief Get color at index.
+			 * \param i the index
+			 * \return color at index
+			 */
+			int operator[](std::size_t i) const;
 
-		/// Get color at index.
-		const int operator[](std::size_t i) const;
+			/**
+			 * \brief Test equality to other ColorCode.
+			 * \para rhs the other ColorCode
+			 * \return \c true if colors and their positions are the same.
+			 */
+			bool operator==(const ColorCode& rhs) const;
 
-		/// Test equality to other ColorCode. true if colors and their positions are the same.
-		const bool operator==(const ColorCode &rhs) const;
-
-		/// String representation of ColorCode.
-		virtual std::wstring toString();
-	};
+			/**
+			 * \brief String representation of ColorCode.
+			 * \return the string
+			 */
+			virtual std::wstring toString();
+			/**
+			 * \brief String representation of ColorCode.
+			 * \return the string
+			 */
+			virtual std::wstring toString() const;
+		};
+	}
 }

@@ -1,0 +1,109 @@
+\hypertarget{classmastermind_1_1logic_1_1_game_history}{}\section{mastermind\+:\+:logic\+:\+:Game\+History Class Reference}
+\label{classmastermind_1_1logic_1_1_game_history}\index{mastermind\+::logic\+::\+Game\+History@{mastermind\+::logic\+::\+Game\+History}}
+
+
+Game History. Saves performed moves, i.\+e. Color\+Codes and Black\+And\+Whites, so the board can be printed.  
+
+
+
+
+{\ttfamily \#include $<$Game\+History.\+h$>$}
+
+Inheritance diagram for mastermind\+:\+:logic\+:\+:Game\+History\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmastermind_1_1logic_1_1_game_history}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmastermind_1_1logic_1_1_game_history_a4731c4c94790c94c5f5e72a5ef344602}{Game\+History} ()
+\begin{DoxyCompactList}\small\item\em Create empty history. \end{DoxyCompactList}\item 
+\hyperlink{classmastermind_1_1logic_1_1_game_history_a7f94763f41492e795201f000874ba9e1}{$\sim$\+Game\+History} ()
+\begin{DoxyCompactList}\small\item\em Destruct this. \end{DoxyCompactList}\item 
+void \hyperlink{classmastermind_1_1logic_1_1_game_history_abcf47c78a6e9be8faa4238f2bc45e5e7}{add} (const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} \&cc) const
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} to the history. \end{DoxyCompactList}\item 
+void \hyperlink{classmastermind_1_1logic_1_1_game_history_a0d81e90269bca2588b857c1c8bf966b8}{add} (const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&bw) const
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} to the history. \end{DoxyCompactList}\item 
+std\+::wstring \hyperlink{classmastermind_1_1logic_1_1_game_history_ae3795a9ab89a850bc3b1f36d3ba76756}{to\+String} () const
+\begin{DoxyCompactList}\small\item\em Get the string representation of the game history. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Game History. Saves performed moves, i.\+e. Color\+Codes and Black\+And\+Whites, so the board can be printed. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_game_history_a4731c4c94790c94c5f5e72a5ef344602}{}\label{classmastermind_1_1logic_1_1_game_history_a4731c4c94790c94c5f5e72a5ef344602} 
+\index{mastermind\+::logic\+::\+Game\+History@{mastermind\+::logic\+::\+Game\+History}!Game\+History@{Game\+History}}
+\index{Game\+History@{Game\+History}!mastermind\+::logic\+::\+Game\+History@{mastermind\+::logic\+::\+Game\+History}}
+\subsubsection{\texorpdfstring{Game\+History()}{GameHistory()}}
+{\footnotesize\ttfamily mastermind\+::logic\+::\+Game\+History\+::\+Game\+History (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create empty history. 
+
+\hypertarget{classmastermind_1_1logic_1_1_game_history_a7f94763f41492e795201f000874ba9e1}{}\label{classmastermind_1_1logic_1_1_game_history_a7f94763f41492e795201f000874ba9e1} 
+\index{mastermind\+::logic\+::\+Game\+History@{mastermind\+::logic\+::\+Game\+History}!````~Game\+History@{$\sim$\+Game\+History}}
+\index{````~Game\+History@{$\sim$\+Game\+History}!mastermind\+::logic\+::\+Game\+History@{mastermind\+::logic\+::\+Game\+History}}
+\subsubsection{\texorpdfstring{$\sim$\+Game\+History()}{~GameHistory()}}
+{\footnotesize\ttfamily mastermind\+::logic\+::\+Game\+History\+::$\sim$\+Game\+History (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruct this. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_game_history_abcf47c78a6e9be8faa4238f2bc45e5e7}{}\label{classmastermind_1_1logic_1_1_game_history_abcf47c78a6e9be8faa4238f2bc45e5e7} 
+\index{mastermind\+::logic\+::\+Game\+History@{mastermind\+::logic\+::\+Game\+History}!add@{add}}
+\index{add@{add}!mastermind\+::logic\+::\+Game\+History@{mastermind\+::logic\+::\+Game\+History}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mastermind\+::logic\+::\+Game\+History\+::add (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} \&}]{cc }\end{DoxyParamCaption}) const}
+
+
+
+Add a \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} to the history. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cc} & the \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmastermind_1_1logic_1_1_game_history_a0d81e90269bca2588b857c1c8bf966b8}{}\label{classmastermind_1_1logic_1_1_game_history_a0d81e90269bca2588b857c1c8bf966b8} 
+\index{mastermind\+::logic\+::\+Game\+History@{mastermind\+::logic\+::\+Game\+History}!add@{add}}
+\index{add@{add}!mastermind\+::logic\+::\+Game\+History@{mastermind\+::logic\+::\+Game\+History}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mastermind\+::logic\+::\+Game\+History\+::add (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&}]{bw }\end{DoxyParamCaption}) const}
+
+
+
+Add a \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} to the history. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bw} & the \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmastermind_1_1logic_1_1_game_history_ae3795a9ab89a850bc3b1f36d3ba76756}{}\label{classmastermind_1_1logic_1_1_game_history_ae3795a9ab89a850bc3b1f36d3ba76756} 
+\index{mastermind\+::logic\+::\+Game\+History@{mastermind\+::logic\+::\+Game\+History}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!mastermind\+::logic\+::\+Game\+History@{mastermind\+::logic\+::\+Game\+History}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily std\+::wstring mastermind\+::logic\+::\+Game\+History\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the string representation of the game history. 
+
+\begin{DoxyReturn}{Returns}
+the string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_game_history_8h}{Game\+History.\+h}\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_game_history_8cpp}{Game\+History.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,114 @@
+\hypertarget{classmastermind_1_1logic_1_1abstract}{}\section{mastermind\+:\+:logic\+:\+:abstract Class Reference}
+\label{classmastermind_1_1logic_1_1abstract}\index{mastermind\+::logic\+::abstract@{mastermind\+::logic\+::abstract}}
+
+
+Interface for an Evaluator of a \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code}.  
+
+
+
+
+{\ttfamily \#include $<$I\+Evaluator.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classmastermind_1_1logic_1_1abstract_a901e84f7a39b9b80224a94ec90b14c25}{$\sim$\+I\+Evaluator} ()
+\item 
+virtual \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} $\ast$ \hyperlink{classmastermind_1_1logic_1_1abstract_a42fd7e506150c1f6a486f9619a7cc337}{evaluate} (const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} \&cc) override
+\begin{DoxyCompactList}\small\item\em Evaluate the given \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} to the respective \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White}. \end{DoxyCompactList}\item 
+virtual \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ \hyperlink{classmastermind_1_1logic_1_1abstract_a3d7e6bdbf8f3926fd42907d86291a373}{get\+Solution} () override
+\begin{DoxyCompactList}\small\item\em Get the solution. \end{DoxyCompactList}\item 
+virtual \hyperlink{classmastermind_1_1logic_1_1abstract_a54d92c8c0accd2d4fbc7ea47f898c18f}{$\sim$\+I\+Guesser} ()
+\item 
+virtual \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ \hyperlink{classmastermind_1_1logic_1_1abstract_ae4e30322061ea0ebc302274c79c5ca47}{next\+Guess} () override
+\begin{DoxyCompactList}\small\item\em Get the next guess. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmastermind_1_1logic_1_1abstract_ad44cfe3ef7f44a27de1522a6510ebd07}{process\+Evaluation} (const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&bw) override
+\begin{DoxyCompactList}\small\item\em Process evaluation. This method processes the other player\textquotesingle{}s feedback on the last guess provided by {\ttfamily next\+Guess}. Must only be executed if {\ttfamily next\+Guess} has been called before and has not returned {\ttfamily null}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for an Evaluator of a \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code}. 
+
+Interface for a Guesser. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmastermind_1_1logic_1_1abstract_a901e84f7a39b9b80224a94ec90b14c25}{}\label{classmastermind_1_1logic_1_1abstract_a901e84f7a39b9b80224a94ec90b14c25} 
+\index{mastermind\+::logic\+::abstract@{mastermind\+::logic\+::abstract}!````~I\+Evaluator@{$\sim$\+I\+Evaluator}}
+\index{````~I\+Evaluator@{$\sim$\+I\+Evaluator}!mastermind\+::logic\+::abstract@{mastermind\+::logic\+::abstract}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+Evaluator()}{~IEvaluator()}}
+{\footnotesize\ttfamily virtual mastermind\+::logic\+::abstract\+::$\sim$\+I\+Evaluator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\hypertarget{classmastermind_1_1logic_1_1abstract_a54d92c8c0accd2d4fbc7ea47f898c18f}{}\label{classmastermind_1_1logic_1_1abstract_a54d92c8c0accd2d4fbc7ea47f898c18f} 
+\index{mastermind\+::logic\+::abstract@{mastermind\+::logic\+::abstract}!````~I\+Guesser@{$\sim$\+I\+Guesser}}
+\index{````~I\+Guesser@{$\sim$\+I\+Guesser}!mastermind\+::logic\+::abstract@{mastermind\+::logic\+::abstract}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+Guesser()}{~IGuesser()}}
+{\footnotesize\ttfamily virtual mastermind\+::logic\+::abstract\+::$\sim$\+I\+Guesser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmastermind_1_1logic_1_1abstract_a42fd7e506150c1f6a486f9619a7cc337}{}\label{classmastermind_1_1logic_1_1abstract_a42fd7e506150c1f6a486f9619a7cc337} 
+\index{mastermind\+::logic\+::abstract@{mastermind\+::logic\+::abstract}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!mastermind\+::logic\+::abstract@{mastermind\+::logic\+::abstract}}
+\subsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily virtual \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White}$\ast$ mastermind\+::logic\+::abstract\+::evaluate (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} \&}]{cc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Evaluate the given \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} to the respective \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cc} & the \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} to be evaluated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the resulting \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1logic_1_1abstract_a3d7e6bdbf8f3926fd42907d86291a373}{}\label{classmastermind_1_1logic_1_1abstract_a3d7e6bdbf8f3926fd42907d86291a373} 
+\index{mastermind\+::logic\+::abstract@{mastermind\+::logic\+::abstract}!get\+Solution@{get\+Solution}}
+\index{get\+Solution@{get\+Solution}!mastermind\+::logic\+::abstract@{mastermind\+::logic\+::abstract}}
+\subsubsection{\texorpdfstring{get\+Solution()}{getSolution()}}
+{\footnotesize\ttfamily virtual \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code}$\ast$ mastermind\+::logic\+::abstract\+::get\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the solution. 
+
+\begin{DoxyReturn}{Returns}
+the solution \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} or N\+U\+LL if not available yet. 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1logic_1_1abstract_ae4e30322061ea0ebc302274c79c5ca47}{}\label{classmastermind_1_1logic_1_1abstract_ae4e30322061ea0ebc302274c79c5ca47} 
+\index{mastermind\+::logic\+::abstract@{mastermind\+::logic\+::abstract}!next\+Guess@{next\+Guess}}
+\index{next\+Guess@{next\+Guess}!mastermind\+::logic\+::abstract@{mastermind\+::logic\+::abstract}}
+\subsubsection{\texorpdfstring{next\+Guess()}{nextGuess()}}
+{\footnotesize\ttfamily virtual \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code}$\ast$ mastermind\+::logic\+::abstract\+::next\+Guess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the next guess. 
+
+\begin{DoxyReturn}{Returns}
+The next guess of the player. {\ttfamily null} aborts the game. 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1logic_1_1abstract_ad44cfe3ef7f44a27de1522a6510ebd07}{}\label{classmastermind_1_1logic_1_1abstract_ad44cfe3ef7f44a27de1522a6510ebd07} 
+\index{mastermind\+::logic\+::abstract@{mastermind\+::logic\+::abstract}!process\+Evaluation@{process\+Evaluation}}
+\index{process\+Evaluation@{process\+Evaluation}!mastermind\+::logic\+::abstract@{mastermind\+::logic\+::abstract}}
+\subsubsection{\texorpdfstring{process\+Evaluation()}{processEvaluation()}}
+{\footnotesize\ttfamily virtual void mastermind\+::logic\+::abstract\+::process\+Evaluation (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&}]{bw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Process evaluation. This method processes the other player\textquotesingle{}s feedback on the last guess provided by {\ttfamily next\+Guess}. Must only be executed if {\ttfamily next\+Guess} has been called before and has not returned {\ttfamily null}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bw} & Evaluation of the last guess. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_i_evaluator_8h}{I\+Evaluator.\+h}\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_i_guesser_8h}{I\+Guesser.\+h}\end{DoxyCompactItemize}

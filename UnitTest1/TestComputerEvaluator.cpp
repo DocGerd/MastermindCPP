@@ -6,7 +6,7 @@
 #include "../MastermindCPPDLL/ComputerEvaluator.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-using namespace mastermind;
+using namespace mastermind::logic;
 
 namespace Microsoft {
 	namespace VisualStudio {
@@ -39,7 +39,7 @@ namespace UnitTest1
 
 			ColorCode first(std::array<int, 4>{ 2, 5, 2, 1 });
 			BlackAndWhite expected(0, 2);
-			BlackAndWhite actual = ce.evaluate(first);
+			BlackAndWhite actual = *ce.evaluate(first);
 			Assert::AreEqual(expected, actual, L"", LINE_INFO());
 		}
 
@@ -51,7 +51,7 @@ namespace UnitTest1
 
 			ColorCode second(std::array<int, 4>{1, 1, 6, 2});
 			BlackAndWhite expected2(1, 1);
-			BlackAndWhite actual2 = ce.evaluate(second);
+			BlackAndWhite actual2 = *ce.evaluate(second);
 			Assert::AreEqual(expected2, actual2, L"", LINE_INFO());
 		}
 
@@ -64,7 +64,7 @@ namespace UnitTest1
 			Assert::IsNull(ce.getSolution(), L"", LINE_INFO());
 
 			ColorCode cc(std::array<int, 4>{ 2, 5, 2, 1 });
-			for (auto i = 0; i < Mastermind::MAX_MOVES; ++i) {
+			for (auto i = 0; i < mastermind::Mastermind::MAX_MOVES; ++i) {
 				ce.evaluate(cc);
 			}
 			Assert::IsNotNull(ce.getSolution(), L"", LINE_INFO());

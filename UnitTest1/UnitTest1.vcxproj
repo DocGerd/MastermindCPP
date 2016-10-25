@@ -129,11 +129,15 @@
       <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <UseFullPaths>true</UseFullPaths>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -228,6 +232,7 @@
   <ItemGroup>
     <ClCompile Include="TestBlackAndWhite.cpp" />
     <ClCompile Include="TestComputerEvaluator.cpp" />
+    <ClCompile Include="TestComputerGuesser.cpp" />
     <ClCompile Include="TestMastermind.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -238,6 +243,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_PG|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TestColorCode.cpp" />
+    <ClCompile Include="TestUtilities.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MastermindCPPDLL\MastermindCPPDLL.vcxproj">

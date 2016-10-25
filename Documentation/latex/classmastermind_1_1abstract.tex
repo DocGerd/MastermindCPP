@@ -1,0 +1,81 @@
+\hypertarget{classmastermind_1_1abstract}{}\section{mastermind\+:\+:abstract Class Reference}
+\label{classmastermind_1_1abstract}\index{mastermind\+::abstract@{mastermind\+::abstract}}
+
+
+Interface for an Evaluator of a \hyperlink{classmastermind_1_1_color_code}{Color\+Code}.  
+
+
+
+
+{\ttfamily \#include $<$I\+Evaluator.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White} \hyperlink{classmastermind_1_1abstract_ad0980c8864018d4df2f5b6a05b9b64a8}{evaluate} (const \hyperlink{classmastermind_1_1_color_code}{Color\+Code} \&cc) override
+\begin{DoxyCompactList}\small\item\em Evaluate the given \hyperlink{classmastermind_1_1_color_code}{Color\+Code} to the respective \hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White}. \end{DoxyCompactList}\item 
+virtual \hyperlink{classmastermind_1_1_color_code}{Color\+Code} $\ast$ \hyperlink{classmastermind_1_1abstract_aeccd67ad3e6ef36834553bcdf77a4db4}{get\+Solution} () override
+\begin{DoxyCompactList}\small\item\em Get the solution. \end{DoxyCompactList}\item 
+virtual \hyperlink{classmastermind_1_1_color_code}{Color\+Code} \hyperlink{classmastermind_1_1abstract_a2aa68c24bf1d51834fe7c9e02d827fa7}{next\+Guess} () override
+\begin{DoxyCompactList}\small\item\em Get the next guess. \end{DoxyCompactList}\item 
+\hypertarget{classmastermind_1_1abstract_a8e8b6d3937e03f4bc83e4b5e988bc699}{}\label{classmastermind_1_1abstract_a8e8b6d3937e03f4bc83e4b5e988bc699} 
+virtual void {\bfseries process\+Evaluation} (\hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White} \&bw) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for an Evaluator of a \hyperlink{classmastermind_1_1_color_code}{Color\+Code}. 
+
+Interface for a Guesser. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classmastermind_1_1abstract_ad0980c8864018d4df2f5b6a05b9b64a8}{}\label{classmastermind_1_1abstract_ad0980c8864018d4df2f5b6a05b9b64a8} 
+\index{mastermind\+::abstract@{mastermind\+::abstract}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!mastermind\+::abstract@{mastermind\+::abstract}}
+\subsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily virtual \hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White} mastermind\+::abstract\+::evaluate (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1_color_code}{Color\+Code} \&}]{cc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Evaluate the given \hyperlink{classmastermind_1_1_color_code}{Color\+Code} to the respective \hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cc} & the \hyperlink{classmastermind_1_1_color_code}{Color\+Code} to be evaluated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the resulting \hyperlink{classmastermind_1_1_black_and_white}{Black\+And\+White} 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1abstract_aeccd67ad3e6ef36834553bcdf77a4db4}{}\label{classmastermind_1_1abstract_aeccd67ad3e6ef36834553bcdf77a4db4} 
+\index{mastermind\+::abstract@{mastermind\+::abstract}!get\+Solution@{get\+Solution}}
+\index{get\+Solution@{get\+Solution}!mastermind\+::abstract@{mastermind\+::abstract}}
+\subsubsection{\texorpdfstring{get\+Solution()}{getSolution()}}
+{\footnotesize\ttfamily virtual \hyperlink{classmastermind_1_1_color_code}{Color\+Code}$\ast$ mastermind\+::abstract\+::get\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the solution. 
+
+\begin{DoxyReturn}{Returns}
+the solution \hyperlink{classmastermind_1_1_color_code}{Color\+Code} or N\+U\+LL if not available yet. 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1abstract_a2aa68c24bf1d51834fe7c9e02d827fa7}{}\label{classmastermind_1_1abstract_a2aa68c24bf1d51834fe7c9e02d827fa7} 
+\index{mastermind\+::abstract@{mastermind\+::abstract}!next\+Guess@{next\+Guess}}
+\index{next\+Guess@{next\+Guess}!mastermind\+::abstract@{mastermind\+::abstract}}
+\subsubsection{\texorpdfstring{next\+Guess()}{nextGuess()}}
+{\footnotesize\ttfamily virtual \hyperlink{classmastermind_1_1_color_code}{Color\+Code} mastermind\+::abstract\+::next\+Guess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the next guess. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classmastermind_1_1_color_code}{Color\+Code} of the guess. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Mastermind\+C\+P\+P\+D\+L\+L/I\+Evaluator.\+h\item 
+Mastermind\+C\+P\+P\+D\+L\+L/I\+Guesser.\+h\end{DoxyCompactItemize}
