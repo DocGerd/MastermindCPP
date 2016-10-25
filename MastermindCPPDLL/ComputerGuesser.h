@@ -15,7 +15,7 @@ namespace mastermind {
 		private:
 #pragma warning(disable: 4251)
 			/// List of possible codes available to guess.
-			std::list<ColorCode> possibleCodes;
+			std::list<ColorCode*>* possibleCodes;
 #pragma warning(default: 4251)
 			/// Amount of moves performed.
 			std::size_t moveCount;
@@ -28,6 +28,11 @@ namespace mastermind {
 			ColorCode* nextGuess() override;
 			/// \copydoc IGuesser::processEvaluation()
 			void processEvaluation(const BlackAndWhite &bw) override;
+			/**
+			 * \brief Check if cheating was detected.
+			 * \return <tt>true</tt> if evaluator cheated
+			 */
+			bool cheatingDetected() const;
 
 		private:
 			void createCodes();
