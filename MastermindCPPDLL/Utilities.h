@@ -3,7 +3,6 @@
 
 #include "ColorCode.h"
 
-#include <string>
 #include <list>
 
 namespace mastermind

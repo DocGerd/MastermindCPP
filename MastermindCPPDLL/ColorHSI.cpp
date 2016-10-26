@@ -1,7 +1,7 @@
 #include "stdafx.h"
 
 #include "ColorHSI.h"
-
+#include "ColorRGB.h"
 
 namespace mastermind
 {

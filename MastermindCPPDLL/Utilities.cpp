@@ -35,7 +35,7 @@ namespace mastermind
 				std::string item;
 				while (std::getline(ss, item, delim))
 				{
-					int token;
+					int token = -1;
 					bool success = true;
 					try
 					{
@@ -47,7 +47,7 @@ namespace mastermind
 					}
 					if (success)
 					{
-						elems.push_back(stoi(item));
+						elems.push_back(token);
 					}
 				}
 			}

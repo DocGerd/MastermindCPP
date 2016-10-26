@@ -72,8 +72,8 @@ namespace mastermind
 		*/
 		inline Players* getPlayers(RequestedState state, GameHistory* history)
 		{
-			IEvaluator* e = nullptr;
-			IGuesser* g = nullptr;
+			IEvaluator* e;
+			IGuesser* g;
 			switch (state)
 			{
 			case HUMAN_GUESSER:

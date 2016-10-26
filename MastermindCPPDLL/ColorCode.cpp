@@ -2,9 +2,6 @@
 
 #include "ColorCode.h"
 
-#include <stdexcept>
-#include <iterator>
-
 namespace mastermind
 {
 	namespace logic

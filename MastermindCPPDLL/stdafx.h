@@ -15,6 +15,10 @@
 #define _USE_MATH_DEFINES
 #include <cmath>
 
+#include <stdexcept>
+
 #include <string>
+#include <list>
+#include <iterator>
 
 #include <cassert>

@@ -2,7 +2,6 @@
 
 #include "API.h"
 #include "Color.h"
-#include "ColorRGB.h"
 
 namespace mastermind
 {

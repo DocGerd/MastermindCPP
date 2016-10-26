@@ -20,7 +20,6 @@ namespace mastermind
 			{
 				throw std::invalid_argument("only two tuple allowed!");
 			}
-			const size_t size = list.size();
 			std::list<std::size_t>::iterator iter = list.begin();
 			assert(iter != list.end());
 			black = *iter;

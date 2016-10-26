@@ -116,9 +116,6 @@
     <ClCompile Include="ComputerEvaluator.cpp">
       <Filter>Source Files\Logic</Filter>
     </ClCompile>
-    <ClCompile Include="IEvaluator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ComputerGuesser.cpp">
       <Filter>Source Files\Logic</Filter>
     </ClCompile>

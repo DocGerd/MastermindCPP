@@ -6,7 +6,7 @@ namespace mastermind
 	namespace logic
 	{
 		ComputerEvaluator::ComputerEvaluator(ColorCode solutionCode) :
-			solution(solutionCode), moveCount(0)
+			moveCount(0), solution(solutionCode)
 		{
 		}
 

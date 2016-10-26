@@ -271,7 +271,6 @@
     <ClCompile Include="GameHistory.cpp" />
     <ClCompile Include="HumanEvaluator.cpp" />
     <ClCompile Include="HumanGuesser.cpp" />
-    <ClCompile Include="IEvaluator.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="ReadOnlyHistory.cpp" />
     <ClCompile Include="Shell.cpp" />

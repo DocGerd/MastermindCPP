@@ -4,7 +4,6 @@
 
 #include "Mastermind.h"
 
-#include <string>
 #include <array>
 #include <list>
 

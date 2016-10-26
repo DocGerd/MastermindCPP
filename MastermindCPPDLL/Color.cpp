@@ -31,9 +31,9 @@ namespace mastermind
 			const double saturation = hsi.getSaturation();
 			const double intensity = hsi.getIntensity();
 
-			double r = -1.0;
-			double g = -1.0;
-			double b = -1.0;
+			double r;
+			double g;
+			double b;
 
 			// TODO: epsilon check
 			if (saturation == 0.0)
@@ -66,8 +66,10 @@ namespace mastermind
 			{
 				throw std::invalid_argument("Hue out of range!");
 			}
-
-			return new ColorRGB(3 * intensity * r, 3 * intensity * g, 3 * intensity * b);
+			const double R = 3.0 * intensity * r;
+			const double G = 3.0 * intensity * g;
+			const double B = 3.0 * intensity * b;
+			return new ColorRGB(R, G, B);
 		}
 
 		ColorHSI* Color::rgbToHSI(const ColorRGB& rgb)

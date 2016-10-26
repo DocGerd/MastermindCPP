@@ -3,7 +3,6 @@
 #include "API.h"
 #include "Mastermind.h"
 
-#include <string>
 #include <list>
 
 namespace mastermind
@@ -19,13 +18,13 @@ namespace mastermind
 		{
 		private:
 			/**
+			* \brief amount black sticks.
+			*/
+			std::size_t black;
+			/**
 			 * \brief amount white sticks.
 			 */
 			std::size_t white;
-			/**
-			 * \brief amount black sticks.
-			 */
-			std::size_t black;
 		public:
 			/**
 			 * \brief Stick combination for a win.

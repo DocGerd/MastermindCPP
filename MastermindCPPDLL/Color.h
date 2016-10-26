@@ -40,22 +40,22 @@ namespace mastermind
 			virtual std::wstring toString() const abstract;
 
 			/**
-			 * \brief Check equality.
-			 * \param rhs the other Color
-			 * \return <tt>true</tt> if the color values are equal
+			 * \brief Get name of this color.
+			 * \return the name or <tt>L""</tt> if no name was given
 			 */
-			//bool operator==(const Color &rhs) const;
-			/**
-			 * \brief Check inequality.
-			 * \param rhs the other Color
-			 * \return <tt>true</tt> if at least one of the color values are not equal
-			 */
-			//bool operator!=(const Color &rhs) const;
-
 			std::wstring getName() const;
 
-
+			/**
+			 * Get RGB color from HSI color.
+			 * \param hsi the HSI color
+			 * \return the resulting RGB color
+			 */
 			static ColorRGB* hsiToRGB(const ColorHSI& hsi);
+			/**
+			 * Get HSI color from RGB color.
+			 * \param rgb the RGB color.
+			 * \return the resulting HSI color
+			 */
 			static ColorHSI* rgbToHSI(const ColorRGB& rgb);
 		};
 	}
