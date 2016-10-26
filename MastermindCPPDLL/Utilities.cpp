@@ -41,7 +41,7 @@ namespace mastermind
 					{
 						token = stoi(item);
 					}
-					catch (std::invalid_argument& ex)
+					catch (std::invalid_argument)
 					{
 						success = false;
 					}

@@ -219,6 +219,7 @@
   <ItemGroup>
     <ClInclude Include="API.h" />
     <ClInclude Include="BlackAndWhite.h" />
+    <ClInclude Include="Color.h" />
     <ClInclude Include="ColorCode.h" />
     <ClInclude Include="ComputerEvaluator.h" />
     <ClInclude Include="ComputerGuesser.h" />
@@ -239,6 +240,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BlackAndWhite.cpp" />
+    <ClCompile Include="Color.cpp" />
     <ClCompile Include="ColorCode.cpp" />
     <ClCompile Include="ComputerEvaluator.cpp" />
     <ClCompile Include="ComputerGuesser.cpp" />
