@@ -44,7 +44,10 @@
     <ClCompile Include="TestComputerGuesser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TestColor.cpp">
+    <ClCompile Include="TestColorHSI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestColorRGB.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

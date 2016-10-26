@@ -1,80 +1,61 @@
 #pragma once
 
 #include "API.h"
+
 #include <string>
 
 namespace mastermind
 {
 	namespace logic
 	{
+		class ColorRGB;
+		class ColorHSI;
+
 		/**
-		 * \brief A RGB color representation.
-		 * RGB values must be each [0..255].
+		 * \brief A color representation.
 		 */
 		class MASTERMINDCPPDLL_API Color
 		{
 		private:
+#pragma warning(disable: 4251)
 			/**
-			 * \brief Red value.
+			 * \brief Name of this color.
 			 */
-			const uint8_t red;
-			/**
-			 * \brief Green value.
-			 */
-			const uint8_t green;
-			/**
-			 * \brief Blue value.
-			 */
-			const uint8_t blue;
+			const std::wstring name;
+#pragma warning(default: 4251)
+
 
 		public:
-			/**
-			 * \brief Create a RGB color.
-			 * \param r red value, must be [0..255]
-			 * \param g green value, must be [0..255]
-			 * \param b blue value, must be [0..255]
-			 */
-			Color(uint8_t r, uint8_t g, uint8_t b);
-
-			/**
-			 * \brief Get red value.
-			 * \return the red value
-			 */
-			uint8_t getRed() const;
-			/**
-			 * \brief Get green value.
-			 * \return the blue value
-			 */
-			uint8_t getGreen() const;
-			/**
-			 * \brief Get blue value.
-			 * \return the blue value
-			 */
-			uint8_t getBlue() const;
-			/**
-			 * \brief Get RGB values as array.
-			 * \return array with RGB values
-			 */
-			uint8_t* getRGB() const;
+			Color();
+			Color(std::wstring name);
+			virtual ~Color()
+			{
+			}
 
 			/**
 			 * \brief String representation of this Color.
-			 * \return string in form <tt>L"(R,G,B)"</tt>
+			 * \return string in form <tt>L"(R,G,B)"</tt> or <tt>L"(H,S,I)"</tt>
 			 */
-			virtual std::wstring toString() const;
+			virtual std::wstring toString() const abstract;
 
 			/**
 			 * \brief Check equality.
 			 * \param rhs the other Color
-			 * \return <tt>true</tt> if the RGB values are equal
+			 * \return <tt>true</tt> if the color values are equal
 			 */
-			bool operator==(const Color &rhs) const;
+			//bool operator==(const Color &rhs) const;
 			/**
 			 * \brief Check inequality.
 			 * \param rhs the other Color
-			 * \return <tt>true</tt> if at least one of the RGB values are not equal
+			 * \return <tt>true</tt> if at least one of the color values are not equal
 			 */
-			bool operator!=(const Color &rhs) const;
+			//bool operator!=(const Color &rhs) const;
+
+			std::wstring getName() const;
+
+
+			static ColorRGB* hsiToRGB(const ColorHSI& hsi);
+			static ColorHSI* rgbToHSI(const ColorRGB& rgb);
 		};
 	}
 }

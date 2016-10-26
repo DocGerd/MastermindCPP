@@ -2,57 +2,77 @@
 
 #include "Color.h"
 
+#include "ColorRGB.h"
+#include "ColorHSI.h"
+
 
 namespace mastermind
 {
 	namespace logic
 	{
-		Color::Color(uint8_t r, uint8_t g, uint8_t b) :
-			red(r), green(g), blue(b)
+		Color::Color() :
+			name(L"")
 		{
-			// no check of parameters necessary as uint8_t is [0..255] anyway
 		}
 
-		uint8_t Color::getRed() const
+		Color::Color(std::wstring name) :
+			name(name)
 		{
-			return this->red;
 		}
 
-		uint8_t Color::getGreen() const
+		std::wstring Color::getName() const
 		{
-			return this->green;
+			return this->name;
 		}
 
-		uint8_t Color::getBlue() const
+		ColorRGB* Color::hsiToRGB(const ColorHSI& hsi)
 		{
-			return this->blue;
+			const float hue = hsi.getHue() * M_PI / 180.0f;
+			const float saturation = hsi.getSaturation();
+			const float intensity = hsi.getIntensity();
+
+			float r = -1.0f;
+			float g = -1.0f;
+			float b = -1.0f;
+
+			// TODO: epsilon check
+			if (saturation == 0.0f)
+			{
+				r = intensity;
+				g = intensity;
+				b = intensity;
+			}
+			else if (hue >= 0.0f && hue < 2.0f * M_PI / 3.0f)
+			{
+				b = (1.0f - saturation) / 3.0f;
+				r = (1.0f + saturation * cos(hue) / cos(M_PI / 3.0f - hue)) / 3.0f;
+				g = 1.0f - r - b;
+			}
+			else if (hue >= 2.0f * M_PI / 3.0f && hue < 4.0 * M_PI / 3.0f)
+			{
+				float hn = hue - 2.0f *M_PI / 3.0f;
+				r = (1.0f - saturation) / 3.0f;
+				g = (1.0f + saturation * cos(hn) / cos(M_PI / 3.0f - hn)) / 3.0f;
+				b = 1.0f - r - g;
+			}
+			else if (hue >= 4.0f * M_PI / 3.0f && hue < 2.0f * M_PI)
+			{
+				float hn = hue - 4.0f * M_PI / 3.0f;
+				g = (1.0f - saturation) / 3.0f;
+				b = (1.0f + saturation * cos(hn) / cos(M_PI / 3.0f - hn)) / 3.0f;
+				r = 1.0f - b - g;
+			}
+			else
+			{
+				throw std::invalid_argument("Hue out of range!");
+			}
+
+			return new ColorRGB(3 * intensity * r, 3 * intensity * g, 3 * intensity * b);
 		}
 
-		uint8_t* Color::getRGB() const
+		ColorHSI* Color::rgbToHSI(const ColorRGB& rgb)
 		{
-			return new uint8_t[3]{ red, green, blue };
-		}
-
-		std::wstring Color::toString() const
-		{
-			std::wstring result = std::wstring(L"(")
-				+ std::to_wstring(red) + L","
-				+ std::to_wstring(green) + L","
-				+ std::to_wstring(blue) + L")";
-			return result;
-		}
-
-		bool Color::operator==(const Color& rhs) const
-		{
-			bool result = this->red == rhs.red
-				&& this->green == rhs.green
-				&& this->blue == rhs.blue;
-			return result;
-		}
-
-		bool Color::operator!=(const Color& rhs) const
-		{
-			return !(*this == rhs);
+			return new ColorHSI(rgb);
 		}
 	}
 }

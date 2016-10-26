@@ -1,71 +1,71 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
-#include "../MastermindCPPDLL/Color.h"
+#include "../MastermindCPPDLL/ColorHSI.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace mastermind::logic;
 
 namespace UnitTest1
 {
-	TEST_CLASS(TestColor)
+	TEST_CLASS(TestColorHSI)
 	{
 	public:
-		TEST_METHOD(TestGetRed)
+		TEST_METHOD(TestGetHue)
 		{
-			Color c1(123, 111, 20);
+			ColorHSI c1(251.1f, 0.756f, 0.426f);
 
-			uint8_t expected = 123;
-			uint8_t actual = c1.getRed();
+			float expected = 251.1f;
+			float actual = c1.getHue();
 
 			Assert::AreEqual(expected, actual, L"", LINE_INFO());
 		}
 
-		TEST_METHOD(TestGetGreen)
+		TEST_METHOD(TestGetSaturation)
 		{
-			Color c1(123, 111, 20);
+			ColorHSI c1(251.1f, 0.756f, 0.426f);
 
-			uint8_t expected = 111;
-			uint8_t actual = c1.getGreen();
+			float expected = 0.756f;
+			float actual = c1.getSaturation();
 
 			Assert::AreEqual(expected, actual, L"", LINE_INFO());
 		}
 
-		TEST_METHOD(TestGetBlue)
+		TEST_METHOD(TestGetIntensity)
 		{
-			Color c1(123, 111, 20);
+			ColorHSI c1(251.1f, 0.756f, 0.426f);
 
-			uint8_t expected = 20;
-			uint8_t actual = c1.getBlue();
+			float expected = 0.426f;
+			float actual = c1.getIntensity();
 
 			Assert::AreEqual(expected, actual, L"", LINE_INFO());
 		}
 
-		TEST_METHOD(TestGetRGB)
+		TEST_METHOD(TestGetHSI)
 		{
-			Color c1(123, 111, 20);
+			ColorHSI c1(251.1f, 0.756f, 0.426f);
 
-			uint8_t* expected = new uint8_t[3]{ 123, 111, 20 };
-			uint8_t* actual = c1.getRGB();
+			float* expected = new float[3]{ 251.1f, 0.756f, 0.426f };
+			float* actual = c1.getHSI();
 
 			for (auto i = 0; i < 3; ++i)
 			{
 				Assert::AreEqual(expected[i], actual[i], L"", LINE_INFO());
-			}			
+			}
 		}
 
 		TEST_METHOD(TestToString)
 		{
-			Color c1(123, 111, 20);
-			std::wstring expected = std::wstring(L"(123,111,20)");
+			ColorHSI c1(251.1f, 0.756f, 0.426f);
+			std::wstring expected = std::wstring(L"(251.100006,0.756000,0.426000)");
 			std::wstring actual = c1.toString();
 			Assert::AreEqual(expected, actual, L"", LINE_INFO());
 		}
 
 		TEST_METHOD(TestEq)
 		{
-			Color c1(123, 111, 20);
-			Color c2(123, 111, 20);
-			Color c3(10, 29, 73);
+			ColorHSI c1(251.1f, 0.756f, 0.426f);
+			ColorHSI c2(251.1f, 0.756f, 0.426f);
+			ColorHSI c3(283.7f, 0.686f, 0.596f);
 
 			bool expected = true;
 			bool actual = c1 == c2;
@@ -78,9 +78,9 @@ namespace UnitTest1
 
 		TEST_METHOD(TestNEq)
 		{
-			Color c1(123, 111, 20);
-			Color c2(123, 111, 20);
-			Color c3(10, 29, 73);
+			ColorHSI c1(251.1f, 0.756f, 0.426f);
+			ColorHSI c2(251.1f, 0.756f, 0.426f);
+			ColorHSI c3(283.7f, 0.686f, 0.596f);
 
 			bool expected = false;
 			bool actual = c1 != c2;
