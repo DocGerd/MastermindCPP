@@ -5,7 +5,6 @@
 #include "ColorRGB.h"
 #include "ColorHSI.h"
 
-
 namespace mastermind
 {
 	namespace logic
@@ -27,7 +26,8 @@ namespace mastermind
 
 		ColorRGB* Color::hsiToRGB(const ColorHSI& hsi)
 		{
-			const double hue = hsi.getHue() * M_PI / 180.0;
+			// hue must be changed from DEG to RAD
+			const double hue = DEG_TO_RAD(hsi.getHue());
 			const double saturation = hsi.getSaturation();
 			const double intensity = hsi.getIntensity();
 
@@ -42,34 +42,34 @@ namespace mastermind
 				g = intensity;
 				b = intensity;
 			}
-			else if (hue >= 0.0 && hue < 2.0 * M_PI / 3.0)
+			else if (0.0 <= hue && hue < DEG_TO_RAD(120.0))
 			{
 				b = (1.0 - saturation) / 3.0;
-				r = (1.0 + saturation * cos(hue) / cos(M_PI / 3.0 - hue)) / 3.0;
-				g = 1.0 - r - b;
+				r = (1.0 + (saturation * cos(hue)) / (cos(DEG_TO_RAD(60.0) - hue))) / 3.0;
+				g = 1.0 - (b + r);
 			}
-			else if (hue >= 2.0 * M_PI / 3.0 && hue < 4.0 * M_PI / 3.0)
+			else if (DEG_TO_RAD(120.0) < hue && hue <= DEG_TO_RAD(240.0))
 			{
-				double hn = hue - 2.0 * M_PI / 3.0;
+				double hn = hue - DEG_TO_RAD(120.0);
 				r = (1.0 - saturation) / 3.0;
-				g = (1.0 + saturation * cos(hn) / cos(M_PI / 3.0 - hn)) / 3.0;
-				b = 1.0 - r - g;
+				g = (1.0 + saturation * cos(hn) / cos(DEG_TO_RAD(60.0) - hn)) / 3.0;
+				b = 1.0 - (r + g);
 			}
-			else if (hue >= 4.0 * M_PI / 3.0 && hue < 2.0 * M_PI)
+			else if (DEG_TO_RAD(240.0) < hue && hue <= DEG_TO_RAD(360.0))
 			{
-				double hn = hue - 4.0 * M_PI / 3.0;
+				double hn = hue - DEG_TO_RAD(240.0);
 				g = (1.0 - saturation) / 3.0;
-				b = (1.0 + saturation * cos(hn) / cos(M_PI / 3.0 - hn)) / 3.0;
-				r = 1.0 - b - g;
+				b = (1.0 + saturation * cos(hn) / cos(DEG_TO_RAD(60) - hn)) / 3.0;
+				r = 1.0 - (g + b);
 			}
 			else
 			{
 				throw std::invalid_argument("Hue out of range!");
 			}
-			const double R = 3.0 * intensity * r;
-			const double G = 3.0 * intensity * g;
-			const double B = 3.0 * intensity * b;
-			return new ColorRGB(R, G, B);
+			const double R = 3.0 * intensity * r * 255.0;
+			const double G = 3.0 * intensity * g * 255.0;
+			const double B = 3.0 * intensity * b * 255.0;
+			return new ColorRGB(round(R), round(G), round(B));
 		}
 
 		ColorHSI* Color::rgbToHSI(const ColorRGB& rgb)

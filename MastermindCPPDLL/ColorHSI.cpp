@@ -67,7 +67,7 @@ namespace mastermind
 		{
 			double result = static_cast<double>(rgb.getRed() + rgb.getGreen() + rgb.getBlue());
 			result = result / 3.0;
-			return result;
+			return result / 255.0;
 		}
 
 		double ColorHSI::saturationFromRGB(const ColorRGB& rgb)
@@ -79,14 +79,29 @@ namespace mastermind
 
 		double ColorHSI::hueFromRGB(const ColorRGB& rgb)
 		{
-			double red = rgb.getRed() / 255.0;
-			double green = rgb.getGreen() / 255.0;
-			double blue = rgb.getBlue() / 255.0;
-			double num = 0.5 * ((red - green) + (red - blue));
-			double denum = (red - green) * (red - green) + (red - blue) * (green - blue);
-			double result = sqrt(num / denum);
-			result = acos(result);
-			return result;
+			const uint8_t r = rgb.getRed();
+			const uint8_t g = rgb.getGreen();
+			const uint8_t b = rgb.getBlue();
+			if (r == g && g == b)
+			{
+				return 0.0;
+			}
+			const double red = r / 255.0;
+			const double green = g / 255.0;
+			const double blue = b / 255.0;
+
+
+			double w = 0.5 * (red - green + red - blue) / sqrt((red - green) * (red - green) + (red - blue) * (green - blue));
+			if (w > 1.0)
+			{
+				w = 1.0;
+			} else if (w < -1.0)
+			{
+				w = -1.0;
+			}
+
+			const double result = acos(w);
+			return RAD_TO_DEG(result);
 		}
 	}
 }
