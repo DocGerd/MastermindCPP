@@ -49,7 +49,7 @@ namespace mastermind
 				}
 				else
 				{
-					std::list<int> colors = mastermind::shell::utilities::Utilities::parseString(input);
+					std::list<std::size_t> colors = mastermind::shell::utilities::Utilities::parseString(input);
 					if (colors.size() == SLOT_COUNT)
 					{
 						cc = new ColorCode(colors);

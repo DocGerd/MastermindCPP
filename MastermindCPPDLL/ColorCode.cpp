@@ -9,15 +9,15 @@ namespace mastermind
 {
 	namespace logic
 	{
-		ColorCode::ColorCode(std::array<int, SLOT_COUNT>& col) :
+		ColorCode::ColorCode(std::array<std::size_t, SLOT_COUNT>& col) :
 			colors(col)
 		{
 		}
 
-		ColorCode::ColorCode(std::list<int>& list)
+		ColorCode::ColorCode(std::list<std::size_t>& list)
 		{
 			const size_t size = list.size();
-			std::list<int>::iterator iter = list.begin();
+			std::list<std::size_t>::iterator iter = list.begin();
 			for (size_t i = 0; i < size && iter != list.end(); ++i)
 			{
 				colors[i] = *iter;
@@ -25,7 +25,7 @@ namespace mastermind
 			}
 		}
 
-		ColorCode::ColorCode(int col[])
+		ColorCode::ColorCode(std::size_t col[])
 		{
 			for (std::size_t i = 0; i < SLOT_COUNT; ++i)
 			{

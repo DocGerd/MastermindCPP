@@ -12,40 +12,40 @@ namespace UnitTest1
 	public:
 		TEST_METHOD(TestGetHue)
 		{
-			ColorHSI c1(251.1f, 0.756f, 0.426f);
+			ColorHSI c1(251.1, 0.756, 0.426);
 
-			float expected = 251.1f;
-			float actual = c1.getHue();
+			double expected = 251.1;
+			double actual = c1.getHue();
 
 			Assert::AreEqual(expected, actual, L"", LINE_INFO());
 		}
 
 		TEST_METHOD(TestGetSaturation)
 		{
-			ColorHSI c1(251.1f, 0.756f, 0.426f);
+			ColorHSI c1(251.1, 0.756, 0.426);
 
-			float expected = 0.756f;
-			float actual = c1.getSaturation();
+			double expected = 0.756;
+			double actual = c1.getSaturation();
 
 			Assert::AreEqual(expected, actual, L"", LINE_INFO());
 		}
 
 		TEST_METHOD(TestGetIntensity)
 		{
-			ColorHSI c1(251.1f, 0.756f, 0.426f);
+			ColorHSI c1(251.1, 0.756, 0.426);
 
-			float expected = 0.426f;
-			float actual = c1.getIntensity();
+			double expected = 0.426;
+			double actual = c1.getIntensity();
 
 			Assert::AreEqual(expected, actual, L"", LINE_INFO());
 		}
 
 		TEST_METHOD(TestGetHSI)
 		{
-			ColorHSI c1(251.1f, 0.756f, 0.426f);
+			ColorHSI c1(251.1, 0.756, 0.426);
 
-			float* expected = new float[3]{ 251.1f, 0.756f, 0.426f };
-			float* actual = c1.getHSI();
+			double* expected = new double[3]{251.1, 0.756, 0.426};
+			double* actual = c1.getHSI();
 
 			for (auto i = 0; i < 3; ++i)
 			{
@@ -63,9 +63,9 @@ namespace UnitTest1
 
 		TEST_METHOD(TestEq)
 		{
-			ColorHSI c1(251.1f, 0.756f, 0.426f);
-			ColorHSI c2(251.1f, 0.756f, 0.426f);
-			ColorHSI c3(283.7f, 0.686f, 0.596f);
+			ColorHSI c1(251.1, 0.756, 0.426);
+			ColorHSI c2(251.1, 0.756, 0.426);
+			ColorHSI c3(283.7, 0.686, 0.596);
 
 			bool expected = true;
 			bool actual = c1 == c2;
@@ -78,9 +78,9 @@ namespace UnitTest1
 
 		TEST_METHOD(TestNEq)
 		{
-			ColorHSI c1(251.1f, 0.756f, 0.426f);
-			ColorHSI c2(251.1f, 0.756f, 0.426f);
-			ColorHSI c3(283.7f, 0.686f, 0.596f);
+			ColorHSI c1(251.1, 0.756, 0.426);
+			ColorHSI c2(251.1, 0.756, 0.426);
+			ColorHSI c3(283.7, 0.686, 0.596);
 
 			bool expected = false;
 			bool actual = c1 != c2;

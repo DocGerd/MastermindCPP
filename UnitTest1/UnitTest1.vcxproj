@@ -231,6 +231,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TestBlackAndWhite.cpp" />
+    <ClCompile Include="TestColor.cpp" />
     <ClCompile Include="TestColorRGB.cpp" />
     <ClCompile Include="TestColorHSI.cpp" />
     <ClCompile Include="TestComputerEvaluator.cpp" />

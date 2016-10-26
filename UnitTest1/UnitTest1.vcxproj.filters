@@ -50,5 +50,8 @@
     <ClCompile Include="TestColorRGB.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TestColor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

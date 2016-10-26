@@ -19,15 +19,15 @@ namespace mastermind
 			/**
 			* \brief Hue value.
 			*/
-			const float hue;
+			const double hue;
 			/**
 			* \brief Saturation value.
 			*/
-			const float saturation;
+			const double saturation;
 			/**
 			* \brief Intensity value.
 			*/
-			const float intensity;
+			const double intensity;
 
 		public:
 			/**
@@ -36,37 +36,37 @@ namespace mastermind
 			* \param s saturation value, must be [0.0..1.0]
 			* \param i intensity value, must be [0.0..1.0]
 			*/
-			ColorHSI(float h, float s, float i);
+			ColorHSI(double h, double s, double i);
 			ColorHSI(const ColorRGB& colorRGB);
 
 			/**
 			* \brief Get hue value.
 			* \return the hue value
 			*/
-			float getHue() const;
+			double getHue() const;
 			/**
 			* \brief Get saturation value.
 			* \return the saturation value
 			*/
-			float getSaturation() const;
+			double getSaturation() const;
 			/**
 			* \brief Get intensity value.
 			* \return the intensity value
 			*/
-			float getIntensity() const;
+			double getIntensity() const;
 			/**
 			* \brief Get RGB values as array.
 			* \return array with HSI values
 			*/
-			float* getHSI() const;
+			double* getHSI() const;
 
 			std::wstring toString() const override;
-			bool operator==(const ColorHSI &rhs) const;
-			bool operator!=(const ColorHSI &rhs) const;
+			bool operator==(const ColorHSI& rhs) const;
+			bool operator!=(const ColorHSI& rhs) const;
 
-			static float hueFromRGB(const ColorRGB& rgb);
-			static float saturationFromRGB(const ColorRGB& rgb);
-			static float intensityFromRGB(const ColorRGB& rgb);
+			static double hueFromRGB(const ColorRGB& rgb);
+			static double saturationFromRGB(const ColorRGB& rgb);
+			static double intensityFromRGB(const ColorRGB& rgb);
 		};
 	}
 }

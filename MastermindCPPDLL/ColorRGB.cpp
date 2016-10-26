@@ -36,7 +36,7 @@ namespace mastermind
 
 		uint8_t* ColorRGB::getRGB() const
 		{
-			return new uint8_t[3]{ red, green, blue };
+			return new uint8_t[3]{red, green, blue};
 		}
 
 		std::wstring ColorRGB::toString() const

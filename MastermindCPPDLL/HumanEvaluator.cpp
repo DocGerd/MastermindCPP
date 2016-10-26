@@ -52,7 +52,7 @@ namespace mastermind
 				}
 				else
 				{
-					std::list<int> sticks = mastermind::shell::utilities::Utilities::parseString(input);
+					std::list<std::size_t> sticks = mastermind::shell::utilities::Utilities::parseString(input);
 					if (sticks.size() == 2)
 					{
 						bw = new BlackAndWhite(sticks);

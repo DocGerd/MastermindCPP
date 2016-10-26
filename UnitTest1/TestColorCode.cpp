@@ -13,13 +13,13 @@ namespace UnitTest1
 
 		TEST_METHOD(TestCstr)
 		{
-			std::array<int, 4> cols = { 1, 2, 3, 4 };
+			std::array<std::size_t, 4> cols = {1, 2, 3, 4};
 			ColorCode cc(cols);
 		}
 
 		TEST_METHOD(TestGet)
 		{
-			std::array<int, 4> cols = { 1, 2, 3, 4 };
+			std::array<std::size_t, 4> cols = {1, 2, 3, 4};
 			ColorCode cc(cols);
 
 			Assert::AreEqual(4, cc.get(3), L"", LINE_INFO());
@@ -27,39 +27,40 @@ namespace UnitTest1
 
 		TEST_METHOD(TestOperatorArr1)
 		{
-			std::array<int, 4> cols = { 1, 2, 3, 4 };
+			std::array<std::size_t, 4> cols = {1, 2, 3, 4};
 			ColorCode cc(cols);
-			int result = cc[3];
+			std::size_t result = cc[3];
 
-			Assert::AreEqual(4, result, L"", LINE_INFO());
+			Assert::AreEqual((std::size_t)4, result, L"", LINE_INFO());
 		}
 
 		TEST_METHOD(TestOperatorArr2)
 		{
-			std::array<int, 4> cols = { 1, 2, 3, 4 };
+			std::array<std::size_t, 4> cols = {1, 2, 3, 4};
 			ColorCode cc(cols);
-			const ColorCode &c2 = cc;
-			int result = c2[3];
+			const ColorCode& c2 = cc;
+			std::size_t result = c2[3];
 
-			Assert::AreEqual(4, result, L"", LINE_INFO());
+			Assert::AreEqual((std::size_t)4, result, L"", LINE_INFO());
 		}
 
-		TEST_METHOD(TestOperatorEq) {
-			std::array<int, 4> cols = { 1, 2, 3, 4 };
+		TEST_METHOD(TestOperatorEq)
+		{
+			std::array<std::size_t, 4> cols = {1, 2, 3, 4};
 			ColorCode cc(cols);
-			const ColorCode &c2 = cc;
+			const ColorCode& c2 = cc;
 			ColorCode c3(cols);
 
 			Assert::IsTrue(c2 == c3, L"", LINE_INFO());
 
-			std::array<int, 4> cols2 = { 5, 6, 7, 8 };
+			std::array<std::size_t, 4> cols2 = {5, 6, 7, 8};
 			ColorCode c4(cols2);
 			Assert::IsFalse(c2 == c4, L"", LINE_INFO());
 		}
 
 		TEST_METHOD(TestToString)
 		{
-			std::array<int, 4> cols = { 1, 2, 3, 4 };
+			std::array<std::size_t, 4> cols = {1, 2, 3, 4};
 			ColorCode cc(cols);
 
 			std::wstring expected(L"1 2 3 4 ");

@@ -44,13 +44,13 @@ namespace UnitTest1
 		{
 			ColorRGB c1(123, 111, 20);
 
-			uint8_t* expected = new uint8_t[3]{ 123, 111, 20 };
+			uint8_t* expected = new uint8_t[3]{123, 111, 20};
 			uint8_t* actual = c1.getRGB();
 
 			for (auto i = 0; i < 3; ++i)
 			{
 				Assert::AreEqual(expected[i], actual[i], L"", LINE_INFO());
-			}			
+			}
 		}
 
 		TEST_METHOD(TestToString)
@@ -89,6 +89,14 @@ namespace UnitTest1
 			expected = true;
 			actual = c1 != c3;
 			Assert::AreEqual(expected, actual, L"", LINE_INFO());
+		}
+
+		TEST_METHOD(TestGetName)
+		{
+			ColorRGB c(L"testname", 123, 111, 20);
+
+			std::wstring expected = L"testname";
+			Assert::AreEqual(expected, c.getName(), L"", LINE_INFO());
 		}
 	};
 }

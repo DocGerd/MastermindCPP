@@ -28,6 +28,7 @@ namespace mastermind
 		public:
 			Color();
 			Color(std::wstring name);
+
 			virtual ~Color()
 			{
 			}

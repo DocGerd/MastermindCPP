@@ -22,7 +22,7 @@ namespace mastermind
 			/**
 			 * \brief Colors in the line.
 			 */
-			std::array<int, SLOT_COUNT> colors;
+			std::array<std::size_t, SLOT_COUNT> colors;
 #pragma warning(default: 4251)
 
 		public:
@@ -30,17 +30,17 @@ namespace mastermind
 			 * \brief Create a ColorCode.
 			 * \param col columns as std::array
 			 */
-			ColorCode(std::array<int, SLOT_COUNT>& col);
+			ColorCode(std::array<std::size_t, SLOT_COUNT>& col);
 			/**
 			* \brief Create a ColorCode.
-			* \param col columns as int[]
+			* \param col columns as std::size_t[]
 			*/
-			ColorCode(int col[]);
+			ColorCode(std::size_t col[]);
 			/**
 			* \brief Create a ColorCode.
 			* \param list columns as std::list
 			*/
-			ColorCode(std::list<int>& list);
+			ColorCode(std::list<std::size_t>& list);
 			/**
 			 * \brief Destruct this.
 			 */

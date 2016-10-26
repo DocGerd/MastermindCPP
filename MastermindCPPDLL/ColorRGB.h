@@ -68,8 +68,8 @@ namespace mastermind
 			uint8_t* getRGB() const;
 
 			std::wstring toString() const override;
-			bool operator==(const ColorRGB &rhs) const;
-			bool operator!=(const ColorRGB &rhs) const;
+			bool operator==(const ColorRGB& rhs) const;
+			bool operator!=(const ColorRGB& rhs) const;
 		};
 	}
 }

@@ -7,7 +7,7 @@ namespace mastermind
 {
 	namespace logic
 	{
-		ColorHSI::ColorHSI(float h, float s, float i) :
+		ColorHSI::ColorHSI(double h, double s, double i) :
 			hue(h), saturation(s), intensity(i)
 		{
 			// TODO: check values
@@ -20,24 +20,24 @@ namespace mastermind
 		{
 		}
 
-		float ColorHSI::getHue() const
+		double ColorHSI::getHue() const
 		{
 			return this->hue;
 		}
 
-		float ColorHSI::getSaturation() const
+		double ColorHSI::getSaturation() const
 		{
 			return this->saturation;
 		}
 
-		float ColorHSI::getIntensity() const
+		double ColorHSI::getIntensity() const
 		{
 			return this->intensity;
 		}
 
-		float* ColorHSI::getHSI() const
+		double* ColorHSI::getHSI() const
 		{
-			float* result = new float[3]{ hue, saturation, intensity };
+			double* result = new double[3]{hue, saturation, intensity};
 			return result;
 		}
 
@@ -63,28 +63,28 @@ namespace mastermind
 			return !(*this == rhs);
 		}
 
-		float ColorHSI::intensityFromRGB(const ColorRGB& rgb)
+		double ColorHSI::intensityFromRGB(const ColorRGB& rgb)
 		{
-			float result = static_cast<float>(rgb.getRed() + rgb.getGreen() + rgb.getBlue());
-			result = result / 3.0f;
+			double result = static_cast<double>(rgb.getRed() + rgb.getGreen() + rgb.getBlue());
+			result = result / 3.0;
 			return result;
 		}
 
-		float ColorHSI::saturationFromRGB(const ColorRGB& rgb)
+		double ColorHSI::saturationFromRGB(const ColorRGB& rgb)
 		{
-			float frac = 3.0f / (rgb.getRed() + rgb.getGreen() + rgb.getBlue());
-			float minrgb = min(min(rgb.getRed(), rgb.getGreen()), rgb.getBlue());
-			return 1.0f - frac * minrgb;
+			double frac = 3.0 / (rgb.getRed() + rgb.getGreen() + rgb.getBlue());
+			double minrgb = min(min(rgb.getRed(), rgb.getGreen()), rgb.getBlue());
+			return 1.0 - frac * minrgb;
 		}
 
-		float ColorHSI::hueFromRGB(const ColorRGB& rgb)
+		double ColorHSI::hueFromRGB(const ColorRGB& rgb)
 		{
-			float red = rgb.getRed() / 255.0f;
-			float green = rgb.getGreen() / 255.0f;
-			float blue = rgb.getBlue() / 255.0f;
-			float num = 0.5f * ((red - green) + (red - blue));
-			float denum = (red - green)*(red - green) + (red - blue) *(green - blue);
-			float result = sqrt(num / denum);
+			double red = rgb.getRed() / 255.0;
+			double green = rgb.getGreen() / 255.0;
+			double blue = rgb.getBlue() / 255.0;
+			double num = 0.5 * ((red - green) + (red - blue));
+			double denum = (red - green) * (red - green) + (red - blue) * (green - blue);
+			double result = sqrt(num / denum);
 			result = acos(result);
 			return result;
 		}

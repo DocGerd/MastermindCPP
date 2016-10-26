@@ -16,7 +16,7 @@ namespace mastermind
 
 			ColorCode Utilities::createRandomCode()
 			{
-				int cols[Mastermind::SLOT_COUNT];
+				std::size_t cols[Mastermind::SLOT_COUNT];
 				std::random_device rd;
 				std::mt19937 rng(rd());
 				std::uniform_int_distribution<int> uni(0, Mastermind::COLOR_COUNT);
@@ -27,7 +27,7 @@ namespace mastermind
 				return ColorCode(cols);
 			}
 
-			void Utilities::split(const std::wstring& s, char delim, std::list<int>& elems)
+			void Utilities::split(const std::wstring& s, char delim, std::list<std::size_t>& elems)
 			{
 				std::istringstream ss;
 				std::string str(s.begin(), s.end());
@@ -52,16 +52,16 @@ namespace mastermind
 				}
 			}
 
-			std::list<int> Utilities::split(const std::wstring& s, char delim)
+			std::list<std::size_t> Utilities::split(const std::wstring& s, char delim)
 			{
-				std::list<int> elems;
+				std::list<std::size_t> elems;
 				split(s, delim, elems);
 				return elems;
 			}
 
-			std::list<int> Utilities::parseString(const std::wstring& s)
+			std::list<std::size_t> Utilities::parseString(const std::wstring& s)
 			{
-				std::list<int> tokens = split(s, ' ');
+				std::list<std::size_t> tokens = split(s, ' ');
 				return tokens;
 			}
 

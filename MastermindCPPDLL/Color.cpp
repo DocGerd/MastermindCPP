@@ -27,40 +27,40 @@ namespace mastermind
 
 		ColorRGB* Color::hsiToRGB(const ColorHSI& hsi)
 		{
-			const float hue = hsi.getHue() * M_PI / 180.0f;
-			const float saturation = hsi.getSaturation();
-			const float intensity = hsi.getIntensity();
+			const double hue = hsi.getHue() * M_PI / 180.0;
+			const double saturation = hsi.getSaturation();
+			const double intensity = hsi.getIntensity();
 
-			float r = -1.0f;
-			float g = -1.0f;
-			float b = -1.0f;
+			double r = -1.0;
+			double g = -1.0;
+			double b = -1.0;
 
 			// TODO: epsilon check
-			if (saturation == 0.0f)
+			if (saturation == 0.0)
 			{
 				r = intensity;
 				g = intensity;
 				b = intensity;
 			}
-			else if (hue >= 0.0f && hue < 2.0f * M_PI / 3.0f)
+			else if (hue >= 0.0 && hue < 2.0 * M_PI / 3.0)
 			{
-				b = (1.0f - saturation) / 3.0f;
-				r = (1.0f + saturation * cos(hue) / cos(M_PI / 3.0f - hue)) / 3.0f;
-				g = 1.0f - r - b;
+				b = (1.0 - saturation) / 3.0;
+				r = (1.0 + saturation * cos(hue) / cos(M_PI / 3.0 - hue)) / 3.0;
+				g = 1.0 - r - b;
 			}
-			else if (hue >= 2.0f * M_PI / 3.0f && hue < 4.0 * M_PI / 3.0f)
+			else if (hue >= 2.0 * M_PI / 3.0 && hue < 4.0 * M_PI / 3.0)
 			{
-				float hn = hue - 2.0f *M_PI / 3.0f;
-				r = (1.0f - saturation) / 3.0f;
-				g = (1.0f + saturation * cos(hn) / cos(M_PI / 3.0f - hn)) / 3.0f;
-				b = 1.0f - r - g;
+				double hn = hue - 2.0 * M_PI / 3.0;
+				r = (1.0 - saturation) / 3.0;
+				g = (1.0 + saturation * cos(hn) / cos(M_PI / 3.0 - hn)) / 3.0;
+				b = 1.0 - r - g;
 			}
-			else if (hue >= 4.0f * M_PI / 3.0f && hue < 2.0f * M_PI)
+			else if (hue >= 4.0 * M_PI / 3.0 && hue < 2.0 * M_PI)
 			{
-				float hn = hue - 4.0f * M_PI / 3.0f;
-				g = (1.0f - saturation) / 3.0f;
-				b = (1.0f + saturation * cos(hn) / cos(M_PI / 3.0f - hn)) / 3.0f;
-				r = 1.0f - b - g;
+				double hn = hue - 4.0 * M_PI / 3.0;
+				g = (1.0 - saturation) / 3.0;
+				b = (1.0 + saturation * cos(hn) / cos(M_PI / 3.0 - hn)) / 3.0;
+				r = 1.0 - b - g;
 			}
 			else
 			{
