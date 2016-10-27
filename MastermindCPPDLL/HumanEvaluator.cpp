@@ -10,13 +10,13 @@ namespace mastermind
 	namespace logic
 	{
 		const std::wstring HumanEvaluator::HELP_TEXT = std::wstring(L"Available actions:")
-		+ L"\nhelp: Print this help message."
-		+ L"\ncancel: Cancel the current game."
-		+ L"\nprint: Print the history of the game."
-		+ L"\nb w: Evaluate last guess with black & white sticks."
-		+ L"\n\tb and w from 0 to " + std::to_wstring(Mastermind::SLOT_COUNT)
-		+ L" and b + w < " + std::to_wstring(Mastermind::SLOT_COUNT)
-		+ L"\n\twrong numbers will be dealt as cheating!";
+			+ L"\nhelp: Print this help message."
+			+ L"\ncancel: Cancel the current game."
+			+ L"\nprint: Print the history of the game."
+			+ L"\nb w: Evaluate last guess with black & white sticks."
+			+ L"\n\tb and w from 0 to " + std::to_wstring(Mastermind::SLOT_COUNT)
+			+ L" and b + w < " + std::to_wstring(Mastermind::SLOT_COUNT)
+			+ L"\n\twrong numbers will be dealt as cheating!";
 
 		HumanEvaluator::HumanEvaluator(ReadOnlyHistory* h) :
 			history(h)
@@ -52,10 +52,12 @@ namespace mastermind
 				}
 				else
 				{
-					std::list<std::size_t> sticks = mastermind::shell::utilities::Utilities::parseString(input);
+					std::list<int*> sticks = mastermind::shell::utilities::Utilities::parseString(input);
 					if (sticks.size() == 2)
 					{
-						bw = new BlackAndWhite(sticks);
+						std::list<std::size_t*> sticksN;
+						std::transform(sticks.begin(), sticks.end(), std::back_inserter(sticksN), shell::utilities::reinterpret_caster<int, std::size_t>());
+						bw = new BlackAndWhite(sticksN);
 						wait = false;
 					}
 					else

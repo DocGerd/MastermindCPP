@@ -8,14 +8,14 @@ namespace mastermind
 	namespace logic
 	{
 		const std::wstring HumanGuesser::HELP_TEXT = std::wstring(L"Available actions:")
-		+ L"\nhelp: Print this help message."
-		+ L"\ncancel: Cancel the current game."
-		+ L"\nprint: Print the history of the game."
-		+ L"\n" + mastermind::shell::utilities::Utilities::createAlphabet()
-		+ L": Enter next guess with colors "
-		+ mastermind::shell::utilities::Utilities::createAlphabet() + L"."
-		+ L"\n\tColors are from 0 to " + std::to_wstring(COLOR_COUNT - 1)
-		+ L"\n\twrong numbers will count as a try";
+			+ L"\nhelp: Print this help message."
+			+ L"\ncancel: Cancel the current game."
+			+ L"\nprint: Print the history of the game."
+			+ L"\n" + mastermind::shell::utilities::Utilities::createAlphabet()
+			+ L": Enter next guess with colors "
+			+ mastermind::shell::utilities::Utilities::createAlphabet() + L"."
+			+ L"\n\tColors are from 0 to " + std::to_wstring(COLOR_COUNT - 1)
+			+ L"\n\twrong numbers will count as a try";
 
 		HumanGuesser::HumanGuesser(ReadOnlyHistory* h) :
 			history(h)
@@ -49,10 +49,12 @@ namespace mastermind
 				}
 				else
 				{
-					std::list<std::size_t> colors = mastermind::shell::utilities::Utilities::parseString(input);
+					std::list<int*> colors = mastermind::shell::utilities::Utilities::parseString(input);
 					if (colors.size() == SLOT_COUNT)
 					{
-						cc = new ColorCode(colors);
+						std::list<color_t*> colorsN;
+						std::transform(colors.begin(), colors.end(), std::back_inserter(colorsN), shell::utilities::reinterpret_caster<int, color_t>());
+						cc = new ColorCode(colorsN);
 						wait = false;
 					}
 					else

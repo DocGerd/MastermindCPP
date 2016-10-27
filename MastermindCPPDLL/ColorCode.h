@@ -11,6 +11,8 @@ namespace mastermind
 {
 	namespace logic
 	{
+		typedef uint8_t color_t;
+
 		/**
 		 * \brief Represents one line of the game board.
 		 */
@@ -21,7 +23,7 @@ namespace mastermind
 			/**
 			 * \brief Colors in the line.
 			 */
-			std::array<std::size_t, SLOT_COUNT> colors;
+			std::array<color_t, SLOT_COUNT> colors;
 #pragma warning(default: 4251)
 
 		public:
@@ -29,17 +31,22 @@ namespace mastermind
 			 * \brief Create a ColorCode.
 			 * \param col columns as std::array
 			 */
-			ColorCode(std::array<std::size_t, SLOT_COUNT>& col);
+			ColorCode(std::array<color_t, SLOT_COUNT>& col);
 			/**
 			* \brief Create a ColorCode.
-			* \param col columns as std::size_t[]
+			* \param col columns as color_t[]
 			*/
-			ColorCode(std::size_t col[]);
+			ColorCode(color_t col[]);
 			/**
 			* \brief Create a ColorCode.
 			* \param list columns as std::list
 			*/
-			ColorCode(std::list<std::size_t>& list);
+			ColorCode(std::list<color_t*>& list);
+			/**
+			 * \brief Create a ColorCode from input string.
+			 * \param str input string
+			 */
+			ColorCode(const std::wstring &str);
 			/**
 			 * \brief Destruct this.
 			 */
@@ -50,14 +57,14 @@ namespace mastermind
 			 * \param index the index
 			 * \return color at index
 			 */
-			int get(std::size_t index);
+			color_t get(std::size_t index);
 
 			/**
 			 * \brief Get color at index.
 			 * \param i the index
 			 * \return color at index
 			 */
-			int operator[](std::size_t i) const;
+			color_t operator[](std::size_t i) const;
 
 			/**
 			 * \brief Test equality to other ColorCode.

@@ -73,7 +73,7 @@ namespace mastermind
 		void ComputerGuesser::createCodes()
 		{
 			possibleCodes = new std::list<ColorCode*>();
-			std::size_t colors[SLOT_COUNT];
+			color_t colors[SLOT_COUNT];
 			for (size_t i = 0; i < SLOT_COUNT; ++i)
 			{
 				colors[i] = 0;

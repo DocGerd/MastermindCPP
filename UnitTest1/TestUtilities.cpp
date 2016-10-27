@@ -21,13 +21,13 @@ namespace UnitTest1
 		TEST_METHOD(TestParseString)
 		{
 			std::wstring str = L"12 29 1 0";
-			std::list<std::size_t> list = mastermind::shell::utilities::Utilities::parseString(str);
+			std::list<int*> list = mastermind::shell::utilities::Utilities::parseString(str);
 			Assert::AreEqual(static_cast<size_t>(4), list.size(), L"", LINE_INFO());
 			size_t size = list.size();
 			std::size_t* tokens = new std::size_t[size];
 			for (std::size_t i = 0; i < size; ++i)
 			{
-				tokens[i] = list.front();
+				tokens[i] = *list.front();
 				list.pop_front();
 			}
 
@@ -40,7 +40,7 @@ namespace UnitTest1
 		TEST_METHOD(TestParseStringFail)
 		{
 			std::wstring str = L"12 a 1 0";
-			std::list<std::size_t> list = mastermind::shell::utilities::Utilities::parseString(str);
+			std::list<int*> list = mastermind::shell::utilities::Utilities::parseString(str);
 			Assert::AreEqual(static_cast<size_t>(3), list.size(), L"", LINE_INFO());
 		}
 

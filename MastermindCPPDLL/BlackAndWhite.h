@@ -42,7 +42,7 @@ namespace mastermind
 			 * \brief Create BlackAndWhite.
 			 * \param sticks list with <tt>size == 2</tt>, first is blacks and second is whites
 			 */
-			BlackAndWhite(std::list<std::size_t>& sticks);
+			BlackAndWhite(std::list<std::size_t*> &sticks);
 
 			/**
 			 * \brief Get string representation.

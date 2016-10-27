@@ -33,9 +33,9 @@ namespace UnitTest1
 		{
 			std::size_t black = 3;
 			std::size_t white = 2;
-			std::list<size_t> list;
-			list.push_back(black);
-			list.push_back(white);
+			std::list<size_t*> list;
+			list.push_back(&black);
+			list.push_back(&white);
 			BlackAndWhite bnw(list);
 
 			Assert::AreEqual(black, bnw.getBlack(), L"", LINE_INFO());

@@ -14,18 +14,18 @@ namespace mastermind
 		{
 		}
 
-		BlackAndWhite::BlackAndWhite(std::list<std::size_t>& list)
+		BlackAndWhite::BlackAndWhite(std::list<std::size_t*>& list)
 		{
 			if (list.size() != 2)
 			{
 				throw std::invalid_argument("only two tuple allowed!");
 			}
-			std::list<std::size_t>::iterator iter = list.begin();
+			std::list<std::size_t*>::iterator iter = list.begin();
 			assert(iter != list.end());
-			black = *iter;
+			black = **iter;
 			++iter;
 			assert(iter != list.end());
-			white = *iter;
+			white = **iter;
 		}
 
 		std::wstring BlackAndWhite::toString() const

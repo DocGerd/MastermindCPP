@@ -14,6 +14,22 @@ namespace mastermind
 			using namespace mastermind::logic;
 
 			/**
+			 * \brief Reinterpreter for list conversions.
+			 * \param From type to cast from
+			 * \param To type to cast to
+			 * \param p pointer to cast
+			 * \return the casted pointer
+			 */
+			template<typename From, typename To>
+			struct MASTERMINDCPPDLL_API reinterpret_caster
+			{
+				To* operator()(From* p)
+				{
+					return reinterpret_cast<To*>(p);
+				}
+			};
+
+			/**
 			 * \brief Utilities class.
 			 */
 			class MASTERMINDCPPDLL_API Utilities
@@ -30,7 +46,7 @@ namespace mastermind
 				* \param s the string to be parsed
 				* \return the tokens
 				*/
-				static std::list<std::size_t> parseString(const std::wstring& s);
+				static std::list<int*> parseString(const std::wstring& s);
 
 				/**
 				 * \brief Create alphabet string for the representation of the board.
@@ -39,14 +55,14 @@ namespace mastermind
 				static std::wstring createAlphabet();
 
 			protected:
-				static void split(const std::wstring& s, char delim, std::list<std::size_t>& elems);
+				static void split(const std::wstring& s, char delim, std::list<std::wstring>& elems);
 				/**
 				* \brief Split a string at given delimiters.
 				* \param s the string to be split
 				* \param delim the delimiter
 				* \return the tokens
 				*/
-				static std::list<std::size_t> split(const std::wstring& s, char delim);
+				static std::list<std::wstring> split(const std::wstring& s, char delim);
 			};
 		}
 	}
