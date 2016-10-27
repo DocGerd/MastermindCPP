@@ -73,11 +73,6 @@ namespace mastermind
 			 * \brief String representation of ColorCode.
 			 * \return the string
 			 */
-			virtual std::wstring toString();
-			/**
-			 * \brief String representation of ColorCode.
-			 * \return the string
-			 */
 			virtual std::wstring toString() const;
 		};
 	}

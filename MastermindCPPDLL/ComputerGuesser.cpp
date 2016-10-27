@@ -2,7 +2,6 @@
 
 #include "ComputerGuesser.h"
 #include "ComputerEvaluator.h"
-#include <iostream>
 
 namespace mastermind
 {
@@ -36,7 +35,6 @@ namespace mastermind
 			{
 				// remove ColorCodes which cannot be possible anymore.
 				ComputerEvaluator evaluator(*(possibleCodes->front()));
-				// FIXME: some bug here
 				std::list<ColorCode*>* possibleCodesNew = new std::list<ColorCode*>();
 				for (std::list<ColorCode*>::iterator iter = possibleCodes->begin(); iter != possibleCodes->end(); ++iter)
 				{

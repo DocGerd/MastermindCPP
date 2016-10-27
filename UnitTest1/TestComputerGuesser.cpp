@@ -1,9 +1,8 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 
-#include "../MastermindCPPDLL/Mastermind.h"
-#include "../MastermindCPPDLL/ColorCode.h"
 #include "../MastermindCPPDLL/ComputerGuesser.h"
+#include "../MastermindCPPDLL/ColorCode.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace mastermind::logic;
@@ -44,6 +43,7 @@ namespace UnitTest1
 
 		TEST_METHOD(TestRunNormal)
 		{
+			// solution is 4 3 1 3
 			// first guess should be 0 0 0 0
 			ComputerGuesser cg;
 			ColorCode* guess = cg.nextGuess();
@@ -54,6 +54,7 @@ namespace UnitTest1
 			cg.processEvaluation(BlackAndWhite(0, 0));
 			delete expected;
 			delete guess;
+			// solution is 4 3 1 3
 			expected = new ColorCode(std::array<color_t, 4>{1, 1, 1, 1});
 			guess = cg.nextGuess();
 			Assert::IsNotNull(guess, L"", LINE_INFO());
@@ -62,23 +63,35 @@ namespace UnitTest1
 			cg.processEvaluation(BlackAndWhite(1, 0));
 			delete expected;
 			delete guess;
-			expected = new ColorCode(std::array<color_t, 4>{1, 2, 3, 4});
+			// solution is 4 3 1 3
+			expected = new ColorCode(std::array<color_t, 4>{1, 2, 2, 2});
 			guess = cg.nextGuess();
 			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
 
-			cg.processEvaluation(BlackAndWhite(0, 3));
+			cg.processEvaluation(BlackAndWhite(0, 1));
 			delete expected;
 			delete guess;
-			expected = new ColorCode(std::array<color_t, 4>{2, 1, 3, 5});
+			// solution is 4 3 1 3
+			expected = new ColorCode(std::array<color_t, 4>{3, 1, 3, 3});
 			guess = cg.nextGuess();
 			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
 
-			cg.processEvaluation(BlackAndWhite(0, 2));
+			cg.processEvaluation(BlackAndWhite(1, 2));
 			delete expected;
 			delete guess;
-			expected = new ColorCode(std::array<color_t, 4>{4, 3, 1, 2});
+			// solution is 4 3 1 3
+			expected = new ColorCode(std::array<color_t, 4>{3, 3, 1, 4});
+			guess = cg.nextGuess();
+			Assert::IsNotNull(guess, L"", LINE_INFO());
+			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
+
+			cg.processEvaluation(BlackAndWhite(2, 2));
+			delete expected;
+			delete guess;
+			// solution is 4 3 1 3
+			expected = new ColorCode(std::array<color_t, 4>{3, 3, 4, 1});
 			guess = cg.nextGuess();
 			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
@@ -86,19 +99,8 @@ namespace UnitTest1
 			cg.processEvaluation(BlackAndWhite(3, 0));
 			delete expected;
 			delete guess;
-			expected = new ColorCode(std::array<color_t, 4>{4, 3, 1, 4});
 			guess = cg.nextGuess();
-			Assert::IsNotNull(guess, L"", LINE_INFO());
-			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
-
-			cg.processEvaluation(BlackAndWhite(3, 0));
-			delete expected;
-			delete guess;
-			expected = new ColorCode(std::array<color_t, 4>{4, 3, 1, 0});
-			guess = cg.nextGuess();
-			Assert::IsNotNull(guess, L"", LINE_INFO());
-			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
-
+			Assert::IsNull(guess, L"", LINE_INFO());
 			// no more moves...
 		}
 	};

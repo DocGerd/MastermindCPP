@@ -45,18 +45,7 @@ namespace mastermind
 		{
 			return this->colors[i];
 		}
-
-		std::wstring ColorCode::toString()
-		{
-			std::wstring result(L"");
-			for (std::size_t i = 0; i < SLOT_COUNT; ++i)
-			{
-				result.append(std::to_wstring(this->colors[i]));
-				result.append(L" ");
-			}
-			return result;
-		}
-
+		
 		std::wstring ColorCode::toString() const
 		{
 			std::wstring result(L"");
