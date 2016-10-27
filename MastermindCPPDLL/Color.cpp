@@ -69,7 +69,10 @@ namespace mastermind
 			const double R = 3.0 * intensity * r * 255.0;
 			const double G = 3.0 * intensity * g * 255.0;
 			const double B = 3.0 * intensity * b * 255.0;
-			return new ColorRGB(round(R), round(G), round(B));
+			return new ColorRGB(
+				static_cast<uint8_t>(round(R)),
+				static_cast<uint8_t>(round(G)),
+				static_cast<uint8_t>(round(B)));
 		}
 
 		ColorHSI* Color::rgbToHSI(const ColorRGB& rgb)

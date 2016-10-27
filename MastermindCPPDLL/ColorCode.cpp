@@ -1,7 +1,8 @@
 #include "stdafx.h"
 
 #include "ColorCode.h"
-#include "Utilities.h"
+
+#include <string>
 
 namespace mastermind
 {

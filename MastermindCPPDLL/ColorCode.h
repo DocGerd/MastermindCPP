@@ -43,11 +43,6 @@ namespace mastermind
 			*/
 			ColorCode(std::list<color_t*>& list);
 			/**
-			 * \brief Create a ColorCode from input string.
-			 * \param str input string
-			 */
-			ColorCode(const std::wstring &str);
-			/**
 			 * \brief Destruct this.
 			 */
 			~ColorCode();

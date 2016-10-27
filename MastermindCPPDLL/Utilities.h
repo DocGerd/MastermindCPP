@@ -20,7 +20,7 @@ namespace mastermind
 			 * \param p pointer to cast
 			 * \return the casted pointer
 			 */
-			template<typename From, typename To>
+			template <typename From, typename To>
 			struct MASTERMINDCPPDLL_API reinterpret_caster
 			{
 				To* operator()(From* p)

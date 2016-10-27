@@ -95,7 +95,8 @@ namespace mastermind
 			if (w > 1.0)
 			{
 				w = 1.0;
-			} else if (w < -1.0)
+			}
+			else if (w < -1.0)
 			{
 				w = -1.0;
 			}

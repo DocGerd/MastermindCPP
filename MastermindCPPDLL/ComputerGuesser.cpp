@@ -80,10 +80,10 @@ namespace mastermind
 			}
 			possibleCodes->push_back(new ColorCode(colors));
 			const std::size_t code_count = CODE_COUNT();
-			for (std::size_t i = 1; i < code_count; ++i)
+			for (int i = 1; i < code_count; ++i)
 			{
 				colors[SLOT_COUNT - 1] = i % COLOR_COUNT;
-				for (std::size_t j = 1; j < SLOT_COUNT; ++j)
+				for (int j = 1; j < SLOT_COUNT; ++j)
 				{
 					colors[SLOT_COUNT - 1 - j] =
 						(i / POWER(COLOR_COUNT, j)) % COLOR_COUNT;
