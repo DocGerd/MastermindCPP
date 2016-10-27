@@ -41,11 +41,12 @@ namespace mastermind
 				for (std::list<ColorCode*>::iterator iter = possibleCodes->begin(); iter != possibleCodes->end(); ++iter)
 				{
 					ColorCode* cc = *iter;
-					BlackAndWhite curr = *evaluator.evaluate(*cc);
-					if (curr == bw)
+					BlackAndWhite* curr = evaluator.evaluate(cc);
+					if (*curr == bw)
 					{
 						possibleCodesNew->push_back(cc);
 					}
+					delete curr;
 				}
 				delete possibleCodes;
 				possibleCodes = possibleCodesNew;

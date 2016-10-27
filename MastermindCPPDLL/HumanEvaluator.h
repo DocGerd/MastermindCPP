@@ -35,7 +35,7 @@ namespace mastermind
 			HumanEvaluator(ReadOnlyHistory* h);
 
 
-			BlackAndWhite* evaluate(const ColorCode& cc) override;
+			BlackAndWhite* evaluate(const ColorCode* cc) override;
 			/**
 			 * \copydoc IEvaluator::getSolution()
 			 */

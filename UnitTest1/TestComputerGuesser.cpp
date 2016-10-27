@@ -48,6 +48,7 @@ namespace UnitTest1
 			ComputerGuesser cg;
 			ColorCode* guess = cg.nextGuess();
 			ColorCode* expected = new ColorCode(std::array<color_t, 4>{0, 0, 0, 0});
+			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
 
 			cg.processEvaluation(BlackAndWhite(0, 0));
@@ -55,6 +56,7 @@ namespace UnitTest1
 			delete guess;
 			expected = new ColorCode(std::array<color_t, 4>{1, 1, 1, 1});
 			guess = cg.nextGuess();
+			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
 
 			cg.processEvaluation(BlackAndWhite(1, 0));
@@ -62,6 +64,7 @@ namespace UnitTest1
 			delete guess;
 			expected = new ColorCode(std::array<color_t, 4>{1, 2, 3, 4});
 			guess = cg.nextGuess();
+			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
 
 			cg.processEvaluation(BlackAndWhite(0, 3));
@@ -69,6 +72,7 @@ namespace UnitTest1
 			delete guess;
 			expected = new ColorCode(std::array<color_t, 4>{2, 1, 3, 5});
 			guess = cg.nextGuess();
+			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
 
 			cg.processEvaluation(BlackAndWhite(0, 2));
@@ -76,6 +80,7 @@ namespace UnitTest1
 			delete guess;
 			expected = new ColorCode(std::array<color_t, 4>{4, 3, 1, 2});
 			guess = cg.nextGuess();
+			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
 
 			cg.processEvaluation(BlackAndWhite(3, 0));
@@ -83,6 +88,7 @@ namespace UnitTest1
 			delete guess;
 			expected = new ColorCode(std::array<color_t, 4>{4, 3, 1, 4});
 			guess = cg.nextGuess();
+			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
 
 			cg.processEvaluation(BlackAndWhite(3, 0));
@@ -90,6 +96,7 @@ namespace UnitTest1
 			delete guess;
 			expected = new ColorCode(std::array<color_t, 4>{4, 3, 1, 0});
 			guess = cg.nextGuess();
+			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
 
 			// no more moves...

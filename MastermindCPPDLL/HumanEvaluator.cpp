@@ -23,10 +23,10 @@ namespace mastermind
 		{
 		}
 
-		BlackAndWhite* HumanEvaluator::evaluate(const ColorCode& cc)
+		BlackAndWhite* HumanEvaluator::evaluate(const ColorCode* cc)
 		{
 			BlackAndWhite* bw = nullptr;
-			std::wcout << L"machine guess: " << cc.toString() << std::endl;
+			std::wcout << L"machine guess: " << cc->toString() << std::endl;
 
 			bool wait = true;
 			while (wait)

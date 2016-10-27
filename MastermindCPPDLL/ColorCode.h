@@ -13,6 +13,7 @@ namespace mastermind
 	{
 		typedef uint8_t color_t;
 
+
 		/**
 		 * \brief Represents one line of the game board.
 		 */
