@@ -38,7 +38,7 @@ namespace mastermind
 			/**
 			 * \copydoc IEvaluator::evaluate()
 			 */
-			BlackAndWhite* evaluate(const ColorCode& cc) override;
+			BlackAndWhite* evaluate(const ColorCode* cc) override;
 			/**
 			 * \copydoc IEvaluator::getSolution()
 			 */

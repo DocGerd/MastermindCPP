@@ -24,7 +24,7 @@ namespace mastermind
 			else
 			{
 				history->add(*cc);
-				bw = evaluator->evaluate(*cc);
+				bw = evaluator->evaluate(cc);
 				if (bw == nullptr)
 				{
 					finished = true;

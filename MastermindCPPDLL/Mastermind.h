@@ -2,8 +2,6 @@
 
 #include "API.h"
 
-#include <string>
-
 namespace mastermind
 {
 	/**

@@ -11,7 +11,8 @@ namespace UnitTest1
 	TEST_CLASS(TestBlackAndWhite)
 	{
 	public:
-		TEST_METHOD(TestGetBlack) {
+		TEST_METHOD(TestGetBlack)
+		{
 			std::size_t black = 3;
 			std::size_t white = 2;
 			BlackAndWhite bnw(black, white);
@@ -19,7 +20,8 @@ namespace UnitTest1
 			Assert::AreEqual(black, bnw.getBlack(), L"", LINE_INFO());
 		}
 
-		TEST_METHOD(TestGetWhite) {
+		TEST_METHOD(TestGetWhite)
+		{
 			std::size_t black = 3;
 			std::size_t white = 2;
 			BlackAndWhite bnw(black, white);
@@ -27,7 +29,21 @@ namespace UnitTest1
 			Assert::AreEqual(white, bnw.getWhite(), L"", LINE_INFO());
 		}
 
-		TEST_METHOD(TestEquals) {
+		TEST_METHOD(TestConstructorWList)
+		{
+			std::size_t black = 3;
+			std::size_t white = 2;
+			std::list<size_t*> list;
+			list.push_back(&black);
+			list.push_back(&white);
+			BlackAndWhite bnw(list);
+
+			Assert::AreEqual(black, bnw.getBlack(), L"", LINE_INFO());
+			Assert::AreEqual(white, bnw.getWhite(), L"", LINE_INFO());
+		}
+
+		TEST_METHOD(TestEquals)
+		{
 			BlackAndWhite bnw1(3, 2);
 			BlackAndWhite bnw2(3, 2);
 			BlackAndWhite bnw3(2, 3);
@@ -39,10 +55,11 @@ namespace UnitTest1
 			Assert::IsFalse(result, L"", LINE_INFO());
 		}
 
-		TEST_METHOD(TestEqualsConst) {
-			const BlackAndWhite &bnw1 = BlackAndWhite(3, 2);
-			const BlackAndWhite &bnw2 = BlackAndWhite(3, 2);
-			const BlackAndWhite &bnw3 = BlackAndWhite(2, 3);
+		TEST_METHOD(TestEqualsConst)
+		{
+			const BlackAndWhite& bnw1 = BlackAndWhite(3, 2);
+			const BlackAndWhite& bnw2 = BlackAndWhite(3, 2);
+			const BlackAndWhite& bnw3 = BlackAndWhite(2, 3);
 
 			bool result = bnw1 == bnw2;
 			Assert::IsTrue(result, L"", LINE_INFO());
@@ -51,7 +68,8 @@ namespace UnitTest1
 			Assert::IsFalse(result, L"", LINE_INFO());
 		}
 
-		TEST_METHOD(TestNotEquals) {
+		TEST_METHOD(TestNotEquals)
+		{
 			BlackAndWhite bnw1(3, 2);
 			BlackAndWhite bnw2(3, 2);
 			BlackAndWhite bnw3(2, 3);

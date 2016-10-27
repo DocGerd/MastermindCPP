@@ -56,20 +56,20 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>Intel C++ Compiler 16.0</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>Intel C++ Compiler 16.0</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_PG|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>Intel C++ Compiler 16.0</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -219,7 +219,10 @@
   <ItemGroup>
     <ClInclude Include="API.h" />
     <ClInclude Include="BlackAndWhite.h" />
+    <ClInclude Include="Color.h" />
     <ClInclude Include="ColorCode.h" />
+    <ClInclude Include="ColorHSI.h" />
+    <ClInclude Include="ColorRGB.h" />
     <ClInclude Include="ComputerEvaluator.h" />
     <ClInclude Include="ComputerGuesser.h" />
     <ClInclude Include="GameHistory.h" />
@@ -239,7 +242,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BlackAndWhite.cpp" />
+    <ClCompile Include="Color.cpp" />
     <ClCompile Include="ColorCode.cpp" />
+    <ClCompile Include="ColorHSI.cpp" />
+    <ClCompile Include="ColorRGB.cpp" />
     <ClCompile Include="ComputerEvaluator.cpp" />
     <ClCompile Include="ComputerGuesser.cpp" />
     <ClCompile Include="dllmain.cpp">
@@ -265,7 +271,6 @@
     <ClCompile Include="GameHistory.cpp" />
     <ClCompile Include="HumanEvaluator.cpp" />
     <ClCompile Include="HumanGuesser.cpp" />
-    <ClCompile Include="IEvaluator.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="ReadOnlyHistory.cpp" />
     <ClCompile Include="Shell.cpp" />

@@ -23,10 +23,10 @@ namespace mastermind
 		{
 		}
 
-		BlackAndWhite* HumanEvaluator::evaluate(const ColorCode& cc)
+		BlackAndWhite* HumanEvaluator::evaluate(const ColorCode* cc)
 		{
 			BlackAndWhite* bw = nullptr;
-			std::wcout << L"machine guess: " << cc.toString() << std::endl;
+			std::wcout << L"machine guess: " << cc->toString() << std::endl;
 
 			bool wait = true;
 			while (wait)
@@ -52,10 +52,12 @@ namespace mastermind
 				}
 				else
 				{
-					std::list<int> sticks = mastermind::shell::utilities::Utilities::parseString(input);
+					std::list<int*> sticks = mastermind::shell::utilities::Utilities::parseString(input);
 					if (sticks.size() == 2)
 					{
-						bw = new BlackAndWhite(sticks);
+						std::list<std::size_t*> sticksN;
+						std::transform(sticks.begin(), sticks.end(), std::back_inserter(sticksN), shell::utilities::reinterpret_caster<int, std::size_t>());
+						bw = new BlackAndWhite(sticksN);
 						wait = false;
 					}
 					else

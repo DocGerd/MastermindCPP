@@ -3,7 +3,6 @@
 #include "API.h"
 #include "Mastermind.h"
 
-#include <string>
 #include <list>
 
 namespace mastermind
@@ -19,13 +18,13 @@ namespace mastermind
 		{
 		private:
 			/**
+			* \brief amount black sticks.
+			*/
+			std::size_t black;
+			/**
 			 * \brief amount white sticks.
 			 */
 			std::size_t white;
-			/**
-			 * \brief amount black sticks.
-			 */
-			std::size_t black;
 		public:
 			/**
 			 * \brief Stick combination for a win.
@@ -43,17 +42,17 @@ namespace mastermind
 			 * \brief Create BlackAndWhite.
 			 * \param sticks list with <tt>size == 2</tt>, first is blacks and second is whites
 			 */
-			BlackAndWhite(std::list<int>& sticks);
+			BlackAndWhite(std::list<std::size_t*>& sticks);
 
 			/**
 			 * \brief Get string representation.
-			 * \return string in format "black: %i white: %i"
+			 * \return string in format <tt>"black: %i white: %i"</tt>
 			 */
 			virtual std::wstring toString() const;
 
 			/**
 			 * \brief Get string representation.
-			 * \return string in format "%i %i"
+			 * \return string in format <tt>"%i %i"</tt>
 			 */
 			std::wstring toStringWithoutDescription() const;
 

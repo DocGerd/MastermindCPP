@@ -16,7 +16,7 @@ namespace mastermind
 
 			ColorCode Utilities::createRandomCode()
 			{
-				int cols[Mastermind::SLOT_COUNT];
+				color_t cols[Mastermind::SLOT_COUNT];
 				std::random_device rd;
 				std::mt19937 rng(rd());
 				std::uniform_int_distribution<int> uni(0, Mastermind::COLOR_COUNT);
@@ -27,7 +27,7 @@ namespace mastermind
 				return ColorCode(cols);
 			}
 
-			void Utilities::split(const std::wstring& s, char delim, std::list<int>& elems)
+			void Utilities::split(const std::wstring& s, char delim, std::list<std::wstring>& elems)
 			{
 				std::istringstream ss;
 				std::string str(s.begin(), s.end());
@@ -35,34 +35,40 @@ namespace mastermind
 				std::string item;
 				while (std::getline(ss, item, delim))
 				{
-					int token;
-					bool success = true;
-					try
-					{
-						token = stoi(item);
-					}
-					catch (std::invalid_argument& ex)
-					{
-						success = false;
-					}
-					if (success)
-					{
-						elems.push_back(stoi(item));
-					}
+					std::wstring wstr(item.begin(), item.end());
+					elems.push_back(wstr);
 				}
 			}
 
-			std::list<int> Utilities::split(const std::wstring& s, char delim)
+			std::list<std::wstring> Utilities::split(const std::wstring& s, char delim)
 			{
-				std::list<int> elems;
+				std::list<std::wstring> elems;
 				split(s, delim, elems);
 				return elems;
 			}
 
-			std::list<int> Utilities::parseString(const std::wstring& s)
+			std::list<int*> Utilities::parseString(const std::wstring& s)
 			{
-				std::list<int> tokens = split(s, ' ');
-				return tokens;
+				std::list<std::wstring> tokens = split(s, ' ');
+				std::list<int*> result;
+				for (std::list<std::wstring>::iterator iter = tokens.begin(); iter != tokens.end(); ++iter)
+				{
+					int* curr;
+					try
+					{
+						curr = new int(stoi(*iter));
+						result.push_back(curr);
+					}
+					catch (std::invalid_argument)
+					{
+						// just ignore
+					}
+					catch (std::out_of_range)
+					{
+						// just ignore
+					}
+				}
+				return result;
 			}
 
 			std::wstring Utilities::createAlphabet()

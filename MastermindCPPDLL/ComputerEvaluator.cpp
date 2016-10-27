@@ -6,7 +6,7 @@ namespace mastermind
 	namespace logic
 	{
 		ComputerEvaluator::ComputerEvaluator(ColorCode solutionCode) :
-			solution(solutionCode), moveCount(0)
+			moveCount(0), solution(solutionCode)
 		{
 		}
 
@@ -14,7 +14,7 @@ namespace mastermind
 		{
 		}
 
-		BlackAndWhite* ComputerEvaluator::evaluate(const ColorCode& cc)
+		BlackAndWhite* ComputerEvaluator::evaluate(const ColorCode* cc)
 		{
 			std::size_t black = 0;
 			std::size_t white = 0;
@@ -30,7 +30,7 @@ namespace mastermind
 			// check blacks
 			for (std::size_t i = 0; i < SLOT_COUNT; ++i)
 			{
-				if (cc[i] == solution[i])
+				if ((*cc)[i] == solution[i])
 				{
 					checkedSol[i] = true;
 					checkedCc[i] = true;
@@ -45,7 +45,7 @@ namespace mastermind
 				{
 					if (!checkedCc[j])
 					{
-						if (solution[i] == cc[j])
+						if (solution[i] == (*cc)[j])
 						{
 							checkedCc[j] = true;
 							checkedSol[i] = true;

@@ -2,30 +2,29 @@
 
 #include "ColorCode.h"
 
-#include <stdexcept>
-#include <iterator>
+#include <string>
 
 namespace mastermind
 {
 	namespace logic
 	{
-		ColorCode::ColorCode(std::array<int, SLOT_COUNT>& col) :
+		ColorCode::ColorCode(std::array<color_t, SLOT_COUNT>& col) :
 			colors(col)
 		{
 		}
 
-		ColorCode::ColorCode(std::list<int>& list)
+		ColorCode::ColorCode(std::list<color_t*>& list)
 		{
 			const size_t size = list.size();
-			std::list<int>::iterator iter = list.begin();
+			std::list<color_t*>::iterator iter = list.begin();
 			for (size_t i = 0; i < size && iter != list.end(); ++i)
 			{
-				colors[i] = *iter;
+				colors[i] = **iter;
 				++iter;
 			}
 		}
 
-		ColorCode::ColorCode(int col[])
+		ColorCode::ColorCode(color_t col[])
 		{
 			for (std::size_t i = 0; i < SLOT_COUNT; ++i)
 			{
@@ -37,27 +36,16 @@ namespace mastermind
 		{
 		}
 
-		int ColorCode::get(std::size_t index)
+		color_t ColorCode::get(std::size_t index)
 		{
 			return this->colors[index];
 		}
 
-		int ColorCode::operator[](std::size_t i) const
+		color_t ColorCode::operator[](std::size_t i) const
 		{
 			return this->colors[i];
 		}
-
-		std::wstring ColorCode::toString()
-		{
-			std::wstring result(L"");
-			for (std::size_t i = 0; i < SLOT_COUNT; ++i)
-			{
-				result.append(std::to_wstring(this->colors[i]));
-				result.append(L" ");
-			}
-			return result;
-		}
-
+		
 		std::wstring ColorCode::toString() const
 		{
 			std::wstring result(L"");

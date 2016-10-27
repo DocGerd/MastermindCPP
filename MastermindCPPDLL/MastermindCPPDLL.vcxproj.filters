@@ -90,6 +90,15 @@
     <ClInclude Include="Utilities.h">
       <Filter>Header Files\Shell</Filter>
     </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorHSI.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorRGB.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -106,9 +115,6 @@
     </ClCompile>
     <ClCompile Include="ComputerEvaluator.cpp">
       <Filter>Source Files\Logic</Filter>
-    </ClCompile>
-    <ClCompile Include="IEvaluator.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ComputerGuesser.cpp">
       <Filter>Source Files\Logic</Filter>
@@ -133,6 +139,15 @@
     </ClCompile>
     <ClCompile Include="Utilities.cpp">
       <Filter>Source Files\Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorRGB.cpp">
+      <Filter>Source Files\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Source Files\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorHSI.cpp">
+      <Filter>Source Files\Logic</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
