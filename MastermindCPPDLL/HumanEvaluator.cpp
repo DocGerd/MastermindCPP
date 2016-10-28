@@ -9,17 +9,17 @@ namespace mastermind
 {
 	namespace logic
 	{
-		const std::wstring HumanEvaluator::HELP_TEXT = std::wstring(L"Available actions:")
-		+ L"\nhelp: Print this help message."
-		+ L"\ncancel: Cancel the current game."
-		+ L"\nprint: Print the history of the game."
-		+ L"\nb w: Evaluate last guess with black & white sticks."
-		+ L"\n\tb and w from 0 to " + std::to_wstring(Mastermind::SLOT_COUNT)
-		+ L" and b + w < " + std::to_wstring(Mastermind::SLOT_COUNT)
-		+ L"\n\twrong numbers will be dealt as cheating!";
-
-		HumanEvaluator::HumanEvaluator(ReadOnlyHistory* h) :
-			history(h)
+		HumanEvaluator::HumanEvaluator(const Mastermind* game, ReadOnlyHistory* h) :
+			game(game),
+			history(h),
+			HELP_TEXT(std::wstring(L"Available actions:")
+				+ L"\nhelp: Print this help message."
+				+ L"\ncancel: Cancel the current game."
+				+ L"\nprint: Print the history of the game."
+				+ L"\nb w: Evaluate last guess with black & white sticks."
+				+ L"\n\tb and w from 0 to " + std::to_wstring(game->getSlotCount())
+				+ L" and b + w < " + std::to_wstring(game->getSlotCount())
+				+ L"\n\twrong numbers will be dealt as cheating!")
 		{
 		}
 

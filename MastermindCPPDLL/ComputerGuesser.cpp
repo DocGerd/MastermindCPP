@@ -2,13 +2,14 @@
 
 #include "ComputerGuesser.h"
 #include "ComputerEvaluator.h"
+#include "Utilities.h"
 
 namespace mastermind
 {
 	namespace logic
 	{
-		ComputerGuesser::ComputerGuesser() :
-			moveCount(0), cheated(false)
+		ComputerGuesser::ComputerGuesser(const Mastermind* game) :
+			game(game), moveCount(0), cheated(false)
 		{
 			createCodes();
 		}
@@ -27,14 +28,14 @@ namespace mastermind
 		void ComputerGuesser::processEvaluation(const BlackAndWhite& bw)
 		{
 			// win situation
-			if (bw == BlackAndWhite::WIN_STICKS)
+			if (game->isWinStick(bw))
 			{
 				std::cout << L"Wow! I did it!" << std::endl;
 			}
 			else
 			{
 				// remove ColorCodes which cannot be possible anymore.
-				ComputerEvaluator evaluator(*(possibleCodes->front()));
+				ComputerEvaluator evaluator(game, possibleCodes->front());
 				std::list<ColorCode*>* possibleCodesNew = new std::list<ColorCode*>();
 				for (std::list<ColorCode*>::iterator iter = possibleCodes->begin(); iter != possibleCodes->end(); ++iter)
 				{
@@ -50,7 +51,7 @@ namespace mastermind
 				possibleCodes = possibleCodesNew;
 
 				// lost situation
-				if (moveCount == MAX_MOVES)
+				if (moveCount == game->getMaxMoves())
 				{
 					std::cout << L"no more moves - I couldn't find a solution" << std::endl;
 				}
@@ -72,22 +73,22 @@ namespace mastermind
 		void ComputerGuesser::createCodes()
 		{
 			possibleCodes = new std::list<ColorCode*>();
-			color_t colors[SLOT_COUNT];
-			for (size_t i = 0; i < SLOT_COUNT; ++i)
+			color_t* colors = new color_t[game->getSlotCount()];
+			for (size_t i = 0; i < game->getSlotCount(); ++i)
 			{
 				colors[i] = 0;
 			}
-			possibleCodes->push_back(new ColorCode(colors));
-			const std::size_t code_count = CODE_COUNT();
+			possibleCodes->push_back(new ColorCode(game->getSlotCount(), colors));
+			const std::size_t code_count = game->getCodeCount();
 			for (int i = 1; i < code_count; ++i)
 			{
-				colors[SLOT_COUNT - 1] = i % COLOR_COUNT;
-				for (int j = 1; j < SLOT_COUNT; ++j)
+				colors[game->getSlotCount() - 1] = i % game->getColorCount();
+				for (int j = 1; j < game->getSlotCount(); ++j)
 				{
-					colors[SLOT_COUNT - 1 - j] =
-						(i / POWER(COLOR_COUNT, j)) % COLOR_COUNT;
+					colors[game->getSlotCount() - 1 - j] =
+						(i / shell::utilities::Utilities::POWER(game->getColorCount(), j)) % game->getColorCount();
 				}
-				possibleCodes->push_back(new ColorCode(colors));
+				possibleCodes->push_back(new ColorCode(game->getSlotCount(), colors));
 			}
 		}
 	}

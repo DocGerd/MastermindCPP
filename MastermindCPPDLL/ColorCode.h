@@ -4,7 +4,7 @@
 
 #include "Mastermind.h"
 
-#include <array>
+#include <vector>
 #include <list>
 
 namespace mastermind
@@ -17,14 +17,14 @@ namespace mastermind
 		/**
 		 * \brief Represents one line of the game board.
 		 */
-		class MASTERMINDCPPDLL_API ColorCode : public Mastermind
+		class MASTERMINDCPPDLL_API ColorCode
 		{
 		private:
 #pragma warning(disable: 4251)
 			/**
 			 * \brief Colors in the line.
 			 */
-			std::array<color_t, SLOT_COUNT> colors;
+			std::vector<color_t> colors;
 #pragma warning(default: 4251)
 
 		public:
@@ -32,12 +32,12 @@ namespace mastermind
 			 * \brief Create a ColorCode.
 			 * \param col columns as std::array
 			 */
-			ColorCode(std::array<color_t, SLOT_COUNT>& col);
+			ColorCode(std::vector<color_t>& col);
 			/**
 			* \brief Create a ColorCode.
 			* \param col columns as color_t[]
 			*/
-			ColorCode(color_t col[]);
+			ColorCode(size_t size, color_t col[]);
 			/**
 			* \brief Create a ColorCode.
 			* \param list columns as std::list
@@ -46,7 +46,7 @@ namespace mastermind
 			/**
 			 * \brief Destruct this.
 			 */
-			~ColorCode();
+			virtual ~ColorCode();
 
 			/**
 			 * \brief Get color at index.

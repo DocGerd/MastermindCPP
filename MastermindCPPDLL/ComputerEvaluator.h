@@ -12,7 +12,7 @@ namespace mastermind
 		/**
 		 * \brief Evaluator which automatically evaluates the ColorCode given to a solution.
 		 */
-		class MASTERMINDCPPDLL_API ComputerEvaluator : public virtual IEvaluator, public Mastermind
+		class MASTERMINDCPPDLL_API ComputerEvaluator : public virtual IEvaluator
 		{
 		private:
 			/**
@@ -20,16 +20,20 @@ namespace mastermind
 			 */
 			unsigned int moveCount;
 			/**
+			* \brief Base game.
+			*/
+			const Mastermind* game;
+			/**
 			 * \brief The solution.
 			 */
-			const ColorCode solution;
+			const ColorCode* solution;
 
 		public:
 			/**
 			 * \brief Create a ComputerEvaluator.
 			 * \param solutionCode the solution
 			 */
-			ComputerEvaluator(ColorCode solutionCode);
+			ComputerEvaluator(const Mastermind* game, const ColorCode* solutionCode);
 			/**
 			 * \brief Destruct this.
 			 */

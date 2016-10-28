@@ -8,7 +8,7 @@ namespace mastermind
 {
 	namespace logic
 	{
-		ColorCode::ColorCode(std::array<color_t, SLOT_COUNT>& col) :
+		ColorCode::ColorCode(std::vector<color_t>& col) :
 			colors(col)
 		{
 		}
@@ -19,16 +19,16 @@ namespace mastermind
 			std::list<color_t*>::iterator iter = list.begin();
 			for (size_t i = 0; i < size && iter != list.end(); ++i)
 			{
-				colors[i] = **iter;
+				colors.push_back(**iter);
 				++iter;
 			}
 		}
 
-		ColorCode::ColorCode(color_t col[])
+		ColorCode::ColorCode(size_t size, color_t col[])
 		{
-			for (std::size_t i = 0; i < SLOT_COUNT; ++i)
+			for (size_t i = 0; i < size; ++i)
 			{
-				colors[i] = col[i];
+				colors.push_back(col[i]);
 			}
 		}
 
@@ -49,7 +49,7 @@ namespace mastermind
 		std::wstring ColorCode::toString() const
 		{
 			std::wstring result(L"");
-			for (std::size_t i = 0; i < SLOT_COUNT; ++i)
+			for (std::size_t i = 0; i < colors.size(); ++i)
 			{
 				result.append(std::to_wstring(this->colors[i]));
 				result.append(L" ");
@@ -60,7 +60,7 @@ namespace mastermind
 		bool ColorCode::operator==(const ColorCode& rhs) const
 		{
 			bool result = true;
-			for (std::size_t i = 0; i < SLOT_COUNT && result; ++i)
+			for (std::size_t i = 0; i < colors.size() && result; ++i)
 			{
 				if (this->colors[i] != rhs.colors[i])
 				{

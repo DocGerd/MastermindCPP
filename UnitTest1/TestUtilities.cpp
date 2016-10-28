@@ -13,7 +13,7 @@ namespace UnitTest1
 		TEST_METHOD(TestCreateAlphabet)
 		{
 			std::wstring expected = L"a b c d";
-			std::wstring actual = mastermind::shell::utilities::Utilities::createAlphabet();
+			std::wstring actual = mastermind::shell::utilities::Utilities::createAlphabet(4);
 
 			Assert::AreEqual(actual, expected, L"", LINE_INFO());
 		}
@@ -31,10 +31,10 @@ namespace UnitTest1
 				list.pop_front();
 			}
 
-			Assert::AreEqual((std::size_t)12, tokens[0], L"", LINE_INFO());
-			Assert::AreEqual((std::size_t)29, tokens[1], L"", LINE_INFO());
-			Assert::AreEqual((std::size_t)1, tokens[2], L"", LINE_INFO());
-			Assert::AreEqual((std::size_t)0, tokens[3], L"", LINE_INFO());
+			Assert::AreEqual(static_cast<std::size_t>(12), tokens[0], L"", LINE_INFO());
+			Assert::AreEqual(static_cast<std::size_t>(29), tokens[1], L"", LINE_INFO());
+			Assert::AreEqual(static_cast<std::size_t>(1), tokens[2], L"", LINE_INFO());
+			Assert::AreEqual(static_cast<std::size_t>(0), tokens[3], L"", LINE_INFO());
 		}
 
 		TEST_METHOD(TestParseStringFail)
@@ -46,7 +46,7 @@ namespace UnitTest1
 
 		TEST_METHOD(TestRandomCode)
 		{
-			mastermind::logic::ColorCode random = mastermind::shell::utilities::Utilities::createRandomCode();
+			mastermind::logic::ColorCode *random = mastermind::shell::utilities::Utilities::createRandomCode(4, 6);
 			Assert::IsTrue(true, L"", LINE_INFO());
 		}
 	};

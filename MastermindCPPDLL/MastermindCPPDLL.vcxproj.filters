@@ -28,6 +28,12 @@
     <Filter Include="Source Files\Shell">
       <UniqueIdentifier>{ea1b92f7-428c-492b-a42e-3056693a0653}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Logic\Color">
+      <UniqueIdentifier>{ebcbcd6c-c66b-4c56-95d4-bf376412c3be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Logic\Color">
+      <UniqueIdentifier>{42c1c3ee-4051-4bf4-9f99-bdc802945c91}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -63,9 +69,6 @@
     <ClInclude Include="Mastermind.h">
       <Filter>Header Files\Logic</Filter>
     </ClInclude>
-    <ClInclude Include="Shell.h">
-      <Filter>Header Files\Shell</Filter>
-    </ClInclude>
     <ClInclude Include="MainGame.h">
       <Filter>Header Files\Logic</Filter>
     </ClInclude>
@@ -81,23 +84,23 @@
     <ClInclude Include="ReadOnlyHistory.h">
       <Filter>Header Files\Logic</Filter>
     </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>Header Files\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Header Files\Logic\Color</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorHSI.h">
+      <Filter>Header Files\Logic\Color</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorRGB.h">
+      <Filter>Header Files\Logic\Color</Filter>
+    </ClInclude>
     <ClInclude Include="Players.h">
       <Filter>Header Files\Shell</Filter>
     </ClInclude>
     <ClInclude Include="RequestedState.h">
       <Filter>Header Files\Shell</Filter>
-    </ClInclude>
-    <ClInclude Include="Utilities.h">
-      <Filter>Header Files\Shell</Filter>
-    </ClInclude>
-    <ClInclude Include="Color.h">
-      <Filter>Header Files\Logic</Filter>
-    </ClInclude>
-    <ClInclude Include="ColorHSI.h">
-      <Filter>Header Files\Logic</Filter>
-    </ClInclude>
-    <ClInclude Include="ColorRGB.h">
-      <Filter>Header Files\Logic</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -134,19 +137,25 @@
     <ClCompile Include="MainGame.cpp">
       <Filter>Source Files\Logic</Filter>
     </ClCompile>
-    <ClCompile Include="Shell.cpp">
-      <Filter>Source Files\Shell</Filter>
-    </ClCompile>
     <ClCompile Include="Utilities.cpp">
       <Filter>Source Files\Shell</Filter>
     </ClCompile>
-    <ClCompile Include="ColorRGB.cpp">
-      <Filter>Source Files\Logic</Filter>
-    </ClCompile>
     <ClCompile Include="Color.cpp">
-      <Filter>Source Files\Logic</Filter>
+      <Filter>Source Files\Logic\Color</Filter>
     </ClCompile>
     <ClCompile Include="ColorHSI.cpp">
+      <Filter>Source Files\Logic\Color</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorRGB.cpp">
+      <Filter>Source Files\Logic\Color</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestedState.cpp">
+      <Filter>Source Files\Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="Players.cpp">
+      <Filter>Source Files\Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="Mastermind.cpp">
       <Filter>Source Files\Logic</Filter>
     </ClCompile>
   </ItemGroup>

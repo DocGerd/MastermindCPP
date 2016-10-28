@@ -1,13 +1,11 @@
 #include "stdafx.h"
-#include "Shell.h"
-#include "RequestedState.h"
-#include "GameHistory.h"
-#include "MainGame.h"
-#include "Players.h"
-#include "IGuesser.h"
-#include "IEvaluator.h"
 
-#include <iostream>
+#include "Shell.h"
+
+#include "../MastermindCPPDLL/RequestedState.h"
+#include "../MastermindCPPDLL/GameHistory.h"
+#include "../MastermindCPPDLL/Players.h"
+#include "../MastermindCPPDLL/MainGame.h"
 
 namespace mastermind
 {
@@ -23,7 +21,7 @@ namespace mastermind
 
 		int Shell::main()
 		{
-			RequestedState state = RequestedState::HUMAN_GUESSER;
+			State state(State::GameState::HUMAN_GUESSER);
 
 			bool quit = false;
 			while (!quit)
@@ -38,11 +36,12 @@ namespace mastermind
 				}
 				else if (input == L"start")
 				{
+					Mastermind* game = new Mastermind();
 					GameHistory* history = new GameHistory();
-					Players* players = getPlayers(state, history);
+					Players* players = Players::getPlayers(state, history);
 					IGuesser* g = players->getGuesser();
 					IEvaluator* e = players->getEvaluator();
-					MainGame* mg = new MainGame(g, e, history);
+					MainGame* mg = new MainGame(game, g, e, history);
 					bool cancel = false;
 					while (!cancel)
 					{
@@ -60,7 +59,7 @@ namespace mastermind
 				}
 				else if (input == L"switch")
 				{
-					state = switchState(state);
+					state.switchState();
 				}
 				else
 				{

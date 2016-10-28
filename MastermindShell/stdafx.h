@@ -7,11 +7,16 @@
 
 #include "targetver.h"
 
-// Headers for CppUnitTest
-#include "CppUnitTest.h"
+#include <stdio.h>
+#include <tchar.h>
+
+
 
 // reference additional headers your program requires here
-#define _USE_MATH_DEFINES
-#include <cmath>
+#include <cassert>
+#include <stdexcept>
 
-#include <vector>
+#include <string>
+
+#include <iostream>
+

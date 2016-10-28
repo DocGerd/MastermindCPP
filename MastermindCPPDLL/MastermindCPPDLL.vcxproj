@@ -235,7 +235,6 @@
     <ClInclude Include="Players.h" />
     <ClInclude Include="ReadOnlyHistory.h" />
     <ClInclude Include="RequestedState.h" />
-    <ClInclude Include="Shell.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Utilities.h" />
@@ -272,8 +271,10 @@
     <ClCompile Include="HumanEvaluator.cpp" />
     <ClCompile Include="HumanGuesser.cpp" />
     <ClCompile Include="MainGame.cpp" />
+    <ClCompile Include="Mastermind.cpp" />
+    <ClCompile Include="Players.cpp" />
     <ClCompile Include="ReadOnlyHistory.cpp" />
-    <ClCompile Include="Shell.cpp" />
+    <ClCompile Include="RequestedState.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

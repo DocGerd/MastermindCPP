@@ -12,9 +12,13 @@ namespace mastermind
 		/**
 		 * \brief A human guesser for console.
 		 */
-		class MASTERMINDCPPDLL_API HumanGuesser : public virtual IGuesser, public Mastermind
+		class MASTERMINDCPPDLL_API HumanGuesser : public virtual IGuesser
 		{
 		private:
+			/**
+			* \brief Base game.
+			*/
+			const Mastermind* game;
 			/**
 			 * \brief History for the evaluator.
 			 * Used for print.
@@ -24,7 +28,7 @@ namespace mastermind
 			/**
 			 * \brief The help text for console output.
 			 */
-			static const std::wstring HELP_TEXT;
+			const std::wstring HELP_TEXT;
 #pragma warning(default: 4251)
 
 		public:
@@ -32,7 +36,7 @@ namespace mastermind
 			* \brief Create a HumanGuesser.
 			* \param h the history to read from
 			*/
-			HumanGuesser(ReadOnlyHistory* h);
+			HumanGuesser(const Mastermind* game, ReadOnlyHistory* h);
 
 			ColorCode* nextGuess() override;
 			void processEvaluation(const BlackAndWhite& bw) override;

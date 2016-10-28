@@ -15,9 +15,13 @@ namespace mastermind
 		 * Uses a heuristic to find a solution. All possibilities are calculated and after each evaluation
 		 * impossible solutions will be removed.
 		 */
-		class MASTERMINDCPPDLL_API ComputerGuesser : public virtual IGuesser, public Mastermind
+		class MASTERMINDCPPDLL_API ComputerGuesser : public virtual IGuesser
 		{
 		private:
+			/**
+			 * \brief Base game.
+			 */
+			const Mastermind* game;
 #pragma warning(disable: 4251)
 			/**
 			 * \brief List of possible codes available to guess.
@@ -37,7 +41,7 @@ namespace mastermind
 			/**
 			 * \brief Create a ComputerGuesser.
 			 */
-			ComputerGuesser();
+			ComputerGuesser(const Mastermind* game);
 			/**
 			 * \copydoc IGuesser::nextGuess()
 			 */

@@ -5,8 +5,8 @@ namespace mastermind
 {
 	namespace logic
 	{
-		MainGame::MainGame(IGuesser* g, IEvaluator* e, GameHistory* h) :
-			moveCount(0), evaluator(e), guesser(g), history(h)
+		MainGame::MainGame(const Mastermind* game, IGuesser* g, IEvaluator* e, GameHistory* h) :
+			game(game), moveCount(0), evaluator(e), guesser(g), history(h)
 		{
 		}
 
@@ -33,14 +33,14 @@ namespace mastermind
 				{
 					history->add(*bw);
 					guesser->processEvaluation(*bw);
-					if (*bw == BlackAndWhite::WIN_STICKS)
+					if (game->isWinStick(*bw))
 					{
 						finished = true;
 					}
 				}
 			}
 			++moveCount;
-			if (moveCount == MAX_MOVES)
+			if (moveCount == game->getMaxMoves())
 			{
 				finished = true;
 			}

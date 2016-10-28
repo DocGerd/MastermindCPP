@@ -13,11 +13,13 @@ namespace UnitTest1
 
 		TEST_METHOD(TestMaxMoves)
 		{
-			const std::size_t cc = mastermind::Mastermind::COLOR_COUNT;
-			const std::size_t sc = mastermind::Mastermind::SLOT_COUNT;
-			const unsigned long expected = (unsigned long)pow(cc, sc);
+			mastermind::logic::Mastermind *game = new mastermind::logic::Mastermind();
+			const uint32_t cc = game->getColorCount();
+			const uint32_t sc = game->getSlotCount();
+			const uint64_t expected = static_cast<uint64_t>(pow(cc, sc));
 
-			Assert::AreEqual(expected, mastermind::Mastermind::CODE_COUNT(), L"", LINE_INFO());
+			Assert::AreEqual(expected, mastermind::logic::Mastermind::Mastermind().getCodeCount(), L"", LINE_INFO());
+			delete game;
 		}
 	};
 }

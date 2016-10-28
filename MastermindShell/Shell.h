@@ -1,7 +1,6 @@
 #pragma once
 
-#include "API.h"
-#include "Mastermind.h"
+#include "../MastermindCPPDLL/Mastermind.h"
 
 namespace mastermind
 {
@@ -10,15 +9,13 @@ namespace mastermind
 		/**
 		 * \brief The shell.
 		 */
-		class MASTERMINDCPPDLL_API Shell : public Mastermind
+		class Shell
 		{
 		private:
-#pragma warning(disable: 4251)
 			/**
 			* \brief The help text for console output.
 			*/
 			static const std::wstring HELP_TEXT;
-#pragma warning(default: 4251)
 		public:
 			/**
 			 * \brief Main method.

@@ -19,6 +19,10 @@ namespace mastermind
 		{
 		private:
 			/**
+			* \brief Base game.
+			*/
+			const Mastermind* game;
+			/**
 			 * \brief Amount of already performed moves.
 			 */
 			std::size_t moveCount;
@@ -42,7 +46,7 @@ namespace mastermind
 			* \param e the evaluator, must not be <tt>null</tt>
 			* \param h the history to write to, must not be <tt>null</tt>
 			*/
-			MainGame(IGuesser* g, IEvaluator* e, GameHistory* h);
+			MainGame(const Mastermind* game, IGuesser* g, IEvaluator* e, GameHistory* h);
 			/**
 			* \brief The game itself. Performs the next turn, i.e.one turn each of
 			* Guesser and Evaluator.

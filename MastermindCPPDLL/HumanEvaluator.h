@@ -16,6 +16,10 @@ namespace mastermind
 		{
 		private:
 			/**
+			* \brief Base game.
+			*/
+			const Mastermind* game;
+			/**
 			 * \brief History for the evaluator.
 			 * Used for print.
 			 */
@@ -24,7 +28,7 @@ namespace mastermind
 			/**
 			 * \brief The help text for console output.
 			 */
-			static const std::wstring HELP_TEXT;
+			const std::wstring HELP_TEXT;
 #pragma warning(default: 4251)
 
 		public:
@@ -32,7 +36,7 @@ namespace mastermind
 			 * \brief Create a HumanEvaluator.
 			 * \param h the history to read from
 			 */
-			HumanEvaluator(ReadOnlyHistory* h);
+			HumanEvaluator(const Mastermind* game, ReadOnlyHistory* h);
 
 
 			BlackAndWhite* evaluate(const ColorCode* cc) override;

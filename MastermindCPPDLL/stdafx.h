@@ -15,15 +15,14 @@
 #define _USE_MATH_DEFINES
 #include <cmath>
 
+#include <cassert>
 #include <stdexcept>
 
 #include <string>
+#include <array>
+#include <vector>
 #include <list>
 #include <iterator>
-
-#include <array>
-
-#include <cassert>
 
 #include <iostream>
 

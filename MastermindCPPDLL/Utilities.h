@@ -39,7 +39,7 @@ namespace mastermind
 				* \brief Create a random ColorCode.
 				* \return the ColorCode
 				*/
-				static ColorCode createRandomCode();
+				static ColorCode* createRandomCode(const uint32_t slotCount, const uint32_t colorCount);
 
 				/**
 				* \brief Parse a string for numbers. Used for input of ColorCodes.
@@ -52,7 +52,15 @@ namespace mastermind
 				 * \brief Create alphabet string for the representation of the board.
 				 * \return string in the form L"a b c d e" etc.
 				 */
-				static std::wstring createAlphabet();
+				static std::wstring createAlphabet(const uint32_t slotCount);
+
+				/**
+				* \brief Calculate power of two uint32_t values.
+				* \param lhs base
+				* \param rhs exponent
+				* \return lhs^rhs
+				*/
+				static uint64_t POWER(uint32_t lhs, uint32_t rhs);
 
 			protected:
 				static void split(const std::wstring& s, char delim, std::list<std::wstring>& elems);

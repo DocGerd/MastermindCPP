@@ -1,7 +1,6 @@
 #pragma once
 
 #include "API.h"
-#include "Mastermind.h"
 
 #include <list>
 
@@ -14,7 +13,7 @@ namespace mastermind
 		 * Black sticks show color and position right.
 		 * White sticks show color right but wrong position.
 		 */
-		class MASTERMINDCPPDLL_API BlackAndWhite : public Mastermind
+		class MASTERMINDCPPDLL_API BlackAndWhite
 		{
 		private:
 			/**
@@ -26,11 +25,6 @@ namespace mastermind
 			 */
 			std::size_t white;
 		public:
-			/**
-			 * \brief Stick combination for a win.
-			 * All black, zero white.
-			 */
-			static const BlackAndWhite WIN_STICKS;
 
 			/**
 			 * \brief Create BlackAndWhite.

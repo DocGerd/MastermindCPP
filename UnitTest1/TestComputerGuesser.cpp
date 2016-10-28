@@ -22,6 +22,8 @@ namespace Microsoft
 	}
 }
 
+using namespace mastermind::logic;
+
 namespace UnitTest1
 {
 	TEST_CLASS(TestComputerGuesser)
@@ -30,9 +32,10 @@ namespace UnitTest1
 		TEST_METHOD(TestRunCheat)
 		{
 			// first guess should be 0 0 0 0
-			ComputerGuesser cg;
+			Mastermind *game = new Mastermind();
+			ComputerGuesser cg(game);
 			ColorCode* guess = cg.nextGuess();
-			ColorCode* expected = new ColorCode(std::array<color_t, 4>{0, 0, 0, 0});
+			ColorCode* expected = new ColorCode(std::vector<color_t>{0, 0, 0, 0});
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
 
 			// evaluation 0 1
@@ -45,9 +48,10 @@ namespace UnitTest1
 		{
 			// solution is 4 3 1 3
 			// first guess should be 0 0 0 0
-			ComputerGuesser cg;
+			Mastermind *game = new Mastermind();
+			ComputerGuesser cg(game);
 			ColorCode* guess = cg.nextGuess();
-			ColorCode* expected = new ColorCode(std::array<color_t, 4>{0, 0, 0, 0});
+			ColorCode* expected = new ColorCode(std::vector<color_t>{0, 0, 0, 0});
 			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
 
@@ -55,7 +59,7 @@ namespace UnitTest1
 			delete expected;
 			delete guess;
 			// solution is 4 3 1 3
-			expected = new ColorCode(std::array<color_t, 4>{1, 1, 1, 1});
+			expected = new ColorCode(std::vector<color_t>{1, 1, 1, 1});
 			guess = cg.nextGuess();
 			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
@@ -64,7 +68,7 @@ namespace UnitTest1
 			delete expected;
 			delete guess;
 			// solution is 4 3 1 3
-			expected = new ColorCode(std::array<color_t, 4>{1, 2, 2, 2});
+			expected = new ColorCode(std::vector<color_t>{1, 2, 2, 2});
 			guess = cg.nextGuess();
 			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
@@ -73,7 +77,7 @@ namespace UnitTest1
 			delete expected;
 			delete guess;
 			// solution is 4 3 1 3
-			expected = new ColorCode(std::array<color_t, 4>{3, 1, 3, 3});
+			expected = new ColorCode(std::vector<color_t>{3, 1, 3, 3});
 			guess = cg.nextGuess();
 			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
@@ -82,7 +86,7 @@ namespace UnitTest1
 			delete expected;
 			delete guess;
 			// solution is 4 3 1 3
-			expected = new ColorCode(std::array<color_t, 4>{3, 3, 1, 4});
+			expected = new ColorCode(std::vector<color_t>{3, 3, 1, 4});
 			guess = cg.nextGuess();
 			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());
@@ -91,7 +95,7 @@ namespace UnitTest1
 			delete expected;
 			delete guess;
 			// solution is 4 3 1 3
-			expected = new ColorCode(std::array<color_t, 4>{3, 3, 4, 1});
+			expected = new ColorCode(std::vector<color_t>{3, 3, 4, 1});
 			guess = cg.nextGuess();
 			Assert::IsNotNull(guess, L"", LINE_INFO());
 			Assert::AreEqual(*expected, *guess, L"", LINE_INFO());

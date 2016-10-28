@@ -7,8 +7,6 @@ namespace mastermind
 {
 	namespace logic
 	{
-		const BlackAndWhite BlackAndWhite::WIN_STICKS = BlackAndWhite(SLOT_COUNT, 0);
-
 		BlackAndWhite::BlackAndWhite(std::size_t blacks, std::size_t whites) :
 			black(blacks), white(whites)
 		{

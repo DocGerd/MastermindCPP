@@ -5,8 +5,8 @@ namespace mastermind
 {
 	namespace logic
 	{
-		ComputerEvaluator::ComputerEvaluator(ColorCode solutionCode) :
-			moveCount(0), solution(solutionCode)
+		ComputerEvaluator::ComputerEvaluator(const Mastermind* game, const ColorCode* solutionCode) :
+			game(game), moveCount(0), solution(solutionCode)
 		{
 		}
 
@@ -19,18 +19,18 @@ namespace mastermind
 			std::size_t black = 0;
 			std::size_t white = 0;
 
-			bool* checkedSol = new bool[SLOT_COUNT];
-			bool* checkedCc = new bool[SLOT_COUNT];
-			for (std::size_t i = 0; i < SLOT_COUNT; ++i)
+			bool* checkedSol = new bool[game->getSlotCount()];
+			bool* checkedCc = new bool[game->getSlotCount()];
+			for (std::size_t i = 0; i < game->getSlotCount(); ++i)
 			{
 				checkedSol[i] = false;
 				checkedCc[i] = false;
 			}
 
 			// check blacks
-			for (std::size_t i = 0; i < SLOT_COUNT; ++i)
+			for (std::size_t i = 0; i < game->getSlotCount(); ++i)
 			{
-				if ((*cc)[i] == solution[i])
+				if ((*cc)[i] == (*solution)[i])
 				{
 					checkedSol[i] = true;
 					checkedCc[i] = true;
@@ -39,13 +39,13 @@ namespace mastermind
 			}
 
 			// check whites
-			for (std::size_t i = 0; i < SLOT_COUNT; ++i)
+			for (std::size_t i = 0; i < game->getSlotCount(); ++i)
 			{
-				for (std::size_t j = 0; j < SLOT_COUNT && !checkedSol[i]; ++j)
+				for (std::size_t j = 0; j < game->getSlotCount() && !checkedSol[i]; ++j)
 				{
 					if (!checkedCc[j])
 					{
-						if (solution[i] == (*cc)[j])
+						if ((*cc)[j] == (*solution)[i])
 						{
 							checkedCc[j] = true;
 							checkedSol[i] = true;
@@ -63,9 +63,9 @@ namespace mastermind
 		ColorCode* ComputerEvaluator::getSolution()
 		{
 			ColorCode* result = nullptr;
-			if (moveCount >= MAX_MOVES)
+			if (moveCount >= game->getMaxMoves())
 			{
-				result = new ColorCode(solution);
+				result = new ColorCode(*solution);
 			}
 			return result;
 		}

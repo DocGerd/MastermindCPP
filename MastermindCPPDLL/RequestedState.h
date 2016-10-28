@@ -1,46 +1,58 @@
 #pragma once
 
-#include <stdexcept>
+#include "API.h"
 
 namespace mastermind
 {
 	namespace shell
 	{
 		/**
-		 * \brief Available states for games.
+		 * \brief Game state.
+		 * Class holds the current game state and can be switched here.
 		 */
-		enum RequestedState
+		class MASTERMINDCPPDLL_API State
 		{
+		public:
 			/**
-			 * \brief Human guesser, computer evaluator.
-			 */
-			HUMAN_GUESSER,
-			/**
-			 * \brief Computer guesser, human evaluator.
-			 */
-			COMPUTER_GUESSER
-		};
-
-		/**
-		 * \brief Switch the state.
-		 * \param state current state
-		 * \return the other state
-		 */
-		static RequestedState switchState(const RequestedState& state)
-		{
-			RequestedState result;
-			switch (state)
+			* \brief Available states for games.
+			*/
+			enum class GameState
 			{
-			case HUMAN_GUESSER:
-				result = RequestedState::COMPUTER_GUESSER;
-				break;
-			case COMPUTER_GUESSER:
-				result = RequestedState::HUMAN_GUESSER;
-				break;
-			default:
-				throw std::logic_error("cannot happen.");
-			}
-			return result;
-		}
+				/**
+				* \brief Human guesser, computer evaluator.
+				*/
+				HUMAN_GUESSER,
+				/**
+				* \brief Computer guesser, human evaluator.
+				*/
+				COMPUTER_GUESSER
+			};
+
+		private:
+			GameState state;
+
+		public:
+			/**
+			 * \brief Create a new state. Initialised to HUMAN_GUESSER.
+			 */
+			State();
+			/**
+			 * \brief Create a new state.
+			 * \param state the state to start.
+			 */
+			State(GameState state);
+			/**
+			* \brief Switch the state.
+			*/
+			void switchState();
+			/**
+			 * \brief Get current state.
+			 * \return the current state
+			 */
+			GameState getCurrentState() const;
+
+		protected:
+			void switchState(const GameState& currentState);
+		};
 	}
 }

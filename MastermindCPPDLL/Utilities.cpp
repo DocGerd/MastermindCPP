@@ -14,17 +14,17 @@ namespace mastermind
 		{
 			using namespace mastermind::logic;
 
-			ColorCode Utilities::createRandomCode()
+			ColorCode* Utilities::createRandomCode(const uint32_t slotCount, const uint32_t colorCount)
 			{
-				color_t cols[Mastermind::SLOT_COUNT];
+				color_t* cols = new color_t[slotCount];
 				std::random_device rd;
 				std::mt19937 rng(rd());
-				std::uniform_int_distribution<int> uni(0, Mastermind::COLOR_COUNT);
-				for (std::size_t i = 0; i < Mastermind::SLOT_COUNT; ++i)
+				std::uniform_int_distribution<int> uni(0, colorCount);
+				for (std::size_t i = 0; i < slotCount; ++i)
 				{
 					cols[i] = uni(rng);
 				}
-				return ColorCode(cols);
+				return new ColorCode(slotCount, cols);
 			}
 
 			void Utilities::split(const std::wstring& s, char delim, std::list<std::wstring>& elems)
@@ -71,16 +71,26 @@ namespace mastermind
 				return result;
 			}
 
-			std::wstring Utilities::createAlphabet()
+			std::wstring Utilities::createAlphabet(const uint32_t slotCount)
 			{
 				wchar_t c = 'a';
 				std::wstring result = L"";
 				result.append(1, c);
-				for (std::size_t i = 0; i < Mastermind::SLOT_COUNT - 1; ++i)
+				for (std::size_t i = 0; i < slotCount - 1; ++i)
 				{
 					++c;
 					result.append(L" ");
 					result.append(1, c);
+				}
+				return result;
+			}
+
+			uint64_t Utilities::POWER(uint32_t lhs, uint32_t rhs)
+			{
+				uint64_t result = lhs;
+				for (auto i = 1; i < rhs; ++i)
+				{
+					result *= lhs;
 				}
 				return result;
 			}

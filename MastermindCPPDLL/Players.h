@@ -5,11 +5,6 @@
 #include "IEvaluator.h"
 #include "RequestedState.h"
 #include "GameHistory.h"
-#include "HumanGuesser.h"
-#include "HumanEvaluator.h"
-#include "ComputerGuesser.h"
-#include "ComputerEvaluator.h"
-#include "Utilities.h"
 
 namespace mastermind
 {
@@ -38,56 +33,29 @@ namespace mastermind
 			 * \param g the guesser
 			 * \param e the evaluator
 			 */
-			Players(IGuesser* g, IEvaluator* e) :
-				guesser(g), evaluator(e)
-			{
-			}
+			Players(IGuesser* g, IEvaluator* e);
 
 			/**
 			 * \brief Get the guesser.
 			 * \return the guesser
 			 */
-			IGuesser* getGuesser() const
-			{
-				return this->guesser;
-			}
+			IGuesser* getGuesser() const;
 
 			/**
 			 * \brief Get the evaluator.
 			 * \return the evaluator
 			 */
-			IEvaluator* getEvaluator() const
-			{
-				return this->evaluator;
-			}
-		};
+			IEvaluator* getEvaluator() const;
 
-		/**
-		* \brief Get the player objects.
-		* Just here are the objects created so the objects are created just
-		* in time. (in case someone "switches" pretty often...)
-		* \param state the requested state, must not be <tt>null</tt>
-		* \param history the history which should be referenced in the Human* objects
-		* \return the players
-		*/
-		inline Players* getPlayers(RequestedState state, GameHistory* history)
-		{
-			IEvaluator* e;
-			IGuesser* g;
-			switch (state)
-			{
-			case HUMAN_GUESSER:
-				g = new HumanGuesser(new ReadOnlyHistory(history));
-				e = new ComputerEvaluator(utilities::Utilities::createRandomCode());
-				break;
-			case COMPUTER_GUESSER:
-				g = new ComputerGuesser();
-				e = new HumanEvaluator(new ReadOnlyHistory(history));
-				break;
-			default:
-				throw std::logic_error("cannot happen");
-			}
-			return new Players(g, e);
-		}
+			/**
+			* \brief Get the player objects.
+			* Just here are the objects created so the objects are created just
+			* in time. (in case someone "switches" pretty often...)
+			* \param state the requested state
+			* \param history the history which should be referenced in the Human* objects
+			* \return the players
+			*/
+			static Players* getPlayers(State state, GameHistory* history);
+		};
 	}
 }
