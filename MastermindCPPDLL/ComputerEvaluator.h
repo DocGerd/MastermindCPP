@@ -16,13 +16,13 @@ namespace mastermind
 		{
 		private:
 			/**
-			 * \brief Amount of already performed moves.
-			 */
-			unsigned int moveCount;
-			/**
 			* \brief Base game.
 			*/
 			const Mastermind* game;
+			/**
+			 * \brief Amount of already performed moves.
+			 */
+			unsigned int moveCount;
 			/**
 			 * \brief The solution.
 			 */

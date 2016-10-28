@@ -26,6 +26,10 @@ namespace mastermind
 			white = **iter;
 		}
 
+		BlackAndWhite::~BlackAndWhite()
+		{	
+		}
+
 		std::wstring BlackAndWhite::toString() const
 		{
 			std::wstring str(L"");

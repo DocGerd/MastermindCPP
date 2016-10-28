@@ -3,6 +3,7 @@
 
 #include "../MastermindCPPDLL/ComputerGuesser.h"
 #include "../MastermindCPPDLL/ColorCode.h"
+#include "../MastermindCPPDLL/BlackAndWhite.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace mastermind::logic;

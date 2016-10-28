@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../MastermindCPPDLL/Mastermind.h"
+#include "../MastermindCPPDLL/RequestedState.h"
 
 namespace mastermind
 {
@@ -16,12 +17,23 @@ namespace mastermind
 			* \brief The help text for console output.
 			*/
 			static const std::wstring HELP_TEXT;
+
+			const logic::Mastermind* game;
+
 		public:
+			Shell();
 			/**
 			 * \brief Main method.
-			 * \return --
+			 * \return 0
 			 */
-			static int main();
+			int main() const;
+
+		protected:
+			void runMain(const State& state) const;
+			/**
+			 * \brief Print help to console.
+			 */
+			static void printHelp();
 		};
 	}
 }

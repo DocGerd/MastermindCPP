@@ -7,6 +7,7 @@
 
 int main()
 {
-	return mastermind::shell::Shell::main();
+	mastermind::shell::Shell shell;
+	return shell.main();
 }
 

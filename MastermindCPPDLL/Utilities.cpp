@@ -1,7 +1,6 @@
 #include "stdafx.h"
 
 #include "Utilities.h"
-#include "Mastermind.h"
 
 #include <sstream>
 #include <random>

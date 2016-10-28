@@ -47,7 +47,7 @@ namespace UnitTest1
 		TEST_METHOD(TestRandomCode)
 		{
 			mastermind::logic::ColorCode *random = mastermind::shell::utilities::Utilities::createRandomCode(4, 6);
-			Assert::IsTrue(true, L"", LINE_INFO());
+			Assert::IsNotNull(random, L"", LINE_INFO());
 		}
 	};
 }

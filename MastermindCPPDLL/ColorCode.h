@@ -2,8 +2,6 @@
 
 #include "API.h"
 
-#include "Mastermind.h"
-
 #include <vector>
 #include <list>
 

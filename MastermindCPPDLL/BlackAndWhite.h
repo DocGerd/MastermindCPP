@@ -39,6 +39,11 @@ namespace mastermind
 			BlackAndWhite(std::list<std::size_t*>& sticks);
 
 			/**
+			 * \brief Destruct this.
+			 */
+			virtual ~BlackAndWhite();
+
+			/**
 			 * \brief Get string representation.
 			 * \return string in format <tt>"black: %i white: %i"</tt>
 			 */
