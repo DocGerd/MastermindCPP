@@ -24,17 +24,15 @@ namespace UnitTest1
 			std::list<int*> list = mastermind::shell::utilities::Utilities::parseString(str);
 			Assert::AreEqual(static_cast<size_t>(4), list.size(), L"", LINE_INFO());
 			size_t size = list.size();
-			std::size_t* tokens = new std::size_t[size];
-			for (std::size_t i = 0; i < size; ++i)
-			{
-				tokens[i] = *list.front();
-				list.pop_front();
-			}
 
-			Assert::AreEqual(static_cast<std::size_t>(12), tokens[0], L"", LINE_INFO());
-			Assert::AreEqual(static_cast<std::size_t>(29), tokens[1], L"", LINE_INFO());
-			Assert::AreEqual(static_cast<std::size_t>(1), tokens[2], L"", LINE_INFO());
-			Assert::AreEqual(static_cast<std::size_t>(0), tokens[3], L"", LINE_INFO());
+			Assert::AreEqual(static_cast<std::size_t>(12), static_cast<size_t>(*list.front()), L"", LINE_INFO());
+			list.pop_front();
+			Assert::AreEqual(static_cast<std::size_t>(29), static_cast<size_t>(*list.front()), L"", LINE_INFO());
+			list.pop_front();
+			Assert::AreEqual(static_cast<std::size_t>(1), static_cast<size_t>(*list.front()), L"", LINE_INFO());
+			list.pop_front();
+			Assert::AreEqual(static_cast<std::size_t>(0), static_cast<size_t>(*list.front()), L"", LINE_INFO());
+			list.pop_front();
 		}
 
 		TEST_METHOD(TestParseStringFail)
