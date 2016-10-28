@@ -1,6 +1,6 @@
 {
   "name": "Mastermindcpp",
   "tagline": "A simple Mastermind game with heuristic computer opponent.",
-  "body": "### Features\r\n## Implemented\r\n* Simple Mastermind Game\r\n* Computer opponent with heuristic guessing and cheat detection\r\n* Simple Console UI\r\n## In Development\r\n* Qt GUI\r\n\r\n### Authors and Contributors\r\n* Patrick Kuhn (@DocGerd)\r\n",
+  "body": "# Features\r\n## Implemented\r\n* Simple Mastermind Game\r\n* Computer opponent with heuristic guessing and cheat detection\r\n* Simple Console UI\r\n## In Development\r\n* Qt GUI\r\n\r\n# Authors and Contributors\r\n* Patrick Kuhn (@DocGerd)\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
