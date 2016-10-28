@@ -3,7 +3,8 @@ TEMPLATE = app
 QT += qml quick
 CONFIG += c++11
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    GeneratedFiles/qrc_qml.cpp
 
 RESOURCES += qml.qrc
 
@@ -19,3 +20,7 @@ win32: LIBS += -L$$PWD/../Debug/ -lMastermindCPPDLL
 
 INCLUDEPATH += $$PWD/../Debug
 DEPENDPATH += $$PWD/../Debug
+
+DISTFILES += \
+    MastermindCPP.qmlproject
+

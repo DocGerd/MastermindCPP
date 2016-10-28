@@ -1,16 +1,54 @@
 import QtQuick 2.7
 import QtQuick.Window 2.2
 
-Window {
-    visible: true
-    width: 640
-    height: 480
-    title: qsTr("Hello World")
+Rectangle {
+    id: screen
 
-    MainForm {
-        anchors.fill: parent
-        mouseArea.onClicked: {
-            console.log(qsTr('Clicked on background. Text: "' + textEdit.text + '"'))
+    width: 490
+    height: 720
+
+    SystemPalette {
+        id: activePalette
+    }
+
+//    Item {
+//        width: parent.width
+//        anchors {
+//            top: parent.top
+//            bottom: toolBar.top
+//        }
+
+//        Image {
+//            id: background
+//            anchors.fill: parent
+//            //source: "shared/pics/background.jpg"
+//            fillMode: Image.PreserveAspectCrop
+//        }
+//    }
+
+    Rectangle {
+        id: toolBar
+        width: parent.width
+        height: 30
+        color: activePalette.window
+        anchors.bottom: screen.bottom
+
+        Button {
+            anchors {
+                left: parent.left
+                verticalCenter: parent.verticalCenter
+            }
+            text: "New Game"
+            onClicked: console.log("Not yet implemented...")
+        }
+
+        Text {
+            id: score
+            anchors {
+                right: parent.right
+                verticalCenter: parent.verticalCenter
+            }
+            text: "Score: bla"
         }
     }
 }

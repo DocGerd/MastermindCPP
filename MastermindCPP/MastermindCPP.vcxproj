@@ -22,6 +22,7 @@
     <ProjectGuid>{9462902E-11FB-3BF7-A19A-6E4450B4F619}</ProjectGuid>
     <RootNamespace>MastermindCPP</RootNamespace>
     <Keyword>Qt4VSv1.0</Keyword>
+    <ProjectName>MastermindGUI</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
