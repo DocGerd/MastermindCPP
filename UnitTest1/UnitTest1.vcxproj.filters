@@ -53,5 +53,8 @@
     <ClCompile Include="TestColor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TestMainGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

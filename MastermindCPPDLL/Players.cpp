@@ -15,6 +15,14 @@ namespace mastermind
 		Players::Players(IGuesser* g, IEvaluator* e) :
 			guesser(g), evaluator(e)
 		{
+			if (g == nullptr)
+			{
+				std::invalid_argument("g must not be nullptr!");
+			}
+			if (e == nullptr)
+			{
+				std::invalid_argument("e must not be nullptr!");
+			}
 		}
 
 		IGuesser* Players::getGuesser() const

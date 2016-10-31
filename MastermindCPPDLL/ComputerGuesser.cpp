@@ -50,12 +50,12 @@ namespace mastermind
 				delete possibleCodes;
 				possibleCodes = possibleCodesNew;
 
-				// lost situation
+				// lost state
 				if (moveCount == game->getMaxMoves())
 				{
 					std::cout << L"no more moves - I couldn't find a solution" << std::endl;
 				}
-				// cheating situation
+				// cheating state
 				else if (possibleCodes->empty())
 				{
 					std::cout << L"no possibilities left - you have been cheating!" << std::endl;
@@ -73,22 +73,24 @@ namespace mastermind
 		void ComputerGuesser::createCodes()
 		{
 			possibleCodes = new std::list<ColorCode*>();
-			color_t* colors = new color_t[game->getSlotCount()];
-			for (size_t i = 0; i < game->getSlotCount(); ++i)
+			const uint32_t slot_count = game->getSlotCount();
+			color_t* colors = new color_t[slot_count];
+			for (size_t i = 0; i < slot_count; ++i)
 			{
 				colors[i] = 0;
 			}
-			possibleCodes->push_back(new ColorCode(game->getSlotCount(), colors));
+			possibleCodes->push_back(new ColorCode(slot_count, colors));
 			const std::size_t code_count = game->getCodeCount();
+			const uint32_t colorcount = game->getColorCount();
 			for (int i = 1; i < code_count; ++i)
 			{
-				colors[game->getSlotCount() - 1] = i % game->getColorCount();
-				for (int j = 1; j < game->getSlotCount(); ++j)
+				colors[slot_count - 1] = i % colorcount;
+				for (int j = 1; j < slot_count; ++j)
 				{
-					colors[game->getSlotCount() - 1 - j] =
-						(i / shell::utilities::Utilities::POWER(game->getColorCount(), j)) % game->getColorCount();
+					colors[slot_count - 1 - j] =
+						(i / shell::utilities::Utilities::POWER(colorcount, j)) % colorcount;
 				}
-				possibleCodes->push_back(new ColorCode(game->getSlotCount(), colors));
+				possibleCodes->push_back(new ColorCode(slot_count, colors));
 			}
 		}
 	}

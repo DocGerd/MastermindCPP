@@ -21,10 +21,23 @@ namespace mastermind
 				+ L" and b + w < " + std::to_wstring(game->getSlotCount())
 				+ L"\n\twrong numbers will be dealt as cheating!")
 		{
+			if (game == nullptr)
+			{
+				throw std::invalid_argument("game must not be nullptr!");
+			}
+			if (h == nullptr)
+			{
+				throw std::invalid_argument("h must not be nullptr!");
+			}
 		}
 
 		BlackAndWhite* HumanEvaluator::evaluate(const ColorCode* cc)
 		{
+			if (cc == nullptr)
+			{
+				throw std::invalid_argument("cc must not be nullptr!");
+			}
+
 			BlackAndWhite* bw = nullptr;
 			std::wcout << L"machine guess: " << cc->toString() << std::endl;
 

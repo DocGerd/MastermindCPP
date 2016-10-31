@@ -34,6 +34,8 @@ namespace mastermind
 			* \param h hue value, must be [0.0..360.0)
 			* \param s saturation value, must be [0.0..1.0]
 			* \param i intensity value, must be [0.0..1.0]
+			* 
+			* \exception std::invalid_argument
 			*/
 			ColorHSI(double h, double s, double i);
 			ColorHSI(const ColorRGB& colorRGB);
@@ -59,6 +61,9 @@ namespace mastermind
 			*/
 			double* getHSI() const;
 
+			/**
+			 * \copydoc mastermind::logic::Color::toString()
+			 */
 			std::wstring toString() const override;
 			bool operator==(const ColorHSI& rhs) const;
 			bool operator!=(const ColorHSI& rhs) const;

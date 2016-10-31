@@ -34,12 +34,14 @@ namespace mastermind
 		public:
 			/**
 			 * \brief Create a HumanEvaluator.
-			 * \param game the main game
-			 * \param h the history to read from
+			 * \param game the main game, must not be <tt>null</tt>
+			 * \param h the history to read from, must not be <tt>null</tt>
 			 */
 			HumanEvaluator(const Mastermind* game, ReadOnlyHistory* h);
 
-
+			/**
+			* \copydoc mastermind::logic::IEvaluator::getSolution()
+			*/
 			BlackAndWhite* evaluate(const ColorCode* cc) override;
 			/**
 			 * \copydoc mastermind::logic::IEvaluator::getSolution()

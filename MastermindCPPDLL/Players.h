@@ -30,8 +30,10 @@ namespace mastermind
 		public:
 			/**
 			 * \brief Create Players.
-			 * \param g the guesser
-			 * \param e the evaluator
+			 * \param g the guesser, must not be <tt>null</tt>
+			 * \param e the evaluator, must not be <tt>null</tt>
+			 * 
+			 * \exception std::invalid_argument
 			 */
 			Players(IGuesser* g, IEvaluator* e);
 

@@ -66,6 +66,9 @@ namespace mastermind
 			*/
 			uint8_t* getRGB() const;
 
+			/**
+			* \copydoc mastermind::logic::Color::toString()
+			*/
 			std::wstring toString() const override;
 			bool operator==(const ColorRGB& rhs) const;
 			bool operator!=(const ColorRGB& rhs) const;

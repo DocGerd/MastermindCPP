@@ -17,6 +17,16 @@ namespace UnitTest1
 			ColorCode cc(cols);
 		}
 
+		TEST_METHOD(TestCstr2)
+		{
+			std::list<color_t*> cols;
+			cols.push_back(new color_t(1));
+			cols.push_back(new color_t(2));
+			cols.push_back(new color_t(3));
+			cols.push_back(new color_t(4));
+			ColorCode cc(cols);
+		}
+
 		TEST_METHOD(TestGet)
 		{
 			std::vector<color_t> cols = { 1, 2, 3, 4 };

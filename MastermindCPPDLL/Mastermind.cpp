@@ -8,9 +8,7 @@ namespace mastermind
 {
 	namespace logic
 	{
-		Mastermind::Mastermind(uint32_t max_moves,
-			uint32_t slot_count,
-			uint32_t color_count) :
+		Mastermind::Mastermind(uint32_t max_moves, uint32_t slot_count, uint32_t color_count) :
 			max_moves(max_moves),
 			slot_count(slot_count),
 			color_count(color_count),
@@ -38,7 +36,7 @@ namespace mastermind
 			return code_count;
 		}
 
-		bool Mastermind::isWinStick(const logic::BlackAndWhite& bw) const
+		bool Mastermind::isWinStick(const BlackAndWhite& bw) const
 		{
 			if (bw.getWhite() == 0 && bw.getBlack() == getSlotCount())
 			{

@@ -42,6 +42,23 @@ namespace UnitTest1
 			Assert::AreEqual(white, bnw.getWhite(), L"", LINE_INFO());
 		}
 
+		TEST_METHOD(TestConstructorWListException)
+		{
+			std::size_t black = 3;
+			std::list<size_t*> list;
+			list.push_back(&black);
+			
+			bool result = false;
+			try
+			{
+				BlackAndWhite bw = BlackAndWhite(list);
+			} catch (std::invalid_argument)
+			{
+				result = true;
+			}
+			Assert::IsTrue(result, L"", LINE_INFO());
+		}
+
 		TEST_METHOD(TestEquals)
 		{
 			BlackAndWhite bnw1(3, 2);
@@ -79,6 +96,22 @@ namespace UnitTest1
 
 			result = bnw1 != bnw3;
 			Assert::IsTrue(result, L"", LINE_INFO());
+		}
+
+		TEST_METHOD(TestToString)
+		{
+			BlackAndWhite bw(3, 2);
+			std::wstring expected(L"black: 3 white: 2");
+			std::wstring actual = bw.toString();
+			Assert::AreEqual(expected, actual, L"", LINE_INFO());
+		}
+
+		TEST_METHOD(TestToStringWithoutDescription)
+		{
+			BlackAndWhite bw(3, 2);
+			std::wstring expected(L"3 2");
+			std::wstring actual = bw.toStringWithoutDescription();
+			Assert::AreEqual(expected, actual, L"", LINE_INFO());
 		}
 	};
 }

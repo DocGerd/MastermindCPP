@@ -11,7 +11,7 @@ namespace mastermind
 		 */
 		class MASTERMINDCPPDLL_API Mastermind
 		{
-		private:
+		public:
 			/**
 			* \brief Maximum moves allowed until game finished.
 			*/
@@ -25,6 +25,7 @@ namespace mastermind
 			*/
 			static constexpr uint32_t DEFAULT_COLOR_COUNT = 6;
 
+		private:
 			/**
 			* \brief Maximum moves allowed until game finished.
 			*/

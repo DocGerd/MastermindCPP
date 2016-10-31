@@ -34,8 +34,8 @@ namespace mastermind
 		public:
 			/**
 			* \brief Create a HumanGuesser.
-			* \param game the main game
-			* \param h the history to read from
+			* \param game the main game, must not be <tt>nullptr</tt>
+			* \param h the history to read from, must not be <tt>nullptr</tt>
 			*/
 			HumanGuesser(const Mastermind* game, ReadOnlyHistory* h);
 

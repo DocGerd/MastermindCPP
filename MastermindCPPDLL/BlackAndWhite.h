@@ -35,6 +35,8 @@ namespace mastermind
 			/**
 			 * \brief Create BlackAndWhite.
 			 * \param sticks list with <tt>size == 2</tt>, first is blacks and second is whites
+			 * 
+			 * \exception std::invalid_argument if <tt>size != 2</tt>
 			 */
 			BlackAndWhite(std::list<std::size_t*>& sticks);
 

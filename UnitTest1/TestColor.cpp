@@ -30,6 +30,18 @@ namespace UnitTest1
 			Assert::AreEqual(expectedInt, intens, 0.005, L"", LINE_INFO());
 		}
 
+		TEST_METHOD(TestRGBtoHSI2)
+		{
+			const ColorRGB rgb(50, 50, 50);
+
+			const double expectedHue = 0.0;
+
+			const ColorHSI* hsi = Color::rgbToHSI(rgb);
+			const double hue = hsi->getHue();
+
+			Assert::AreEqual(expectedHue, hue, 0.001, L"", LINE_INFO());
+		}
+
 		TEST_METHOD(TestHSItoRGBCase1)
 		{
 			const ColorHSI hsi(60.0, 0.7273, 37.0 / 255.0);

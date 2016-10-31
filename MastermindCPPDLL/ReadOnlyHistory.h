@@ -21,7 +21,9 @@ namespace mastermind
 		public:
 			/**
 			 * \brief Create a read-only history.
-			 * \param h the base history
+			 * \param h the base history, must not be <tt>nullptr</tt>
+			 * 
+			 * \exception std::invalid_argument
 			 */
 			ReadOnlyHistory(GameHistory* h);
 

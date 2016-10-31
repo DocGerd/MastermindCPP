@@ -22,7 +22,7 @@ namespace mastermind
 
 			/**
 			 * \brief Evaluate the given ColorCode to the respective BlackAndWhite.
-			 * \param cc the ColorCode to be evaluated
+			 * \param cc the ColorCode to be evaluated, must not be <tt>null</tt>
 			 * \return the resulting BlackAndWhite
 			*/
 			virtual BlackAndWhite* evaluate(const ColorCode* cc) abstract;

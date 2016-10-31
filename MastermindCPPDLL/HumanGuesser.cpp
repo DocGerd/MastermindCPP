@@ -20,7 +20,14 @@ namespace mastermind
 				+ L"\n\tColors are from 0 to " + std::to_wstring(game->getColorCount() - 1)
 				+ L"\n\twrong numbers will count as a try")
 		{
-
+			if (game == nullptr)
+			{
+				throw std::invalid_argument("game must not be nullptr!");
+			}
+			if (h == nullptr)
+			{
+				throw std::invalid_argument("h must not be nullptr!");
+			}
 		}
 
 		ColorCode* HumanGuesser::nextGuess()

@@ -8,9 +8,25 @@ namespace mastermind
 	namespace logic
 	{
 		ColorHSI::ColorHSI(double h, double s, double i) :
-			hue(h), saturation(s), intensity(i)
+			hue(h),
+			saturation(s),
+			intensity(i)
 		{
-			// TODO: check values
+			// hue must be [0..360)
+			if (hue < 0.0 || hue >= 360.0)
+			{
+				throw std::invalid_argument("hue was out of range [0.0..360.0]!");
+			}
+			// saturation must be [0.0..1.0]
+			if (saturation < 0.0 || saturation > 1.0)
+			{
+				throw std::invalid_argument("saturation was out of range [0.0..1.0]!");
+			}
+			// intensity must be [0.0..1.0]
+			if (intensity < 0.0 || intensity > 1.0)
+			{
+				throw std::invalid_argument("intensity was out of range [0.0..1.0]!");
+			}
 		}
 
 		ColorHSI::ColorHSI(const ColorRGB& colorRGB) :
@@ -37,7 +53,7 @@ namespace mastermind
 
 		double* ColorHSI::getHSI() const
 		{
-			double* result = new double[3]{hue, saturation, intensity};
+			double* result = new double[3]{ hue, saturation, intensity };
 			return result;
 		}
 

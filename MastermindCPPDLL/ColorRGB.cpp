@@ -36,7 +36,7 @@ namespace mastermind
 
 		uint8_t* ColorRGB::getRGB() const
 		{
-			return new uint8_t[3]{red, green, blue};
+			return new uint8_t[3]{ red, green, blue };
 		}
 
 		std::wstring ColorRGB::toString() const
@@ -50,9 +50,7 @@ namespace mastermind
 
 		bool ColorRGB::operator==(const ColorRGB& rhs) const
 		{
-			bool result = this->red == rhs.red
-				&& this->green == rhs.green
-				&& this->blue == rhs.blue;
+			bool result = this->red == rhs.red && this->green == rhs.green && this->blue == rhs.blue;
 			return result;
 		}
 
