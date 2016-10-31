@@ -33,6 +33,7 @@ namespace mastermind
 			ColorCode(std::vector<color_t>& col);
 			/**
 			* \brief Create a ColorCode.
+			* \param size size of array
 			* \param col columns as color_t[]
 			*/
 			ColorCode(size_t size, color_t col[]);
@@ -62,7 +63,7 @@ namespace mastermind
 
 			/**
 			 * \brief Test equality to other ColorCode.
-			 * \para rhs the other ColorCode
+			 * \param rhs the other ColorCode
 			 * \return \c true if colors and their positions are the same.
 			 */
 			bool operator==(const ColorCode& rhs) const;

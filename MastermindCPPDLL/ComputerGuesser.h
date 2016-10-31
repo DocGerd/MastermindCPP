@@ -43,11 +43,11 @@ namespace mastermind
 			 */
 			ComputerGuesser(const Mastermind* game);
 			/**
-			 * \copydoc IGuesser::nextGuess()
+			 * \copydoc mastermind::logic::IGuesser::nextGuess()
 			 */
 			ColorCode* nextGuess() override;
 			/**
-			 * \copydoc IGuesser::processEvaluation()
+			 * \copydoc mastermind::logic::IGuesser::processEvaluation()
 			 */
 			void processEvaluation(const BlackAndWhite& bw) override;
 			/**

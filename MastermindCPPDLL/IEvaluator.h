@@ -11,8 +11,9 @@ namespace mastermind
 	{
 		/**
 		 * \brief Interface for an Evaluator of a ColorCode.
+		 * This interface class should be abstract however Doxygen has parsing problems then.
 		 */
-		class MASTERMINDCPPDLL_API IEvaluator abstract
+		class MASTERMINDCPPDLL_API IEvaluator //abstract
 		{
 		public:
 			virtual ~IEvaluator()

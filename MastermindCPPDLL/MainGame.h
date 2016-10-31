@@ -42,6 +42,7 @@ namespace mastermind
 		public:
 			/**
 			* Creates a MainGame object.
+			* \param game the main game, must not be <tt>null</tt>
 			* \param g the guesser, must not be <tt>null</tt>
 			* \param e the evaluator, must not be <tt>null</tt>
 			* \param h the history to write to, must not be <tt>null</tt>

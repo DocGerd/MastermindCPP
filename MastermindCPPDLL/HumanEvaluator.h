@@ -34,6 +34,7 @@ namespace mastermind
 		public:
 			/**
 			 * \brief Create a HumanEvaluator.
+			 * \param game the main game
 			 * \param h the history to read from
 			 */
 			HumanEvaluator(const Mastermind* game, ReadOnlyHistory* h);
@@ -41,7 +42,7 @@ namespace mastermind
 
 			BlackAndWhite* evaluate(const ColorCode* cc) override;
 			/**
-			 * \copydoc IEvaluator::getSolution()
+			 * \copydoc mastermind::logic::IEvaluator::getSolution()
 			 */
 			ColorCode* getSolution() override;
 		};

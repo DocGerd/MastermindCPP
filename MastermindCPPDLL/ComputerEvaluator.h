@@ -31,6 +31,7 @@ namespace mastermind
 		public:
 			/**
 			 * \brief Create a ComputerEvaluator.
+			 * \param game the main game
 			 * \param solutionCode the solution
 			 */
 			ComputerEvaluator(const Mastermind* game, const ColorCode* solutionCode);
@@ -40,11 +41,11 @@ namespace mastermind
 			~ComputerEvaluator();
 
 			/**
-			 * \copydoc IEvaluator::evaluate()
+			 * \copydoc mastermind::logic::IEvaluator::evaluate()
 			 */
 			BlackAndWhite* evaluate(const ColorCode* cc) override;
 			/**
-			 * \copydoc IEvaluator::getSolution()
+			 * \copydoc mastermind::logic::IEvaluator::getSolution()
 			 */
 			ColorCode* getSolution() override;
 		};

@@ -11,8 +11,9 @@ namespace mastermind
 	{
 		/**
 		 * \brief Interface for a Guesser.
+		 * This interface class should be abstract however Doxygen has parsing problems then.
 		 */
-		class MASTERMINDCPPDLL_API IGuesser abstract
+		class MASTERMINDCPPDLL_API IGuesser //abstract
 		{
 		public:
 			virtual ~IGuesser()
