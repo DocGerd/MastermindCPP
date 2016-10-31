@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['evaluate',['evaluate',['../classmastermind_1_1logic_1_1_computer_evaluator.html#a579f808c46ab11077c4a3ce51838714b',1,'mastermind::logic::ComputerEvaluator::evaluate()'],['../classmastermind_1_1logic_1_1abstract.html#a42fd7e506150c1f6a486f9619a7cc337',1,'mastermind::logic::abstract::evaluate()'],['../classmastermind_1_1logic_1_1_human_evaluator.html#ac427121219b8e69ed30b0e123ce622a4',1,'mastermind::logic::HumanEvaluator::evaluate()']]]
+  ['evaluate',['evaluate',['../classmastermind_1_1logic_1_1_computer_evaluator.html#a65f4a9bafcd5240e0cf92f6398025bd5',1,'mastermind::logic::ComputerEvaluator::evaluate()'],['../classmastermind_1_1logic_1_1_i_evaluator.html#a1ac9459cbb3698affa4154388b019f09',1,'mastermind::logic::IEvaluator::evaluate()'],['../classmastermind_1_1logic_1_1_human_evaluator.html#a12080bafb5e428db8cf8b8173821f83d',1,'mastermind::logic::HumanEvaluator::evaluate()']]]
 ];

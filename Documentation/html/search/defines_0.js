@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mastermindcppdll_5fapi',['MASTERMINDCPPDLL_API',['../_a_p_i_8h.html#a93b4dd106b2aed3fba0a3197d32d82ae',1,'API.h']]]
+  ['_5fuse_5fmath_5fdefines',['_USE_MATH_DEFINES',['../_mastermind_c_p_p_d_l_l_2stdafx_8h.html#a525335710b53cb064ca56b936120431e',1,'_USE_MATH_DEFINES():&#160;stdafx.h'],['../_unit_test1_2stdafx_8h.html#a525335710b53cb064ca56b936120431e',1,'_USE_MATH_DEFINES():&#160;stdafx.h']]]
 ];

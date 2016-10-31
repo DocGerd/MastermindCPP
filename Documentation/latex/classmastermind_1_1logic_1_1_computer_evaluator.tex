@@ -18,26 +18,34 @@ Inheritance diagram for mastermind\+:\+:logic\+:\+:Computer\+Evaluator\+:\begin{
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classmastermind_1_1logic_1_1_computer_evaluator_a63c369068472dc8117552f991bd37a7a}{Computer\+Evaluator} (\hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} solution\+Code)
+\hyperlink{classmastermind_1_1logic_1_1_computer_evaluator_add62379f02e99740075dadc62f9707c9}{Computer\+Evaluator} (const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind} $\ast$\hyperlink{classmastermind_1_1logic_1_1_computer_evaluator_a8801ded4db90b5feae19e6d521738311}{game}, const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$solution\+Code)
 \begin{DoxyCompactList}\small\item\em Create a \hyperlink{classmastermind_1_1logic_1_1_computer_evaluator}{Computer\+Evaluator}. \end{DoxyCompactList}\item 
 \hyperlink{classmastermind_1_1logic_1_1_computer_evaluator_aa216efb1cb2e885562d01b76751c84be}{$\sim$\+Computer\+Evaluator} ()
 \begin{DoxyCompactList}\small\item\em Destruct this. \end{DoxyCompactList}\item 
-\hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_computer_evaluator_a579f808c46ab11077c4a3ce51838714b}{evaluate} (const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} \&cc) override
-\item 
+\hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_computer_evaluator_a65f4a9bafcd5240e0cf92f6398025bd5}{evaluate} (const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$cc) override
+\begin{DoxyCompactList}\small\item\em Evaluate the given \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} to the respective \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White}. \end{DoxyCompactList}\item 
 \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_computer_evaluator_ac6e0423a5ef2f6679cfe6be75d3a09dd}{get\+Solution} () override
-\end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
+\begin{DoxyCompactList}\small\item\em Get the solution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_computer_evaluator_a8801ded4db90b5feae19e6d521738311}{game}
+\begin{DoxyCompactList}\small\item\em Base game. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classmastermind_1_1logic_1_1_computer_evaluator_afc73806d239bdc6c9df603850d309982}{move\+Count}
+\begin{DoxyCompactList}\small\item\em Amount of already performed moves. \end{DoxyCompactList}\item 
+const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_computer_evaluator_a8bd8017a92e245a8985f2caf71b45c44}{solution}
+\begin{DoxyCompactList}\small\item\em The solution. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Evaluator which automatically evaluates the \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} given to a solution. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classmastermind_1_1logic_1_1_computer_evaluator_a63c369068472dc8117552f991bd37a7a}{}\label{classmastermind_1_1logic_1_1_computer_evaluator_a63c369068472dc8117552f991bd37a7a} 
+\hypertarget{classmastermind_1_1logic_1_1_computer_evaluator_add62379f02e99740075dadc62f9707c9}{}\label{classmastermind_1_1logic_1_1_computer_evaluator_add62379f02e99740075dadc62f9707c9} 
 \index{mastermind\+::logic\+::\+Computer\+Evaluator@{mastermind\+::logic\+::\+Computer\+Evaluator}!Computer\+Evaluator@{Computer\+Evaluator}}
 \index{Computer\+Evaluator@{Computer\+Evaluator}!mastermind\+::logic\+::\+Computer\+Evaluator@{mastermind\+::logic\+::\+Computer\+Evaluator}}
 \subsubsection{\texorpdfstring{Computer\+Evaluator()}{ComputerEvaluator()}}
-{\footnotesize\ttfamily mastermind\+::logic\+::\+Computer\+Evaluator\+::\+Computer\+Evaluator (\begin{DoxyParamCaption}\item[{\hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code}}]{solution\+Code }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily mastermind\+::logic\+::\+Computer\+Evaluator\+::\+Computer\+Evaluator (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind} $\ast$}]{game,  }\item[{const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$}]{solution\+Code }\end{DoxyParamCaption})}
 
 
 
@@ -45,6 +53,8 @@ Create a \hyperlink{classmastermind_1_1logic_1_1_computer_evaluator}{Computer\+E
 
 
 \begin{DoxyParams}{Parameters}
+{\em game} & the main game \\
+\hline
 {\em solution\+Code} & the solution \\
 \hline
 \end{DoxyParams}
@@ -61,25 +71,77 @@ Destruct this.
 
 
 \subsection{Member Function Documentation}
-\hypertarget{classmastermind_1_1logic_1_1_computer_evaluator_a579f808c46ab11077c4a3ce51838714b}{}\label{classmastermind_1_1logic_1_1_computer_evaluator_a579f808c46ab11077c4a3ce51838714b} 
+\hypertarget{classmastermind_1_1logic_1_1_computer_evaluator_a65f4a9bafcd5240e0cf92f6398025bd5}{}\label{classmastermind_1_1logic_1_1_computer_evaluator_a65f4a9bafcd5240e0cf92f6398025bd5} 
 \index{mastermind\+::logic\+::\+Computer\+Evaluator@{mastermind\+::logic\+::\+Computer\+Evaluator}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!mastermind\+::logic\+::\+Computer\+Evaluator@{mastermind\+::logic\+::\+Computer\+Evaluator}}
 \subsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} $\ast$ mastermind\+::logic\+::\+Computer\+Evaluator\+::evaluate (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} \&}]{cc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} $\ast$ mastermind\+::logic\+::\+Computer\+Evaluator\+::evaluate (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$}]{cc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
+Evaluate the given \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} to the respective \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White}. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em cc} & the \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} to be evaluated, must not be {\ttfamily null} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the resulting \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classmastermind_1_1logic_1_1_i_evaluator_a1ac9459cbb3698affa4154388b019f09}{mastermind\+::logic\+::\+I\+Evaluator}.
 
 \hypertarget{classmastermind_1_1logic_1_1_computer_evaluator_ac6e0423a5ef2f6679cfe6be75d3a09dd}{}\label{classmastermind_1_1logic_1_1_computer_evaluator_ac6e0423a5ef2f6679cfe6be75d3a09dd} 
 \index{mastermind\+::logic\+::\+Computer\+Evaluator@{mastermind\+::logic\+::\+Computer\+Evaluator}!get\+Solution@{get\+Solution}}
 \index{get\+Solution@{get\+Solution}!mastermind\+::logic\+::\+Computer\+Evaluator@{mastermind\+::logic\+::\+Computer\+Evaluator}}
 \subsubsection{\texorpdfstring{get\+Solution()}{getSolution()}}
-{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ mastermind\+::logic\+::\+Computer\+Evaluator\+::get\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ mastermind\+::logic\+::\+Computer\+Evaluator\+::get\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
+Get the solution. 
 
+\begin{DoxyReturn}{Returns}
+the solution \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} or N\+U\+LL if not available yet. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classmastermind_1_1logic_1_1_i_evaluator_a544ecf5ba1d2cb5708e62fc508d341f3}{mastermind\+::logic\+::\+I\+Evaluator}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_computer_evaluator_a8801ded4db90b5feae19e6d521738311}{}\label{classmastermind_1_1logic_1_1_computer_evaluator_a8801ded4db90b5feae19e6d521738311} 
+\index{mastermind\+::logic\+::\+Computer\+Evaluator@{mastermind\+::logic\+::\+Computer\+Evaluator}!game@{game}}
+\index{game@{game}!mastermind\+::logic\+::\+Computer\+Evaluator@{mastermind\+::logic\+::\+Computer\+Evaluator}}
+\subsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind}$\ast$ mastermind\+::logic\+::\+Computer\+Evaluator\+::game\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Base game. 
+
+\hypertarget{classmastermind_1_1logic_1_1_computer_evaluator_afc73806d239bdc6c9df603850d309982}{}\label{classmastermind_1_1logic_1_1_computer_evaluator_afc73806d239bdc6c9df603850d309982} 
+\index{mastermind\+::logic\+::\+Computer\+Evaluator@{mastermind\+::logic\+::\+Computer\+Evaluator}!move\+Count@{move\+Count}}
+\index{move\+Count@{move\+Count}!mastermind\+::logic\+::\+Computer\+Evaluator@{mastermind\+::logic\+::\+Computer\+Evaluator}}
+\subsubsection{\texorpdfstring{move\+Count}{moveCount}}
+{\footnotesize\ttfamily unsigned int mastermind\+::logic\+::\+Computer\+Evaluator\+::move\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Amount of already performed moves. 
+
+\hypertarget{classmastermind_1_1logic_1_1_computer_evaluator_a8bd8017a92e245a8985f2caf71b45c44}{}\label{classmastermind_1_1logic_1_1_computer_evaluator_a8bd8017a92e245a8985f2caf71b45c44} 
+\index{mastermind\+::logic\+::\+Computer\+Evaluator@{mastermind\+::logic\+::\+Computer\+Evaluator}!solution@{solution}}
+\index{solution@{solution}!mastermind\+::logic\+::\+Computer\+Evaluator@{mastermind\+::logic\+::\+Computer\+Evaluator}}
+\subsubsection{\texorpdfstring{solution}{solution}}
+{\footnotesize\ttfamily const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code}$\ast$ mastermind\+::logic\+::\+Computer\+Evaluator\+::solution\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The solution. 
 
 
 

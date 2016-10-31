@@ -81,9 +81,7 @@ $(document).ready(function(){initNavTree('namespacemastermind_1_1shell.html','')
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">mastermind::shell Namespace Reference</div>  </div>
 </div><!--header-->
@@ -102,91 +100,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1shell_1_1_shell.html">Shell</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The shell.  <a href="classmastermind_1_1shell_1_1_shell.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ad060dfaf42b2c0f7827708f0d0046ede"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemastermind_1_1shell.html#ad060dfaf42b2c0f7827708f0d0046ede">RequestedState</a> { <a class="el" href="namespacemastermind_1_1shell.html#ad060dfaf42b2c0f7827708f0d0046edeacc5ce9ad68fd8bcf63c6431048467ac2">HUMAN_GUESSER</a>, 
-<a class="el" href="namespacemastermind_1_1shell.html#ad060dfaf42b2c0f7827708f0d0046edea3853901e4a57fe6d139724873c112ed8">COMPUTER_GUESSER</a>
- }<tr class="memdesc:ad060dfaf42b2c0f7827708f0d0046ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available states for games.  <a href="namespacemastermind_1_1shell.html#ad060dfaf42b2c0f7827708f0d0046ede">More...</a><br /></td></tr>
-</td></tr>
-<tr class="separator:ad060dfaf42b2c0f7827708f0d0046ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a516fea896c290c75364c483e71389b3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmastermind_1_1shell_1_1_players.html">Players</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemastermind_1_1shell.html#a516fea896c290c75364c483e71389b3d">getPlayers</a> (<a class="el" href="namespacemastermind_1_1shell.html#ad060dfaf42b2c0f7827708f0d0046ede">RequestedState</a> state, <a class="el" href="classmastermind_1_1logic_1_1_game_history.html">GameHistory</a> *history)</td></tr>
-<tr class="memdesc:a516fea896c290c75364c483e71389b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the player objects. Just here are the objects created so the objects are created just in time. (in case someone "switches" pretty often...)  <a href="#a516fea896c290c75364c483e71389b3d">More...</a><br /></td></tr>
-<tr class="separator:a516fea896c290c75364c483e71389b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1shell_1_1_state.html">State</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Game state. Class holds the current game state and can be switched here.  <a href="classmastermind_1_1shell_1_1_state.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="ad060dfaf42b2c0f7827708f0d0046ede"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad060dfaf42b2c0f7827708f0d0046ede">&sect;&nbsp;</a></span>RequestedState</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="namespacemastermind_1_1shell.html#ad060dfaf42b2c0f7827708f0d0046ede">mastermind::shell::RequestedState</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Available states for games. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad060dfaf42b2c0f7827708f0d0046edeacc5ce9ad68fd8bcf63c6431048467ac2"></a>HUMAN_GUESSER&#160;</td><td class="fielddoc"><p>Human guesser, computer evaluator. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ad060dfaf42b2c0f7827708f0d0046edea3853901e4a57fe6d139724873c112ed8"></a>COMPUTER_GUESSER&#160;</td><td class="fielddoc"><p>Computer guesser, human evaluator. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a516fea896c290c75364c483e71389b3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a516fea896c290c75364c483e71389b3d">&sect;&nbsp;</a></span>getPlayers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classmastermind_1_1shell_1_1_players.html">Players</a>* mastermind::shell::getPlayers </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacemastermind_1_1shell.html#ad060dfaf42b2c0f7827708f0d0046ede">RequestedState</a>&#160;</td>
-          <td class="paramname"><em>state</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classmastermind_1_1logic_1_1_game_history.html">GameHistory</a> *&#160;</td>
-          <td class="paramname"><em>history</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the player objects. Just here are the objects created so the objects are created just in time. (in case someone "switches" pretty often...) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">state</td><td>the requested state, must not be <code>null</code> </td></tr>
-    <tr><td class="paramname">history</td><td>the history which should be referenced in the Human* objects </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the players </dd></dl>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

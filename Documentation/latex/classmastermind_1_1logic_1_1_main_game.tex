@@ -2,7 +2,7 @@
 \label{classmastermind_1_1logic_1_1_main_game}\index{mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}}
 
 
-The Game. Game logic is in here. No in and output. Works only with the interfaces of I\+Evaluator and I\+Guesser.  
+The Game. Game logic is in here. No in and output. Works only with the interfaces of \hyperlink{classmastermind_1_1logic_1_1_i_evaluator}{I\+Evaluator} and \hyperlink{classmastermind_1_1logic_1_1_i_guesser}{I\+Guesser}.  
 
 
 
@@ -18,25 +18,40 @@ Inheritance diagram for mastermind\+:\+:logic\+:\+:Main\+Game\+:\begin{figure}[H
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classmastermind_1_1logic_1_1_main_game_af1a4d71009b1d4322edec911ea39b55c}{Main\+Game} (I\+Guesser $\ast$g, I\+Evaluator $\ast$e, \hyperlink{classmastermind_1_1logic_1_1_game_history}{Game\+History} $\ast$h)
+\hyperlink{classmastermind_1_1logic_1_1_main_game_af298f54f55a4803bd5a7a9dec61b3548}{Main\+Game} (const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind} $\ast$\hyperlink{classmastermind_1_1logic_1_1_main_game_a063ce840892c07f33091a2e3935365ee}{game}, \hyperlink{classmastermind_1_1logic_1_1_i_guesser}{I\+Guesser} $\ast$g, \hyperlink{classmastermind_1_1logic_1_1_i_evaluator}{I\+Evaluator} $\ast$e, \hyperlink{classmastermind_1_1logic_1_1_game_history}{Game\+History} $\ast$h)
 \item 
 bool \hyperlink{classmastermind_1_1logic_1_1_main_game_a2b48f18cf8dbd95431d4627b57ea5d01}{next} ()
 \begin{DoxyCompactList}\small\item\em The game itself. Performs the next turn, i.\+e.\+one turn each of Guesser and Evaluator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_main_game_a063ce840892c07f33091a2e3935365ee}{game}
+\begin{DoxyCompactList}\small\item\em Base game. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_main_game_a9fff568bdb033edbfed54d3c4bc58ef3}{move\+Count}
+\begin{DoxyCompactList}\small\item\em Amount of already performed moves. \end{DoxyCompactList}\item 
+\hyperlink{classmastermind_1_1logic_1_1_i_evaluator}{I\+Evaluator} $\ast$const \hyperlink{classmastermind_1_1logic_1_1_main_game_a1ef0616e5078e9ac2b04cef8a83e0a8f}{evaluator}
+\begin{DoxyCompactList}\small\item\em The evaluator of the game. \end{DoxyCompactList}\item 
+\hyperlink{classmastermind_1_1logic_1_1_i_guesser}{I\+Guesser} $\ast$const \hyperlink{classmastermind_1_1logic_1_1_main_game_aacb345c4a133339f2680837ad256fa19}{guesser}
+\begin{DoxyCompactList}\small\item\em The Guesser of the game. \end{DoxyCompactList}\item 
+\hyperlink{classmastermind_1_1logic_1_1_game_history}{Game\+History} $\ast$const \hyperlink{classmastermind_1_1logic_1_1_main_game_a6620d1b001a306b469f9d5e88d540f0c}{history}
+\begin{DoxyCompactList}\small\item\em History for the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-The Game. Game logic is in here. No in and output. Works only with the interfaces of I\+Evaluator and I\+Guesser. 
+The Game. Game logic is in here. No in and output. Works only with the interfaces of \hyperlink{classmastermind_1_1logic_1_1_i_evaluator}{I\+Evaluator} and \hyperlink{classmastermind_1_1logic_1_1_i_guesser}{I\+Guesser}. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classmastermind_1_1logic_1_1_main_game_af1a4d71009b1d4322edec911ea39b55c}{}\label{classmastermind_1_1logic_1_1_main_game_af1a4d71009b1d4322edec911ea39b55c} 
+\hypertarget{classmastermind_1_1logic_1_1_main_game_af298f54f55a4803bd5a7a9dec61b3548}{}\label{classmastermind_1_1logic_1_1_main_game_af298f54f55a4803bd5a7a9dec61b3548} 
 \index{mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}!Main\+Game@{Main\+Game}}
 \index{Main\+Game@{Main\+Game}!mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}}
 \subsubsection{\texorpdfstring{Main\+Game()}{MainGame()}}
-{\footnotesize\ttfamily mastermind\+::logic\+::\+Main\+Game\+::\+Main\+Game (\begin{DoxyParamCaption}\item[{I\+Guesser $\ast$}]{g,  }\item[{I\+Evaluator $\ast$}]{e,  }\item[{\hyperlink{classmastermind_1_1logic_1_1_game_history}{Game\+History} $\ast$}]{h }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily mastermind\+::logic\+::\+Main\+Game\+::\+Main\+Game (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind} $\ast$}]{game,  }\item[{\hyperlink{classmastermind_1_1logic_1_1_i_guesser}{I\+Guesser} $\ast$}]{g,  }\item[{\hyperlink{classmastermind_1_1logic_1_1_i_evaluator}{I\+Evaluator} $\ast$}]{e,  }\item[{\hyperlink{classmastermind_1_1logic_1_1_game_history}{Game\+History} $\ast$}]{h }\end{DoxyParamCaption})}
 
 Creates a \hyperlink{classmastermind_1_1logic_1_1_main_game}{Main\+Game} object. 
 \begin{DoxyParams}{Parameters}
+{\em game} & the main game, must not be {\ttfamily null} \\
+\hline
 {\em g} & the guesser, must not be {\ttfamily null} \\
 \hline
 {\em e} & the evaluator, must not be {\ttfamily null} \\
@@ -60,6 +75,59 @@ The game itself. Performs the next turn, i.\+e.\+one turn each of Guesser and Ev
 \begin{DoxyReturn}{Returns}
 {\ttfamily true} if game finished, i.\+e.\+won or cancel 
 \end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_main_game_a1ef0616e5078e9ac2b04cef8a83e0a8f}{}\label{classmastermind_1_1logic_1_1_main_game_a1ef0616e5078e9ac2b04cef8a83e0a8f} 
+\index{mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}!evaluator@{evaluator}}
+\index{evaluator@{evaluator}!mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}}
+\subsubsection{\texorpdfstring{evaluator}{evaluator}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_i_evaluator}{I\+Evaluator}$\ast$ const mastermind\+::logic\+::\+Main\+Game\+::evaluator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The evaluator of the game. 
+
+\hypertarget{classmastermind_1_1logic_1_1_main_game_a063ce840892c07f33091a2e3935365ee}{}\label{classmastermind_1_1logic_1_1_main_game_a063ce840892c07f33091a2e3935365ee} 
+\index{mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}!game@{game}}
+\index{game@{game}!mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}}
+\subsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind}$\ast$ mastermind\+::logic\+::\+Main\+Game\+::game\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Base game. 
+
+\hypertarget{classmastermind_1_1logic_1_1_main_game_aacb345c4a133339f2680837ad256fa19}{}\label{classmastermind_1_1logic_1_1_main_game_aacb345c4a133339f2680837ad256fa19} 
+\index{mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}!guesser@{guesser}}
+\index{guesser@{guesser}!mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}}
+\subsubsection{\texorpdfstring{guesser}{guesser}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_i_guesser}{I\+Guesser}$\ast$ const mastermind\+::logic\+::\+Main\+Game\+::guesser\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The Guesser of the game. 
+
+\hypertarget{classmastermind_1_1logic_1_1_main_game_a6620d1b001a306b469f9d5e88d540f0c}{}\label{classmastermind_1_1logic_1_1_main_game_a6620d1b001a306b469f9d5e88d540f0c} 
+\index{mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}!history@{history}}
+\index{history@{history}!mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}}
+\subsubsection{\texorpdfstring{history}{history}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_game_history}{Game\+History}$\ast$ const mastermind\+::logic\+::\+Main\+Game\+::history\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+History for the game. 
+
+\hypertarget{classmastermind_1_1logic_1_1_main_game_a9fff568bdb033edbfed54d3c4bc58ef3}{}\label{classmastermind_1_1logic_1_1_main_game_a9fff568bdb033edbfed54d3c4bc58ef3} 
+\index{mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}!move\+Count@{move\+Count}}
+\index{move\+Count@{move\+Count}!mastermind\+::logic\+::\+Main\+Game@{mastermind\+::logic\+::\+Main\+Game}}
+\subsubsection{\texorpdfstring{move\+Count}{moveCount}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mastermind\+::logic\+::\+Main\+Game\+::move\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Amount of already performed moves. 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

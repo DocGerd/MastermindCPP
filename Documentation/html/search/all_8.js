@@ -1,20 +1,10 @@
 var searchData=
 [
-  ['cppunittestframework',['CppUnitTestFramework',['../namespace_microsoft_1_1_visual_studio_1_1_cpp_unit_test_framework.html',1,'Microsoft::VisualStudio']]],
-  ['logic',['logic',['../namespacemastermind_1_1logic.html',1,'mastermind']]],
-  ['main',['main',['../classmastermind_1_1shell_1_1_shell.html#aa47488e9975693b33445e871951ec9cd',1,'mastermind::shell::Shell::main()'],['../_mastermind_c_p_p_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;MastermindCPP.cpp']]],
-  ['maingame',['MainGame',['../classmastermind_1_1logic_1_1_main_game.html',1,'mastermind::logic']]],
-  ['maingame',['MainGame',['../classmastermind_1_1logic_1_1_main_game.html#af1a4d71009b1d4322edec911ea39b55c',1,'mastermind::logic::MainGame']]],
-  ['maingame_2ecpp',['MainGame.cpp',['../_main_game_8cpp.html',1,'']]],
-  ['maingame_2eh',['MainGame.h',['../_main_game_8h.html',1,'']]],
-  ['mastermind',['Mastermind',['../classmastermind_1_1_mastermind.html',1,'mastermind']]],
-  ['mastermind',['mastermind',['../namespacemastermind.html',1,'']]],
-  ['mastermind_2eh',['Mastermind.h',['../_mastermind_8h.html',1,'']]],
-  ['mastermindcpp_2ecpp',['MastermindCPP.cpp',['../_mastermind_c_p_p_8cpp.html',1,'']]],
-  ['mastermindcppdll_5fapi',['MASTERMINDCPPDLL_API',['../_a_p_i_8h.html#a93b4dd106b2aed3fba0a3197d32d82ae',1,'API.h']]],
-  ['max_5fmoves',['MAX_MOVES',['../classmastermind_1_1_mastermind.html#a8bbb0daf2ebb27f688f1a30cd4488be1',1,'mastermind::Mastermind']]],
-  ['microsoft',['Microsoft',['../namespace_microsoft.html',1,'']]],
-  ['shell',['shell',['../namespacemastermind_1_1shell.html',1,'mastermind']]],
-  ['utilities',['utilities',['../namespacemastermind_1_1shell_1_1utilities.html',1,'mastermind::shell']]],
-  ['visualstudio',['VisualStudio',['../namespace_microsoft_1_1_visual_studio.html',1,'Microsoft']]]
+  ['ievaluator',['IEvaluator',['../classmastermind_1_1logic_1_1_i_evaluator.html',1,'mastermind::logic']]],
+  ['ievaluator_2eh',['IEvaluator.h',['../_i_evaluator_8h.html',1,'']]],
+  ['iguesser',['IGuesser',['../classmastermind_1_1logic_1_1_i_guesser.html',1,'mastermind::logic']]],
+  ['iguesser_2eh',['IGuesser.h',['../_i_guesser_8h.html',1,'']]],
+  ['intensity',['intensity',['../classmastermind_1_1logic_1_1_color_h_s_i.html#acae1c5e74aae7a627bb1dbcd9f7ee521',1,'mastermind::logic::ColorHSI']]],
+  ['intensityfromrgb',['intensityFromRGB',['../classmastermind_1_1logic_1_1_color_h_s_i.html#a921bf6e8d5e9d71d2823b2db2c9c84cb',1,'mastermind::logic::ColorHSI']]],
+  ['iswinstick',['isWinStick',['../classmastermind_1_1logic_1_1_mastermind.html#a97247d26b2896c78711cef22611a009b',1,'mastermind::logic::Mastermind']]]
 ];

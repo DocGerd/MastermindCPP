@@ -80,7 +80,8 @@ $(document).ready(function(){initNavTree('namespacemastermind_1_1logic.html','')
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">mastermind::logic Namespace Reference</div>  </div>
 </div><!--header-->
@@ -88,14 +89,20 @@ $(document).ready(function(){initNavTree('namespacemastermind_1_1logic.html','')
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1abstract.html">abstract</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for an Evaluator of a <a class="el" href="classmastermind_1_1logic_1_1_color_code.html" title="Represents one line of the game board. ">ColorCode</a>.  <a href="classmastermind_1_1logic_1_1abstract.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_black_and_white.html">BlackAndWhite</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representation for evaluation sticks. Black sticks show color and position right. White sticks show color right but wrong position.  <a href="classmastermind_1_1logic_1_1_black_and_white.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_color.html">Color</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A color representation.  <a href="classmastermind_1_1logic_1_1_color.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_color_code.html">ColorCode</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents one line of the game board.  <a href="classmastermind_1_1logic_1_1_color_code.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_color_h_s_i.html">ColorHSI</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A RGB color representation. RGB values must be each [0..255].  <a href="classmastermind_1_1logic_1_1_color_h_s_i.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_color_r_g_b.html">ColorRGB</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A RGB color representation. RGB values must be each [0..255].  <a href="classmastermind_1_1logic_1_1_color_r_g_b.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_computer_evaluator.html">ComputerEvaluator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluator which automatically evaluates the <a class="el" href="classmastermind_1_1logic_1_1_color_code.html" title="Represents one line of the game board. ">ColorCode</a> given to a solution.  <a href="classmastermind_1_1logic_1_1_computer_evaluator.html#details">More...</a><br /></td></tr>
@@ -112,13 +119,42 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_human_guesser.html">HumanGuesser</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A human guesser for console.  <a href="classmastermind_1_1logic_1_1_human_guesser.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_i_evaluator.html">IEvaluator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for an Evaluator of a <a class="el" href="classmastermind_1_1logic_1_1_color_code.html" title="Represents one line of the game board. ">ColorCode</a>. This interface class should be abstract however Doxygen has parsing problems then.  <a href="classmastermind_1_1logic_1_1_i_evaluator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_i_guesser.html">IGuesser</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for a Guesser. This interface class should be abstract however Doxygen has parsing problems then.  <a href="classmastermind_1_1logic_1_1_i_guesser.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_main_game.html">MainGame</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Game. Game logic is in here. No in and output. Works only with the interfaces of IEvaluator and IGuesser.  <a href="classmastermind_1_1logic_1_1_main_game.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Game. Game logic is in here. No in and output. Works only with the interfaces of <a class="el" href="classmastermind_1_1logic_1_1_i_evaluator.html" title="Interface for an Evaluator of a ColorCode. This interface class should be abstract however Doxygen ha...">IEvaluator</a> and <a class="el" href="classmastermind_1_1logic_1_1_i_guesser.html" title="Interface for a Guesser. This interface class should be abstract however Doxygen has parsing problems...">IGuesser</a>.  <a href="classmastermind_1_1logic_1_1_main_game.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_mastermind.html">Mastermind</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for important global game values.  <a href="classmastermind_1_1logic_1_1_mastermind.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_read_only_history.html">ReadOnlyHistory</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only history to ensure invariant of history.  <a href="classmastermind_1_1logic_1_1_read_only_history.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aab4e2166db8e8e5dcbed785c7927eca1"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemastermind_1_1logic.html#aab4e2166db8e8e5dcbed785c7927eca1">color_t</a></td></tr>
+<tr class="separator:aab4e2166db8e8e5dcbed785c7927eca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="aab4e2166db8e8e5dcbed785c7927eca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab4e2166db8e8e5dcbed785c7927eca1">&sect;&nbsp;</a></span>color_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint8_t <a class="el" href="namespacemastermind_1_1logic.html#aab4e2166db8e8e5dcbed785c7927eca1">mastermind::logic::color_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

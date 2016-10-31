@@ -9,40 +9,107 @@ The shell.
 
 {\ttfamily \#include $<$Shell.\+h$>$}
 
-Inheritance diagram for mastermind\+:\+:shell\+:\+:Shell\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{classmastermind_1_1shell_1_1_shell}
-\end{center}
-\end{figure}
-\subsection*{Static Public Member Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static int \hyperlink{classmastermind_1_1shell_1_1_shell_aa47488e9975693b33445e871951ec9cd}{main} ()
+\hyperlink{classmastermind_1_1shell_1_1_shell_accc6d14d851bf9adf00c93837c5f1526}{Shell} ()
+\item 
+int \hyperlink{classmastermind_1_1shell_1_1_shell_ae0b334aea0b022f03424f70593a40a9b}{main} () const
 \begin{DoxyCompactList}\small\item\em Main method. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classmastermind_1_1shell_1_1_shell_ab74c8abb6d0caac122de8906bbcc6a3c}{run\+Main} (const \hyperlink{classmastermind_1_1shell_1_1_state}{State} \&state) const
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classmastermind_1_1shell_1_1_shell_afa07030d8818db52935dcba29b25d708}{print\+Help} ()
+\begin{DoxyCompactList}\small\item\em Print help to console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{logic\+::\+Mastermind} $\ast$ \hyperlink{classmastermind_1_1shell_1_1_shell_a12f951c05bb022b96f380cfb88a98e15}{game}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::wstring \hyperlink{classmastermind_1_1shell_1_1_shell_aace07f09e5898a12bdb7ce9dac2ade13}{H\+E\+L\+P\+\_\+\+T\+E\+XT}
+\begin{DoxyCompactList}\small\item\em The help text for console output. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 The shell. 
 
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmastermind_1_1shell_1_1_shell_accc6d14d851bf9adf00c93837c5f1526}{}\label{classmastermind_1_1shell_1_1_shell_accc6d14d851bf9adf00c93837c5f1526} 
+\index{mastermind\+::shell\+::\+Shell@{mastermind\+::shell\+::\+Shell}!Shell@{Shell}}
+\index{Shell@{Shell}!mastermind\+::shell\+::\+Shell@{mastermind\+::shell\+::\+Shell}}
+\subsubsection{\texorpdfstring{Shell()}{Shell()}}
+{\footnotesize\ttfamily mastermind\+::shell\+::\+Shell\+::\+Shell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
 \subsection{Member Function Documentation}
-\hypertarget{classmastermind_1_1shell_1_1_shell_aa47488e9975693b33445e871951ec9cd}{}\label{classmastermind_1_1shell_1_1_shell_aa47488e9975693b33445e871951ec9cd} 
+\hypertarget{classmastermind_1_1shell_1_1_shell_ae0b334aea0b022f03424f70593a40a9b}{}\label{classmastermind_1_1shell_1_1_shell_ae0b334aea0b022f03424f70593a40a9b} 
 \index{mastermind\+::shell\+::\+Shell@{mastermind\+::shell\+::\+Shell}!main@{main}}
 \index{main@{main}!mastermind\+::shell\+::\+Shell@{mastermind\+::shell\+::\+Shell}}
 \subsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily int mastermind\+::shell\+::\+Shell\+::main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily int mastermind\+::shell\+::\+Shell\+::main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
 Main method. 
 
 \begin{DoxyReturn}{Returns}
--- 
+0 
 \end{DoxyReturn}
+\hypertarget{classmastermind_1_1shell_1_1_shell_afa07030d8818db52935dcba29b25d708}{}\label{classmastermind_1_1shell_1_1_shell_afa07030d8818db52935dcba29b25d708} 
+\index{mastermind\+::shell\+::\+Shell@{mastermind\+::shell\+::\+Shell}!print\+Help@{print\+Help}}
+\index{print\+Help@{print\+Help}!mastermind\+::shell\+::\+Shell@{mastermind\+::shell\+::\+Shell}}
+\subsubsection{\texorpdfstring{print\+Help()}{printHelp()}}
+{\footnotesize\ttfamily void mastermind\+::shell\+::\+Shell\+::print\+Help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Print help to console. 
+
+\hypertarget{classmastermind_1_1shell_1_1_shell_ab74c8abb6d0caac122de8906bbcc6a3c}{}\label{classmastermind_1_1shell_1_1_shell_ab74c8abb6d0caac122de8906bbcc6a3c} 
+\index{mastermind\+::shell\+::\+Shell@{mastermind\+::shell\+::\+Shell}!run\+Main@{run\+Main}}
+\index{run\+Main@{run\+Main}!mastermind\+::shell\+::\+Shell@{mastermind\+::shell\+::\+Shell}}
+\subsubsection{\texorpdfstring{run\+Main()}{runMain()}}
+{\footnotesize\ttfamily void mastermind\+::shell\+::\+Shell\+::run\+Main (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1shell_1_1_state}{State} \&}]{state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmastermind_1_1shell_1_1_shell_a12f951c05bb022b96f380cfb88a98e15}{}\label{classmastermind_1_1shell_1_1_shell_a12f951c05bb022b96f380cfb88a98e15} 
+\index{mastermind\+::shell\+::\+Shell@{mastermind\+::shell\+::\+Shell}!game@{game}}
+\index{game@{game}!mastermind\+::shell\+::\+Shell@{mastermind\+::shell\+::\+Shell}}
+\subsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{logic\+::\+Mastermind}$\ast$ mastermind\+::shell\+::\+Shell\+::game\hspace{0.3cm}{\ttfamily [private]}}
+
+\hypertarget{classmastermind_1_1shell_1_1_shell_aace07f09e5898a12bdb7ce9dac2ade13}{}\label{classmastermind_1_1shell_1_1_shell_aace07f09e5898a12bdb7ce9dac2ade13} 
+\index{mastermind\+::shell\+::\+Shell@{mastermind\+::shell\+::\+Shell}!H\+E\+L\+P\+\_\+\+T\+E\+XT@{H\+E\+L\+P\+\_\+\+T\+E\+XT}}
+\index{H\+E\+L\+P\+\_\+\+T\+E\+XT@{H\+E\+L\+P\+\_\+\+T\+E\+XT}!mastermind\+::shell\+::\+Shell@{mastermind\+::shell\+::\+Shell}}
+\subsubsection{\texorpdfstring{H\+E\+L\+P\+\_\+\+T\+E\+XT}{HELP\_TEXT}}
+{\footnotesize\ttfamily const std\+::wstring mastermind\+::shell\+::\+Shell\+::\+H\+E\+L\+P\+\_\+\+T\+E\+XT\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= std::wstring(L\textcolor{stringliteral}{"Available commands: "})
+            + L\textcolor{stringliteral}{"\(\backslash\)nhelp: Print this help message."}
+            + L\textcolor{stringliteral}{"\(\backslash\)nstart: Start a new game in the current mode."}
+            + L\textcolor{stringliteral}{"\(\backslash\)nquit: Terminate the programme."}
+            + L\textcolor{stringliteral}{"\(\backslash\)nswitch: Change the game mode."}
+\end{DoxyCode}
+
+
+The help text for console output. 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_shell_8h}{Shell.\+h}\item 
-Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_shell_8cpp}{Shell.\+cpp}\end{DoxyCompactItemize}
+Mastermind\+Shell/\hyperlink{_shell_8h}{Shell.\+h}\item 
+Mastermind\+Shell/\hyperlink{_shell_8cpp}{Shell.\+cpp}\end{DoxyCompactItemize}

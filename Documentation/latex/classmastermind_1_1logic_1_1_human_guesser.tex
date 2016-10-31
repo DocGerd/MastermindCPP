@@ -18,24 +18,32 @@ Inheritance diagram for mastermind\+:\+:logic\+:\+:Human\+Guesser\+:\begin{figur
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classmastermind_1_1logic_1_1_human_guesser_a877ab01fca174b802a041cfabf16e468}{Human\+Guesser} (\hyperlink{classmastermind_1_1logic_1_1_read_only_history}{Read\+Only\+History} $\ast$h)
+\hyperlink{classmastermind_1_1logic_1_1_human_guesser_a8898e930a7d0fd76d796844f600f34de}{Human\+Guesser} (const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind} $\ast$\hyperlink{classmastermind_1_1logic_1_1_human_guesser_a36934ed862366c1d0e15e14302a23ff8}{game}, \hyperlink{classmastermind_1_1logic_1_1_read_only_history}{Read\+Only\+History} $\ast$h)
 \begin{DoxyCompactList}\small\item\em Create a \hyperlink{classmastermind_1_1logic_1_1_human_guesser}{Human\+Guesser}. \end{DoxyCompactList}\item 
 \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_human_guesser_a5a165250f667fd40099c43cd3caf487c}{next\+Guess} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Get the next guess. \end{DoxyCompactList}\item 
 void \hyperlink{classmastermind_1_1logic_1_1_human_guesser_ad1c868e2dac07c1af9bb8935783e2e9b}{process\+Evaluation} (const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&bw) override
-\end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
+\begin{DoxyCompactList}\small\item\em Process evaluation. This method processes the other player\textquotesingle{}s feedback on the last guess provided by {\ttfamily next\+Guess}. Must only be executed if {\ttfamily next\+Guess} has been called before and has not returned {\ttfamily null}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_human_guesser_a36934ed862366c1d0e15e14302a23ff8}{game}
+\begin{DoxyCompactList}\small\item\em Base game. \end{DoxyCompactList}\item 
+\hyperlink{classmastermind_1_1logic_1_1_read_only_history}{Read\+Only\+History} $\ast$const \hyperlink{classmastermind_1_1logic_1_1_human_guesser_aa6d916119121bed7fbdf7f1af9807b58}{history}
+\begin{DoxyCompactList}\small\item\em History for the evaluator. Used for print. \end{DoxyCompactList}\item 
+const std\+::wstring \hyperlink{classmastermind_1_1logic_1_1_human_guesser_a8df8372c5f59e73e88ad023dd66d590f}{H\+E\+L\+P\+\_\+\+T\+E\+XT}
+\begin{DoxyCompactList}\small\item\em The help text for console output. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 A human guesser for console. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classmastermind_1_1logic_1_1_human_guesser_a877ab01fca174b802a041cfabf16e468}{}\label{classmastermind_1_1logic_1_1_human_guesser_a877ab01fca174b802a041cfabf16e468} 
+\hypertarget{classmastermind_1_1logic_1_1_human_guesser_a8898e930a7d0fd76d796844f600f34de}{}\label{classmastermind_1_1logic_1_1_human_guesser_a8898e930a7d0fd76d796844f600f34de} 
 \index{mastermind\+::logic\+::\+Human\+Guesser@{mastermind\+::logic\+::\+Human\+Guesser}!Human\+Guesser@{Human\+Guesser}}
 \index{Human\+Guesser@{Human\+Guesser}!mastermind\+::logic\+::\+Human\+Guesser@{mastermind\+::logic\+::\+Human\+Guesser}}
 \subsubsection{\texorpdfstring{Human\+Guesser()}{HumanGuesser()}}
-{\footnotesize\ttfamily mastermind\+::logic\+::\+Human\+Guesser\+::\+Human\+Guesser (\begin{DoxyParamCaption}\item[{\hyperlink{classmastermind_1_1logic_1_1_read_only_history}{Read\+Only\+History} $\ast$}]{h }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily mastermind\+::logic\+::\+Human\+Guesser\+::\+Human\+Guesser (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind} $\ast$}]{game,  }\item[{\hyperlink{classmastermind_1_1logic_1_1_read_only_history}{Read\+Only\+History} $\ast$}]{h }\end{DoxyParamCaption})}
 
 
 
@@ -43,7 +51,9 @@ Create a \hyperlink{classmastermind_1_1logic_1_1_human_guesser}{Human\+Guesser}.
 
 
 \begin{DoxyParams}{Parameters}
-{\em h} & the history to read from \\
+{\em game} & the main game, must not be {\ttfamily nullptr} \\
+\hline
+{\em h} & the history to read from, must not be {\ttfamily nullptr} \\
 \hline
 \end{DoxyParams}
 
@@ -53,13 +63,70 @@ Create a \hyperlink{classmastermind_1_1logic_1_1_human_guesser}{Human\+Guesser}.
 \index{mastermind\+::logic\+::\+Human\+Guesser@{mastermind\+::logic\+::\+Human\+Guesser}!next\+Guess@{next\+Guess}}
 \index{next\+Guess@{next\+Guess}!mastermind\+::logic\+::\+Human\+Guesser@{mastermind\+::logic\+::\+Human\+Guesser}}
 \subsubsection{\texorpdfstring{next\+Guess()}{nextGuess()}}
-{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ mastermind\+::logic\+::\+Human\+Guesser\+::next\+Guess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ mastermind\+::logic\+::\+Human\+Guesser\+::next\+Guess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the next guess. 
+
+\begin{DoxyReturn}{Returns}
+The next guess of the player. {\ttfamily null} aborts the game. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classmastermind_1_1logic_1_1_i_guesser_a285f709f2076098acb5bc7c49a1435c7}{mastermind\+::logic\+::\+I\+Guesser}.
 
 \hypertarget{classmastermind_1_1logic_1_1_human_guesser_ad1c868e2dac07c1af9bb8935783e2e9b}{}\label{classmastermind_1_1logic_1_1_human_guesser_ad1c868e2dac07c1af9bb8935783e2e9b} 
 \index{mastermind\+::logic\+::\+Human\+Guesser@{mastermind\+::logic\+::\+Human\+Guesser}!process\+Evaluation@{process\+Evaluation}}
 \index{process\+Evaluation@{process\+Evaluation}!mastermind\+::logic\+::\+Human\+Guesser@{mastermind\+::logic\+::\+Human\+Guesser}}
 \subsubsection{\texorpdfstring{process\+Evaluation()}{processEvaluation()}}
-{\footnotesize\ttfamily void mastermind\+::logic\+::\+Human\+Guesser\+::process\+Evaluation (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&}]{bw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+{\footnotesize\ttfamily void mastermind\+::logic\+::\+Human\+Guesser\+::process\+Evaluation (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&}]{bw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Process evaluation. This method processes the other player\textquotesingle{}s feedback on the last guess provided by {\ttfamily next\+Guess}. Must only be executed if {\ttfamily next\+Guess} has been called before and has not returned {\ttfamily null}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bw} & Evaluation of the last guess. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classmastermind_1_1logic_1_1_i_guesser_a83a8fbd8aed3c4fa8c7a023fd7ebd6e7}{mastermind\+::logic\+::\+I\+Guesser}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_human_guesser_a36934ed862366c1d0e15e14302a23ff8}{}\label{classmastermind_1_1logic_1_1_human_guesser_a36934ed862366c1d0e15e14302a23ff8} 
+\index{mastermind\+::logic\+::\+Human\+Guesser@{mastermind\+::logic\+::\+Human\+Guesser}!game@{game}}
+\index{game@{game}!mastermind\+::logic\+::\+Human\+Guesser@{mastermind\+::logic\+::\+Human\+Guesser}}
+\subsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind}$\ast$ mastermind\+::logic\+::\+Human\+Guesser\+::game\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Base game. 
+
+\hypertarget{classmastermind_1_1logic_1_1_human_guesser_a8df8372c5f59e73e88ad023dd66d590f}{}\label{classmastermind_1_1logic_1_1_human_guesser_a8df8372c5f59e73e88ad023dd66d590f} 
+\index{mastermind\+::logic\+::\+Human\+Guesser@{mastermind\+::logic\+::\+Human\+Guesser}!H\+E\+L\+P\+\_\+\+T\+E\+XT@{H\+E\+L\+P\+\_\+\+T\+E\+XT}}
+\index{H\+E\+L\+P\+\_\+\+T\+E\+XT@{H\+E\+L\+P\+\_\+\+T\+E\+XT}!mastermind\+::logic\+::\+Human\+Guesser@{mastermind\+::logic\+::\+Human\+Guesser}}
+\subsubsection{\texorpdfstring{H\+E\+L\+P\+\_\+\+T\+E\+XT}{HELP\_TEXT}}
+{\footnotesize\ttfamily const std\+::wstring mastermind\+::logic\+::\+Human\+Guesser\+::\+H\+E\+L\+P\+\_\+\+T\+E\+XT\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The help text for console output. 
+
+\hypertarget{classmastermind_1_1logic_1_1_human_guesser_aa6d916119121bed7fbdf7f1af9807b58}{}\label{classmastermind_1_1logic_1_1_human_guesser_aa6d916119121bed7fbdf7f1af9807b58} 
+\index{mastermind\+::logic\+::\+Human\+Guesser@{mastermind\+::logic\+::\+Human\+Guesser}!history@{history}}
+\index{history@{history}!mastermind\+::logic\+::\+Human\+Guesser@{mastermind\+::logic\+::\+Human\+Guesser}}
+\subsubsection{\texorpdfstring{history}{history}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_read_only_history}{Read\+Only\+History}$\ast$ const mastermind\+::logic\+::\+Human\+Guesser\+::history\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+History for the evaluator. Used for print. 
 
 
 

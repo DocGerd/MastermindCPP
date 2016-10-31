@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['requestedstate',['RequestedState',['../namespacemastermind_1_1shell.html#ad060dfaf42b2c0f7827708f0d0046ede',1,'mastermind::shell']]]
+  ['gamestate',['GameState',['../classmastermind_1_1shell_1_1_state.html#a7667dd4920335355f616e9ffc2793d0b',1,'mastermind::shell::State']]]
 ];

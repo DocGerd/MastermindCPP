@@ -9,19 +9,15 @@ Representation for evaluation sticks. Black sticks show color and position right
 
 {\ttfamily \#include $<$Black\+And\+White.\+h$>$}
 
-Inheritance diagram for mastermind\+:\+:logic\+:\+:Black\+And\+White\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{classmastermind_1_1logic_1_1_black_and_white}
-\end{center}
-\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classmastermind_1_1logic_1_1_black_and_white_a4dbd770b9f1ba3bef45ebba9fc01dcf4}{Black\+And\+White} (std\+::size\+\_\+t blacks, std\+::size\+\_\+t whites)
 \begin{DoxyCompactList}\small\item\em Create \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White}. \end{DoxyCompactList}\item 
-\hyperlink{classmastermind_1_1logic_1_1_black_and_white_af6fc312cb65dcb1cc53f6e75cf45861d}{Black\+And\+White} (std\+::list$<$ int $>$ \&sticks)
+\hyperlink{classmastermind_1_1logic_1_1_black_and_white_a4ddf35a30c296bb2453cffc833ea20e8}{Black\+And\+White} (std\+::list$<$ std\+::size\+\_\+t $\ast$$>$ \&sticks)
 \begin{DoxyCompactList}\small\item\em Create \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White}. \end{DoxyCompactList}\item 
+virtual \hyperlink{classmastermind_1_1logic_1_1_black_and_white_aba480247d6d6b92e190b427f95781202}{$\sim$\+Black\+And\+White} ()
+\begin{DoxyCompactList}\small\item\em Destruct this. \end{DoxyCompactList}\item 
 virtual std\+::wstring \hyperlink{classmastermind_1_1logic_1_1_black_and_white_aaa1108efb71702c9cdf6ac9a9ad4a0c9}{to\+String} () const
 \begin{DoxyCompactList}\small\item\em Get string representation. \end{DoxyCompactList}\item 
 std\+::wstring \hyperlink{classmastermind_1_1logic_1_1_black_and_white_a38779882fc72d356a660026e047eafb9}{to\+String\+Without\+Description} () const
@@ -34,12 +30,13 @@ std\+::size\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_black_and_white_a85a1
 \begin{DoxyCompactList}\small\item\em Get amount of white sticks. \end{DoxyCompactList}\item 
 std\+::size\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_black_and_white_a5215b8ea947ec23c323448b46ba9e897}{get\+Black} () const
 \begin{DoxyCompactList}\small\item\em Get amount of black sticks. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Static Public Attributes}
+\subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \hyperlink{classmastermind_1_1logic_1_1_black_and_white_a9c0ca1063cd6e8d41b0d87d510de33f5}{W\+I\+N\+\_\+\+S\+T\+I\+C\+KS} = \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White}(\hyperlink{classmastermind_1_1_mastermind_ad4cfc8127641ff8dfe89d65ae232331c}{S\+L\+O\+T\+\_\+\+C\+O\+U\+NT}, 0)
-\begin{DoxyCompactList}\small\item\em Stick combination for a win. All black, zero white. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
+std\+::size\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_black_and_white_a63bc0b99519882a72c21afe1ac3ef2ae}{black}
+\begin{DoxyCompactList}\small\item\em amount black sticks. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_black_and_white_ad5a31a26cbaf5294fac2f6ddf565408d}{white}
+\begin{DoxyCompactList}\small\item\em amount white sticks. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -63,11 +60,11 @@ Create \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+Whit
 {\em whites} & amount of white sticks \\
 \hline
 \end{DoxyParams}
-\hypertarget{classmastermind_1_1logic_1_1_black_and_white_af6fc312cb65dcb1cc53f6e75cf45861d}{}\label{classmastermind_1_1logic_1_1_black_and_white_af6fc312cb65dcb1cc53f6e75cf45861d} 
+\hypertarget{classmastermind_1_1logic_1_1_black_and_white_a4ddf35a30c296bb2453cffc833ea20e8}{}\label{classmastermind_1_1logic_1_1_black_and_white_a4ddf35a30c296bb2453cffc833ea20e8} 
 \index{mastermind\+::logic\+::\+Black\+And\+White@{mastermind\+::logic\+::\+Black\+And\+White}!Black\+And\+White@{Black\+And\+White}}
 \index{Black\+And\+White@{Black\+And\+White}!mastermind\+::logic\+::\+Black\+And\+White@{mastermind\+::logic\+::\+Black\+And\+White}}
 \subsubsection{\texorpdfstring{Black\+And\+White()}{BlackAndWhite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily mastermind\+::logic\+::\+Black\+And\+White\+::\+Black\+And\+White (\begin{DoxyParamCaption}\item[{std\+::list$<$ int $>$ \&}]{sticks }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily mastermind\+::logic\+::\+Black\+And\+White\+::\+Black\+And\+White (\begin{DoxyParamCaption}\item[{std\+::list$<$ std\+::size\+\_\+t $\ast$$>$ \&}]{sticks }\end{DoxyParamCaption})}
 
 
 
@@ -75,9 +72,24 @@ Create \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+Whit
 
 
 \begin{DoxyParams}{Parameters}
-{\em sticks} & list with {\ttfamily size == 2}, first is blacks and second is whites \\
+{\em sticks} & list with {\ttfamily size == 2}, first is blacks and second is whites\\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if {\ttfamily size != 2} \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classmastermind_1_1logic_1_1_black_and_white_aba480247d6d6b92e190b427f95781202}{}\label{classmastermind_1_1logic_1_1_black_and_white_aba480247d6d6b92e190b427f95781202} 
+\index{mastermind\+::logic\+::\+Black\+And\+White@{mastermind\+::logic\+::\+Black\+And\+White}!````~Black\+And\+White@{$\sim$\+Black\+And\+White}}
+\index{````~Black\+And\+White@{$\sim$\+Black\+And\+White}!mastermind\+::logic\+::\+Black\+And\+White@{mastermind\+::logic\+::\+Black\+And\+White}}
+\subsubsection{\texorpdfstring{$\sim$\+Black\+And\+White()}{~BlackAndWhite()}}
+{\footnotesize\ttfamily mastermind\+::logic\+::\+Black\+And\+White\+::$\sim$\+Black\+And\+White (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destruct this. 
+
 
 
 \subsection{Member Function Documentation}
@@ -154,7 +166,7 @@ Test equality.
 Get string representation. 
 
 \begin{DoxyReturn}{Returns}
-string in format \char`\"{}black\+: \%i white\+: \%i\char`\"{} 
+string in format {\ttfamily \char`\"{}black\+: \%i white\+: \%i\char`\"{}} 
 \end{DoxyReturn}
 \hypertarget{classmastermind_1_1logic_1_1_black_and_white_a38779882fc72d356a660026e047eafb9}{}\label{classmastermind_1_1logic_1_1_black_and_white_a38779882fc72d356a660026e047eafb9} 
 \index{mastermind\+::logic\+::\+Black\+And\+White@{mastermind\+::logic\+::\+Black\+And\+White}!to\+String\+Without\+Description@{to\+String\+Without\+Description}}
@@ -167,20 +179,30 @@ string in format \char`\"{}black\+: \%i white\+: \%i\char`\"{}
 Get string representation. 
 
 \begin{DoxyReturn}{Returns}
-string in format \char`\"{}\%i \%i\char`\"{} 
+string in format {\ttfamily \char`\"{}\%i \%i\char`\"{}} 
 \end{DoxyReturn}
 
 
 \subsection{Member Data Documentation}
-\hypertarget{classmastermind_1_1logic_1_1_black_and_white_a9c0ca1063cd6e8d41b0d87d510de33f5}{}\label{classmastermind_1_1logic_1_1_black_and_white_a9c0ca1063cd6e8d41b0d87d510de33f5} 
-\index{mastermind\+::logic\+::\+Black\+And\+White@{mastermind\+::logic\+::\+Black\+And\+White}!W\+I\+N\+\_\+\+S\+T\+I\+C\+KS@{W\+I\+N\+\_\+\+S\+T\+I\+C\+KS}}
-\index{W\+I\+N\+\_\+\+S\+T\+I\+C\+KS@{W\+I\+N\+\_\+\+S\+T\+I\+C\+KS}!mastermind\+::logic\+::\+Black\+And\+White@{mastermind\+::logic\+::\+Black\+And\+White}}
-\subsubsection{\texorpdfstring{W\+I\+N\+\_\+\+S\+T\+I\+C\+KS}{WIN\_STICKS}}
-{\footnotesize\ttfamily const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} mastermind\+::logic\+::\+Black\+And\+White\+::\+W\+I\+N\+\_\+\+S\+T\+I\+C\+KS = \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White}(\hyperlink{classmastermind_1_1_mastermind_ad4cfc8127641ff8dfe89d65ae232331c}{S\+L\+O\+T\+\_\+\+C\+O\+U\+NT}, 0)\hspace{0.3cm}{\ttfamily [static]}}
+\hypertarget{classmastermind_1_1logic_1_1_black_and_white_a63bc0b99519882a72c21afe1ac3ef2ae}{}\label{classmastermind_1_1logic_1_1_black_and_white_a63bc0b99519882a72c21afe1ac3ef2ae} 
+\index{mastermind\+::logic\+::\+Black\+And\+White@{mastermind\+::logic\+::\+Black\+And\+White}!black@{black}}
+\index{black@{black}!mastermind\+::logic\+::\+Black\+And\+White@{mastermind\+::logic\+::\+Black\+And\+White}}
+\subsubsection{\texorpdfstring{black}{black}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mastermind\+::logic\+::\+Black\+And\+White\+::black\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Stick combination for a win. All black, zero white. 
+amount black sticks. 
+
+\hypertarget{classmastermind_1_1logic_1_1_black_and_white_ad5a31a26cbaf5294fac2f6ddf565408d}{}\label{classmastermind_1_1logic_1_1_black_and_white_ad5a31a26cbaf5294fac2f6ddf565408d} 
+\index{mastermind\+::logic\+::\+Black\+And\+White@{mastermind\+::logic\+::\+Black\+And\+White}!white@{white}}
+\index{white@{white}!mastermind\+::logic\+::\+Black\+And\+White@{mastermind\+::logic\+::\+Black\+And\+White}}
+\subsubsection{\texorpdfstring{white}{white}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mastermind\+::logic\+::\+Black\+And\+White\+::white\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+amount white sticks. 
 
 
 

@@ -81,6 +81,7 @@ $(document).ready(function(){initNavTree('classmastermind_1_1logic_1_1_read_only
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classmastermind_1_1logic_1_1_read_only_history-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">mastermind::logic::ReadOnlyHistory Class Reference</div>  </div>
@@ -100,6 +101,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a87011de9b87d3a754a64f0292ceaf10f"><td class="memItemLeft" align="right" valign="top">std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_read_only_history.html#a87011de9b87d3a754a64f0292ceaf10f">toString</a> () const</td></tr>
 <tr class="memdesc:a87011de9b87d3a754a64f0292ceaf10f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get string of this history.  <a href="#a87011de9b87d3a754a64f0292ceaf10f">More...</a><br /></td></tr>
 <tr class="separator:a87011de9b87d3a754a64f0292ceaf10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a95e89bc90b14b6b6a6ddcc48268344ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmastermind_1_1logic_1_1_game_history.html">GameHistory</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_read_only_history.html#a95e89bc90b14b6b6a6ddcc48268344ce">history</a></td></tr>
+<tr class="memdesc:a95e89bc90b14b6b6a6ddcc48268344ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">The history.  <a href="#a95e89bc90b14b6b6a6ddcc48268344ce">More...</a><br /></td></tr>
+<tr class="separator:a95e89bc90b14b6b6a6ddcc48268344ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Read-only history to ensure invariant of history. </p>
@@ -123,7 +130,13 @@ Public Member Functions</h2></td></tr>
 <p>Create a read-only history. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">h</td><td>the base history </td></tr>
+    <tr><td class="paramname">h</td><td>the base history, must not be <code>nullptr</code></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -148,6 +161,31 @@ Public Member Functions</h2></td></tr>
 
 <p>Get string of this history. </p>
 <dl class="section return"><dt>Returns</dt><dd>the string </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a95e89bc90b14b6b6a6ddcc48268344ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95e89bc90b14b6b6a6ddcc48268344ce">&sect;&nbsp;</a></span>history</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmastermind_1_1logic_1_1_game_history.html">GameHistory</a>* const mastermind::logic::ReadOnlyHistory::history</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The history. </p>
 
 </div>
 </div>

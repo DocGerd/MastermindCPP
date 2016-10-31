@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['_7ecolorcode',['~ColorCode',['../classmastermind_1_1logic_1_1_color_code.html#aee5e4a3d13fd9e2e2c69964fdffe04cf',1,'mastermind::logic::ColorCode']]],
-  ['_7ecomputerevaluator',['~ComputerEvaluator',['../classmastermind_1_1logic_1_1_computer_evaluator.html#aa216efb1cb2e885562d01b76751c84be',1,'mastermind::logic::ComputerEvaluator']]],
-  ['_7egamehistory',['~GameHistory',['../classmastermind_1_1logic_1_1_game_history.html#a7f94763f41492e795201f000874ba9e1',1,'mastermind::logic::GameHistory']]],
-  ['_7eievaluator',['~IEvaluator',['../classmastermind_1_1logic_1_1abstract.html#a901e84f7a39b9b80224a94ec90b14c25',1,'mastermind::logic::abstract']]],
-  ['_7eiguesser',['~IGuesser',['../classmastermind_1_1logic_1_1abstract.html#a54d92c8c0accd2d4fbc7ea47f898c18f',1,'mastermind::logic::abstract']]],
-  ['_7emastermind',['~Mastermind',['../classmastermind_1_1_mastermind.html#ac7d104e1c2febabb8d819de2ba447487',1,'mastermind::Mastermind']]]
+  ['saturationfromrgb',['saturationFromRGB',['../classmastermind_1_1logic_1_1_color_h_s_i.html#aea09217f241f3548c3f45e6706596ada',1,'mastermind::logic::ColorHSI']]],
+  ['shell',['Shell',['../classmastermind_1_1shell_1_1_shell.html#accc6d14d851bf9adf00c93837c5f1526',1,'mastermind::shell::Shell']]],
+  ['split',['split',['../classmastermind_1_1shell_1_1utilities_1_1_utilities.html#a9676baba3bcb2d508ccedce50f466a9c',1,'mastermind::shell::utilities::Utilities::split(const std::wstring &amp;s, char delim, std::list&lt; std::wstring &gt; &amp;elems)'],['../classmastermind_1_1shell_1_1utilities_1_1_utilities.html#ac053c782cd5669535205daf989e0f695',1,'mastermind::shell::utilities::Utilities::split(const std::wstring &amp;s, char delim)']]],
+  ['state',['State',['../classmastermind_1_1shell_1_1_state.html#a78a389eea152b0305d9600a2cd5decc9',1,'mastermind::shell::State::State()'],['../classmastermind_1_1shell_1_1_state.html#acb7ba3f392b85eec1ae099d2c2b34a89',1,'mastermind::shell::State::State(GameState state)']]],
+  ['switchstate',['switchState',['../classmastermind_1_1shell_1_1_state.html#ad09ab9698069829ead2841338cf86a6b',1,'mastermind::shell::State::switchState()'],['../classmastermind_1_1shell_1_1_state.html#a9e4c9895ef013d1d16c1db240ee32344',1,'mastermind::shell::State::switchState(const GameState &amp;currentState)']]]
 ];

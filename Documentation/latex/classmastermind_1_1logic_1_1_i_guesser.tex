@@ -1,0 +1,82 @@
+\hypertarget{classmastermind_1_1logic_1_1_i_guesser}{}\section{mastermind\+:\+:logic\+:\+:I\+Guesser Class Reference}
+\label{classmastermind_1_1logic_1_1_i_guesser}\index{mastermind\+::logic\+::\+I\+Guesser@{mastermind\+::logic\+::\+I\+Guesser}}
+
+
+Interface for a Guesser. This interface class should be abstract however Doxygen has parsing problems then.  
+
+
+
+
+{\ttfamily \#include $<$I\+Guesser.\+h$>$}
+
+Inheritance diagram for mastermind\+:\+:logic\+:\+:I\+Guesser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmastermind_1_1logic_1_1_i_guesser}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classmastermind_1_1logic_1_1_i_guesser_a43ad2f926001589dd454925b839ab106}{$\sim$\+I\+Guesser} ()
+\item 
+virtual \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_i_guesser_a285f709f2076098acb5bc7c49a1435c7}{next\+Guess} () override
+\begin{DoxyCompactList}\small\item\em Get the next guess. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmastermind_1_1logic_1_1_i_guesser_a83a8fbd8aed3c4fa8c7a023fd7ebd6e7}{process\+Evaluation} (const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&bw) override
+\begin{DoxyCompactList}\small\item\em Process evaluation. This method processes the other player\textquotesingle{}s feedback on the last guess provided by {\ttfamily next\+Guess}. Must only be executed if {\ttfamily next\+Guess} has been called before and has not returned {\ttfamily null}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for a Guesser. This interface class should be abstract however Doxygen has parsing problems then. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_i_guesser_a43ad2f926001589dd454925b839ab106}{}\label{classmastermind_1_1logic_1_1_i_guesser_a43ad2f926001589dd454925b839ab106} 
+\index{mastermind\+::logic\+::\+I\+Guesser@{mastermind\+::logic\+::\+I\+Guesser}!````~I\+Guesser@{$\sim$\+I\+Guesser}}
+\index{````~I\+Guesser@{$\sim$\+I\+Guesser}!mastermind\+::logic\+::\+I\+Guesser@{mastermind\+::logic\+::\+I\+Guesser}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+Guesser()}{~IGuesser()}}
+{\footnotesize\ttfamily virtual mastermind\+::logic\+::\+I\+Guesser\+::$\sim$\+I\+Guesser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_i_guesser_a285f709f2076098acb5bc7c49a1435c7}{}\label{classmastermind_1_1logic_1_1_i_guesser_a285f709f2076098acb5bc7c49a1435c7} 
+\index{mastermind\+::logic\+::\+I\+Guesser@{mastermind\+::logic\+::\+I\+Guesser}!next\+Guess@{next\+Guess}}
+\index{next\+Guess@{next\+Guess}!mastermind\+::logic\+::\+I\+Guesser@{mastermind\+::logic\+::\+I\+Guesser}}
+\subsubsection{\texorpdfstring{next\+Guess()}{nextGuess()}}
+{\footnotesize\ttfamily virtual \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code}$\ast$ mastermind\+::logic\+::\+I\+Guesser\+::next\+Guess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the next guess. 
+
+\begin{DoxyReturn}{Returns}
+The next guess of the player. {\ttfamily null} aborts the game. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmastermind_1_1logic_1_1_computer_guesser_a5553cb2d63534927fbf9031c5d40c828}{mastermind\+::logic\+::\+Computer\+Guesser}, and \hyperlink{classmastermind_1_1logic_1_1_human_guesser_a5a165250f667fd40099c43cd3caf487c}{mastermind\+::logic\+::\+Human\+Guesser}.
+
+\hypertarget{classmastermind_1_1logic_1_1_i_guesser_a83a8fbd8aed3c4fa8c7a023fd7ebd6e7}{}\label{classmastermind_1_1logic_1_1_i_guesser_a83a8fbd8aed3c4fa8c7a023fd7ebd6e7} 
+\index{mastermind\+::logic\+::\+I\+Guesser@{mastermind\+::logic\+::\+I\+Guesser}!process\+Evaluation@{process\+Evaluation}}
+\index{process\+Evaluation@{process\+Evaluation}!mastermind\+::logic\+::\+I\+Guesser@{mastermind\+::logic\+::\+I\+Guesser}}
+\subsubsection{\texorpdfstring{process\+Evaluation()}{processEvaluation()}}
+{\footnotesize\ttfamily virtual void mastermind\+::logic\+::\+I\+Guesser\+::process\+Evaluation (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&}]{bw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Process evaluation. This method processes the other player\textquotesingle{}s feedback on the last guess provided by {\ttfamily next\+Guess}. Must only be executed if {\ttfamily next\+Guess} has been called before and has not returned {\ttfamily null}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bw} & Evaluation of the last guess. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classmastermind_1_1logic_1_1_computer_guesser_a728f55a5700d3574fc6b9207c9e8db7d}{mastermind\+::logic\+::\+Computer\+Guesser}, and \hyperlink{classmastermind_1_1logic_1_1_human_guesser_ad1c868e2dac07c1af9bb8935783e2e9b}{mastermind\+::logic\+::\+Human\+Guesser}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_i_guesser_8h}{I\+Guesser.\+h}\end{DoxyCompactItemize}

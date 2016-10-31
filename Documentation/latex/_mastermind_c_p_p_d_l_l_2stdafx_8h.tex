@@ -2,14 +2,47 @@
 \label{_mastermind_c_p_p_d_l_l_2stdafx_8h}\index{Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h@{Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h}}
 {\ttfamily \#include \char`\"{}targetver.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \hyperlink{_mastermind_c_p_p_d_l_l_2stdafx_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9}{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}
+\item 
+\#define \hyperlink{_mastermind_c_p_p_d_l_l_2stdafx_8h_a525335710b53cb064ca56b936120431e}{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES}
+\item 
+\#define \hyperlink{_mastermind_c_p_p_d_l_l_2stdafx_8h_a90ae985e00cec9991fb60db399599e8a}{D\+E\+G\+\_\+\+T\+O\+\_\+\+R\+AD}(deg)~((deg) $\ast$ M\+\_\+\+PI / 180.\+0)
+\item 
+\#define \hyperlink{_mastermind_c_p_p_d_l_l_2stdafx_8h_ac87db1456183534146dc35641744a6df}{R\+A\+D\+\_\+\+T\+O\+\_\+\+D\+EG}(rad)~((rad) $\ast$ 180.\+0 / M\+\_\+\+PI)
 \end{DoxyCompactItemize}
 
 
 \subsection{Macro Definition Documentation}
+\hypertarget{_mastermind_c_p_p_d_l_l_2stdafx_8h_a525335710b53cb064ca56b936120431e}{}\label{_mastermind_c_p_p_d_l_l_2stdafx_8h_a525335710b53cb064ca56b936120431e} 
+\index{Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h@{Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h}!\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES@{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES}}
+\index{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES@{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES}!Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h@{Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES}{\_USE\_MATH\_DEFINES}}
+{\footnotesize\ttfamily \#define \+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES}
+
+\hypertarget{_mastermind_c_p_p_d_l_l_2stdafx_8h_a90ae985e00cec9991fb60db399599e8a}{}\label{_mastermind_c_p_p_d_l_l_2stdafx_8h_a90ae985e00cec9991fb60db399599e8a} 
+\index{Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h@{Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h}!D\+E\+G\+\_\+\+T\+O\+\_\+\+R\+AD@{D\+E\+G\+\_\+\+T\+O\+\_\+\+R\+AD}}
+\index{D\+E\+G\+\_\+\+T\+O\+\_\+\+R\+AD@{D\+E\+G\+\_\+\+T\+O\+\_\+\+R\+AD}!Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h@{Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+G\+\_\+\+T\+O\+\_\+\+R\+AD}{DEG\_TO\_RAD}}
+{\footnotesize\ttfamily \#define D\+E\+G\+\_\+\+T\+O\+\_\+\+R\+AD(\begin{DoxyParamCaption}\item[{}]{deg }\end{DoxyParamCaption})~((deg) $\ast$ M\+\_\+\+PI / 180.\+0)}
+
+\hypertarget{_mastermind_c_p_p_d_l_l_2stdafx_8h_ac87db1456183534146dc35641744a6df}{}\label{_mastermind_c_p_p_d_l_l_2stdafx_8h_ac87db1456183534146dc35641744a6df} 
+\index{Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h@{Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h}!R\+A\+D\+\_\+\+T\+O\+\_\+\+D\+EG@{R\+A\+D\+\_\+\+T\+O\+\_\+\+D\+EG}}
+\index{R\+A\+D\+\_\+\+T\+O\+\_\+\+D\+EG@{R\+A\+D\+\_\+\+T\+O\+\_\+\+D\+EG}!Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h@{Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h}}
+\subsubsection{\texorpdfstring{R\+A\+D\+\_\+\+T\+O\+\_\+\+D\+EG}{RAD\_TO\_DEG}}
+{\footnotesize\ttfamily \#define R\+A\+D\+\_\+\+T\+O\+\_\+\+D\+EG(\begin{DoxyParamCaption}\item[{}]{rad }\end{DoxyParamCaption})~((rad) $\ast$ 180.\+0 / M\+\_\+\+PI)}
+
 \hypertarget{_mastermind_c_p_p_d_l_l_2stdafx_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9}{}\label{_mastermind_c_p_p_d_l_l_2stdafx_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9} 
 \index{Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h@{Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h}!W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN@{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}}
 \index{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN@{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}!Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h@{Mastermind\+C\+P\+P\+D\+L\+L/stdafx.\+h}}

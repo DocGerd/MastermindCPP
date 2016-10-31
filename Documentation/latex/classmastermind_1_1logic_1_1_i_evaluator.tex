@@ -1,0 +1,85 @@
+\hypertarget{classmastermind_1_1logic_1_1_i_evaluator}{}\section{mastermind\+:\+:logic\+:\+:I\+Evaluator Class Reference}
+\label{classmastermind_1_1logic_1_1_i_evaluator}\index{mastermind\+::logic\+::\+I\+Evaluator@{mastermind\+::logic\+::\+I\+Evaluator}}
+
+
+Interface for an Evaluator of a \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code}. This interface class should be abstract however Doxygen has parsing problems then.  
+
+
+
+
+{\ttfamily \#include $<$I\+Evaluator.\+h$>$}
+
+Inheritance diagram for mastermind\+:\+:logic\+:\+:I\+Evaluator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmastermind_1_1logic_1_1_i_evaluator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classmastermind_1_1logic_1_1_i_evaluator_a77766402180f37bce062b808feb5cee6}{$\sim$\+I\+Evaluator} ()
+\item 
+virtual \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_i_evaluator_a1ac9459cbb3698affa4154388b019f09}{evaluate} (const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$cc) override
+\begin{DoxyCompactList}\small\item\em Evaluate the given \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} to the respective \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White}. \end{DoxyCompactList}\item 
+virtual \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_i_evaluator_a544ecf5ba1d2cb5708e62fc508d341f3}{get\+Solution} () override
+\begin{DoxyCompactList}\small\item\em Get the solution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for an Evaluator of a \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code}. This interface class should be abstract however Doxygen has parsing problems then. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_i_evaluator_a77766402180f37bce062b808feb5cee6}{}\label{classmastermind_1_1logic_1_1_i_evaluator_a77766402180f37bce062b808feb5cee6} 
+\index{mastermind\+::logic\+::\+I\+Evaluator@{mastermind\+::logic\+::\+I\+Evaluator}!````~I\+Evaluator@{$\sim$\+I\+Evaluator}}
+\index{````~I\+Evaluator@{$\sim$\+I\+Evaluator}!mastermind\+::logic\+::\+I\+Evaluator@{mastermind\+::logic\+::\+I\+Evaluator}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+Evaluator()}{~IEvaluator()}}
+{\footnotesize\ttfamily virtual mastermind\+::logic\+::\+I\+Evaluator\+::$\sim$\+I\+Evaluator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_i_evaluator_a1ac9459cbb3698affa4154388b019f09}{}\label{classmastermind_1_1logic_1_1_i_evaluator_a1ac9459cbb3698affa4154388b019f09} 
+\index{mastermind\+::logic\+::\+I\+Evaluator@{mastermind\+::logic\+::\+I\+Evaluator}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!mastermind\+::logic\+::\+I\+Evaluator@{mastermind\+::logic\+::\+I\+Evaluator}}
+\subsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily virtual \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White}$\ast$ mastermind\+::logic\+::\+I\+Evaluator\+::evaluate (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$}]{cc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Evaluate the given \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} to the respective \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cc} & the \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} to be evaluated, must not be {\ttfamily null} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the resulting \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmastermind_1_1logic_1_1_computer_evaluator_a65f4a9bafcd5240e0cf92f6398025bd5}{mastermind\+::logic\+::\+Computer\+Evaluator}, and \hyperlink{classmastermind_1_1logic_1_1_human_evaluator_a12080bafb5e428db8cf8b8173821f83d}{mastermind\+::logic\+::\+Human\+Evaluator}.
+
+\hypertarget{classmastermind_1_1logic_1_1_i_evaluator_a544ecf5ba1d2cb5708e62fc508d341f3}{}\label{classmastermind_1_1logic_1_1_i_evaluator_a544ecf5ba1d2cb5708e62fc508d341f3} 
+\index{mastermind\+::logic\+::\+I\+Evaluator@{mastermind\+::logic\+::\+I\+Evaluator}!get\+Solution@{get\+Solution}}
+\index{get\+Solution@{get\+Solution}!mastermind\+::logic\+::\+I\+Evaluator@{mastermind\+::logic\+::\+I\+Evaluator}}
+\subsubsection{\texorpdfstring{get\+Solution()}{getSolution()}}
+{\footnotesize\ttfamily virtual \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code}$\ast$ mastermind\+::logic\+::\+I\+Evaluator\+::get\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the solution. 
+
+\begin{DoxyReturn}{Returns}
+the solution \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} or N\+U\+LL if not available yet. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmastermind_1_1logic_1_1_computer_evaluator_ac6e0423a5ef2f6679cfe6be75d3a09dd}{mastermind\+::logic\+::\+Computer\+Evaluator}, and \hyperlink{classmastermind_1_1logic_1_1_human_evaluator_ab369895151e4702e8b57d74c8f6869db}{mastermind\+::logic\+::\+Human\+Evaluator}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_i_evaluator_8h}{I\+Evaluator.\+h}\end{DoxyCompactItemize}

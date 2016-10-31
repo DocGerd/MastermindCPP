@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['win_5fsticks',['WIN_STICKS',['../classmastermind_1_1logic_1_1_black_and_white.html#a9c0ca1063cd6e8d41b0d87d510de33f5',1,'mastermind::logic::BlackAndWhite']]]
+  ['evaluator',['evaluator',['../classmastermind_1_1logic_1_1_main_game.html#a1ef0616e5078e9ac2b04cef8a83e0a8f',1,'mastermind::logic::MainGame::evaluator()'],['../classmastermind_1_1shell_1_1_players.html#ab5def272c1a430a8d0c388a93e7479d3',1,'mastermind::shell::Players::evaluator()']]]
 ];

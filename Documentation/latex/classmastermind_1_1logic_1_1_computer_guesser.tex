@@ -18,26 +18,41 @@ Inheritance diagram for mastermind\+:\+:logic\+:\+:Computer\+Guesser\+:\begin{fi
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classmastermind_1_1logic_1_1_computer_guesser_a56134030aac585a8cdbe1e42d544b653}{Computer\+Guesser} ()
+\hyperlink{classmastermind_1_1logic_1_1_computer_guesser_a685a4f74519d1dbfb3e6e429bb6d6a60}{Computer\+Guesser} (const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind} $\ast$\hyperlink{classmastermind_1_1logic_1_1_computer_guesser_a2f061369ee7e4e0319093a182fc41065}{game})
 \begin{DoxyCompactList}\small\item\em Create a \hyperlink{classmastermind_1_1logic_1_1_computer_guesser}{Computer\+Guesser}. \end{DoxyCompactList}\item 
 \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_computer_guesser_a5553cb2d63534927fbf9031c5d40c828}{next\+Guess} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Get the next guess. \end{DoxyCompactList}\item 
 void \hyperlink{classmastermind_1_1logic_1_1_computer_guesser_a728f55a5700d3574fc6b9207c9e8db7d}{process\+Evaluation} (const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&bw) override
-\item 
+\begin{DoxyCompactList}\small\item\em Process evaluation. This method processes the other player\textquotesingle{}s feedback on the last guess provided by {\ttfamily next\+Guess}. Must only be executed if {\ttfamily next\+Guess} has been called before and has not returned {\ttfamily null}. \end{DoxyCompactList}\item 
 bool \hyperlink{classmastermind_1_1logic_1_1_computer_guesser_ae93df46297030bcbd924f5ddc4af4889}{cheating\+Detected} () const
 \begin{DoxyCompactList}\small\item\em Check if cheating was detected. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classmastermind_1_1logic_1_1_computer_guesser_aa7c627d1d8ac073cc40e5693064e58c9}{create\+Codes} ()
+\begin{DoxyCompactList}\small\item\em Create all possible Color\+Codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind} $\ast$ \hyperlink{classmastermind_1_1logic_1_1_computer_guesser_a2f061369ee7e4e0319093a182fc41065}{game}
+\begin{DoxyCompactList}\small\item\em Base game. \end{DoxyCompactList}\item 
+std\+::list$<$ \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ $>$ $\ast$ \hyperlink{classmastermind_1_1logic_1_1_computer_guesser_af2500a37b694f1b2cb8f3242c618def4}{possible\+Codes}
+\begin{DoxyCompactList}\small\item\em List of possible codes available to guess. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_computer_guesser_a76f33b29e742132ea800947b2ec0347a}{move\+Count}
+\begin{DoxyCompactList}\small\item\em Amount of moves performed. \end{DoxyCompactList}\item 
+bool \hyperlink{classmastermind_1_1logic_1_1_computer_guesser_a2a2d1f455eb90493517bf8d1067adb31}{cheated}
+\begin{DoxyCompactList}\small\item\em Flag indicating player has cheated. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 A computer guesser. Uses a heuristic to find a solution. All possibilities are calculated and after each evaluation impossible solutions will be removed. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classmastermind_1_1logic_1_1_computer_guesser_a56134030aac585a8cdbe1e42d544b653}{}\label{classmastermind_1_1logic_1_1_computer_guesser_a56134030aac585a8cdbe1e42d544b653} 
+\hypertarget{classmastermind_1_1logic_1_1_computer_guesser_a685a4f74519d1dbfb3e6e429bb6d6a60}{}\label{classmastermind_1_1logic_1_1_computer_guesser_a685a4f74519d1dbfb3e6e429bb6d6a60} 
 \index{mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}!Computer\+Guesser@{Computer\+Guesser}}
 \index{Computer\+Guesser@{Computer\+Guesser}!mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}}
 \subsubsection{\texorpdfstring{Computer\+Guesser()}{ComputerGuesser()}}
-{\footnotesize\ttfamily mastermind\+::logic\+::\+Computer\+Guesser\+::\+Computer\+Guesser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily mastermind\+::logic\+::\+Computer\+Guesser\+::\+Computer\+Guesser (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind} $\ast$}]{game }\end{DoxyParamCaption})}
 
 
 
@@ -59,25 +74,94 @@ Check if cheating was detected.
 \begin{DoxyReturn}{Returns}
 {\ttfamily true} if evaluator cheated 
 \end{DoxyReturn}
+\hypertarget{classmastermind_1_1logic_1_1_computer_guesser_aa7c627d1d8ac073cc40e5693064e58c9}{}\label{classmastermind_1_1logic_1_1_computer_guesser_aa7c627d1d8ac073cc40e5693064e58c9} 
+\index{mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}!create\+Codes@{create\+Codes}}
+\index{create\+Codes@{create\+Codes}!mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}}
+\subsubsection{\texorpdfstring{create\+Codes()}{createCodes()}}
+{\footnotesize\ttfamily void mastermind\+::logic\+::\+Computer\+Guesser\+::create\+Codes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create all possible Color\+Codes. 
+
 \hypertarget{classmastermind_1_1logic_1_1_computer_guesser_a5553cb2d63534927fbf9031c5d40c828}{}\label{classmastermind_1_1logic_1_1_computer_guesser_a5553cb2d63534927fbf9031c5d40c828} 
 \index{mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}!next\+Guess@{next\+Guess}}
 \index{next\+Guess@{next\+Guess}!mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}}
 \subsubsection{\texorpdfstring{next\+Guess()}{nextGuess()}}
-{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ mastermind\+::logic\+::\+Computer\+Guesser\+::next\+Guess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ mastermind\+::logic\+::\+Computer\+Guesser\+::next\+Guess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
+Get the next guess. 
 
+\begin{DoxyReturn}{Returns}
+The next guess of the player. {\ttfamily null} aborts the game. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classmastermind_1_1logic_1_1_i_guesser_a285f709f2076098acb5bc7c49a1435c7}{mastermind\+::logic\+::\+I\+Guesser}.
 
 \hypertarget{classmastermind_1_1logic_1_1_computer_guesser_a728f55a5700d3574fc6b9207c9e8db7d}{}\label{classmastermind_1_1logic_1_1_computer_guesser_a728f55a5700d3574fc6b9207c9e8db7d} 
 \index{mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}!process\+Evaluation@{process\+Evaluation}}
 \index{process\+Evaluation@{process\+Evaluation}!mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}}
 \subsubsection{\texorpdfstring{process\+Evaluation()}{processEvaluation()}}
-{\footnotesize\ttfamily void mastermind\+::logic\+::\+Computer\+Guesser\+::process\+Evaluation (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&}]{bw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+{\footnotesize\ttfamily void mastermind\+::logic\+::\+Computer\+Guesser\+::process\+Evaluation (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&}]{bw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
+Process evaluation. This method processes the other player\textquotesingle{}s feedback on the last guess provided by {\ttfamily next\+Guess}. Must only be executed if {\ttfamily next\+Guess} has been called before and has not returned {\ttfamily null}. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em bw} & Evaluation of the last guess. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classmastermind_1_1logic_1_1_i_guesser_a83a8fbd8aed3c4fa8c7a023fd7ebd6e7}{mastermind\+::logic\+::\+I\+Guesser}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_computer_guesser_a2a2d1f455eb90493517bf8d1067adb31}{}\label{classmastermind_1_1logic_1_1_computer_guesser_a2a2d1f455eb90493517bf8d1067adb31} 
+\index{mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}!cheated@{cheated}}
+\index{cheated@{cheated}!mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}}
+\subsubsection{\texorpdfstring{cheated}{cheated}}
+{\footnotesize\ttfamily bool mastermind\+::logic\+::\+Computer\+Guesser\+::cheated\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag indicating player has cheated. 
+
+\hypertarget{classmastermind_1_1logic_1_1_computer_guesser_a2f061369ee7e4e0319093a182fc41065}{}\label{classmastermind_1_1logic_1_1_computer_guesser_a2f061369ee7e4e0319093a182fc41065} 
+\index{mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}!game@{game}}
+\index{game@{game}!mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}}
+\subsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily const \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind}$\ast$ mastermind\+::logic\+::\+Computer\+Guesser\+::game\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Base game. 
+
+\hypertarget{classmastermind_1_1logic_1_1_computer_guesser_a76f33b29e742132ea800947b2ec0347a}{}\label{classmastermind_1_1logic_1_1_computer_guesser_a76f33b29e742132ea800947b2ec0347a} 
+\index{mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}!move\+Count@{move\+Count}}
+\index{move\+Count@{move\+Count}!mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}}
+\subsubsection{\texorpdfstring{move\+Count}{moveCount}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mastermind\+::logic\+::\+Computer\+Guesser\+::move\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Amount of moves performed. 
+
+\hypertarget{classmastermind_1_1logic_1_1_computer_guesser_af2500a37b694f1b2cb8f3242c618def4}{}\label{classmastermind_1_1logic_1_1_computer_guesser_af2500a37b694f1b2cb8f3242c618def4} 
+\index{mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}!possible\+Codes@{possible\+Codes}}
+\index{possible\+Codes@{possible\+Codes}!mastermind\+::logic\+::\+Computer\+Guesser@{mastermind\+::logic\+::\+Computer\+Guesser}}
+\subsubsection{\texorpdfstring{possible\+Codes}{possibleCodes}}
+{\footnotesize\ttfamily std\+::list$<$\hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code}$\ast$$>$$\ast$ mastermind\+::logic\+::\+Computer\+Guesser\+::possible\+Codes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of possible codes available to guess. 
 
 
 

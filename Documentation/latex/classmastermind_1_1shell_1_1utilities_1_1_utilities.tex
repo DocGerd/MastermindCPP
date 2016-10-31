@@ -12,18 +12,20 @@
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_ae384c27ca0a2b6866d9769b60ebb011f}{create\+Random\+Code} ()
+static \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_a023c76d90d0588949e26358c3f273219}{create\+Random\+Code} (const uint32\+\_\+t slot\+Count, const uint32\+\_\+t color\+Count)
 \begin{DoxyCompactList}\small\item\em Create a random Color\+Code. \end{DoxyCompactList}\item 
-static std\+::list$<$ int $>$ \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_a42b5ee02b8c69c290ab27e9f76a8dbb9}{parse\+String} (const std\+::wstring \&s)
+static std\+::list$<$ int $\ast$ $>$ \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_ab364b032c0a68c7a0dbd5696b23d23b0}{parse\+String} (const std\+::wstring \&s)
 \begin{DoxyCompactList}\small\item\em Parse a string for numbers. Used for input of Color\+Codes. \end{DoxyCompactList}\item 
-static std\+::wstring \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_a86393a0717a6c0522878b951bffa3cbc}{create\+Alphabet} ()
-\begin{DoxyCompactList}\small\item\em Create alphabet string for the representation of the board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static std\+::wstring \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_a29b0701b6eeea2cc5557da28def33d3e}{create\+Alphabet} (const uint32\+\_\+t slot\+Count)
+\begin{DoxyCompactList}\small\item\em Create alphabet string for the representation of the board. \end{DoxyCompactList}\item 
+static uint64\+\_\+t \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_a890a9c41f6a4a13419fb6a7e456bfc4f}{P\+O\+W\+ER} (uint32\+\_\+t lhs, uint32\+\_\+t rhs)
+\begin{DoxyCompactList}\small\item\em Calculate power of two uint32\+\_\+t values. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_a546b49b8a9c3a5e53400d48d6b6f5126}{split} (const std\+::wstring \&s, char delim, std\+::list$<$ int $>$ \&elems)
+static void \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_a9676baba3bcb2d508ccedce50f466a9c}{split} (const std\+::wstring \&s, char delim, std\+::list$<$ std\+::wstring $>$ \&elems)
 \item 
-static std\+::list$<$ int $>$ \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_a6fe21ac1d92d80b2380d27a4ebd657cb}{split} (const std\+::wstring \&s, char delim)
+static std\+::list$<$ std\+::wstring $>$ \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities_ac053c782cd5669535205daf989e0f695}{split} (const std\+::wstring \&s, char delim)
 \begin{DoxyCompactList}\small\item\em Split a string at given delimiters. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -31,11 +33,11 @@ static std\+::list$<$ int $>$ \hyperlink{classmastermind_1_1shell_1_1utilities_1
 \hyperlink{classmastermind_1_1shell_1_1utilities_1_1_utilities}{Utilities} class. 
 
 \subsection{Member Function Documentation}
-\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_a86393a0717a6c0522878b951bffa3cbc}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_a86393a0717a6c0522878b951bffa3cbc} 
+\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_a29b0701b6eeea2cc5557da28def33d3e}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_a29b0701b6eeea2cc5557da28def33d3e} 
 \index{mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}!create\+Alphabet@{create\+Alphabet}}
 \index{create\+Alphabet@{create\+Alphabet}!mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}}
 \subsubsection{\texorpdfstring{create\+Alphabet()}{createAlphabet()}}
-{\footnotesize\ttfamily std\+::wstring mastermind\+::shell\+::utilities\+::\+Utilities\+::create\+Alphabet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily std\+::wstring mastermind\+::shell\+::utilities\+::\+Utilities\+::create\+Alphabet (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{slot\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -44,11 +46,11 @@ Create alphabet string for the representation of the board.
 \begin{DoxyReturn}{Returns}
 string in the form L\char`\"{}a b c d e\char`\"{} etc. 
 \end{DoxyReturn}
-\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_ae384c27ca0a2b6866d9769b60ebb011f}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_ae384c27ca0a2b6866d9769b60ebb011f} 
+\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_a023c76d90d0588949e26358c3f273219}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_a023c76d90d0588949e26358c3f273219} 
 \index{mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}!create\+Random\+Code@{create\+Random\+Code}}
 \index{create\+Random\+Code@{create\+Random\+Code}!mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}}
 \subsubsection{\texorpdfstring{create\+Random\+Code()}{createRandomCode()}}
-{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} mastermind\+::shell\+::utilities\+::\+Utilities\+::create\+Random\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} $\ast$ mastermind\+::shell\+::utilities\+::\+Utilities\+::create\+Random\+Code (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{slot\+Count,  }\item[{const uint32\+\_\+t}]{color\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -57,11 +59,11 @@ Create a random Color\+Code.
 \begin{DoxyReturn}{Returns}
 the Color\+Code 
 \end{DoxyReturn}
-\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_a42b5ee02b8c69c290ab27e9f76a8dbb9}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_a42b5ee02b8c69c290ab27e9f76a8dbb9} 
+\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_ab364b032c0a68c7a0dbd5696b23d23b0}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_ab364b032c0a68c7a0dbd5696b23d23b0} 
 \index{mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}!parse\+String@{parse\+String}}
 \index{parse\+String@{parse\+String}!mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}}
 \subsubsection{\texorpdfstring{parse\+String()}{parseString()}}
-{\footnotesize\ttfamily std\+::list$<$ int $>$ mastermind\+::shell\+::utilities\+::\+Utilities\+::parse\+String (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily std\+::list$<$ int $\ast$ $>$ mastermind\+::shell\+::utilities\+::\+Utilities\+::parse\+String (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -75,17 +77,37 @@ Parse a string for numbers. Used for input of Color\+Codes.
 \begin{DoxyReturn}{Returns}
 the tokens 
 \end{DoxyReturn}
-\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_a546b49b8a9c3a5e53400d48d6b6f5126}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_a546b49b8a9c3a5e53400d48d6b6f5126} 
+\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_a890a9c41f6a4a13419fb6a7e456bfc4f}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_a890a9c41f6a4a13419fb6a7e456bfc4f} 
+\index{mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}!P\+O\+W\+ER@{P\+O\+W\+ER}}
+\index{P\+O\+W\+ER@{P\+O\+W\+ER}!mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}}
+\subsubsection{\texorpdfstring{P\+O\+W\+E\+R()}{POWER()}}
+{\footnotesize\ttfamily uint64\+\_\+t mastermind\+::shell\+::utilities\+::\+Utilities\+::\+P\+O\+W\+ER (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{lhs,  }\item[{uint32\+\_\+t}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculate power of two uint32\+\_\+t values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & base \\
+\hline
+{\em rhs} & exponent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+lhs$^\wedge$rhs 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_a9676baba3bcb2d508ccedce50f466a9c}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_a9676baba3bcb2d508ccedce50f466a9c} 
 \index{mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}!split@{split}}
 \index{split@{split}!mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}}
 \subsubsection{\texorpdfstring{split()}{split()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void mastermind\+::shell\+::utilities\+::\+Utilities\+::split (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s,  }\item[{char}]{delim,  }\item[{std\+::list$<$ int $>$ \&}]{elems }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+{\footnotesize\ttfamily void mastermind\+::shell\+::utilities\+::\+Utilities\+::split (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s,  }\item[{char}]{delim,  }\item[{std\+::list$<$ std\+::wstring $>$ \&}]{elems }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
-\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_a6fe21ac1d92d80b2380d27a4ebd657cb}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_a6fe21ac1d92d80b2380d27a4ebd657cb} 
+\hypertarget{classmastermind_1_1shell_1_1utilities_1_1_utilities_ac053c782cd5669535205daf989e0f695}{}\label{classmastermind_1_1shell_1_1utilities_1_1_utilities_ac053c782cd5669535205daf989e0f695} 
 \index{mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}!split@{split}}
 \index{split@{split}!mastermind\+::shell\+::utilities\+::\+Utilities@{mastermind\+::shell\+::utilities\+::\+Utilities}}
 \subsubsection{\texorpdfstring{split()}{split()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily std\+::list$<$ int $>$ mastermind\+::shell\+::utilities\+::\+Utilities\+::split (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s,  }\item[{char}]{delim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+{\footnotesize\ttfamily std\+::list$<$ std\+::wstring $>$ mastermind\+::shell\+::utilities\+::\+Utilities\+::split (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s,  }\item[{char}]{delim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
 
 

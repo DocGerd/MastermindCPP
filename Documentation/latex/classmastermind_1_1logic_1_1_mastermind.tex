@@ -1,0 +1,204 @@
+\hypertarget{classmastermind_1_1logic_1_1_mastermind}{}\section{mastermind\+:\+:logic\+:\+:Mastermind Class Reference}
+\label{classmastermind_1_1logic_1_1_mastermind}\index{mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}}
+
+
+Class for important global game values.  
+
+
+
+
+{\ttfamily \#include $<$Mastermind.\+h$>$}
+
+Inheritance diagram for mastermind\+:\+:logic\+:\+:Mastermind\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.736434cm]{classmastermind_1_1logic_1_1_mastermind}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmastermind_1_1logic_1_1_mastermind_a386b9f51c21ab36c651f86d1671eccfd}{Mastermind} (uint32\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_mastermind_ac25c65d6c3b258154b632e5edb77fdb7}{max\+\_\+moves}=\hyperlink{classmastermind_1_1logic_1_1_mastermind_a1b389e8f4829939f8fd49e093cb9868b}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+M\+O\+V\+ES}, uint32\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_mastermind_a19f901a04d6175f6437b89cd3600c338}{slot\+\_\+count}=\hyperlink{classmastermind_1_1logic_1_1_mastermind_a27d7dbfa1b75744f4b8378e7faaec0af}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+\_\+\+C\+O\+U\+NT}, uint32\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_mastermind_a6fe199e91d3e00de452087f0aedabeff}{color\+\_\+count}=\hyperlink{classmastermind_1_1logic_1_1_mastermind_a090907ffd34339289c533fada5bd05c6}{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT})
+\item 
+uint32\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_mastermind_a7d74266aa973efd0fd9b0cf238c4080f}{get\+Max\+Moves} () const
+\begin{DoxyCompactList}\small\item\em Get max moves. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_mastermind_a81d6b51ea24fa52073d87d250d7268ff}{get\+Slot\+Count} () const
+\begin{DoxyCompactList}\small\item\em Get slot count. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_mastermind_ab24668a2fa062cd89a4bd3878b8beef8}{get\+Color\+Count} () const
+\begin{DoxyCompactList}\small\item\em Get color count. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_mastermind_a75472536b4800a58cfcc47cbe07b02cf}{get\+Code\+Count} () const
+\begin{DoxyCompactList}\small\item\em Get code count. \end{DoxyCompactList}\item 
+bool \hyperlink{classmastermind_1_1logic_1_1_mastermind_a97247d26b2896c78711cef22611a009b}{is\+Win\+Stick} (const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&bw) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr uint32\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_mastermind_a1b389e8f4829939f8fd49e093cb9868b}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+M\+O\+V\+ES} = 7
+\begin{DoxyCompactList}\small\item\em Maximum moves allowed until game finished. \end{DoxyCompactList}\item 
+static constexpr uint32\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_mastermind_a27d7dbfa1b75744f4b8378e7faaec0af}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+\_\+\+C\+O\+U\+NT} = 4
+\begin{DoxyCompactList}\small\item\em Amount of slots for colors. \end{DoxyCompactList}\item 
+static constexpr uint32\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_mastermind_a090907ffd34339289c533fada5bd05c6}{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT} = 6
+\begin{DoxyCompactList}\small\item\em Amount of available colors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const uint32\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_mastermind_ac25c65d6c3b258154b632e5edb77fdb7}{max\+\_\+moves}
+\begin{DoxyCompactList}\small\item\em Maximum moves allowed until game finished. \end{DoxyCompactList}\item 
+const uint32\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_mastermind_a19f901a04d6175f6437b89cd3600c338}{slot\+\_\+count}
+\begin{DoxyCompactList}\small\item\em Amount of slots for colors. \end{DoxyCompactList}\item 
+const uint32\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_mastermind_a6fe199e91d3e00de452087f0aedabeff}{color\+\_\+count}
+\begin{DoxyCompactList}\small\item\em Amount of available colors. \end{DoxyCompactList}\item 
+const uint64\+\_\+t \hyperlink{classmastermind_1_1logic_1_1_mastermind_a66141ba1e71164c2a9c19fbf5d9a6f65}{code\+\_\+count}
+\begin{DoxyCompactList}\small\item\em Amount of possible codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for important global game values. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_mastermind_a386b9f51c21ab36c651f86d1671eccfd}{}\label{classmastermind_1_1logic_1_1_mastermind_a386b9f51c21ab36c651f86d1671eccfd} 
+\index{mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}!Mastermind@{Mastermind}}
+\index{Mastermind@{Mastermind}!mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{Mastermind()}{Mastermind()}}
+{\footnotesize\ttfamily mastermind\+::logic\+::\+Mastermind\+::\+Mastermind (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{max\+\_\+moves = {\ttfamily \hyperlink{classmastermind_1_1logic_1_1_mastermind_a1b389e8f4829939f8fd49e093cb9868b}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+M\+O\+V\+ES}},  }\item[{uint32\+\_\+t}]{slot\+\_\+count = {\ttfamily \hyperlink{classmastermind_1_1logic_1_1_mastermind_a27d7dbfa1b75744f4b8378e7faaec0af}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+\_\+\+C\+O\+U\+NT}},  }\item[{uint32\+\_\+t}]{color\+\_\+count = {\ttfamily \hyperlink{classmastermind_1_1logic_1_1_mastermind_a090907ffd34339289c533fada5bd05c6}{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT}} }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_mastermind_a75472536b4800a58cfcc47cbe07b02cf}{}\label{classmastermind_1_1logic_1_1_mastermind_a75472536b4800a58cfcc47cbe07b02cf} 
+\index{mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}!get\+Code\+Count@{get\+Code\+Count}}
+\index{get\+Code\+Count@{get\+Code\+Count}!mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{get\+Code\+Count()}{getCodeCount()}}
+{\footnotesize\ttfamily uint64\+\_\+t mastermind\+::logic\+::\+Mastermind\+::get\+Code\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get code count. 
+
+\begin{DoxyReturn}{Returns}
+code count 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1logic_1_1_mastermind_ab24668a2fa062cd89a4bd3878b8beef8}{}\label{classmastermind_1_1logic_1_1_mastermind_ab24668a2fa062cd89a4bd3878b8beef8} 
+\index{mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}!get\+Color\+Count@{get\+Color\+Count}}
+\index{get\+Color\+Count@{get\+Color\+Count}!mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{get\+Color\+Count()}{getColorCount()}}
+{\footnotesize\ttfamily uint32\+\_\+t mastermind\+::logic\+::\+Mastermind\+::get\+Color\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get color count. 
+
+\begin{DoxyReturn}{Returns}
+color count 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1logic_1_1_mastermind_a7d74266aa973efd0fd9b0cf238c4080f}{}\label{classmastermind_1_1logic_1_1_mastermind_a7d74266aa973efd0fd9b0cf238c4080f} 
+\index{mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}!get\+Max\+Moves@{get\+Max\+Moves}}
+\index{get\+Max\+Moves@{get\+Max\+Moves}!mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{get\+Max\+Moves()}{getMaxMoves()}}
+{\footnotesize\ttfamily uint32\+\_\+t mastermind\+::logic\+::\+Mastermind\+::get\+Max\+Moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get max moves. 
+
+\begin{DoxyReturn}{Returns}
+max moves 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1logic_1_1_mastermind_a81d6b51ea24fa52073d87d250d7268ff}{}\label{classmastermind_1_1logic_1_1_mastermind_a81d6b51ea24fa52073d87d250d7268ff} 
+\index{mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}!get\+Slot\+Count@{get\+Slot\+Count}}
+\index{get\+Slot\+Count@{get\+Slot\+Count}!mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{get\+Slot\+Count()}{getSlotCount()}}
+{\footnotesize\ttfamily uint32\+\_\+t mastermind\+::logic\+::\+Mastermind\+::get\+Slot\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get slot count. 
+
+\begin{DoxyReturn}{Returns}
+slot count 
+\end{DoxyReturn}
+\hypertarget{classmastermind_1_1logic_1_1_mastermind_a97247d26b2896c78711cef22611a009b}{}\label{classmastermind_1_1logic_1_1_mastermind_a97247d26b2896c78711cef22611a009b} 
+\index{mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}!is\+Win\+Stick@{is\+Win\+Stick}}
+\index{is\+Win\+Stick@{is\+Win\+Stick}!mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{is\+Win\+Stick()}{isWinStick()}}
+{\footnotesize\ttfamily bool mastermind\+::logic\+::\+Mastermind\+::is\+Win\+Stick (\begin{DoxyParamCaption}\item[{const \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White} \&}]{bw }\end{DoxyParamCaption}) const}
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmastermind_1_1logic_1_1_mastermind_a66141ba1e71164c2a9c19fbf5d9a6f65}{}\label{classmastermind_1_1logic_1_1_mastermind_a66141ba1e71164c2a9c19fbf5d9a6f65} 
+\index{mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}!code\+\_\+count@{code\+\_\+count}}
+\index{code\+\_\+count@{code\+\_\+count}!mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{code\+\_\+count}{code\_count}}
+{\footnotesize\ttfamily const uint64\+\_\+t mastermind\+::logic\+::\+Mastermind\+::code\+\_\+count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Amount of possible codes. 
+
+\hypertarget{classmastermind_1_1logic_1_1_mastermind_a6fe199e91d3e00de452087f0aedabeff}{}\label{classmastermind_1_1logic_1_1_mastermind_a6fe199e91d3e00de452087f0aedabeff} 
+\index{mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}!color\+\_\+count@{color\+\_\+count}}
+\index{color\+\_\+count@{color\+\_\+count}!mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{color\+\_\+count}{color\_count}}
+{\footnotesize\ttfamily const uint32\+\_\+t mastermind\+::logic\+::\+Mastermind\+::color\+\_\+count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Amount of available colors. 
+
+\hypertarget{classmastermind_1_1logic_1_1_mastermind_a090907ffd34339289c533fada5bd05c6}{}\label{classmastermind_1_1logic_1_1_mastermind_a090907ffd34339289c533fada5bd05c6} 
+\index{mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}!D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT}!mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT}{DEFAULT\_COLOR\_COUNT}}
+{\footnotesize\ttfamily constexpr uint32\+\_\+t mastermind\+::logic\+::\+Mastermind\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+U\+NT = 6\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Amount of available colors. 
+
+\hypertarget{classmastermind_1_1logic_1_1_mastermind_a1b389e8f4829939f8fd49e093cb9868b}{}\label{classmastermind_1_1logic_1_1_mastermind_a1b389e8f4829939f8fd49e093cb9868b} 
+\index{mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}!D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+M\+O\+V\+ES@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+M\+O\+V\+ES}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+M\+O\+V\+ES@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+M\+O\+V\+ES}!mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+M\+O\+V\+ES}{DEFAULT\_MAX\_MOVES}}
+{\footnotesize\ttfamily constexpr uint32\+\_\+t mastermind\+::logic\+::\+Mastermind\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+M\+O\+V\+ES = 7\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Maximum moves allowed until game finished. 
+
+\hypertarget{classmastermind_1_1logic_1_1_mastermind_a27d7dbfa1b75744f4b8378e7faaec0af}{}\label{classmastermind_1_1logic_1_1_mastermind_a27d7dbfa1b75744f4b8378e7faaec0af} 
+\index{mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}!D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+\_\+\+C\+O\+U\+NT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+\_\+\+C\+O\+U\+NT}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+\_\+\+C\+O\+U\+NT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+\_\+\+C\+O\+U\+NT}!mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+\_\+\+C\+O\+U\+NT}{DEFAULT\_SLOT\_COUNT}}
+{\footnotesize\ttfamily constexpr uint32\+\_\+t mastermind\+::logic\+::\+Mastermind\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+\_\+\+C\+O\+U\+NT = 4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Amount of slots for colors. 
+
+\hypertarget{classmastermind_1_1logic_1_1_mastermind_ac25c65d6c3b258154b632e5edb77fdb7}{}\label{classmastermind_1_1logic_1_1_mastermind_ac25c65d6c3b258154b632e5edb77fdb7} 
+\index{mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}!max\+\_\+moves@{max\+\_\+moves}}
+\index{max\+\_\+moves@{max\+\_\+moves}!mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{max\+\_\+moves}{max\_moves}}
+{\footnotesize\ttfamily const uint32\+\_\+t mastermind\+::logic\+::\+Mastermind\+::max\+\_\+moves\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Maximum moves allowed until game finished. 
+
+\hypertarget{classmastermind_1_1logic_1_1_mastermind_a19f901a04d6175f6437b89cd3600c338}{}\label{classmastermind_1_1logic_1_1_mastermind_a19f901a04d6175f6437b89cd3600c338} 
+\index{mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}!slot\+\_\+count@{slot\+\_\+count}}
+\index{slot\+\_\+count@{slot\+\_\+count}!mastermind\+::logic\+::\+Mastermind@{mastermind\+::logic\+::\+Mastermind}}
+\subsubsection{\texorpdfstring{slot\+\_\+count}{slot\_count}}
+{\footnotesize\ttfamily const uint32\+\_\+t mastermind\+::logic\+::\+Mastermind\+::slot\+\_\+count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Amount of slots for colors. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_mastermind_8h}{Mastermind.\+h}\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_mastermind_8cpp}{Mastermind.\+cpp}\end{DoxyCompactItemize}

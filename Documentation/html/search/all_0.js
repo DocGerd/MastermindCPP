@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['abstract',['abstract',['../classmastermind_1_1logic_1_1abstract.html',1,'mastermind::logic']]],
-  ['add',['add',['../classmastermind_1_1logic_1_1_game_history.html#abcf47c78a6e9be8faa4238f2bc45e5e7',1,'mastermind::logic::GameHistory::add(const ColorCode &amp;cc) const'],['../classmastermind_1_1logic_1_1_game_history.html#a0d81e90269bca2588b857c1c8bf966b8',1,'mastermind::logic::GameHistory::add(const BlackAndWhite &amp;bw) const']]],
-  ['api_2eh',['API.h',['../_a_p_i_8h.html',1,'']]]
+  ['_5fuse_5fmath_5fdefines',['_USE_MATH_DEFINES',['../_mastermind_c_p_p_d_l_l_2stdafx_8h.html#a525335710b53cb064ca56b936120431e',1,'_USE_MATH_DEFINES():&#160;stdafx.h'],['../_unit_test1_2stdafx_8h.html#a525335710b53cb064ca56b936120431e',1,'_USE_MATH_DEFINES():&#160;stdafx.h']]]
 ];

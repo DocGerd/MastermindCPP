@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['operator_21_3d',['operator!=',['../classmastermind_1_1logic_1_1_black_and_white.html#a8d622959805faeb3f63b0342667b58f7',1,'mastermind::logic::BlackAndWhite']]],
-  ['operator_3d_3d',['operator==',['../classmastermind_1_1logic_1_1_black_and_white.html#ade7da8e1b846896a978f619b9689a7cb',1,'mastermind::logic::BlackAndWhite::operator==()'],['../classmastermind_1_1logic_1_1_color_code.html#a2bb0b3f30f7a353348a7b73da5b47e19',1,'mastermind::logic::ColorCode::operator==()']]],
-  ['operator_5b_5d',['operator[]',['../classmastermind_1_1logic_1_1_color_code.html#addfc2314a5fcc2783edd0b6c6a70a4cc',1,'mastermind::logic::ColorCode']]]
+  ['name',['name',['../classmastermind_1_1logic_1_1_color.html#aa086b665d9a43db3acbd43ed7f4d31ba',1,'mastermind::logic::Color']]],
+  ['next',['next',['../classmastermind_1_1logic_1_1_main_game.html#a2b48f18cf8dbd95431d4627b57ea5d01',1,'mastermind::logic::MainGame']]],
+  ['nextguess',['nextGuess',['../classmastermind_1_1logic_1_1_computer_guesser.html#a5553cb2d63534927fbf9031c5d40c828',1,'mastermind::logic::ComputerGuesser::nextGuess()'],['../classmastermind_1_1logic_1_1_i_guesser.html#a285f709f2076098acb5bc7c49a1435c7',1,'mastermind::logic::IGuesser::nextGuess()'],['../classmastermind_1_1logic_1_1_human_guesser.html#a5a165250f667fd40099c43cd3caf487c',1,'mastermind::logic::HumanGuesser::nextGuess()']]]
 ];

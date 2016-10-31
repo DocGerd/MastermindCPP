@@ -81,6 +81,7 @@ $(document).ready(function(){initNavTree('classmastermind_1_1logic_1_1_computer_
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classmastermind_1_1logic_1_1_computer_evaluator-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">mastermind::logic::ComputerEvaluator Class Reference</div>  </div>
@@ -97,52 +98,45 @@ Inheritance diagram for mastermind::logic::ComputerEvaluator:</div>
  <div class="center">
   <img src="classmastermind_1_1logic_1_1_computer_evaluator.png" usemap="#mastermind::logic::ComputerEvaluator_map" alt=""/>
   <map id="mastermind::logic::ComputerEvaluator_map" name="mastermind::logic::ComputerEvaluator_map">
-<area href="classmastermind_1_1_mastermind.html" title="Class for important global game values. " alt="mastermind::Mastermind" shape="rect" coords="232,0,454,24"/>
+<area href="classmastermind_1_1logic_1_1_i_evaluator.html" title="Interface for an Evaluator of a ColorCode. This interface class should be abstract however Doxygen ha..." alt="mastermind::logic::IEvaluator" shape="rect" coords="0,0,222,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a63c369068472dc8117552f991bd37a7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_computer_evaluator.html#a63c369068472dc8117552f991bd37a7a">ComputerEvaluator</a> (<a class="el" href="classmastermind_1_1logic_1_1_color_code.html">ColorCode</a> solutionCode)</td></tr>
-<tr class="memdesc:a63c369068472dc8117552f991bd37a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classmastermind_1_1logic_1_1_computer_evaluator.html" title="Evaluator which automatically evaluates the ColorCode given to a solution. ">ComputerEvaluator</a>.  <a href="#a63c369068472dc8117552f991bd37a7a">More...</a><br /></td></tr>
-<tr class="separator:a63c369068472dc8117552f991bd37a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add62379f02e99740075dadc62f9707c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_computer_evaluator.html#add62379f02e99740075dadc62f9707c9">ComputerEvaluator</a> (const <a class="el" href="classmastermind_1_1logic_1_1_mastermind.html">Mastermind</a> *<a class="el" href="classmastermind_1_1logic_1_1_computer_evaluator.html#a8801ded4db90b5feae19e6d521738311">game</a>, const <a class="el" href="classmastermind_1_1logic_1_1_color_code.html">ColorCode</a> *solutionCode)</td></tr>
+<tr class="memdesc:add62379f02e99740075dadc62f9707c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classmastermind_1_1logic_1_1_computer_evaluator.html" title="Evaluator which automatically evaluates the ColorCode given to a solution. ">ComputerEvaluator</a>.  <a href="#add62379f02e99740075dadc62f9707c9">More...</a><br /></td></tr>
+<tr class="separator:add62379f02e99740075dadc62f9707c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa216efb1cb2e885562d01b76751c84be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_computer_evaluator.html#aa216efb1cb2e885562d01b76751c84be">~ComputerEvaluator</a> ()</td></tr>
 <tr class="memdesc:aa216efb1cb2e885562d01b76751c84be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct this.  <a href="#aa216efb1cb2e885562d01b76751c84be">More...</a><br /></td></tr>
 <tr class="separator:aa216efb1cb2e885562d01b76751c84be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a579f808c46ab11077c4a3ce51838714b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmastermind_1_1logic_1_1_black_and_white.html">BlackAndWhite</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_computer_evaluator.html#a579f808c46ab11077c4a3ce51838714b">evaluate</a> (const <a class="el" href="classmastermind_1_1logic_1_1_color_code.html">ColorCode</a> &amp;cc) override</td></tr>
-<tr class="separator:a579f808c46ab11077c4a3ce51838714b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f4a9bafcd5240e0cf92f6398025bd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmastermind_1_1logic_1_1_black_and_white.html">BlackAndWhite</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_computer_evaluator.html#a65f4a9bafcd5240e0cf92f6398025bd5">evaluate</a> (const <a class="el" href="classmastermind_1_1logic_1_1_color_code.html">ColorCode</a> *cc) override</td></tr>
+<tr class="memdesc:a65f4a9bafcd5240e0cf92f6398025bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the given <a class="el" href="classmastermind_1_1logic_1_1_color_code.html" title="Represents one line of the game board. ">ColorCode</a> to the respective <a class="el" href="classmastermind_1_1logic_1_1_black_and_white.html" title="Representation for evaluation sticks. Black sticks show color and position right. White sticks show c...">BlackAndWhite</a>.  <a href="#a65f4a9bafcd5240e0cf92f6398025bd5">More...</a><br /></td></tr>
+<tr class="separator:a65f4a9bafcd5240e0cf92f6398025bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6e0423a5ef2f6679cfe6be75d3a09dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmastermind_1_1logic_1_1_color_code.html">ColorCode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_computer_evaluator.html#ac6e0423a5ef2f6679cfe6be75d3a09dd">getSolution</a> () override</td></tr>
+<tr class="memdesc:ac6e0423a5ef2f6679cfe6be75d3a09dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the solution.  <a href="#ac6e0423a5ef2f6679cfe6be75d3a09dd">More...</a><br /></td></tr>
 <tr class="separator:ac6e0423a5ef2f6679cfe6be75d3a09dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classmastermind_1_1_mastermind"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmastermind_1_1_mastermind')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmastermind_1_1_mastermind.html">mastermind::Mastermind</a></td></tr>
-<tr class="memitem:ac7d104e1c2febabb8d819de2ba447487 inherit pub_methods_classmastermind_1_1_mastermind"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1_mastermind.html#ac7d104e1c2febabb8d819de2ba447487">~Mastermind</a> ()</td></tr>
-<tr class="memdesc:ac7d104e1c2febabb8d819de2ba447487 inherit pub_methods_classmastermind_1_1_mastermind"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct this.  <a href="classmastermind_1_1_mastermind.html#ac7d104e1c2febabb8d819de2ba447487">More...</a><br /></td></tr>
-<tr class="separator:ac7d104e1c2febabb8d819de2ba447487 inherit pub_methods_classmastermind_1_1_mastermind"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classmastermind_1_1logic_1_1_i_evaluator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmastermind_1_1logic_1_1_i_evaluator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmastermind_1_1logic_1_1_i_evaluator.html">mastermind::logic::IEvaluator</a></td></tr>
+<tr class="memitem:a77766402180f37bce062b808feb5cee6 inherit pub_methods_classmastermind_1_1logic_1_1_i_evaluator"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_i_evaluator.html#a77766402180f37bce062b808feb5cee6">~IEvaluator</a> ()</td></tr>
+<tr class="separator:a77766402180f37bce062b808feb5cee6 inherit pub_methods_classmastermind_1_1logic_1_1_i_evaluator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_methods_classmastermind_1_1_mastermind"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classmastermind_1_1_mastermind')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classmastermind_1_1_mastermind.html">mastermind::Mastermind</a></td></tr>
-<tr class="memitem:af22130e134506ecb5e756b931e759a03 inherit pub_static_methods_classmastermind_1_1_mastermind"><td class="memItemLeft" align="right" valign="top">static unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1_mastermind.html#af22130e134506ecb5e756b931e759a03">CODE_COUNT</a> ()</td></tr>
-<tr class="memdesc:af22130e134506ecb5e756b931e759a03 inherit pub_static_methods_classmastermind_1_1_mastermind"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of possible solutions.  <a href="classmastermind_1_1_mastermind.html#af22130e134506ecb5e756b931e759a03">More...</a><br /></td></tr>
-<tr class="separator:af22130e134506ecb5e756b931e759a03 inherit pub_static_methods_classmastermind_1_1_mastermind"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24e1947e0ead0b7610b14dbeea618fbd inherit pub_static_methods_classmastermind_1_1_mastermind"><td class="memItemLeft" align="right" valign="top">static unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1_mastermind.html#a24e1947e0ead0b7610b14dbeea618fbd">POWER</a> (int lhs, int rhs)</td></tr>
-<tr class="memdesc:a24e1947e0ead0b7610b14dbeea618fbd inherit pub_static_methods_classmastermind_1_1_mastermind"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate power of two int values.  <a href="classmastermind_1_1_mastermind.html#a24e1947e0ead0b7610b14dbeea618fbd">More...</a><br /></td></tr>
-<tr class="separator:a24e1947e0ead0b7610b14dbeea618fbd inherit pub_static_methods_classmastermind_1_1_mastermind"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_attribs_classmastermind_1_1_mastermind"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classmastermind_1_1_mastermind')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classmastermind_1_1_mastermind.html">mastermind::Mastermind</a></td></tr>
-<tr class="memitem:a8bbb0daf2ebb27f688f1a30cd4488be1 inherit pub_static_attribs_classmastermind_1_1_mastermind"><td class="memItemLeft" align="right" valign="top">static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1_mastermind.html#a8bbb0daf2ebb27f688f1a30cd4488be1">MAX_MOVES</a> = 7</td></tr>
-<tr class="memdesc:a8bbb0daf2ebb27f688f1a30cd4488be1 inherit pub_static_attribs_classmastermind_1_1_mastermind"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum moves allowed until game finished.  <a href="classmastermind_1_1_mastermind.html#a8bbb0daf2ebb27f688f1a30cd4488be1">More...</a><br /></td></tr>
-<tr class="separator:a8bbb0daf2ebb27f688f1a30cd4488be1 inherit pub_static_attribs_classmastermind_1_1_mastermind"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4cfc8127641ff8dfe89d65ae232331c inherit pub_static_attribs_classmastermind_1_1_mastermind"><td class="memItemLeft" align="right" valign="top">static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1_mastermind.html#ad4cfc8127641ff8dfe89d65ae232331c">SLOT_COUNT</a> = 4</td></tr>
-<tr class="memdesc:ad4cfc8127641ff8dfe89d65ae232331c inherit pub_static_attribs_classmastermind_1_1_mastermind"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of slots for colors.  <a href="classmastermind_1_1_mastermind.html#ad4cfc8127641ff8dfe89d65ae232331c">More...</a><br /></td></tr>
-<tr class="separator:ad4cfc8127641ff8dfe89d65ae232331c inherit pub_static_attribs_classmastermind_1_1_mastermind"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a934035f0e608928076c4ce68b50d30f0 inherit pub_static_attribs_classmastermind_1_1_mastermind"><td class="memItemLeft" align="right" valign="top">static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1_mastermind.html#a934035f0e608928076c4ce68b50d30f0">COLOR_COUNT</a> = 6</td></tr>
-<tr class="memdesc:a934035f0e608928076c4ce68b50d30f0 inherit pub_static_attribs_classmastermind_1_1_mastermind"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of available colors.  <a href="classmastermind_1_1_mastermind.html#a934035f0e608928076c4ce68b50d30f0">More...</a><br /></td></tr>
-<tr class="separator:a934035f0e608928076c4ce68b50d30f0 inherit pub_static_attribs_classmastermind_1_1_mastermind"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a8801ded4db90b5feae19e6d521738311"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmastermind_1_1logic_1_1_mastermind.html">Mastermind</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_computer_evaluator.html#a8801ded4db90b5feae19e6d521738311">game</a></td></tr>
+<tr class="memdesc:a8801ded4db90b5feae19e6d521738311"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base game.  <a href="#a8801ded4db90b5feae19e6d521738311">More...</a><br /></td></tr>
+<tr class="separator:a8801ded4db90b5feae19e6d521738311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc73806d239bdc6c9df603850d309982"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_computer_evaluator.html#afc73806d239bdc6c9df603850d309982">moveCount</a></td></tr>
+<tr class="memdesc:afc73806d239bdc6c9df603850d309982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of already performed moves.  <a href="#afc73806d239bdc6c9df603850d309982">More...</a><br /></td></tr>
+<tr class="separator:afc73806d239bdc6c9df603850d309982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bd8017a92e245a8985f2caf71b45c44"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmastermind_1_1logic_1_1_color_code.html">ColorCode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmastermind_1_1logic_1_1_computer_evaluator.html#a8bd8017a92e245a8985f2caf71b45c44">solution</a></td></tr>
+<tr class="memdesc:a8bd8017a92e245a8985f2caf71b45c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">The solution.  <a href="#a8bd8017a92e245a8985f2caf71b45c44">More...</a><br /></td></tr>
+<tr class="separator:a8bd8017a92e245a8985f2caf71b45c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Evaluator which automatically evaluates the <a class="el" href="classmastermind_1_1logic_1_1_color_code.html" title="Represents one line of the game board. ">ColorCode</a> given to a solution. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a63c369068472dc8117552f991bd37a7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63c369068472dc8117552f991bd37a7a">&sect;&nbsp;</a></span>ComputerEvaluator()</h2>
+<a id="add62379f02e99740075dadc62f9707c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add62379f02e99740075dadc62f9707c9">&sect;&nbsp;</a></span>ComputerEvaluator()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -150,9 +144,19 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">mastermind::logic::ComputerEvaluator::ComputerEvaluator </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classmastermind_1_1logic_1_1_color_code.html">ColorCode</a>&#160;</td>
-          <td class="paramname"><em>solutionCode</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classmastermind_1_1logic_1_1_mastermind.html">Mastermind</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="classmastermind_1_1logic_1_1_color_code.html">ColorCode</a> *&#160;</td>
+          <td class="paramname"><em>solutionCode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -160,6 +164,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Create a <a class="el" href="classmastermind_1_1logic_1_1_computer_evaluator.html" title="Evaluator which automatically evaluates the ColorCode given to a solution. ">ComputerEvaluator</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">game</td><td>the main game </td></tr>
     <tr><td class="paramname">solutionCode</td><td>the solution </td></tr>
   </table>
   </dd>
@@ -187,8 +192,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a579f808c46ab11077c4a3ce51838714b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a579f808c46ab11077c4a3ce51838714b">&sect;&nbsp;</a></span>evaluate()</h2>
+<a id="a65f4a9bafcd5240e0cf92f6398025bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f4a9bafcd5240e0cf92f6398025bd5">&sect;&nbsp;</a></span>evaluate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,19 +204,28 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classmastermind_1_1logic_1_1_black_and_white.html">BlackAndWhite</a> * mastermind::logic::ComputerEvaluator::evaluate </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classmastermind_1_1logic_1_1_color_code.html">ColorCode</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classmastermind_1_1logic_1_1_color_code.html">ColorCode</a> *&#160;</td>
           <td class="paramname"><em>cc</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Evaluate the given <a class="el" href="classmastermind_1_1logic_1_1_color_code.html" title="Represents one line of the game board. ">ColorCode</a> to the respective <a class="el" href="classmastermind_1_1logic_1_1_black_and_white.html" title="Representation for evaluation sticks. Black sticks show color and position right. White sticks show c...">BlackAndWhite</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cc</td><td>the <a class="el" href="classmastermind_1_1logic_1_1_color_code.html" title="Represents one line of the game board. ">ColorCode</a> to be evaluated, must not be <code>null</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the resulting <a class="el" href="classmastermind_1_1logic_1_1_black_and_white.html" title="Representation for evaluation sticks. Black sticks show color and position right. White sticks show c...">BlackAndWhite</a> </dd></dl>
+
+<p>Implements <a class="el" href="classmastermind_1_1logic_1_1_i_evaluator.html#a1ac9459cbb3698affa4154388b019f09">mastermind::logic::IEvaluator</a>.</p>
 
 </div>
 </div>
@@ -233,12 +247,88 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Get the solution. </p>
+<dl class="section return"><dt>Returns</dt><dd>the solution <a class="el" href="classmastermind_1_1logic_1_1_color_code.html" title="Represents one line of the game board. ">ColorCode</a> or NULL if not available yet. </dd></dl>
+
+<p>Implements <a class="el" href="classmastermind_1_1logic_1_1_i_evaluator.html#a544ecf5ba1d2cb5708e62fc508d341f3">mastermind::logic::IEvaluator</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8801ded4db90b5feae19e6d521738311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8801ded4db90b5feae19e6d521738311">&sect;&nbsp;</a></span>game</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmastermind_1_1logic_1_1_mastermind.html">Mastermind</a>* mastermind::logic::ComputerEvaluator::game</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Base game. </p>
+
+</div>
+</div>
+<a id="afc73806d239bdc6c9df603850d309982"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc73806d239bdc6c9df603850d309982">&sect;&nbsp;</a></span>moveCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int mastermind::logic::ComputerEvaluator::moveCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Amount of already performed moves. </p>
+
+</div>
+</div>
+<a id="a8bd8017a92e245a8985f2caf71b45c44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd8017a92e245a8985f2caf71b45c44">&sect;&nbsp;</a></span>solution</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmastermind_1_1logic_1_1_color_code.html">ColorCode</a>* mastermind::logic::ComputerEvaluator::solution</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The solution. </p>
 
 </div>
 </div>

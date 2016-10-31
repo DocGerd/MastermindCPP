@@ -12,12 +12,24 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classmastermind_1_1shell_1_1_players_a0789193995383df718119738773a4d45}{Players} (I\+Guesser $\ast$g, I\+Evaluator $\ast$e)
+\hyperlink{classmastermind_1_1shell_1_1_players_a0789193995383df718119738773a4d45}{Players} (\hyperlink{classmastermind_1_1logic_1_1_i_guesser}{I\+Guesser} $\ast$g, \hyperlink{classmastermind_1_1logic_1_1_i_evaluator}{I\+Evaluator} $\ast$e)
 \begin{DoxyCompactList}\small\item\em Create \hyperlink{classmastermind_1_1shell_1_1_players}{Players}. \end{DoxyCompactList}\item 
-I\+Guesser $\ast$ \hyperlink{classmastermind_1_1shell_1_1_players_a66aa10a32b7469eea4f8668ac995cf73}{get\+Guesser} () const
+\hyperlink{classmastermind_1_1logic_1_1_i_guesser}{I\+Guesser} $\ast$ \hyperlink{classmastermind_1_1shell_1_1_players_a6835bb0025cb106959de2fe9db15c646}{get\+Guesser} () const
 \begin{DoxyCompactList}\small\item\em Get the guesser. \end{DoxyCompactList}\item 
-I\+Evaluator $\ast$ \hyperlink{classmastermind_1_1shell_1_1_players_ad79169b7a2096cac0b161d6ed015023f}{get\+Evaluator} () const
+\hyperlink{classmastermind_1_1logic_1_1_i_evaluator}{I\+Evaluator} $\ast$ \hyperlink{classmastermind_1_1shell_1_1_players_a98685816e9b68a6131c6694cf685ac40}{get\+Evaluator} () const
 \begin{DoxyCompactList}\small\item\em Get the evaluator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classmastermind_1_1shell_1_1_players}{Players} $\ast$ \hyperlink{classmastermind_1_1shell_1_1_players_a5e8a48c86167f6bb947408bd7614c047}{get\+Players} (\hyperlink{classmastermind_1_1shell_1_1_state}{State} state, \hyperlink{classmastermind_1_1logic_1_1_game_history}{Game\+History} $\ast$history)
+\begin{DoxyCompactList}\small\item\em Get the player objects. Just here are the objects created so the objects are created just in time. (in case someone \char`\"{}switches\char`\"{} pretty often...) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmastermind_1_1logic_1_1_i_guesser}{I\+Guesser} $\ast$const \hyperlink{classmastermind_1_1shell_1_1_players_aec78e6a571eed40e72d1822da38346cb}{guesser}
+\begin{DoxyCompactList}\small\item\em Player who is guessing. \end{DoxyCompactList}\item 
+\hyperlink{classmastermind_1_1logic_1_1_i_evaluator}{I\+Evaluator} $\ast$const \hyperlink{classmastermind_1_1shell_1_1_players_ab5def272c1a430a8d0c388a93e7479d3}{evaluator}
+\begin{DoxyCompactList}\small\item\em Player who is evaluating. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -28,7 +40,7 @@ I\+Evaluator $\ast$ \hyperlink{classmastermind_1_1shell_1_1_players_ad79169b7a20
 \index{mastermind\+::shell\+::\+Players@{mastermind\+::shell\+::\+Players}!Players@{Players}}
 \index{Players@{Players}!mastermind\+::shell\+::\+Players@{mastermind\+::shell\+::\+Players}}
 \subsubsection{\texorpdfstring{Players()}{Players()}}
-{\footnotesize\ttfamily mastermind\+::shell\+::\+Players\+::\+Players (\begin{DoxyParamCaption}\item[{I\+Guesser $\ast$}]{g,  }\item[{I\+Evaluator $\ast$}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily mastermind\+::shell\+::\+Players\+::\+Players (\begin{DoxyParamCaption}\item[{\hyperlink{classmastermind_1_1logic_1_1_i_guesser}{I\+Guesser} $\ast$}]{g,  }\item[{\hyperlink{classmastermind_1_1logic_1_1_i_evaluator}{I\+Evaluator} $\ast$}]{e }\end{DoxyParamCaption})}
 
 
 
@@ -36,19 +48,24 @@ Create \hyperlink{classmastermind_1_1shell_1_1_players}{Players}.
 
 
 \begin{DoxyParams}{Parameters}
-{\em g} & the guesser \\
+{\em g} & the guesser, must not be {\ttfamily null} \\
 \hline
-{\em e} & the evaluator \\
+{\em e} & the evaluator, must not be {\ttfamily null}\\
 \hline
 \end{DoxyParams}
 
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+
 
 \subsection{Member Function Documentation}
-\hypertarget{classmastermind_1_1shell_1_1_players_ad79169b7a2096cac0b161d6ed015023f}{}\label{classmastermind_1_1shell_1_1_players_ad79169b7a2096cac0b161d6ed015023f} 
+\hypertarget{classmastermind_1_1shell_1_1_players_a98685816e9b68a6131c6694cf685ac40}{}\label{classmastermind_1_1shell_1_1_players_a98685816e9b68a6131c6694cf685ac40} 
 \index{mastermind\+::shell\+::\+Players@{mastermind\+::shell\+::\+Players}!get\+Evaluator@{get\+Evaluator}}
 \index{get\+Evaluator@{get\+Evaluator}!mastermind\+::shell\+::\+Players@{mastermind\+::shell\+::\+Players}}
 \subsubsection{\texorpdfstring{get\+Evaluator()}{getEvaluator()}}
-{\footnotesize\ttfamily I\+Evaluator$\ast$ mastermind\+::shell\+::\+Players\+::get\+Evaluator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_i_evaluator}{I\+Evaluator} $\ast$ mastermind\+::shell\+::\+Players\+::get\+Evaluator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -57,11 +74,11 @@ Get the evaluator.
 \begin{DoxyReturn}{Returns}
 the evaluator 
 \end{DoxyReturn}
-\hypertarget{classmastermind_1_1shell_1_1_players_a66aa10a32b7469eea4f8668ac995cf73}{}\label{classmastermind_1_1shell_1_1_players_a66aa10a32b7469eea4f8668ac995cf73} 
+\hypertarget{classmastermind_1_1shell_1_1_players_a6835bb0025cb106959de2fe9db15c646}{}\label{classmastermind_1_1shell_1_1_players_a6835bb0025cb106959de2fe9db15c646} 
 \index{mastermind\+::shell\+::\+Players@{mastermind\+::shell\+::\+Players}!get\+Guesser@{get\+Guesser}}
 \index{get\+Guesser@{get\+Guesser}!mastermind\+::shell\+::\+Players@{mastermind\+::shell\+::\+Players}}
 \subsubsection{\texorpdfstring{get\+Guesser()}{getGuesser()}}
-{\footnotesize\ttfamily I\+Guesser$\ast$ mastermind\+::shell\+::\+Players\+::get\+Guesser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_i_guesser}{I\+Guesser} $\ast$ mastermind\+::shell\+::\+Players\+::get\+Guesser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -70,8 +87,52 @@ Get the guesser.
 \begin{DoxyReturn}{Returns}
 the guesser 
 \end{DoxyReturn}
+\hypertarget{classmastermind_1_1shell_1_1_players_a5e8a48c86167f6bb947408bd7614c047}{}\label{classmastermind_1_1shell_1_1_players_a5e8a48c86167f6bb947408bd7614c047} 
+\index{mastermind\+::shell\+::\+Players@{mastermind\+::shell\+::\+Players}!get\+Players@{get\+Players}}
+\index{get\+Players@{get\+Players}!mastermind\+::shell\+::\+Players@{mastermind\+::shell\+::\+Players}}
+\subsubsection{\texorpdfstring{get\+Players()}{getPlayers()}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1shell_1_1_players}{Players} $\ast$ mastermind\+::shell\+::\+Players\+::get\+Players (\begin{DoxyParamCaption}\item[{\hyperlink{classmastermind_1_1shell_1_1_state}{State}}]{state,  }\item[{\hyperlink{classmastermind_1_1logic_1_1_game_history}{Game\+History} $\ast$}]{history }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+
+Get the player objects. Just here are the objects created so the objects are created just in time. (in case someone \char`\"{}switches\char`\"{} pretty often...) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & the requested state \\
+\hline
+{\em history} & the history which should be referenced in the Human$\ast$ objects \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the players 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmastermind_1_1shell_1_1_players_ab5def272c1a430a8d0c388a93e7479d3}{}\label{classmastermind_1_1shell_1_1_players_ab5def272c1a430a8d0c388a93e7479d3} 
+\index{mastermind\+::shell\+::\+Players@{mastermind\+::shell\+::\+Players}!evaluator@{evaluator}}
+\index{evaluator@{evaluator}!mastermind\+::shell\+::\+Players@{mastermind\+::shell\+::\+Players}}
+\subsubsection{\texorpdfstring{evaluator}{evaluator}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_i_evaluator}{I\+Evaluator}$\ast$ const mastermind\+::shell\+::\+Players\+::evaluator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Player who is evaluating. 
+
+\hypertarget{classmastermind_1_1shell_1_1_players_aec78e6a571eed40e72d1822da38346cb}{}\label{classmastermind_1_1shell_1_1_players_aec78e6a571eed40e72d1822da38346cb} 
+\index{mastermind\+::shell\+::\+Players@{mastermind\+::shell\+::\+Players}!guesser@{guesser}}
+\index{guesser@{guesser}!mastermind\+::shell\+::\+Players@{mastermind\+::shell\+::\+Players}}
+\subsubsection{\texorpdfstring{guesser}{guesser}}
+{\footnotesize\ttfamily \hyperlink{classmastermind_1_1logic_1_1_i_guesser}{I\+Guesser}$\ast$ const mastermind\+::shell\+::\+Players\+::guesser\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Player who is guessing. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_players_8h}{Players.\+h}\end{DoxyCompactItemize}
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_players_8h}{Players.\+h}\item 
+Mastermind\+C\+P\+P\+D\+L\+L/\hyperlink{_players_8cpp}{Players.\+cpp}\end{DoxyCompactItemize}

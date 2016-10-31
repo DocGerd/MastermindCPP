@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['abstract',['abstract',['../classmastermind_1_1logic_1_1abstract.html',1,'mastermind::logic']]]
+  ['blackandwhite',['BlackAndWhite',['../classmastermind_1_1logic_1_1_black_and_white.html',1,'mastermind::logic']]]
 ];

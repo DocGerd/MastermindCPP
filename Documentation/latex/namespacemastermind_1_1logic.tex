@@ -3,12 +3,16 @@
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{classmastermind_1_1logic_1_1abstract}{abstract}
-\begin{DoxyCompactList}\small\item\em Interface for an Evaluator of a \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code}. \end{DoxyCompactList}\item 
 class \hyperlink{classmastermind_1_1logic_1_1_black_and_white}{Black\+And\+White}
 \begin{DoxyCompactList}\small\item\em Representation for evaluation sticks. Black sticks show color and position right. White sticks show color right but wrong position. \end{DoxyCompactList}\item 
+class \hyperlink{classmastermind_1_1logic_1_1_color}{Color}
+\begin{DoxyCompactList}\small\item\em A color representation. \end{DoxyCompactList}\item 
 class \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code}
 \begin{DoxyCompactList}\small\item\em Represents one line of the game board. \end{DoxyCompactList}\item 
+class \hyperlink{classmastermind_1_1logic_1_1_color_h_s_i}{Color\+H\+SI}
+\begin{DoxyCompactList}\small\item\em A R\+GB color representation. R\+GB values must be each \mbox{[}0..255\mbox{]}. \end{DoxyCompactList}\item 
+class \hyperlink{classmastermind_1_1logic_1_1_color_r_g_b}{Color\+R\+GB}
+\begin{DoxyCompactList}\small\item\em A R\+GB color representation. R\+GB values must be each \mbox{[}0..255\mbox{]}. \end{DoxyCompactList}\item 
 class \hyperlink{classmastermind_1_1logic_1_1_computer_evaluator}{Computer\+Evaluator}
 \begin{DoxyCompactList}\small\item\em Evaluator which automatically evaluates the \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code} given to a solution. \end{DoxyCompactList}\item 
 class \hyperlink{classmastermind_1_1logic_1_1_computer_guesser}{Computer\+Guesser}
@@ -19,7 +23,27 @@ class \hyperlink{classmastermind_1_1logic_1_1_human_evaluator}{Human\+Evaluator}
 \begin{DoxyCompactList}\small\item\em A human Evaluator for console. \end{DoxyCompactList}\item 
 class \hyperlink{classmastermind_1_1logic_1_1_human_guesser}{Human\+Guesser}
 \begin{DoxyCompactList}\small\item\em A human guesser for console. \end{DoxyCompactList}\item 
+class \hyperlink{classmastermind_1_1logic_1_1_i_evaluator}{I\+Evaluator}
+\begin{DoxyCompactList}\small\item\em Interface for an Evaluator of a \hyperlink{classmastermind_1_1logic_1_1_color_code}{Color\+Code}. This interface class should be abstract however Doxygen has parsing problems then. \end{DoxyCompactList}\item 
+class \hyperlink{classmastermind_1_1logic_1_1_i_guesser}{I\+Guesser}
+\begin{DoxyCompactList}\small\item\em Interface for a Guesser. This interface class should be abstract however Doxygen has parsing problems then. \end{DoxyCompactList}\item 
 class \hyperlink{classmastermind_1_1logic_1_1_main_game}{Main\+Game}
-\begin{DoxyCompactList}\small\item\em The Game. Game logic is in here. No in and output. Works only with the interfaces of I\+Evaluator and I\+Guesser. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The Game. Game logic is in here. No in and output. Works only with the interfaces of \hyperlink{classmastermind_1_1logic_1_1_i_evaluator}{I\+Evaluator} and \hyperlink{classmastermind_1_1logic_1_1_i_guesser}{I\+Guesser}. \end{DoxyCompactList}\item 
+class \hyperlink{classmastermind_1_1logic_1_1_mastermind}{Mastermind}
+\begin{DoxyCompactList}\small\item\em Class for important global game values. \end{DoxyCompactList}\item 
 class \hyperlink{classmastermind_1_1logic_1_1_read_only_history}{Read\+Only\+History}
 \begin{DoxyCompactList}\small\item\em Read-\/only history to ensure invariant of history. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint8\+\_\+t \hyperlink{namespacemastermind_1_1logic_aab4e2166db8e8e5dcbed785c7927eca1}{color\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacemastermind_1_1logic_aab4e2166db8e8e5dcbed785c7927eca1}{}\label{namespacemastermind_1_1logic_aab4e2166db8e8e5dcbed785c7927eca1} 
+\index{mastermind\+::logic@{mastermind\+::logic}!color\+\_\+t@{color\+\_\+t}}
+\index{color\+\_\+t@{color\+\_\+t}!mastermind\+::logic@{mastermind\+::logic}}
+\subsubsection{\texorpdfstring{color\+\_\+t}{color\_t}}
+{\footnotesize\ttfamily typedef uint8\+\_\+t \hyperlink{namespacemastermind_1_1logic_aab4e2166db8e8e5dcbed785c7927eca1}{mastermind\+::logic\+::color\+\_\+t}}
+

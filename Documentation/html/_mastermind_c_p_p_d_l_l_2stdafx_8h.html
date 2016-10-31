@@ -87,6 +87,15 @@ $(document).ready(function(){initNavTree('_mastermind_c_p_p_d_l_l_2stdafx_8h.htm
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_mastermind_c_p_p_d_l_l_2targetver_8h_source.html">targetver.h</a>&quot;</code><br />
 <code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;list&gt;</code><br />
+<code>#include &lt;iterator&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 </div>
 <p><a href="_mastermind_c_p_p_d_l_l_2stdafx_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -94,8 +103,64 @@ $(document).ready(function(){initNavTree('_mastermind_c_p_p_d_l_l_2stdafx_8h.htm
 Macros</h2></td></tr>
 <tr class="memitem:ac7bef5d85e3dcd73eef56ad39ffc84a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mastermind_c_p_p_d_l_l_2stdafx_8h.html#ac7bef5d85e3dcd73eef56ad39ffc84a9">WIN32_LEAN_AND_MEAN</a></td></tr>
 <tr class="separator:ac7bef5d85e3dcd73eef56ad39ffc84a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a525335710b53cb064ca56b936120431e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mastermind_c_p_p_d_l_l_2stdafx_8h.html#a525335710b53cb064ca56b936120431e">_USE_MATH_DEFINES</a></td></tr>
+<tr class="separator:a525335710b53cb064ca56b936120431e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90ae985e00cec9991fb60db399599e8a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mastermind_c_p_p_d_l_l_2stdafx_8h.html#a90ae985e00cec9991fb60db399599e8a">DEG_TO_RAD</a>(deg)&#160;&#160;&#160;((deg) * M_PI / 180.0)</td></tr>
+<tr class="separator:a90ae985e00cec9991fb60db399599e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac87db1456183534146dc35641744a6df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mastermind_c_p_p_d_l_l_2stdafx_8h.html#ac87db1456183534146dc35641744a6df">RAD_TO_DEG</a>(rad)&#160;&#160;&#160;((rad) * 180.0 / M_PI)</td></tr>
+<tr class="separator:ac87db1456183534146dc35641744a6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a525335710b53cb064ca56b936120431e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a525335710b53cb064ca56b936120431e">&sect;&nbsp;</a></span>_USE_MATH_DEFINES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _USE_MATH_DEFINES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90ae985e00cec9991fb60db399599e8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90ae985e00cec9991fb60db399599e8a">&sect;&nbsp;</a></span>DEG_TO_RAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEG_TO_RAD</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">deg</td><td>)</td>
+          <td>&#160;&#160;&#160;((deg) * M_PI / 180.0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac87db1456183534146dc35641744a6df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87db1456183534146dc35641744a6df">&sect;&nbsp;</a></span>RAD_TO_DEG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RAD_TO_DEG</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">rad</td><td>)</td>
+          <td>&#160;&#160;&#160;((rad) * 180.0 / M_PI)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac7bef5d85e3dcd73eef56ad39ffc84a9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac7bef5d85e3dcd73eef56ad39ffc84a9">&sect;&nbsp;</a></span>WIN32_LEAN_AND_MEAN</h2>
 
